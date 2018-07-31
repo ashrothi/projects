@@ -1,0 +1,8 @@
+INFO - Inside Initialize method
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/XFusionPlatform/device/get/metadata/status/by/type
+INFO - Para:   access_key=d3cd4e3f-5946-11e6-9bb0-fe984cc15272&device_type=4&host_status=0
+INFO - Response Code is:   401
+INFO - Response : 
+INFO - Exception occur in getting devices.
+INFO - Device List: []

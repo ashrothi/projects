@@ -1,0 +1,40 @@
+<HTML>
+<body>
+
+Dear Supervisor,
+
+<p>Device used by user is offline. Please find the details as following-</p>
+<div style="width:100%;"> 
+<table style="border-left:1px solid #000;border-top:1px solid #000;font-weight:normal;" width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<th style="border-bottom:1px solid #000;border-right:1px solid #000;text-indent:10px;line-height:24px;text-align:left;"><b>User Name </b></th> 
+<td style="border-bottom:1px solid #000;border-right:1px solid #000;text-indent:10px;line-height:24px;text-align:left;"><b>$!object.first_name $!object.last_name</b></td>
+</tr>   
+
+<tr>
+<th style="border-bottom:1px solid #000;border-right:1px solid #000;text-indent:10px;line-height:24px;text-align:left;"><b>Contact No. </b></th> 
+<td style="border-bottom:1px solid #000;border-right:1px solid #000;text-indent:10px;line-height:24px;text-align:left;"><b>$!object.contact_number</b></td>
+</tr> 
+
+<tr>
+<th style="border-bottom:1px solid #000;border-right:1px solid #000;text-indent:10px;line-height:24px;text-align:left;"><b>Offline Since (Minutes). </b></th> 
+<td style="border-bottom:1px solid #000;border-right:1px solid #000;text-indent:10px;line-height:24px;text-align:left;"><b>$!object.last_online_time</b></td>
+</tr>  
+<tr>
+<th style="border-bottom:1px solid #000;border-right:1px solid #000;text-indent:10px;line-height:24px;text-align:left;"><b>Last Online Time (24 Hrs) </b></th> 
+<td style="border-bottom:1px solid #000;border-right:1px solid #000;text-indent:10px;line-height:24px;text-align:left;"><b>$!object.online_since</b></td>
+</tr> 
+     	 
+ 
+  
+</table>	    
+</div>
+<p>Please take appropriate actions (For your kind intervention and necessary action).</p>
+
+<p>Thanks,</p>
+<p>Team Veris.</p>
+<p>To view click here- <a href="http://i.teramatrix.in:3030/">http://i.veris.in:3030/</a></p>
+
+<small>This message has been automatically generated in response to the creation of a Ticket from FFT Veris tool.</small>
+</body>
+</html>

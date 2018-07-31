@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd
+  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+  http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+	<context:component-scan
+		base-package="com.springiot.*" />
+
+	<mvc:annotation-driven />
+
+	<bean id="loggingAspect" class="com.springiot.logging.AOPLogging" />
+	<aop:aspectj-autoproxy />
+
+	<tx:annotation-driven
+		transaction-manager="transactionManager" />
+	<!-- <mvc:resources mapping="/resources/**" location="/resources/" cache-period="10000" 
+		/> -->
+
+	<bean id="swagger2Config"
+		class="springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration" />
+
+
+	<!-- <context:property-placeholder location="classpath:/swagger.properties" 
+		/> -->
+
+	<mvc:resources mapping="swagger-ui.html"
+		location="classpath:/META-INF/resources/" />
+	<mvc:resources mapping="/webjars/**"
+		location="classpath:/META-INF/resources/webjars/" />
+
+
+	<!-- applicationContext.xml -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="embedded-database" />
+		<property name="packagesToScan" value="com.springiot.modal" />
+		<property name="hibernateProperties">
+			<value>
+				hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect
+				hibernate.connection.useUnicode=true
+				hibernate.connection.characterEncoding=UTF-8
+				hibernate.connection.charSet=UTF-8
+				hibernate.ejb.naming_strategy=org.hibernate.cfg.ImprovedNamingStrategy
+				hibernate.show_sql=true
+
+				hibernate.c3p0.msize=20
+				hibernate.c3p0.max_size=40
+				hibernate.c3p0.timeout=300
+				hibernate.c3p0.max_statements=50
+				hibernate.c3p0.idle_test_period=3000
+				<!-- hibernate.connection.zeroDateTimeBehavior=convertToNull -->
+			</value>
+		</property>
+	</bean>
+
+	<bean
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager"
+		id="transactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<bean class="com.springiot.constant.ProcessParameter"
+		id="processParameter">
+		<property name="maps">
+			<map>
+				<entry key="1"
+					value="CALL hfcl_get_kpi(tag,report_date, device_id)" />
+
+				<entry key="2"
+					value="CALL hfcl_get_fifteen_min_kpi(tag,start_date,end_date, device_id)" />
+				<entry key="3"
+					value="CALL hfcl_get_hourly_kpi(tag,start_date,end_date, device_id)" />
+			</map>
+		</property>
+	</bean>
+
+	<bean class="com.springiot.constant.URLParameter"
+		id="urlParameter">
+		<property name="authURL"
+			value="http://127.0.0.1:7878/OAuthEngine/oauth/token" />
+		<property name="xfusionOAuthURL"
+			value="http://127.0.0.1:7878/XFusionPlatform/oauth/token" />
+		<property name="authResetPasswordURL"
+			value="http://127.0.0.1:7878/OAuthEngine/passwordreset" />
+		<property name="authExpireURL"
+			value="http://127.0.0.1:7878/OAuthEngine/oauth/token/expire" />
+		<property name="authForgotPasswordURL"
+			value="http://127.0.0.1:7878/OAuthEngine/forgotpassword" />
+		<property name="authUpdateURL"
+			value="http://127.0.0.1:7878/OAuthEngine/passwordupdate" />
+		<property name="xfusionURL"
+			value="http://127.0.0.1:7878/XFusionPlatform/xfusionusers" />
+		<property name="xfusionPlatformThirdPartyIntegrationToken"
+			value="http://127.0.0.1:7878/XFusionPlatform/thirdparty/integration/token" />
+		<property name="deviceGetMetadataStatusBytType"
+			value="http://127.0.0.1:7878/XFusionPlatform/device/get/metadata/status/by/type" />
+		<property name="performanceService"
+			value="http://127.0.0.1:7878/XFusionPlatform/performance/service/multipledevices/get/many" />
+	</bean>
+
+	<!-- <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"> 
+		</bean> -->
+</beans>

@@ -1,0 +1,15 @@
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.TotalDataCalls(PCU.java:284)
+	at com.teramatrix.processData.PCU.initial(PCU.java:37)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.TotalDataCalls(PCU.java:284)
+	at com.teramatrix.processData.PCU.initial(PCU.java:37)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.TotalDataCalls(PCU.java:284)
+	at com.teramatrix.processData.PCU.initial(PCU.java:37)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)

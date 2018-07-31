@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd
+  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+  http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+	<context:component-scan
+		base-package="com.springiot.*" />
+
+	<mvc:annotation-driven />
+
+	<bean id="loggingAspect" class="com.springiot.logging.AOPLogging" />
+	<aop:aspectj-autoproxy />
+
+	<tx:annotation-driven
+		transaction-manager="transactionManager" />
+	<bean id="swagger2Config"
+		class="springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration" />
+
+	<!-- <context:property-placeholder location="classpath:/swagger.properties" 
+		/> -->
+
+	<mvc:resources mapping="swagger-ui.html"
+		location="classpath:/META-INF/resources/" />
+	<mvc:resources mapping="/webjars/**"
+		location="classpath:/META-INF/resources/webjars/" />
+
+	<!-- applicationContext.xml -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="embedded-database" />
+		<property name="packagesToScan" value="com.springiot.modal" />
+		<property name="hibernateProperties">
+			<value>
+				hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect
+				hibernate.connection.useUnicode=true
+				hibernate.connection.characterEncoding=UTF-8
+				hibernate.connection.charSet=UTF-8
+				hibernate.ejb.naming_strategy=org.hibernate.cfg.ImprovedNamingStrategy
+				hibernate.show_sql=true
+
+				hibernate.c3p0.min_size=20
+				hibernate.c3p0.max_size=40
+				hibernate.c3p0.timeout=300
+				hibernate.c3p0.max_statements=50
+				hibernate.c3p0.idle_test_period=3000
+				<!-- hibernate.connection.zeroDateTimeBehavior=convertToNull -->
+			</value>
+		</property>
+	</bean>
+
+	<bean id="sessionFactoryHsql"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="embedded-database-hsql" />
+		<property name="packagesToScan" value="com.springiot.modal" />
+		<property name="hibernateProperties">
+			<value>
+				hibernate.dialect=org.hibernate.dialect.HSQLDialect
+				hibernate.connection.useUnicode=true
+				hibernate.connection.characterEncoding=UTF-8
+				hibernate.connection.charSet=UTF-8
+				hibernate.ejb.naming_strategy=org.hibernate.cfg.ImprovedNamingStrategy
+				hibernate.show_sql=true
+
+				hibernate.c3p0.min_size=20
+				hibernate.c3p0.max_size=40
+				hibernate.c3p0.timeout=300
+				hibernate.c3p0.max_statements=50
+				hibernate.c3p0.idle_test_period=3000
+				<!-- hibernate.connection.zeroDateTimeBehavior=convertToNull -->
+			</value>
+		</property>
+	</bean>
+
+
+	<bean
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager"
+		id="transactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+
+	<bean class="com.springiot.constant.ProcessParameter"
+		id="processParameter">
+		<property name="maps">
+			<map>
+				<entry key="login" value="call xfusion_user_validate(?,?,?,?)" />
+				<!-- <entry key="loginByUserKey" value="call xfusion_user_get_info_by_user_key(?,?)" 
+					/> -->
+				<entry key="1" value="call xfusion_users_get_api_access()" />
+				<entry key="2" value="call xfusion_users_get_view_access()" />
+				<entry key="3"
+					value="call xfusion_password_update(user_key,current_password,new_password)" />
+				<entry key="4"
+					value="call xfusion_user_update_approve_status(user_key,approved)" />
+				<entry key="5"
+					value="call xfusion_user_update_last_activity_date(user_key)" />
+				<entry key="6"
+					value="call xfusion_user_update_lock_status(user_key,lock_status)" />
+				<entry key="7" value="call xfusion_user_update_role(user_key)" />
+				<entry key="8"
+					value="call xfusion_user_get_api_access(user_key)" />
+				<entry key="9"
+					value="call xfusion_user_get_view_access(user_key)" />
+				<entry key="10"
+					value="call xfusion_session_manage(session_id,applicaton_key,user_key)" />
+				<entry key="11"
+					value="call xfusion_roles_get_all(user_key,user_id)" />
+				<entry key="12"
+					value="call xfusion_users_get_by_application(user_key,user_id,applicationid)" />
+				<entry key="13"
+					value="call xfusion_users_get_by_organization(organizationid)" />
+				<entry key="14" value="call xfusion_users_get_by_role(roleid)" />
+				<entry key="15"
+					value="call xfusion_application_create(user_key,user_id,applications_name,alias,application_url,description,view_url,api_url,service_url,file_path,logo_file_path)" />
+				<entry key="16"
+					value="call xfusion_validate_accesskey_url(access_key,url)" />
+				<entry key="17"
+					value="call xfusion_password_forgot_code(user_id)" />
+				<entry key="18"
+					value="call xfusion_password_reset(access_code,new_password)" />
+				<entry key="19"
+					value="call xfusion_application_get_all(user_key,user_id)" />
+				<entry key="20"
+					value="call xfusion_role_create(user_key,user_id,application_id,role_name,csv_attributes,csv_attributes_alias,csv_data_types,csv_regex,csv_is_required)" />
+				<entry key="21"
+					value="call xfusion_roles_get_all_by_user_application(user_key,user_id,application_id)" />
+				<entry key="22"
+					value="call xfusion_application_update(user_key,user_id,application_id,application_alias,application_url,description,service_url,api_url,view_url,file_path,logo_file_path)" />
+				<entry key="23"
+					value="call xfusion_role_update(user_key,user_id,role_id,role_name,csv_attributes,csv_attributes_alias,csv_data_types,csv_regex,csv_is_required)" />
+				<entry key="24"
+					value="call xfusion_application_delete(user_key,user_id,application_id)" />
+				<entry key="25"
+					value="call xfusion_role_delete(user_key,user_id,application_id,role_id)" />
+				<entry key="26"
+					value="call xfusion_user_create(email,password,password_question,password_answer,is_approved,application_id,role_id,csv_attributes_id,csv_attributes_alias,csv_attributes_value)" />
+				<entry key="27"
+					value="call xfusion_user_update(user_key,user_id,edit_user_id,email,role_id,csv_attributes_id,csv_attributes_alias,csv_attributes_value)" />
+				<entry key="28"
+					value="call xfusion_user_delete(user_key,user_id,delete_user_id)" />
+				<entry key="29"
+					value="call xfusion_users_get_all(user_key,user_id)" />
+				<entry key="31"
+					value="call xfusion_api_get_by_application(user_key,user_id,application_id)" />
+				<entry key="32"
+					value="call xfusion_permission_api_role_reset(user_key,user_id,role_id,api_ids,is_bit)" />
+				<entry key="33"
+					value="call xfusion_permission_api_get_all(user_key,user_id,role_id)" />
+				<entry key="34"
+					value="call xfusion_permission_view_get_all(user_key,user_id,role_id)" />
+				<entry key="35"
+					value="call xfusion_permission_view_role_reset(user_key,user_id,role_id,view_id,is_bit)" />
+				<entry key="36"
+					value="call xfusion_view_insert(user_key,user_id,application_id,view_name,view_url,is_added)" />
+				<entry key="37"
+					value="call xfusion_view_get_by_application(user_key,user_id,application_id)" />
+				<entry key="38"
+					value="call xfusion_api_get_all_by_application(user_key,user_id,application_id)" />
+				<entry key="39"
+					value="call xfusion_api_delete(user_key,user_id,api_id)" />
+
+				<entry key="40"
+					value="call xfusion_api_update(user_key,user_id,api_id,api_name,api_url)" />
+				<entry key="41"
+					value="call xfusion_view_get_all_by_application(user_key,user_id,application_id)" />
+				<entry key="42"
+					value="call xfusion_view_delete(user_key,user_id,api_id)" />
+
+				<entry key="43"
+					value="call xfusion_view_update(user_key,user_id,api_id,api_name,api_url)" />
+				<entry key="44"
+					value="call xfusion_api_update_multiple(user_key,user_id,api_id,api_name,api_url,is_added)" />
+				<entry key="45"
+					value="call xfusion_view_update_multiple(user_key,user_id,view_id,view_name,view_url,is_added)" />
+				<entry key="46"
+					value="call xfusion_permission_view_get_all_by_application(user_key,user_id,application_id)" />
+				<entry key="47"
+					value="call xfusion_permission_api_get_all_by_application(user_key,user_id,application_id)" />
+				<entry key="48"
+					value="call xfusion_users_get_all_except_application(user_key,user_id,application_id)" />
+				<entry key="49"
+					value="call xfusion_application_user_add(user_key,user_id,edit_user_id,edit_role_id)" />
+
+				<entry key="52"
+					value="call xfusion_audit_log_get_all(user_key,user_id,application_key,from_date,end_date)" />
+
+				<entry key="55"
+					value="call xfusion_users_get_by_application_key(user_key,user_id,application_key)" />
+				<entry key="56"
+					value="call xfusion_audit_log_get_all_limit(user_key,user_id,application_key,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="57"
+					value="call xfusion_audit_log_count(user_key,user_id,application_key,from_date,end_date,in_condition)" />
+				<entry key="58"
+					value="call xfusion_application_user_remove(user_key,user_id,edit_user_id,edit_role_id)" />
+				<entry key="59"
+					value="call xfusion_user_inactive(user_key,user_id,inactive_user_id,isactive_status)" />
+				<entry key="60"
+					value="call xfusion_user_update_lock_status(user_key,user_id,edit_user_id,lock_status)" />
+				<entry key="61"
+					value="call xfusion_user_profile_create(username,password,password_question,password_answer,is_approved,application_id,role_id,first_name,last_name,country,state,city,preferred_number,phone_numbers,address,creation_date,is_permanent_address,image_path,thumbail_image_path,csv_attributes_id,csv_attributes_alias,csv_attributes_value)" />
+				<entry key="62" value="call xfusion_country_get()" />
+				<entry key="63"
+					value="call xfusion_state_get_by_country_id(country_id)" />
+				<entry key="64"
+					value="call xfusion_city_get_by_state_id(state_id)" />
+				<entry key="65"
+					value="call xfusion_user_profile_update(user_key,user_id,email,first_name,last_name,country,state,city,preferred_number,phone_numbers,address,is_anonymous,is_deleted,last_activity_date,is_permanent_address,image_path,thumbail_image_path)" />
+				<entry key="66"
+					value="call xfusion_user_details_get_by_user_id(user_key,user_id)" />
+				<entry key="67"
+					value="call xfusion_datatype_get_datatype(user_key,user_id)" />
+				<entry key="68"
+					value="call xfusion_role_attribute_delete(user_key,user_id,role_id,attribute_id)" />
+				<entry key="69"
+					value="call xfusion_role_update_attribute(user_key,user_id,role_id,attribute_id,attribute_name,attribute_alias,attribute_data_type,attribute_reg_ex,attribute_is_required)" />
+				<entry key="70"
+					value="call xfusion_role_update(user_key,user_id,role_id,role_name)" />
+				<entry key="71"
+					value="call xfusion_role_add_attribute(user_key,user_id,role_id,attribute_name,attribute_alias,attribute_data_type,attribute_reg_ex,attribute_is_required)" />
+				<entry key="72"
+					value="call xfusion_attributes_get_by_role (user_key,user_id,role_id)" />
+				<entry key="73"
+					value="call xfusion_user_update_attribute(user_key,user_id,member_user_key,member_user_id,role_id,attribute_id,attribute_value)" />
+				<entry key="74"
+					value="call xfusion_user_get_attribute(user_key,user_id,role_id,member_user_key,member_user_id)" />
+				<entry key="75"
+					value="call xfusion_user_update_by_user_id(user_key,user_id,edit_user_id,edit_user_key,application_id,edit_role_ids,email,first_name,last_name,country,state,city,preferred_number,phone_numbers,address,is_anonymous,is_deleted,last_activity_date,is_permanent_address,image_path,thumbail_image_path,csv_attributes_id,csv_attributes_alias,csv_attributes_value)" />
+				<entry key="76"
+					value="call xfusion_applications_get_by_id(user_key,user_id)" />
+				<entry key="77"
+					value="call xfusion_exception_log_get_all(user_key,user_id,application_key,from_date,end_date,limit,offset,in_condition)" />
+
+				<entry key="80"
+					value="call xfusion_exception_log_count(user_key,user_id,application_key,from_date,end_date,in_condition)" />
+
+				<entry key="30" value="call xfusion_api_insert(?,?,?,?,?,?)" />
+				<entry key="50"
+					value="call xfusion_audit_log_insert(?,?,?,?,?,?,?,?)" />
+				<entry key="51"
+					value="call xfusion_exception_log_insert(?,?,?,?,?,?,?)" />
+				<entry key="53"
+					value="call xfusion_view_access_get_by_application(?)" />
+				<entry key="54"
+					value="call xfusion_api_access_get_by_application(?)" />
+				<entry key="78" value="call xfusion_user_otp_insert(?,?,?)" />
+				<entry key="79" value="call xfusion_user_get_by_user_id(?)" />
+
+				<entry key="81" value="call xfusion_otp_get_by_user(?,?)" />
+				<entry key="82"
+					value="call xfusion_auth_validate_token(user_key,user_id,token,application_key,token_type)" />
+				<entry key="83"
+					value="call xfusion_users_logged_in(user_key,user_id,application_key)" />
+				<entry key="84"
+					value="call xfusion_auth_token_delete(user_key,user_id,token)" />
+				<entry key="85"
+					value="call xfusion_auth_session_check(user_key,user_id,application_key,token)" />
+				<entry key="86"
+					value="call xfusion_auth_session_update(delete_previous_session,create_new_session,user_key,user_id,application_key,token)" />
+				<entry key="87"
+					value="call xfusion_auth_session_configure(user_key,user_id,user_list,is_password_expire,password_expire_time,is_session_enable,is_single_sign_on_enable,session_expire_time)" />
+				<entry key="88"
+					value="call xfusion_auth_session_delete_settings(user_key,user_id,user_list)" />
+				<entry key="89"
+					value="call xfusion_users_get_all_by_application_key(user_key,user_id,application_key)" />
+				<entry key="90"
+					value="call xfusion_roles_get_all_by_user_application_id(user_key,user_id,application_id)" />
+				<entry key="91"
+					value="call xfusion_roles_get_all_by_user_application_key(user_key,user_id,application_key)" />
+				<entry key="92"
+					value="call xfusion_role_inherit_permissions(user_key,user_id,role,assign_to_role)" />
+				<entry key="93" value="call xfusion_check_grafana()" />
+				<entry key="94"
+					value="call xfusion_api_get_all_permissions(user_key,user_id,role_id)" />
+			</map>
+		</property>
+	</bean>
+
+	<bean class="com.springiot.constant.GrafanaParameter"
+		id="GrafanaParameter">
+		<property name="grafanaAPI"
+			value="http://127.0.0.1:7878/AIDashboard" />
+	</bean>
+
+	<bean id="emailStatus" class="com.springiot.email.EmailStatus">
+		<property name="username" value="test-reply@barcindia.co.in" />
+		<property name="password" value="Barcindia123" />
+		<property name="socketPort" value="465" />
+		<property name="socketClass"
+			value="javax.net.ssl.SSLSocketFactory" />
+		<property name="authEmail" value="true" />
+		<property name="emailHost" value="smtp.office365.com" />
+		<property name="emailPort" value="587" />
+		<property name="to" value="test-reply@barcindia.co.in" />
+		<property name="bcc" value="test-reply@barcindia.co.in" />
+		<property name="cc" value="test-reply@barcindia.co.in" />
+		<property name="attachment" value="" />
+		<property name="subject" value="Forgot 
+		Password" />
+		<property name="msgFromStatus" value="BARC BUDDE" />
+		<property name="signUpSubject" value="User Verification" />
+		<property name="msgSignUpTime" value="xFusion-Platform" />
+	</bean>
+
+	<!-- <bean id="emailStatus" class="com.springiot.email.EmailStatus"> <property 
+		name="username" value="xfusiondonotreply@gmail.com" /> <property name="password" 
+		value="temp@123" /> <property name="socketPort" value="465" /> <property 
+		name="socketClass" value="javax.net.ssl.SSLSocketFactory" /> <property name="authEmail" 
+		value="true" /> <property name="emailHost" value="smtp.gmail.com" /> <property 
+		name="emailPort" value="587" /> <property name="to" value="xfusiondonotreply@gmail.com" 
+		/> <property name="cc" value="xfusiondonotreply@gmail.com" /> <property name="bcc" 
+		value="xfusiondonotreply@gmail.com" /> <property name="attachment" value="" 
+		/> <property name="subject" value="Forgot Password" /> <property name="msgFromStatus" 
+		value="Authorization Engine" /> <property name="signUpSubject" value="User 
+		Verification" /> <property name="msgSignUpTime" value="xFusion-Platform" 
+		/> </bean> -->
+
+	<!-- <bean id="emailStatus" class="com.springiot.email.EmailStatus"> <property 
+		name="username" value="noreplycelebicargo@gmail.com" /> <property name="password" 
+		value="ttpl@123" /> <property name="socketPort" value="465" /> <property 
+		name="socketClass" value="javax.net.ssl.SSLSocketFactory" /> <property name="authEmail" 
+		value="true" /> <property name="emailHost" value="smtp.gmail.com" /> <property 
+		name="emailPort" value="587" /> <property name="to" value="noreplycelebicargo@gmail.com" 
+		/> <property name="cc" value="noreplycelebicargo@gmail.com" /> <property 
+		name="bcc" value="noreplycelebicargo@gmail.com" /> <property name="attachment" 
+		value="" /> <property name="subject" value="Forgot Password" /> <property 
+		name="msgFromStatus" value="Authorization Engine" /> <property name="signUpSubject" 
+		value="User Verification" /> <property name="msgSignUpTime" value="xFusion-Platform" 
+		/> </bean> -->
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="50000000" />
+	</bean>
+
+</beans>

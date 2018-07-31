@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<table border="1" cellpadding="2" cellspacing="0" style="table-layout: fixed; width: 100%; font-size: 9px; font-family:"Bookman Old Style";  border-collapse: collapse; border: 1px solid #000">
+	<tr style="height: 20px;">
+		<td colspan="1" rowspan="2" style="padding: 5px 3px 7px 5px; border-top: 1px solid #000000; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; text-align: center;">
+		<span>
+		<div style="max-height: 59px">
+			<img alt=" " src="$!object.logo" style="height: 50px; margin: auto;">
+		</div>
+		</span></td>
+		<td colspan="14" style="padding: 5px 3px 7px 5px; border-top: 1px solid #000000; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 13px; vertical-align: middle; text-align: center;">
+		<span>
+		<div style="max-height: 39px">
+			PERFORMANCE AND ENDURANCE TESTING LAB REPORT</div>
+		</span></td>
+	</tr>
+	<tr style="height: 20px;">
+		<td colspan="14" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 13px; text-align: center;">
+		SQA HMCL GURGAON</td>
+	</tr>
+	<tr style="height: 20px;">
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: left;">
+		PART NAME</td>
+		<td colspan="3" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: left; font-family:"Century";">
+		&nbsp;$!object.header.get(0).part_name</td>
+		<td colspan="3" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: left;">
+		HMCL PART CODE</td>
+		<td colspan="3" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: left; font-family:"Century";">
+		&nbsp;$!object.header.get(0).hmcl_part_code </td>
+		<td colspan="2" rowspan="2" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: left;">
+		<span>
+		<div style="max-height: 39px">
+			REPORT DATE</div>
+		</span></td>
+		<td colspan="2" rowspan="2" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: left; font-family:"Century";">
+		<span>
+		<div style="max-height: 39px">
+			&nbsp;$!object.header.get(0).report_date.replace("00:00:00.0","")</div>
+		</span></td>
+	</tr>
+	<tr style="height: 20px;">
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: left;">
+		VENDOR NAME/CODE</td>
+		<td colspan="3" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: left; font-family:"Century";">
+		&nbsp;$!object.header.get(0).vendor_name /$!object.header.get(0).vendor_code</td>
+		<td colspan="3" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: left;">
+		VENDOR PART CODE</td>
+		<td colspan="3" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: left; font-family:"Century";">
+		&nbsp;$!object.header.get(0).vendor_part_code</td>
+	</tr>
+	<tr style="height: 20px;">
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: left;">
+		PLANT</td>
+		<td colspan="3" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: left; font-family:"Century";">
+		&nbsp;$!object.header.get(0).plant</td>
+		<td colspan="3" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: left;">
+		VENDOR MFG LOCATION</td>
+		<td colspan="3" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: left; font-family:"Century";">
+		&nbsp;$!object.header.get(0).vendor_mfg_location</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: left;">
+		TEST START DATE</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: left; font-family:"Century";">
+		&nbsp;$!object.header.get(0).test_start_date.replace("00:00:00.0","")</td>
+	</tr>
+	<tr style="height: 20px;">
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: left;">
+		INSPECTION LOT NO</td>
+		<td colspan="3" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: left; font-family:"Century";">
+		&nbsp;$!object.header.get(0).inspection_lot_no</td>
+		<td colspan="3" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: left;">
+		INSPECTION LOT QTY</td>
+		<td colspan="3" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: left; font-family:"Century";">
+		&nbsp;$!object.header.get(0).inspection_lot_qty</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: left;">
+		TEST END DATE</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: left; font-family:"Century";">
+		&nbsp;$!object.header.get(0).test_end_date.replace("00:00:00.0","")</td>
+	</tr>
+	<tr style="height: 20px;">
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: left;">
+		INSPECTION LOT DATE</td>
+		<td colspan="3" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: left; font-family:"Century";">
+		&nbsp;$!object.header.get(0).inspection_lot_date.replace("00:00:00.0","")</td>
+		<td colspan="3" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: left;">
+		PART MFG DATE</td>
+		<td colspan="3" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: left; font-family:"Century";">
+		&nbsp;$!object.header.get(0).part_mfg_date.replace("00:00:00.0","")</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: left;">
+		NO OF SAMPLES</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: left; font-family:"Century";">
+		&nbsp;$!object.header.get(0).no_of_samples Nos</td>
+	</tr>
+	<tr style="height: 20px;">
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: left;">
+		TYPE OF TEST</td>
+		<td colspan="13" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: left; font-family:"Century";">
+		&nbsp;$!object.header.get(0).testing_type</td>
+	</tr>
+	<tr style="height: 20px;">
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: left;">
+		OBJECTIVE</td>
+		<td colspan="13" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: left; font-family:"Century";">
+		&nbsp;$!object.header.get(0).objective</td>
+	</tr>
+	<tr style="height: 20px;">
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: left;">
+		DETAILS OF MODIFICATION</td>
+		<td colspan="13" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: left; font-family:"Century";">
+		&nbsp;$!object.header.get(0).part_modification_detail</td>
+	</tr>
+	
+	<tr style="height: 20px;">
+		<td colspan="2" rowspan="2" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: left;">
+		<span>
+		<div style="max-height: 100px">
+			TEST CONDITION AND METHOD</div>
+		</span></td>
+		<td colspan="6" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		AS PER STANDARD</td>
+		<td colspan="7" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		ACTUAL TEST CONDITION</td>
+	</tr>
+	<tr style="height: 20px;">
+		<td colspan="6" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: left; font-family:"Century";">
+		$!object.header.get(0).test_method
+		</td>
+		<td colspan="7" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: left; font-family:"Century";">
+		&nbsp;$!object.header.get(0).test_condition</td>
+	</tr>
+	<tr style="height: 20px;">
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: left;">
+		TEST DURATION</td>
+		<td colspan="5" rowspan="1" style="padding: 5px 3px 7px 5px; background-color: #b6dde8; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:Century; font-size: 9px; vertical-align: middle; text-align: left;">
+		<strong>&nbsp;$!object.header.get(0).test_duration CYCLES</strong> </td>
+		<td colspan="3" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: left;">
+		TEST STANDARD</td>
+		<td colspan="5" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: left; font-family:"Century";">
+		&nbsp;$!object.header.get(0).test_standard</td>
+	</tr>
+	<tr style="height: 20px;">
+		<td colspan="3" rowspan="2" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		<span>
+		<div style="max-height: 39px">
+			ITEMS</div>
+		</span></td>
+		<td colspan="2" rowspan="2" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		<span>
+		<div style="max-height: 39px">
+			TEST REQUIRMENT AND SPEC</div>
+		</span></td>
+		<td colspan="5" rowspan="1" style="padding: 5px 3px 7px 5px; background-color: #dbe4f0; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		BEFORE TEST RESULT</td>
+		<td colspan="5" rowspan="1" style="padding: 5px 3px 7px 5px; background-color: #ddd9c3; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		AFTER TEST RESULT</td>
+	</tr>
+	<tr style="height: 20px;">
+		<td style="padding: 5px 3px 7px 5px; background-color: #dbe4f0; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		N1</td>
+		<td style="padding: 5px 3px 7px 5px; background-color: #dbe4f0; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		N2</td>
+		<td style="padding: 5px 3px 7px 5px; background-color: #dbe4f0; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		N3</td>
+		<td style="padding: 5px 3px 7px 5px; background-color: #dbe4f0; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		N4</td>
+		<td style="padding: 5px 3px 7px 5px; background-color: #dbe4f0; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		N5</td>
+		<td style="padding: 5px 3px 7px 5px; background-color: #ddd9c3; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		N1</td>
+		<td style="padding: 5px 3px 7px 5px; background-color: #ddd9c3; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		N2</td>
+		<td style="padding: 5px 3px 7px 5px; background-color: #ddd9c3; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		N3</td>
+		<td style="padding: 5px 3px 7px 5px; background-color: #ddd9c3; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		N4</td>
+		<td style="padding: 5px 3px 7px 5px; background-color: #ddd9c3; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		N5</td>
+	</tr>
+	<tr style="height: 20px;">
+		<td colspan="3" rowspan="1"style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: left;">
+		MIN. OPERATION VOLTAGE</td>
+		<td colspan="1" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(0).operation_voltage_min_specification</td>
+		<td colspan="1" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(0).operation_voltage_max_specification8V MAX.</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(0).operation_voltage_before </td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(1).operation_voltage_before</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(2).operation_voltage_before</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(3).operation_voltage_before</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(4).operation_voltage_before</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(0).operation_voltage_after</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(1).operation_voltage_after</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(2).operation_voltage_after</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #ff0000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(3).operation_voltage_after</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(4).operation_voltage_after</td>
+	</tr>
+	<tr style="height: 20px;">
+		<td colspan="3" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: left;">
+		RESET VOLTAGE</td>
+		<td colspan="1" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(0).reset_voltage_min_specification </td>
+		<td colspan="1" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(0).reset_voltage_max_specification </td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(0).reset_voltage_before </td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(1).reset_voltage_before</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(2).reset_voltage_before</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(3).reset_voltage_before </td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(4).reset_voltage_before</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(0).reset_voltage_after</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(1).reset_voltage_after</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(2).reset_voltage_after </td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; font-weight: bold; color: #ff0000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(3).reset_voltage_after </td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(4).reset_voltage_after</td>
+	</tr>
+	<tr style="height: 20px;">
+		<td  colspan="3" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: left;">
+		COIL CURRENT</td>
+		<td colspan="1" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(0).coil_current_min_specification</td>
+		<td colspan="1" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(0).coil_current_max_specificationMAX.</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(0).coil_current_before </td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(1).coil_current_before </td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(2).coil_current_before</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(3).coil_current_before</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(4).coil_current_before</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(0).coil_current_after </td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(1).coil_current_after </td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(2).coil_current_after </td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(3).coil_current_after</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(4).coil_current_after</td>
+	</tr>
+	<tr style="height: 20px;">
+		<td  colspan="3" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: left;">
+		CONTACT VOLTAGE DROP</td>
+		<td colspan="1" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(0).contact_point_voltage_drop_min_specificationAT </td>
+		<td colspan="1" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(0).contact_point_voltage_drop_max_specification0.</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(0).contact_point_voltage_drop_before</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(1).contact_point_voltage_drop_before </td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(2).contact_point_voltage_drop_before</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(3).contact_point_voltage_drop_before</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(4).contact_point_voltage_drop_before</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(0).contact_point_voltage_drop_after</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(1).contact_point_voltage_drop_after</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(2).contact_point_voltage_drop_after </td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(3).contact_point_voltage_drop_after</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(4).contact_point_voltage_drop_after</td>
+	</tr>
+	<tr style="height: 20px;">
+		<td  colspan="3" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: left;">
+		INSULATION RESISTANCE</td>
+		<td colspan="1" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(0).insulation_resistance_min_specification</td>
+		<td colspan="1" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(0).insulation_resistance_max_specification</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(0).insulation_resistance_before </td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(1).insulation_resistance_before </td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(2).insulation_resistance_before </td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(3).insulation_resistance_before </td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(4).insulation_resistance_before </td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(0).insulation_resistance_after </td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(1).insulation_resistance_after </td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(2).insulation_resistance_after </td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(3).insulation_resistance_after </td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(4).insulation_resistance_after </td>
+	</tr>
+	<tr style="height: 20px;">
+		<td  colspan="3" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: left;">
+		APPEARANCE</td>
+		<td colspan="1" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(0).appearance_min_specification</td>
+		<td colspan="1" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(0).appearance_max_specification</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(0).appearance_before</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(1).appearance_before</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(2).appearance_before</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(3).appearance_before</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(4).appearance_before</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(0).appearance_after</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(1).appearance_after </td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(2).appearance_after</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(3).appearance_after</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(4).appearance_after</td>
+	</tr>
+	<tr style="height: 20px;">
+		<td  colspan="3" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: left;">
+		LOAD CURRENT</td>
+		<td colspan="1" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(0).load_current_min_specification</td>
+		<td colspan="1" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(0).load_current_max_specification</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(0).load_current_before</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(1).load_current_before</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(2).load_current_before</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(3).load_current_before</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(4).load_current_before</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(0).load_current_after</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(1).load_current_after </td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(2).load_current_after</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(3).load_current_after</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(4).load_current_after</td>
+	</tr>
+	<tr style="height: 20px;">
+		<td colspan="5" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		CYCLE</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(0).cycle_before</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(1).cycle_before</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(2).cycle_before</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(3).cycle_before</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(4).cycle_before</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(0).cycle_after</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(1).cycle_after </td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(2).cycle_after</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(3).cycle_after</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: center; font-family:"Century";">
+		$!object.grid.get(4).cycle_after</td>
+	</tr>
+	<tr style="height: 20px;">
+		<td colspan="5" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		JUDGEMENT</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		<strong>#if($!object.grid.get(0).judgement_before == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		<strong>#if($!object.grid.get(1).judgement_before == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		<strong>#if($!object.grid.get(2).judgement_before == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		<strong>#if($!object.grid.get(3).judgement_before == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		<strong>#if($!object.grid.get(4).judgement_before == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		<strong>#if($!object.grid.get(0).judgement_after == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		<strong>#if($!object.grid.get(1).judgement_after == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		<strong>#if($!object.grid.get(2).judgement_after == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		<strong>#if($!object.grid.get(3).judgement_after == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		<strong>#if($!object.grid.get(4).judgement_after == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+	</tr>
+	<tr style="height: 20px;">
+		<td colspan="15" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: left;">
+		PHOTOGRAPHS:-</td>
+	</tr>
+	<tr style="height: 20px;">
+		<td colspan="7" rowspan="1" style="padding: 5px 3px 7px 5px; background-color: #dbe4f0; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		BEFORE TEST</td>
+		<td colspan="8" rowspan="1" style="padding: 5px 3px 7px 5px; background-color: #ddd9c3; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		AFTER TEST</td>
+	</tr>
+	<tr style="height: 20px;">
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		N1</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">
+		</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		N2</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">
+		</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		N3</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		N1</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">
+		</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		N2</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">
+		</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		N3</td>
+	</tr>
+	<tr >
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000;">
+		#foreach ($beforeN1 in $!object.beforeImageN1) 
+						#if ($beforeN1.image_path)
+							<img src="$beforeN1.image_path" alt=" " height="250" > <br>
+			    		#end
+						
+					#end </td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">
+		</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">
+		#foreach ($beforeN2 in $!object.beforeImageN2) 
+						#if ($beforeN2.image_path)
+							<img src="$beforeN2.image_path" alt=" " height="250" > <br>
+			    		#end
+						
+					#end </td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">
+		</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">
+		#foreach ($beforeN3 in $!object.beforeImageN3) 
+						#if ($beforeN3.image_path)
+							<img src="$beforeN3.image_path" alt=" " height="250" > <br>
+			    		#end
+						
+					#end </td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">
+		#foreach ($afterN1 in $!object.afterImageN1)
+							 #if ($afterN1.image_path)
+								<img src="$afterN1.image_path" alt=" " height="250" > <br>
+			    			#end
+						
+						#end </td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">
+		</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">
+		#foreach ($afterN2 in $!object.afterImageN2)
+							 #if ($afterN2.image_path)
+								<img src="$afterN2.image_path" alt=" " height="250" > <br>
+			    			#end
+						
+						#end </td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">
+		</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">
+		#foreach ($afterN3 in $!object.afterImageN3)
+							 #if ($afterN3.image_path)
+								<img src="$afterN3.image_path" alt=" " height="250" > <br>
+			    			#end
+						
+						#end </td>
+	</tr>
+	<tr style="height: 20px;">
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		N4</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">
+		</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		N5</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">
+		</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">
+		</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		N4</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">
+		</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		N5</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">
+		</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">
+		</td>
+	</tr>
+	<tr >
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000;">
+		#foreach ($beforeN4 in $!object.beforeImageN4) 
+						#if ($beforeN4.image_path)
+							<img src="$beforeN4.image_path" alt=" " height="250" > <br>
+			    		#end
+						
+					#end</td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">
+		</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">
+		#foreach ($beforeN5 in $!object.beforeImageN5) 
+						#if ($beforeN5.image_path)
+							<img src="$beforeN5.image_path" alt=" " height="250" > <br>
+			    		#end
+						
+					#end </td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">
+		</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">
+		</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">
+		#foreach ($afterN4 in $!object.afterImageN4)
+							 #if ($afterN4.image_path)
+								<img src="$afterN4.image_path" alt=" " height="250" > <br>
+			    			#end
+						
+						#end </td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">
+		</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">
+		#foreach ($afterN5 in $!object.afterImageN5)
+							 #if ($afterN5.image_path)
+								<img src="$afterN5.image_path" alt=" " height="250" > <br>
+			    			#end
+						
+						#end </td>
+		<td style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">
+		</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">
+		</td>
+	</tr>
+	<tr style="height: 20px;">
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: left;">
+		OBSERVATION :-</td>
+		<td colspan="13" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; color: #000000; vertical-align: middle; text-align: left; font-family:"Century";">
+		#foreach ($observation in $!object.observation) 
+		$!observation.observation <br>
+		#end</td>
+	</tr>
+	<tr style="height: 20px;">
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: left;">
+		CONCLUSION :-</td>
+		<td colspan="13" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9px; vertical-align: middle; text-align: left; font-family:"Century";">
+		<strong>$!object.result.get(0).result #foreach ($conclusion in $!object.conclusion) $!conclusion.conclusion
+		<br/>#end</strong></td>
+	</tr>
+	<tr style="height: 20px;">
+		<td colspan="5" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		TESTED BY </td>
+		<td colspan="5" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		VERIFIED BY </td>
+		<td colspan="5" rowspan="1" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">
+		APPROVED BY</td>
+	</tr>
+	<tr >
+		<td colspan="5" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">#if ($object.signature.image_path_tested_by)
+				<br/><img alt="" align="center" height="30" src="$!object.signature.image_path_tested_by" /><br/>
+	    	#end</td>
+		<td colspan="5" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">#if ($object.signature.image_path_verified_by)
+				<img alt="" align="center" height="30" src="$!object.signature.image_path_verified_by" />
+	    	#end</td>
+		<td colspan="5" style="padding: 5px 3px 7px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-weight: bold; font-size: 9px; vertical-align: middle; text-align: center;">#if ($object.signature.image_path_approved_by)
+				<img alt="" align="center" height="30" src="$!object.signature.image_path_approved_by" />
+			#end</td>
+	</tr>
+</table>
+
+</body>
+
+</html>

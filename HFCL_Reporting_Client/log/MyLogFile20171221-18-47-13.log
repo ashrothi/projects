@@ -1,0 +1,9 @@
+INFO - Inside Initialize method
+INFO -  Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/get/devices/by/devicetype
+INFO - Response Code is:   200
+INFO - Response : {"description":null,"object":null,"list":null,"valid":false}
+INFO - Exception occur in getting devices.
+INFO -  Api Url:null
+INFO - apiResponse  : 
+INFO -  Api Url:null
+INFO - apiResponse : 

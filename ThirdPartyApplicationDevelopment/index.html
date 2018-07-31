@@ -1,0 +1,541 @@
+<!doctype html>
+<html>
+  <head>
+    <title>GlobeTouch Notification API</title>
+    <style type="text/css">
+      body {
+	font-family: Trebuchet MS, sans-serif;
+	font-size: 15px;
+	color: #444;
+	margin-right: 24px;
+}
+
+h1	{
+	font-size: 25px;
+}
+h2	{
+	font-size: 20px;
+}
+h3	{
+	font-size: 16px;
+	font-weight: bold;
+}
+hr	{
+	height: 1px;
+	border: 0;
+	color: #ddd;
+	background-color: #ddd;
+}
+
+.app-desc {
+  clear: both;
+  margin-left: 20px;
+}
+.param-name {
+  width: 100%;
+}
+.license-info {
+  margin-left: 20px;
+}
+
+.license-url {
+  margin-left: 20px;
+}
+
+.model {
+  margin: 0 0 0px 20px;
+}
+
+.method {
+  margin-left: 20px;
+}
+
+.method-notes	{
+	margin: 10px 0 20px 0;
+	font-size: 90%;
+	color: #555;
+}
+
+pre {
+  padding: 10px;
+  margin-bottom: 2px;
+}
+
+.http-method {
+ text-transform: uppercase;
+}
+
+pre.get {
+  background-color: #0f6ab4;
+}
+
+pre.post {
+  background-color: #10a54a;
+}
+
+pre.put {
+  background-color: #c5862b;
+}
+
+pre.delete {
+  background-color: #a41e22;
+}
+
+.huge	{
+	color: #fff;
+}
+
+pre.example {
+  background-color: #f3f3f3;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+code {
+  white-space: pre;
+}
+
+.nickname {
+  font-weight: bold;
+}
+
+.method-path {
+  font-size: 1.5em;
+  background-color: #0f6ab4;
+}
+
+.up {
+  float:right;
+}
+
+.parameter {
+  width: 500px;
+}
+
+.param {
+  width: 500px;
+  padding: 10px 0 0 20px;
+  font-weight: bold;
+}
+
+.param-desc {
+  width: 700px;
+  padding: 0 0 0 20px;
+  color: #777;
+}
+
+.param-type {
+  font-style: italic;
+}
+
+.param-enum-header {
+width: 700px;
+padding: 0 0 0 60px;
+color: #777;
+font-weight: bold;
+}
+
+.param-enum {
+width: 700px;
+padding: 0 0 0 80px;
+color: #777;
+font-style: italic;
+}
+
+.field-label {
+  padding: 0;
+  margin: 0;
+  clear: both;
+}
+
+.field-items	{
+	padding: 0 0 15px 0;
+	margin-bottom: 15px;
+}
+
+.return-type {
+  clear: both;
+  padding-bottom: 10px;
+}
+
+.param-header {
+  font-weight: bold;
+}
+
+.method-tags {
+  text-align: right;
+}
+
+.method-tag {
+  background: none repeat scroll 0% 0% #24A600;
+  border-radius: 3px;
+  padding: 2px 10px;
+  margin: 2px;
+  color: #FFF;
+  display: inline-block;
+  text-decoration: none;
+}
+
+    </style>
+  </head>
+  <body>
+  <h1>GlobeTouch Notification API</h1>
+    <div class="app-desc">Move your app forward with the GlobeTouch Notification API</div>
+    <div class="app-desc">More information: <a href="https://helloreverb.com">https://helloreverb.com</a></div>
+    <div class="app-desc">Contact Info: <a href="hello@helloreverb.com">hello@helloreverb.com</a></div>
+    <div class="app-desc">Version: 1.0.0</div>
+    <div class="app-desc">BasePath:/NotificationCenterApplication</div>
+    <div class="license-info">All rights reserved</div>
+    <div class="license-url">http://apache.org/licenses/LICENSE-2.0.html</div>
+  <h2>Access</h2>
+
+  <h2><a name="__Methods">Methods</a></h2>
+  [ Jump to <a href="#__Models">Models</a> ]
+
+  <h3>Table of Contents </h3>
+  <div class="method-summary"></div>
+  <h4><a href="#Mail">Mail</a></h4>
+  <ul>
+  <li><a href="#mailNotificationPost"><code><span class="http-method">post</span> /mail/notification</code></a></li>
+  </ul>
+  <h4><a href="#SMS">SMS</a></h4>
+  <ul>
+  <li><a href="#smsNotificationPost"><code><span class="http-method">post</span> /sms/notification</code></a></li>
+  </ul>
+  <h4><a href="#Webhooks">Webhooks</a></h4>
+  <ul>
+  <li><a href="#webhooksNotificationPost"><code><span class="http-method">post</span> /webhooks/notification</code></a></li>
+  </ul>
+
+  <h1><a name="Mail">Mail</a></h1>
+  <div class="method"><a name="mailNotificationPost"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /mail/notification</code></pre></div>
+    <div class="method-summary">Notification as Mail. (<span class="nickname">mailNotificationPost</span>)</div>
+    <div class="method-notes">The /mail/notification sends Email to the user on a given Email id. 
+The response includes the Notification id.
+</div>
+
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">username (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Username for sending Email. format: string</div><div class="param">token (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Auth Token for accessing API. format: string</div><div class="param">ip_address (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; IP Adrress. format: string</div><div class="param">end_node_name (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; End Node Name. format: string</div><div class="param">notificationmsg (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Notification Message. format: string</div><div class="param">notificationtype (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Notification Type. format: string</div><div class="param">smtpdetails (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; SMTP Details for sending Email. format: string</div><div class="param">smtpPort (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; SMTP Port for sending Email. format: string</div><div class="param">smtpusernameusername (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Username for authenticating the SMTP. format: string</div><div class="param">smtppasswordpassword (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Password for authenticating the SMTP. format: string</div><div class="param">subject (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Subject for sending into the Mail. format: string</div><div class="param">template (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Template for setting into the Email body. format: string</div><div class="param">from (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; from address for sending Email. format: string</div><div class="param">to (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Address of user to whom mail is sent. format: string</div><div class="param">cc (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Address of user to whom carbon copy of mail is sent. format: string</div><div class="param">bcc (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Address of user to whom blind carbon copy of mail is sent. format: string</div>
+    </div>  <!-- field-items -->
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      array[<a href="#Notification">Notification</a>]
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>[ {
+  "valid" : "aeiou",
+  "description" : "aeiou",
+  "list" : "aeiou",
+  "object" : {
+    "notification_id" : "aeiou"
+  }
+} ]</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    An array of products
+        
+    <h4 class="field-label">401</h4>
+    Authentication Error
+        <a href="#AuthError">AuthError</a>
+    <h4 class="field-label">404</h4>
+    URL Not Found Error
+        <a href="#UrlError">UrlError</a>
+    <h4 class="field-label">500</h4>
+    Internal Server Error
+        <a href="#InternalError">InternalError</a>
+  </div> <!-- method -->
+  <hr/>
+  <h1><a name="SMS">SMS</a></h1>
+  <div class="method"><a name="smsNotificationPost"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /sms/notification</code></pre></div>
+    <div class="method-summary">Price Estimates (<span class="nickname">smsNotificationPost</span>)</div>
+    <div class="method-notes">The Price Estimates endpoint returns an estimated price range
+for each product offered at a given location. The price estimate is
+provided as a formatted string with the full price range and the localized
+currency symbol.&lt;br&gt;&lt;br&gt;The response also includes low and high estimates,
+and the [ISO 4217](http://en.wikipedia.org/wiki/ISO_4217) currency code for
+situations requiring currency conversion. When surge is active for a particular
+product, its surge_multiplier will be greater than 1, but the price estimate
+already factors in this multiplier.
+</div>
+
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">username (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Username for sending Email. format: string</div><div class="param">token (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Auth Token for accessing API format: string</div><div class="param">ip_address (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; IP Adrress. format: string</div><div class="param">end_node_name (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; End Node Name. format: string</div><div class="param">notificationmsg (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Notification Message. format: string</div><div class="param">notificationtype (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Notification Type. format: string</div><div class="param">mobileno (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Mobile number on which sms is to be sent. format: string</div><div class="param">sendurl (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; URL for sending sms. format: string</div><div class="param">smsUsername (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Username for sending sms. format: string</div><div class="param">SmsPassword (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Password for the user. format: string</div><div class="param">subject (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Subject for sending into the sms. format: string</div><div class="param">template (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Template for setting into the SMS body. format: string</div><div class="param">from (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; from number for sending SMS. format: string</div>
+    </div>  <!-- field-items -->
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      array[<a href="#Notification">Notification</a>]
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>[ {
+  "valid" : "aeiou",
+  "description" : "aeiou",
+  "list" : "aeiou",
+  "object" : {
+    "notification_id" : "aeiou"
+  }
+} ]</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    An array of price estimates by product
+        
+    <h4 class="field-label">401</h4>
+    Authentication Error
+        <a href="#AuthError">AuthError</a>
+    <h4 class="field-label">404</h4>
+    URL Not Found Error
+        <a href="#UrlError">UrlError</a>
+    <h4 class="field-label">500</h4>
+    Internal Server Error
+        <a href="#InternalError">InternalError</a>
+  </div> <!-- method -->
+  <hr/>
+  <h1><a name="Webhooks">Webhooks</a></h1>
+  <div class="method"><a name="webhooksNotificationPost"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /webhooks/notification</code></pre></div>
+    <div class="method-summary">Time Estimates (<span class="nickname">webhooksNotificationPost</span>)</div>
+    <div class="method-notes">The Time Estimates endpoint returns ETAs for all products offered at a given location, with the responses expressed as integers in seconds. We recommend that this endpoint be called every minute to provide the most accurate, up-to-date ETAs.</div>
+
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">username (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Username for sending Email. format: string</div><div class="param">token (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Auth Token for accessing API format: string</div><div class="param">ip_address (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; IP Adrress. format: string</div><div class="param">end_node_name (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; End Node Name. format: string</div><div class="param">notificationmsg (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Notification Message. format: string</div><div class="param">notificationtype (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Notification Type. format: string</div><div class="param">url (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; API url to access. format: string</div><div class="param">urlparameter (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Parameters to be passed into the API call. format: string</div><div class="param">connectionurl (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Connection URL for connecting to database. format: string</div><div class="param">connectiondriver (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Driver name for connecting to database. format: string</div><div class="param">tablename (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Datbase table name in which data is stored. format: string</div><div class="param">tableparameter (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Parameters of the table. format: string</div>
+    </div>  <!-- field-items -->
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      array[<a href="#Notification">Notification</a>]
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>[ {
+  "valid" : "aeiou",
+  "description" : "aeiou",
+  "list" : "aeiou",
+  "object" : {
+    "notification_id" : "aeiou"
+  }
+} ]</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    An array of products
+        
+    <h4 class="field-label">401</h4>
+    Authentication Error
+        <a href="#AuthError">AuthError</a>
+    <h4 class="field-label">404</h4>
+    URL Not Found Error
+        <a href="#UrlError">UrlError</a>
+    <h4 class="field-label">500</h4>
+    Internal Server Error
+        <a href="#InternalError">InternalError</a>
+  </div> <!-- method -->
+  <hr/>
+
+  <div class="up"><a href="#__Models">Up</a></div>
+  <h2><a name="__Models">Models</a></h2>
+  [ Jump to <a href="#__Methods">Methods</a> ]
+
+  <h3>Table of Contents</h3>
+  <ol>
+    <li><a href="#AuthError"><code>AuthError</code></a></li>
+    <li><a href="#InternalError"><code>InternalError</code></a></li>
+    <li><a href="#Notification"><code>Notification</code></a></li>
+    <li><a href="#Notification_object"><code>Notification_object</code></a></li>
+    <li><a href="#UrlError"><code>UrlError</code></a></li>
+  </ol>
+
+  <div class="model">
+    <h3 class="field-label"><a name="AuthError">AuthError - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">description (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Description about error in API call. </div>
+<div class="param">object (optional)</div><div class="param-desc"><span class="param-type"><a href="#Notification_object">Notification_object</a></span>  </div>
+<div class="param">list (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> if there is data. </div>
+<div class="param">valid (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> True or False </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3 class="field-label"><a name="InternalError">InternalError - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">description (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Description about error in API call. </div>
+<div class="param">object (optional)</div><div class="param-desc"><span class="param-type"><a href="#Notification_object">Notification_object</a></span>  </div>
+<div class="param">list (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> if there is data. </div>
+<div class="param">valid (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> True or False </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3 class="field-label"><a name="Notification">Notification - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">description (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Description about success of API call. </div>
+<div class="param">object (optional)</div><div class="param-desc"><span class="param-type"><a href="#Notification_object">Notification_object</a></span>  </div>
+<div class="param">list (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> if there is data. </div>
+<div class="param">valid (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> True or False </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3 class="field-label"><a name="Notification_object">Notification_object - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">notification_id (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Unique identifier for each build </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3 class="field-label"><a name="UrlError">UrlError - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">description (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Description about error in API call. </div>
+<div class="param">object (optional)</div><div class="param-desc"><span class="param-type"><a href="#Notification_object">Notification_object</a></span>  </div>
+<div class="param">list (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> if there is data. </div>
+<div class="param">valid (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> True or False </div>
+    </div>  <!-- field-items -->
+  </div>
+  </body>
+</html>

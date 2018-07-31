@@ -1,0 +1,206 @@
+<html>
+<head>
+</head>
+
+<body>
+
+<table cellpadding="0" cellspacing="0" style="table-layout: fixed; width:100%; font-size: 8px; border-collapse: collapse;">
+	<tr style="padding:5px 3px 5px 3px;vertical-align:middle;text-align:center; font-size:18px;"><th height="50">
+		#if( $object.plannerHeader.size()> 0 )
+			$!object.plannerHeader.get(0).planner_name
+		#end
+	</th></tr>
+</table>
+<table border="1" cellpadding="0" cellspacing="0" style="table-layout: fixed; width:100%; font-size: 8px; border-collapse: collapse; border: 1px solid #ccc">
+	<tr>
+		<td colspan="15" style="padding:5px 3px 5px 3px;vertical-align:middle;text-align:center"></td>
+	</tr>
+	<tr>
+		<td colspan="3" align="center" rowspan="2" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-top: 1px dotted #000000; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000; border-left: 1px dotted #000000; text-align:center;">
+		 <img src="$!object.logo" height="50" style="margin:auto;" align="center" />
+		 </td>
+		<td colspan="6" rowspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; background-color: #ffffff; border-top: 1px dotted #000000; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; height: 38px;">
+		SQA HMCL GURGAON</td>
+		
+		<td colspan="6" rowspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-top: 1px dotted #000000; border-right: 1px dotted #000000; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; height: 38px;">
+		TEST PLAN &amp; TEST DURATION</td>
+	</tr>
+	<tr style="height: 61px;">
+		<td style="padding: 5px 3px 5px 3px; vertical-align: middle; background-color: #ffffff; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;">
+		PLANNER No.</td>
+		<td style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000; color: #000000; wrap-strategy: 0; white-space: nowrap; vertical-align: middle; text-align: center;">
+		$!object.plannerno</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; background-color: #ffffff; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;">
+		PLANNER REVISION No.</td>
+		<td colspan="2" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000;">
+		
+		#if( $object.plannerHeader.size()> 0 )
+			$!object.plannerHeader.get(0).planner_version
+		#end
+		</td>
+		
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;">
+		REPEATED OPERATION DURABILITY</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;">
+		SHOWER DURABILITY</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;">
+		DUST DURABILITY</td>
+	</tr>
+	<tr style="height: 20px;">
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; background-color: #ffffff; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000; border-left: 1px dotted #000000; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;">
+		<span>
+			SL. No</span>
+			</td>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; background-color: #ffffff; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;">
+		<span>
+		
+			PART CODE
+		</span></td>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; background-color: #ffffff; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;">
+		<span>
+		
+			COMPONENT NAME
+		</span></td>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; background-color: #ffffff; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;">
+		<span>
+		
+			MODEL
+		</span></td>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; background-color: #ffffff; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;">
+		<span>
+		
+			VENDOR
+		</span></td>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;">
+		<span>
+		
+			VENDOR CODE
+		</span></td>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;">
+		<span>
+		
+			VENDOR LOCATION
+		</span></td>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;">
+		<span>
+		
+			HMCL LOCATION
+		</span></td>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;">
+		<span>
+		
+			Total No. Of SAMPLES
+		</span></td>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;">
+		<span>
+		
+			DURATION(Hours)
+		</span></td>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;">
+		<span>
+		
+			No. Of Sample
+		</span></td>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;">
+		<span>
+		
+			DURATION(Hours)
+		</span></td>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;">
+		<span>
+		
+			No. Of Sample
+		</span></td>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;">
+		<span>
+		
+			DURATION(Hours)
+		</span></td>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;">
+		<span>
+		
+			No. Of Sample
+		</span></td>
+	</tr>
+	#foreach($plannerHeader in $object.plannerHeader)
+	<tr style="height: 22px;">
+		<td style="padding: 5px 3px 5px 3px; text-align: center; vertical-align: middle; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000; border-left: 1px dotted #000000;">
+		$plannerHeader.id</td>
+		<td style="padding: 5px 3px 5px 3px; text-align: center; vertical-align: middle; background-color: #ffffff; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000;">
+		$plannerHeader.part_code</td>
+		<td style="padding: 5px 3px 5px 3px;  text-align: center; vertical-align: middle; background-color: #ffffff; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000;">
+		$plannerHeader.part_name</td>
+		<td style="padding: 5px 3px 5px 3px;  text-align: center; vertical-align: middle; background-color: #ffffff; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000;">
+		$plannerHeader.vehicle_model</td>
+		<td style="padding: 5px 3px 5px 3px;  text-align: center; vertical-align: middle; background-color: #ffffff; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000;">
+		$plannerHeader.vendor</td>
+		<td style="padding: 5px 3px 5px 3px;  text-align: center; vertical-align: middle; background-color: #ffffff; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000;">
+		$plannerHeader.vendor_code</td>
+		<td style="padding: 5px 3px 5px 3px;  text-align: center; vertical-align: middle; background-color: #ffffff; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000;">
+		$plannerHeader.part_manufacturing_location</td>
+		<td style="padding: 5px 3px 5px 3px;  text-align: center; vertical-align: middle; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000;">
+		$plannerHeader.plant</td>
+		<td style="padding: 5px 3px 5px 3px;  text-align: center; vertical-align: middle; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000;">
+		$plannerHeader.no_of_samples</td>
+		<td style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000; text-align: center;">
+		$plannerHeader.repeated_operation_duration</td>
+		<td style="padding: 5px 3px 5px 3px;  text-align: center; vertical-align: middle; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000;">
+		$plannerHeader.repeated_operation</td>
+		<td style="padding: 5px 3px 5px 3px;  text-align: center; vertical-align: middle; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000;">
+		$plannerHeader.shower_duration</td>
+		<td style="padding: 5px 3px 5px 3px;  text-align: center; vertical-align: middle; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000;">
+		$plannerHeader.shower</td>
+		<td style="padding: 5px 3px 5px 3px;  text-align: center; vertical-align: middle; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000;">
+		$plannerHeader.dust_duration</td>
+		<td style="padding: 5px 3px 5px 3px;  text-align: center; vertical-align: middle; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000;">
+		$plannerHeader.dust</td>
+	</tr>
+	#end
+</table>
+<p>&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" style="width: 100%; table-layout: fixed; font-size: 8px; border-collapse: collapse; border: 1px solid #ccc; text-align: center;">
+	<tr style="height: 35px;">
+		<td colspan="5" rowspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;">
+		EQUIPMENT ENGAGEMENT</td>
+	</tr>
+	<tr style="height: 32px;">
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;">
+		EQUIPMENT </td>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;">
+		ENGAGEMENT TIME PER DAY (In Hours)</td>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;">
+		TOTAL AVAILABLE TESTING DAYS IN THIS MONTH MONTH</td>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;">
+		HOURS OF ENGAGEMENT IN THIS MONTH MONTH</td>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;">
+		EQUIPMENT ENGAGEMENT AS PER ABOVE PLAN</td>
+	</tr>
+	#foreach($plannerEquipment in $object.plannerEquipment)
+	<tr>
+		<td style="text-align: center;" ><p>$plannerEquipment.equipment</p></td>
+		<td style="text-align: center;"><p>$plannerEquipment.running_hours_per_day</p></td>
+		<td style="text-align: center;"><p>$plannerEquipment.total_testing_day</p></td>
+		<td style="text-align: center;"><p>$plannerEquipment.total_testing_hours</p></td>
+		<td style="text-align: center;"><p>$plannerEquipment.equipment_engagement_plan</p></td>
+	</tr>
+	#end
+</table>
+<p>&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" dir="ltr" style="width: 100%; table-layout: fixed; font-size: 8px; border-collapse: collapse; border: 1px solid #ccc">
+	<tr style="height: 44px;">
+		<td style="padding: 0px 3px 0px 15px; vertical-align: middle; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left;">ASSUMPTIONS</td>
+	</tr>
+	<tr style="height: 44px;">
+		<td style="padding: 0px 3px 0px 15px; vertical-align: middle; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left;">1. Planner is made based upon 100% Utilization 
+		of testing Equipments</td>
+	</tr>
+	<tr style="height: 53px;">
+		<td style="padding: 0px 3px 0px 15px; vertical-align: middle; border-right: 1px dotted #000000; border-bottom: 1px dotted #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; ">2. Equipment Running time per day is based 
+		upon the total effective time available excluding Setup/ Data logging time 
+		and Before / After test parameters checking time.</td>
+	</tr>
+</table>
+
+</body>
+
+</html>

@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd
+  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+  http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+	<context:component-scan base-package="com.springiot.*" />
+
+	<mvc:annotation-driven />
+
+	<bean id="loggingAspect" class="com.springiot.logging.AOPLogging" />
+
+	<aop:aspectj-autoproxy />
+
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	<!-- <mvc:resources mapping="/resources/**" location="/resources/" cache-period="10000" 
+		/> -->
+
+	<bean id="swagger2Config"
+		class="springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration" />
+
+	<context:property-placeholder location="classpath:/swagger.properties" />
+
+	<mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/" />
+	<mvc:resources mapping="/webjars/**"
+		location="classpath:/META-INF/resources/webjars/" />
+
+	<!-- applicationContext.xml -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="embedded-database" />
+		<property name="packagesToScan" value="com.springiot.modal" />
+		<property name="hibernateProperties">
+			<value>
+				hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect
+				hibernate.connection.useUnicode=true
+				hibernate.connection.characterEncoding=UTF-8
+				hibernate.connection.charSet=UTF-8
+				hibernate.ejb.naming_strategy=org.hibernate.cfg.ImprovedNamingStrategy
+				hibernate.show_sql=true
+
+				hibernate.c3p0.msize=20
+				hibernate.c3p0.max_size=40
+				hibernate.c3p0.timeout=300
+				hibernate.c3p0.max_statements=50
+				hibernate.c3p0.idle_test_period=3000
+				<!-- hibernate.connection.zeroDateTimeBehavior=convertToNull -->
+			</value>
+		</property>
+	</bean>
+
+	<bean class="org.springframework.orm.hibernate4.HibernateTransactionManager"
+		id="transactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<bean class="com.springiot.constant.ProcessParameter" id="processParameter">
+		<property name="maps">
+			<map>
+				<entry key="1"
+					value="call flint_open_ticket_insert(task_status,pickup_country,pickup_state,pickup_city,pickup_address,pickup_landmark,pickup_contact_no,consignee_key,dropoff_country,dropoff_state,dropoff_city,dropoff_address,dropoff_landmark,dropoff_contact_no,product_type,product_value,number_of_items,volume_in_weight,volume_in_percentage,sla,vehicle_id,pickup_date,pickup_lat,pickup_long,dropoff_date,dropoff_lat,dropoff_long,user_id,user_key,consignee_name,consigner_name,reciever_name,distance_from_source,pickup_email_id,dropoff_email_id,consigner_document_name,consignee_document_name,consigner_document_path,consignee_document_path,consigner_id,consignee_id,booking_id,booking_service_id,route_price_id,organization_id,mawb_no,total_cost,address_id)" />
+				<!--Audit Log -->
+
+				<entry key="2"
+					value="call flint_audit_log_count(user_key, user_id, application_key, from_date, end_date)" />
+				<entry key="3"
+					value="call flint_audit_log_get_all(user_key,user_id,application_key,from_date,end_date)" />
+				<entry key="4"
+					value="call flint_audit_log_get_all_limit(user_key,user_id,application_key,from_date,end_date,limit,offset)" />
+				<entry key="5" value="call flint_audit_log_insert(?,?,?,?,?,?,?,?,?)" />
+				<!-- -->
+				<entry key="6" value="call flint_product_type_get_all()" />
+				<entry key="7" value="call flint_country_get()" />
+				<entry key="8" value="call flint_city_get_by_state_id(state_id)" />
+				<entry key="9" value="call flint_state_get_by_country_id(country_id)" />
+				<entry key="10"
+					value="call flint_open_ticket_update(task_status,pickup_country,pickup_state,pickup_city,pickup_address,pickup_landmark,pickup_contact_no,consignee_key,dropoff_country,dropoff_state,dropoff_city,dropoff_address,dropoff_landmark,dropoff_contact_no,product_type,product_value,number_of_items,volume_weight,volume_percentage,sla_minutes,vehicle_id,pickup_date,pickup_lat,pickup_long,dropoff_date,dropoff_lat,dropoff_long,ticket_id,task_id,is_task_closed,user_id,user_key,consignee_name,consigner_name,reciever_name,remarks,files,pickup_email_id,dropoff_email_id,consigner_document_name,consignee_document_name,consigner_document_path,consignee_document_path,consigner_id,consignee_id,activity_document_name,activity_document_path)" />
+				<entry key="11"
+					value="call flint_closed_tickets_get_all(user_key,user_id,user_ids_list,from_date,to_date,limit,offset,organization_id,role_name)" />
+				<entry key="12"
+					value="call flint_open_tickets_get_all_web(user_key,user_id,user_ids_list,limit,offset,organization_id,role_name)" />
+				<entry key="13"
+					value="call flint_status_get_all_for_web(user_key,user_id) " />
+				<entry key="14"
+					value="call flint_status_get_all_for_android(user_key,user_id) " />
+				<entry key="15"
+					value="call flint_vehicle_insert(user_key,user_id,registration_number,registration_number,model_number,vehicle_type,is_national_permit,state_ids,capacity_in_weight,length,breadth,height,vehicle_key,fuel_tank_capacity,fuel_quality,fuel_type,maximum_payload,towing_capacity,curb_weight,cargo_volume,bed_length,ground_clearance,passenger_capacity,registration_state,license_plate,vehicle_purchasing_date,status,ownership,chaisis_number,sla,make,epa_highway,epa_capacity,epa_combined,product_variants,gross_vehicle_gross_rating,engine_summary,engine_brand,engine_aspiration,engine_block_type,engine_bore,engine_cam_type,engine_compression,engine_cylinders,engine_displacement,engine_fuel_induction,engine_fuel_quality,engine_max_hp,engine_max_torque,engine_redline_rpm,engine_stroke,engine_valves,transmission_summary,transmission_brand,transmission_type,transmission_gear,wheels_drive_type,wheels_brake_system,wheels_front_track_width,wheels_rear_track_width,wheels_wheelbase,wheels_rear_wheel_diameter,wheels_front_wheel_diameter,wheels_rear_axle,wheels_front_tire_type,wheels_rear_tire_type,wheels_front_tire_psi,wheels_rear_tire_psi,document_name,document_path,primary_meter,current_reading,latitude,longitude,organization_id,id)" />
+				<entry key="16"
+					value="call flint_vehicle_map_device(user_key,user_id,vehicle_id,device_id)" />
+				<entry key="17"
+					value="call flint_vehicle_get_vehicle_type(user_key,user_id,user_ids_list)" />
+				<!-- <entry key="18" value="call flint_vehicle_get_all_by_organization(organization_id,role_name,user_id,limit,offset)" 
+					/> -->
+
+				<entry key="18"
+					value="call flint_vehicle_get_all(user_key,user_id,user_ids_list,organization_id)" />
+
+				<entry key="19"
+					value="call flint_vehicle_get_all_criteria(user_key,user_id,user_ids_list,pickup_location,dropoff_location,required_volume,vehicle_type)" />
+				<entry key="20"
+					value="call flint_user_vehicle_map(user_key,user_id,edit_user_key,edit_user_id,vehicle_id,edit_user_type)" />
+				<entry key="21"
+					value="call flint_notification_get_all(user_key,user_id,user_ids_list,from_date,end_date,limit,offset)" />
+				<entry key="22"
+					value="call flint_notification_update(user_key,user_id,role_name,task_id,ticket_id,is_gcm_pushed)" />
+				<entry key="23"
+					value="call flint_open_ticket_get_info(user_key,user_id,ticket_id)" />
+				<entry key="24"
+					value="call flint_open_task_get_info(user_key,user_id,ticket_id,task_id)" />
+				<entry key="25"
+					value="call flint_driver_add_device(license_key,device_id,imei,gcm_id,mac_address,bluetooth_address)" />
+				<entry key="26"
+					value="call flint_driver_get_device_id(license_key,imei,gcm_id,mac_address,bluetooth_address)" />
+				<entry key="27"
+					value="call flint_open_tickets_activity_get_by_id(user_key,user_id,ticket_id,task_id)" />
+				<entry key="28"
+					value="call flint_closed_task_get_info(user_key,user_id,ticket_id,task_id)" />
+				<entry key="29"
+					value="call flint_closed_ticket_get_info(user_key,user_id,ticket_id)" />
+				<entry key="30"
+					value="call flint_closed_tickets_activity_get_by_id(user_key,user_id,ticket_id,task_id)" />
+				<entry key="31"
+					value="call flint_vehicle_get_all(user_key,user_id,user_ids_list)" />
+				<entry key="32"
+					value="call flint_open_tickets_get_all(user_key,user_id,user_ids_list,limit,offset,organization_id,role_name)" />
+				<entry key="33"
+					value="call flint_devices_get_by_ticket_id(user_key,user_id,ticket_id,task_id)" />
+				<entry key="34" value="call flint_role_get_role(user_key,user_id)" />
+				<entry key="35" value="call flint_get_body_type(user_key,user_id)" />
+				<entry key="36"
+					value="call flint_get_engine_block_type(user_key,user_id)" />
+				<entry key="37" value="call flint_get_engine_cam_type(user_key,user_id)" />
+				<entry key="38" value="call flint_get_fuel_type(user_key,user_id)" />
+				<entry key="39"
+					value="call flint_get_wheels_drive_type(user_key,user_id)" />
+				<entry key="40" value="call flint_get_wheels_tire_type(user_key,user_id)" />
+				<entry key="41"
+					value="call flint_vehicle_add_engine(user_key,user_id,id,vehicle_id,vehicle_key,engine_summary,engine_brand,engine_aspiration,engine_brand_copy1,engine_block_type,engine_bore,engine_cam_type,engine_compression,engine_cylinders,engine_displacement,engine_fuel_induction,engine_fuel_quality,engine_max_hp,engine_max_torque,engine_redline_rpm,engine_stroke,engine_valves)" />
+				<entry key="42"
+					value="call flint_vehicle_add_transmission_wheels(user_key,user_id,id,vehicle_id,vehicle_key,transmission_summary,transmission_brand,transmission_type,transmission_gear,wheels_drive_type,wheels_brake_system,wheels_front_track_width,wheels_rear_track_width,wheels__wheelbase,wheels_rear_wheel_diameter,wheels_front_wheel_diameter,wheels_rear_axle,wheels_front_tire_type,wheels_rear_tire_type,wheels_front_tire_psi,wheels_rear_tire_psi)" />
+				<entry key="43" value="call flint_gcm_id_by_vehicle_id(?,?,?)" />
+				<entry key="44"
+					value="call flint_delete_vehicle(user_key,user_id,user_ids_list,vehicle_key,vehicle_id,id)" />
+				<entry key="45"
+					value="call flint_vehicle_add_transmission_wheels_update(user_key,user_id,id,vehicle_id,vehicle_key,transmission_summary,transmission_brand,transmission_type,transmission_gear,wheels_drive_type,wheels_brake_system,wheels_front_track_width,wheels_rear_track_width,wheels__wheelbase,wheels_rear_wheel_diameter,wheels_front_wheel_diameter,wheels_rear_axle,wheels_front_tire_type,wheels_rear_tire_type,wheels_front_tire_psi,wheels_rear_tire_psi,created_by_user_id,created_by_user_key,last_modified_by_user_id,last_modified_by_user_key,creation_time,last_modified_time)" />
+				<entry key="46"
+					value="call flint_vehicle_add_engine_update(user_key,user_id,id,vehicle_id,vehicle_key,engine_summary,engine_brand,engine_aspiration,engine_brand_copy1,engine_block_type,engine_bore,engine_cam_type,engine_compression,engine_cylinders,engine_displacement,engine_fuel_induction,engine_fuel_quality,engine_max_hp,engine_max_torque,engine_redline_rpm,engine_stroke,engine_valves,created_by_user_id,created_by_user_key,last_modified_by_user_id,last_modified_by_user_key,creation_time,last_modified_time)" />
+				<entry key="47"
+					value="call flint_vehicles_gets_vehicles(user_key,user_id,user_ids_list)	" />
+				<entry key="48"
+					value="call flint_vehicles_gets_vehicles_engines(user_key,user_id,user_ids_list)" />
+				<entry key="49"
+					value="call flint_vehicles_gets_vehicles_all_details(user_key,user_id,user_ids_list,organization_id)" />
+				<entry key="50"
+					value="call flint_vehicles_gets_vehicle_transmission_wheels(user_key,user_id,user_ids_list)" />
+				<entry key="51"
+					value="call flint_vehicle_update(user_key,user_id,vehicle_id,registration_number,model_number,vehicle_type,is_national_permit,state_ids,capacity_in_weight,length,breadth,height,vehicle_key,fuel_tank_capacity,fuel_quality,fuel_type,maximum_payload,towing_capacity,curb_weight,cargo_volume,bed_length,ground_clearance,passenger_capacity,registration_state,license_plate,vehicle_purchasing_date,status,ownership,chaisis_number,sla,make,epa_highway,epa_capacity,epa_combined,product_variants,gross_vehicle_gross_rating,engine_summary,engine_brand,engine_aspiration,engine_block_type,engine_bore,engine_cam_type,engine_compression,engine_cylinders,engine_displacement,engine_fuel_induction,engine_fuel_quality,engine_max_hp,engine_max_torque,engine_redline_rpm,engine_stroke,engine_valves,transmission_summary,transmission_brand,transmission_type,transmission_gear,wheels_drive_type,wheels_brake_system,wheels_front_track_width,wheels_rear_track_width,wheels_wheelbase,wheels_rear_wheel_diameter,wheels_front_wheel_diameter,wheels_rear_axle,wheels_front_tire_type,wheels_rear_tire_type,wheels_front_tire_psi,wheels_rear_tire_psi,document_name,document_path,is_active,is_deleted,primary_meter,current_reading,latitude,longitude)" />
+				<entry key="52"
+					value="call flint_vehicle_update_transmission_wheels(user_key,user_id,id,vehicle_id,vehicle_key,transmission_summary,transmission_brand,transmission_type,transmission_gear,wheels_drive_type,wheels_brake_system,wheels_front_track_width,wheels_rear_track_width,wheels_wheelbase,wheels_rear_wheel_diameter,wheels_front_wheel_diameter,wheels_rear_axle,wheels_front_tire_type,wheels_rear_tire_type,wheels_front_tire_psi,wheels_rear_tire_psi)" />
+				<entry key="53"
+					value="call flint_vehicle_update_engine(user_key,user_id,id,vehicle_id,vehicle_key,engine_summary,engine_brand,engine_aspiration,engine_brand_copy1,engine_block_type,engine_bore,engine_cam_type,engine_compression,engine_cylinders,engine_displacement,engine_fuel_induction,engine_fuel_quality,engine_max_hp,engine_max_torque,engine_redline_rpm,engine_stroke,engine_valves)" />
+				<entry key="54"
+					value="call flint_closed_tickets_get_all_web(user_key,user_id,user_ids_list,from_date,to_date,limit,offset,organization_id,role_name)" />
+				<entry key="55"
+					value="call flint_vehicles_get_by_registration_number(user_key,user_id,registration_number)" />
+				<entry key="56"
+					value="call flint_get_task_info_by_task_alias(ticket_task_alias)" />
+				<entry key="57"
+					value="call flint_open_tickets_get_by_ticket_id(user_key,user_id,ticket_id)" />
+				<entry key="58"
+					value="call flint_vehicle_get_all_history_tracking(user_key,user_id,user_ids_list,organization_id,role_name)" />
+				<entry key="59"
+					value="call flint_vehicles_get_by_registration_number_history(user_key,user_id,registration_number)" />
+				<entry key="60"
+					value="call flint_closed_tickets_get_by_ticket_id(user_key,user_id,ticket_id)" />
+				<entry key="61"
+					value="call flint_open_tickets_serach_by_task_alias(user_key,user_id,ticket_task_alias)" />
+				<entry key="62"
+					value="call flint_open_tickets_serach_by_user_id(user_key,user_id,insert_user_id)" />
+				<entry key="63"
+					value="call flint_closed_tickets_serach_by_task_alias(user_key,user_id,ticket_task_alias)" />
+				<entry key="64"
+					value="call flint_closed_tickets_serach_by_user_id(user_key,user_id,insert_user_id)" />
+				<entry key="65"
+					value="call flint_driver_insert(driver_key,driver_id,first_name,driver_middle_name,last_name,preferred_number,username,address,city,state,driving_license,driving_license_expiry_date,country,document_name,document_path,password,organization_id)" />
+				<entry key="66"
+					value="call flint_driver_update(vehicle_user_key,vehicle_user_id,license_key,is_inactive,is_deleted,driver_first_name,driver_middle_name,driver_last_name,driver_contact_number,last_inactive_on,last_active_on,driver_email_id,driver_address,driver_city,driver_state,driving_license,driving_license_expiry_date,driver_country,document_name,document_path)" />
+				<entry key="67"
+					value="call flint_get_driver_details(user_key,user_id,license_key)" />
+				<entry key="68"
+					value="call flint_saved_open_ticket_insert(task_status,pickup_country,pickup_state,pickup_city,pickup_address,pickup_landmark,pickup_contact_no,consignee_key,dropoff_country,dropoff_state,dropoff_city,dropoff_address,dropoff_landmark,dropoff_contact_no,product_type,product_value,number_of_items,volume_in_weight,volume_in_percentage,sla,vehicle_id,pickup_date,pickup_lat,pickup_long,dropoff_date,dropoff_lat,dropoff_long,user_id,user_key,consignee_name,consigner_name,reciever_name,distance_from_source,pickup_email_id,dropoff_email_id,scheduled_date,consigner_document_name,consignee_document_name,consigner_document_path,consignee_document_path,consigner_id,consignee_id)" />
+				<entry key="69"
+					value="call flint_tickets_get_by_keyword(user_key,user_id,user_ids_list,keyword_to_search,limit,offset)" />
+				<entry key="70"
+					value="call flint_get_gcm_id_by_licence_key(user_Key,user_ids,license_key,device_id)" />
+				<entry key="71"
+					value="call flint_exception_log_count(user_key,user_id,application_key,from_date,end_date,limit,offset)" />
+				<entry key="72"
+					value="call flint_exception_log_get_all(user_key,user_id,application_key,from_date,end_date,limit,offset,condition)" />
+				<entry key="73" value="call flint_exception_log_insert(?,?,?,?,?,?,?)" />
+				<entry key="74" value="call flint_get_dropdown_options(type_alias)" />
+				<entry key="76"
+					value="call flint_consignee_consigner_insert(customer_id,name,email_id,contact_number,company_name,office_contact_number,country,state,city,latitude,longitude,product_type,vehicle_type,load_weight,number_of_items,load_volume,user_type,consigne_doc_name,consigne_doc_path,alias,company_address,dropoff_location)" />
+				<entry key="77"
+					value="call flint_customer_insert(customer_key,customer_id,first_name,last_name,prefered_contact_number,sla,is_first_preference,tag_id,document_name,document_path)" />
+				<entry key="78"
+					value="call flint_customer_delete(user_key,user_id,customer_user_id)" />
+				<entry key="79"
+					value="call flint_consignee_consigner_update(customer_id,name,email_id,contact_number,company_name,office_contact_number,country,state,city,latitude,longitude,is_deleted,product_type,vehicle_type,load_weight,number_of_items,load_volume,user_type,consigne_doc_name,consigne_doc_path,alias,company_address,dropoff_location)" />
+				<entry key="80"
+					value="call flint_customer_update(customer_key,customer_id,first_name,last_name,prefered_contact_number,sla,is_first_preference,tag_id,is_active,is_deleted,document_name,document_path)" />
+				<entry key="81"
+					value="call flint_get_customer(user_key,user_id,user_ids_list)" />
+
+				<entry key="82" value="call flint_get_preferences(preference_id)" />
+				<entry key="83" value="call flint_get_user_tag(user_tag_name)" />
+				<entry key="84"
+					value="call flint_user_tag_insert(user_tag_name,sequence_number,preference_id)" />
+				<entry key="85"
+					value="call flint_driver_delete(vehicle_user_key,vehicle_user_id,license_key)" />
+				<entry key="86"
+					value="call flint_get_all_drivers(user_key,user_id,vehicle_id,vehicle_key)" />
+				<entry key="87"
+					value="call flint_get_customer_by_key(user_key,user_id,customer_key)" />
+				<entry key="88"
+					value="call flint_get_vehicle_details_by_registration_number(user_key,user_id,registration_number)" />
+				<entry key="89"
+					value="call flint_customer_get_by_keyword(user_key,user_id,user_ids_list,keyword_to_search,limit,offset)" />
+				<entry key="90"
+					value="call flint_get_saved_open_ticket(user_id,user_key,user_ids_list)" />
+				<entry key="91"
+					value="call flint_get_customer_by_user_type(user_key,user_id,user_ids_list,user_type)" />
+				<entry key="92"
+					value="call flint_delete_saved_open_tickets(user_key,user_id,id)" />
+				<entry key="93"
+					value="call flint_delete_consignee_consigner(user_key,user_id,id)" />
+				<entry key="94"
+					value="call flint_saved_open_ticket_update(id,task_status,pickup_country,pickup_state,pickup_city,pickup_address,pickup_landmark,pickup_contact_no,consignee_key,dropoff_country,dropoff_state,dropoff_city,dropoff_address,dropoff_landmark,dropoff_contact_no,product_type,product_value,number_of_items,volume_in_weight,volume_in_percentage,sla,vehicle_id,pickup_date,pickup_lat,pickup_long,dropoff_date,dropoff_lat,dropoff_long,user_id,user_key,consignee_name,consigner_name,reciever_name,distance_from_source,pickup_email_id,dropoff_email_id,scheduled_date,consigner_document_name,consignee_document_name,consigner_document_path,consignee_document_path,consigner_id,consignee_id)" />
+				<entry key="95"
+					value="call flint_closed_tickets_get_by_registration_number(user_key,user_id,registration_number)" />
+				<entry key="96"
+					value="call flint_open_tickets_get_by_registration_number(user_key,user_id,registration_number)" />
+
+
+				<entry key="97" value="call flint_get_booking_service_details()" />
+				<entry key="98" value="call flint_get_booking_details()" />
+				<entry key="99"
+					value="call flint_get_origin_address(booking_id,booking_service_id)" />
+				<entry key="100"
+					value="call flint_get_destination_address(booking_id,booking_service_id)" />
+				<entry key="101"
+					value="call flint_signup(user_key,email,company_type,company_name,preferred_number,gender,address,first_name,last_name,country,state,city)" />
+				<entry key="102"
+					value="call flint_get_export_import_count(user_key,user_id)" />
+
+				<entry key="103"
+					value="call flint_route_price_insert(route_origin,route_destination,vehicle_id,truck_capacity_group,charges,max_response_time,intravel_time,vehicle_type_id)" />
+				<entry key="104" value="call flint_organization_delete(organization_id)" />
+				<entry key="105"
+					value="call flint_organization_update(organization_name,path,level,color_code,path_alias,parent_group_name,organization_id,city,country,description,platform_organization_id)" />
+				<entry key="106" value="call flint_route_price_get_all(user_key)" />
+				<entry key="107"
+					value="call flint_organization_insert(organization_name,path,level,path_alias,parent_group_name,city,country,description,color_code,organization_id)" />
+				<entry key="108"
+					value="call flint_route_price_update(truck_capacity_group,charges,max_response_time,travel_time,route_id)" />
+				<entry key="109" value="call flint_route_price_delete(route_id)" />
+				<entry key="110"
+					value="call flint_organization_get_all_by_user_key(user_key)" />
+				<entry key="111"
+					value="call flint_vehicle_get_all_by_user_id(user_key,user_id,user_ids_list,vehicle_type,capacity)" />
+				<entry key="112"
+					value="call flint_get_report_monthly_revenue(organization_id,from_date,to_date)" />
+
+				<entry key="113" value="call flint_check_user_exist(email_id)" />
+				<entry key="114"
+					value="call flint_insert_vehicle_driver(vehicle_id,license_key,vehicle_device_id,start_time,end_time)" />
+				<entry key="115"
+					value="call flint_insert_vehicle_driver_detach(vehicle_device_id,license_key)" />
+
+				<entry key="116" value="call flint_airline_prefix_get_all()" />
+				<entry key="117"
+					value="call flint_open_tickets_get_all_mobile(user_key,user_id,user_ids_list,limit,offset,organization_id,role_name)" />
+
+
+				<entry key="118"
+					value="call flint_get_open_ticket_device_get_all(organizaiton_id)" />
+				<entry key="119"
+					value="call flint_get_all_drivers_by_organization(organization_id)" />
+				<entry key="120"
+					value="call flint_get_organization_id_by_user_id(user_id)" />
+				<entry key="121" value="call flint_city_get_by_parent_city_id(city_id)" />
+			</map>
+		</property>
+	</bean>
+
+	<!-- <bean class="com.springiot.constant.URLParameter" id="urlParameter"> 
+		<property name="authURL" value="http://127.0.0.1:7878/OAuthEngine/oauth/token" 
+		/> <property name="XauthURL" value="http://127.0.0.1:7878/XFusionPlatform/oauth/token" 
+		/> <property name="authResetPasswordURL" value="http://127.0.0.1:7878/OAuthEngine/passwordreset" 
+		/> <property name="authExpireURL" value="http://127.0.0.1:7878/OAuthEngine/oauth/token/expire" 
+		/> <property name="authForgotPasswordURL" value="http://127.0.0.1:7878/OAuthEngine/forgotpassword" 
+		/> <property name="authUpdateURL" value="http://127.0.0.1:7878/OAuthEngine/passwordupdate" 
+		/> <property name="xfusionServiceStatusDeviceGetManyWithoutData" value="http://127.0.0.1:7878/XFusionPlatform/servicestatus/device/get/many/without/data" 
+		/> <property name="xfusionInventoryStatusDeviceGetManyWithoutData" value="http://127.0.0.1:7878/XFusionPlatform/inventorystatus/device/get/many/without/data" 
+		/> <property name="xfusionPlatformDeviceGetMetaData" value="http://127.0.0.1:7878/XFusionPlatform/device/get/metadata" 
+		/> <property name="xfusionPlatformDeviceExecuteCommand" value="http://127.0.0.1:7878/XFusionPlatform/execute/command/tr069" 
+		/> <property name="xfusionPlatformDeviceModelGetAllByDeviceTechnology" value="http://127.0.0.1:7878/XFusionPlatform/device/model/get/all/by/device/technology" 
+		/> <property name="xfusionPlatformUsersGetAllByUserOrganization" value="http://127.0.0.1:7878/XFusionPlatform/users/get/all/by/user/organization" 
+		/> <property name="xfusionPlatformDeviceRegister" value="http://127.0.0.1:7878/XFusionPlatform/deviceregister" 
+		/> <property name="xfusionPlatformPerformanceServiceStatusDevicesGetMany" 
+		value="http://127.0.0.1:7878/XFusionPlatform/performane/servicestatus/devices/get/many" 
+		/> <property name="xfusionPlatformPerformanceOrganizationGetAll" value="http://127.0.0.1:7878/XFusionPlatform/organization/get/all" 
+		/> <property name="xfusionPerformanceServiceMultipleDevicesStatusGetMany" 
+		value="http://127.0.0.1:7878/XFusionPlatform/performance/status/multipledevices/get/many" 
+		/> <property name="xfusionPerformanceServiceMultipleDevicesGetMany" value="http://127.0.0.1:7878/XFusionPlatform/performance/service/multipledevices/get/many" 
+		/> <property name="xfusionOrganizationCountryGet" value="http://127.0.0.1:7878/XFusionPlatform/country/get/country" 
+		/> <property name="xfusionOrganizationGetAll" value="http://127.0.0.1:7878/XFusionPlatform/organization/get/all" 
+		/> <property name="xfusionOrganizationStateGet" value="http://127.0.0.1:7878/XFusionPlatform/state/get/state" 
+		/> <property name="xfusionOrganizationCityGet" value="http://127.0.0.1:7878/XFusionPlatform/city/get/city" 
+		/> <property name="xfusionOrganizationInsert" value="http://127.0.0.1:7878/XFusionPlatform/organization/insert" 
+		/> <property name="xfusionOrganizationUpdate" value="http://127.0.0.1:7878/XFusionPlatform/organization/update" 
+		/> <property name="xfusionOrganizationDelete" value="http://127.0.0.1:7878/XFusionPlatform/organization/delete" 
+		/> <property name="userCreate" value="http://127.0.0.1:7878/OAuthEngine/user/profile/create" 
+		/> <property name="userUpdate" value="http://127.0.0.1:7878/OAuthEngine/user/profile/update" 
+		/> <property name="userDelete" value="http://127.0.0.1:7878/OAuthEngine/user/delete" 
+		/> <property name="userGetAll" value="http://127.0.0.1:7878/OAuthEngine/users/get/application" 
+		/> <property name="userRoleGetAll" value="http://127.0.0.1:7878/OAuthEngine/roles/get/all" 
+		/> <property name="attributeGetAllByUser" value="http://127.0.0.1:7878/OAuthEngine/xfusion/attributes/get/by/role" 
+		/> <property name="xfusionOrganizationUserMapping" value="http://127.0.0.1:7878/XFusionPlatform/user/organization/insert" 
+		/> <property name="oauthRolesGetALlUserApplication" value="http://127.0.0.1:7878/OAuthEngine/roles/get/all/user/application" 
+		/> <property name="oauthUserGetAttribute" value="http://127.0.0.1:7878/OAuthEngine/xfusion/user/get/attribute" 
+		/> <property name="oauthUserUpdateLockStatus" value="http://127.0.0.1:7878/OAuthEngine/user/update/lock/status" 
+		/> <property name="oauthApplictionUserRemove" value="http://127.0.0.1:7878/OAuthEngine/application/user/remove" 
+		/> <property name="oauthUsersGetAllExceptApplication" value="http://127.0.0.1:7878/OAuthEngine/users/get/all/except/application" 
+		/> <property name="oauthUserUpdateAttribute" value="http://127.0.0.1:7878/OAuthEngine/xfusion/user/update/attribute" 
+		/> <property name="oauthApplicationUserAdd" value="http://127.0.0.1:7878/OAuthEngine/application/user/add" 
+		/> <property name="oauthUserInactive" value="http://127.0.0.1:7878/OAuthEngine/user/inactive" 
+		/> <property name="oauthCountryGet" value="http://127.0.0.1:7878/OAuthEngine/country/get" 
+		/> <property name="oauthStateGet" value="http://127.0.0.1:7878/OAuthEngine/state/get/by/country/id" 
+		/> <property name="oauthCityGet" value="http://127.0.0.1:7878/OAuthEngine/city/get/by/state/id" 
+		/> <property name="oauthUserUpdate" value="http://127.0.0.1:7878/OAuthEngine/user/update" 
+		/> <property name="xfusionPlatformUsersList" value="http://127.0.0.1:7878/XFusionPlatform/users/list" 
+		/> <property name="xfusionPlatformOrganizationGetAllUser" value="http://127.0.0.1:7878/XFusionPlatform/organization/get/all/user" 
+		/> <property name="xfusionPlatformDeviceMApping" value="http://127.0.0.1:7878/XFusionPlatform/device/add/device" 
+		/> <property name="xfusionPlatformGetOrganizationByUser" value="http://127.0.0.1:7878/XFusionPlatform/organization/get/by/user" 
+		/> <property name="xfusionPlatformGetUserList" value="http://127.0.0.1:7878/XFusionPlatform/users/list" 
+		/> <property name="validateToken" value="http://127.0.0.1:7878/OAuthEngine/oauth/validate/token" 
+		/> <property name="rootOrganization" value="http://127.0.0.1:7878/XFusionPlatform/organization/root/by/user" 
+		/> <property name="userVerification" value="http://127.0.0.1:7878/OAuthEngine/user/verification" 
+		/> <property name="userCreation" value="http://127.0.0.1:7878/OAuthEngine/user/creation/signup" 
+		/> </bean> -->
+	<bean class="com.springiot.constant.URLParameter" id="urlParameter">
+		<property name="authURL"
+			value="http://192.168.1.242:7878/OAuthEngine_v2/oauth/token" />
+		<property name="XauthURL"
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/oauth/token" />
+		<property name="authResetPasswordURL"
+			value="http://192.168.1.242:7878/OAuthEngine_v2/passwordreset" />
+		<property name="authExpireURL"
+			value="http://192.168.1.242:7878/OAuthEngine_v2/oauth/token/expire" />
+		<property name="authForgotPasswordURL"
+			value="http://192.168.1.242:7878/OAuthEngine_v2/forgotpassword" />
+		<property name="authUpdateURL"
+			value="http://192.168.1.242:7878/OAuthEngine_v2/passwordupdate" />
+		<property name="xfusionServiceStatusDeviceGetManyWithoutData"
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/servicestatus/device/get/many/without/data" />
+		<property name="xfusionInventoryStatusDeviceGetManyWithoutData"
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/inventorystatus/device/get/many/without/data" />
+		<property name="xfusionPlatformDeviceGetMetaData"
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/device/get/metadata" />
+		<property name="xfusionPlatformDeviceExecuteCommand"
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/execute/command/tr069" />
+		<property name="xfusionPlatformDeviceModelGetAllByDeviceTechnology"
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/device/model/get/all/by/device/technology" />
+		<property name="xfusionPlatformUsersGetAllByUserOrganization"
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/users/get/all/by/user/organization" />
+		<property name="xfusionPlatformDeviceRegister"
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/deviceregister" />
+		<property name="xfusionPlatformPerformanceServiceStatusDevicesGetMany"
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/performane/servicestatus/devices/get/many" />
+		<property name="xfusionPlatformPerformanceOrganizationGetAll"
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/organization/get/all" />
+		<property name="xfusionPerformanceServiceMultipleDevicesStatusGetMany"
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/performance/status/multipledevices/get/many" />
+		<property name="xfusionPerformanceServiceMultipleDevicesGetMany"
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/performance/service/multipledevices/get/many" />
+		<property name="xfusionOrganizationCountryGet"
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/country/get/country" />
+		<property name="xfusionOrganizationGetAll"
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/organization/get/all" />
+		<property name="xfusionOrganizationStateGet"
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/state/get/state" />
+		<property name="xfusionOrganizationCityGet"
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/city/get/city" />
+		<property name="xfusionOrganizationInsert"
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/organization/insert" />
+		<property name="xfusionOrganizationUpdate"
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/organization/update" />
+		<property name="xfusionOrganizationDelete"
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/organization/delete" />
+		<property name="userCreate"
+			value="http://192.168.1.242:7878/OAuthEngine_v2/user/profile/create" />
+		<property name="userUpdate"
+			value="http://192.168.1.242:7878/OAuthEngine_v2/user/profile/update" />
+		<property name="userDelete"
+			value="http://192.168.1.242:7878/OAuthEngine_v2/user/delete" />
+		<property name="userGetAll"
+			value="http://192.168.1.242:7878/OAuthEngine_v2/users/get/application" />
+		<property name="userRoleGetAll"
+			value="http://192.168.1.242:7878/OAuthEngine_v2/roles/get/all" />
+		<property name="attributeGetAllByUser"
+			value="http://192.168.1.242:7878/OAuthEngine_v2/xfusion/attributes/get/by/role" />
+		<property name="xfusionOrganizationUserMapping"
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/user/organization/insert" />
+		<property name="oauthRolesGetALlUserApplication"
+			value="http://192.168.1.242:7878/OAuthEngine_v2/roles/get/all/user/application" />
+		<property name="oauthUserGetAttribute"
+			value="http://192.168.1.242:7878/OAuthEngine_v2/xfusion/user/get/attribute" />
+		<property name="oauthUserUpdateLockStatus"
+			value="http://192.168.1.242:7878/OAuthEngine_v2/user/update/lock/status" />
+		<property name="oauthApplictionUserRemove"
+			value="http://192.168.1.242:7878/OAuthEngine_v2/application/user/remove" />
+		<property name="oauthUsersGetAllExceptApplication"
+			value="http://192.168.1.242:7878/OAuthEngine_v2/users/get/all/except/application" />
+		<property name="oauthUserUpdateAttribute"
+			value="http://192.168.1.242:7878/OAuthEngine_v2/xfusion/user/update/attribute" />
+		<property name="oauthApplicationUserAdd"
+			value="http://192.168.1.242:7878/OAuthEngine_v2/application/user/add" />
+		<property name="oauthUserInactive"
+			value="http://192.168.1.242:7878/OAuthEngine_v2/user/inactive" />
+		<property name="oauthCountryGet"
+			value="http://192.168.1.242:7878/OAuthEngine_v2/country/get" />
+		<property name="oauthStateGet"
+			value="http://192.168.1.242:7878/OAuthEngine_v2/state/get/by/country/id" />
+		<property name="oauthCityGet"
+			value="http://192.168.1.242:7878/OAuthEngine_v2/city/get/by/state/id" />
+		<property name="oauthUserUpdate"
+			value="http://192.168.1.242:7878/OAuthEngine_v2/user/update" />
+		<property name="xfusionPlatformUsersList"
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/users/list" />
+		<property name="xfusionPlatformOrganizationGetAllUser"
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/organization/get/all/user" />
+		<property name="xfusionPlatformDeviceMApping"
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/device/add/device" />
+		<property name="xfusionPlatformGetOrganizationByUser"
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/organization/get/by/user" />
+		<property name="xfusionPlatformGetUserList"
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/users/list" />
+		<property name="validateToken"
+			value="http://192.168.1.242:7878/OAuthEngine_v2/oauth/validate/token" />
+		<property name="rootOrganization"
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/organization/root/by/user" />
+		<property name="userVerification"
+			value="http://192.168.1.242:7878/OAuthEngine_v2/user/verification" />
+		<property name="userCreation"
+			value="http://192.168.1.242:7878/OAuthEngine_v2/user/creation/signup" />
+	</bean>
+	<!-- <bean class="com.springiot.constant.URLParameter" id="urlParameter"> 
+		<property name="authURL" value="http://192.168.1.242:4444/OAuthEngine/oauth/token" 
+		/> <property name="authResetPasswordURL" value="http://192.168.1.242:4444/OAuthEngine/passwordreset" 
+		/> <property name="authExpireURL" value="http://192.168.1.242:4444/OAuthEngine/oauth/token/expire" 
+		/> <property name="authForgotPasswordURL" value="http://192.168.1.242:4444/OAuthEngine/forgotpassword" 
+		/> <property name="authUpdateURL" value="http://192.168.1.242:4444/OAuthEngine/passwordupdate" 
+		/> <property name="xfusionServiceStatusDeviceGetManyWithoutData" value="http://192.168.1.242:4444/XFusionPlatform/servicestatus/device/get/many/without/data" 
+		/> <property name="xfusionInventoryStatusDeviceGetManyWithoutData" value="http://192.168.1.242:4444/XFusionPlatform/inventorystatus/device/get/many/without/data" 
+		/> <property name="xfusionPlatformDeviceGetMetaData" value="http://192.168.1.242:4444/XFusionPlatform/device/get/metadata" 
+		/> <property name="xfusionPlatformDeviceExecuteCommand" value="http://192.168.1.242:4444/XFusionPlatform/execute/command/tr069" 
+		/> <property name="xfusionPlatformDeviceModelGetAllByDeviceTechnology" value="http://192.168.1.242:4444/XFusionPlatform/device/model/get/all/by/device/technology" 
+		/> <property name="xfusionPlatformUsersGetAllByUserOrganization" value="http://192.168.1.242:4444/XFusionPlatform/users/get/all/by/user/organization" 
+		/> <property name="xfusionPlatformDeviceRegister" value="http://192.168.1.242:4444/XFusionPlatform/deviceregister" 
+		/> <property name="xfusionPlatformPerformanceServiceStatusDevicesGetMany" 
+		value="http://192.168.1.242:4444/XFusionPlatform/performane/servicestatus/devices/get/many" 
+		/> <property name="xfusionPlatformPerformanceOrganizationGetAll" value="http://192.168.1.242:4444/XFusionPlatform/organization/get/all" 
+		/> <property name="xfusionPerformanceServiceMultipleDevicesStatusGetMany" 
+		value="http://192.168.1.242:4444/XFusionPlatform/performance/status/multipledevices/get/many" 
+		/> <property name="xfusionPerformanceServiceMultipleDevicesGetMany" value="http://192.168.1.242:4444/XFusionPlatform/performance/service/multipledevices/get/many" 
+		/> <property name="xfusionOrganizationCountryGet" value="http://192.168.1.242:4444/XFusionPlatform/country/get/country" 
+		/> <property name="xfusionOrganizationGetAll" value="http://192.168.1.242:4444/XFusionPlatform/organization/get/all" 
+		/> <property name="xfusionOrganizationStateGet" value="http://192.168.1.242:4444/XFusionPlatform/state/get/state" 
+		/> <property name="xfusionOrganizationCityGet" value="http://192.168.1.242:4444/XFusionPlatform/city/get/city" 
+		/> <property name="xfusionOrganizationInsert" value="http://192.168.1.242:4444/XFusionPlatform/organization/insert" 
+		/> <property name="xfusionOrganizationUpdate" value="http://192.168.1.242:4444/XFusionPlatform/organization/update" 
+		/> <property name="xfusionOrganizationDelete" value="http://192.168.1.242:4444/XFusionPlatform/organization/delete" 
+		/> <property name="userCreate" value="http://192.168.1.242:4444/OAuthEngine/user/profile/create" 
+		/> <property name="userUpdate" value="http://192.168.1.242:4444/OAuthEngine/user/profile/update" 
+		/> <property name="userDelete" value="http://192.168.1.242:4444/OAuthEngine/user/delete" 
+		/> <property name="userGetAll" value="http://192.168.1.242:4444/OAuthEngine/users/get/application" 
+		/> <property name="userRoleGetAll" value="http://192.168.1.242:4444/OAuthEngine/roles/get/all" 
+		/> <property name="attributeGetAllByUser" value="http://192.168.1.242:4444/OAuthEngine/xfusion/attributes/get/by/role" 
+		/> <property name="xfusionOrganizationUserMapping" value="http://192.168.1.242:4444/XFusionPlatform/user/organization/insert" 
+		/> <property name="oauthRolesGetALlUserApplication" value="http://192.168.1.242:4444/OAuthEngine/roles/get/all/user/application" 
+		/> <property name="oauthUserGetAttribute" value="http://192.168.1.242:4444/OAuthEngine/xfusion/user/get/attribute" 
+		/> <property name="oauthUserUpdateLockStatus" value="http://192.168.1.242:4444/OAuthEngine/user/update/lock/status" 
+		/> <property name="oauthApplictionUserRemove" value="http://192.168.1.242:4444/OAuthEngine/application/user/remove" 
+		/> <property name="oauthUsersGetAllExceptApplication" value="http://192.168.1.242:4444/OAuthEngine/users/get/all/except/application" 
+		/> <property name="oauthUserUpdateAttribute" value="http://192.168.1.242:4444/OAuthEngine/xfusion/user/update/attribute" 
+		/> <property name="oauthApplicationUserAdd" value="http://192.168.1.242:4444/OAuthEngine/application/user/add" 
+		/> <property name="oauthUserInactive" value="http://192.168.1.242:4444/OAuthEngine/user/inactive" 
+		/> <property name="oauthCountryGet" value="http://192.168.1.242:4444/OAuthEngine/country/get" 
+		/> <property name="oauthStateGet" value="http://192.168.1.242:4444/OAuthEngine/state/get/by/country/id" 
+		/> <property name="oauthCityGet" value="http://192.168.1.242:4444/OAuthEngine/city/get/by/state/id" 
+		/> <property name="oauthUserUpdate" value="http://192.168.1.242:4444/OAuthEngine/user/update" 
+		/> <property name="xfusionPlatformUsersList" value="http://192.168.1.242:4444/XFusionPlatform/users/list" 
+		/> <property name="xfusionPlatformOrganizationGetAllUser" value="http://192.168.1.242:4444/XFusionPlatform/organization/get/all/user" 
+		/> <property name="xfusionPlatformDeviceMApping" value="http://192.168.1.242:4444/XFusionPlatform/device/add/device" 
+		/> <property name="xfusionPlatformGetOrganizationByUser" value="http://192.168.1.242:4444/XFusionPlatform/organization/get/by/user" 
+		/> <property name="xfusionPlatformGetUserList" value="http://192.168.1.242:4444/XFusionPlatform/users/list" 
+		/> <property name="validateToken" value="http://192.168.1.242:4444/OAuthEngine/oauth/validate/token" 
+		/> <property name="rootOrganization" value="http://192.168.1.242:4444/XFusionPlatform/organization/root/by/user" 
+		/> </bean> -->
+	<!-- <bean class="com.springiot.constant.URLParameter" id="urlParameter"> 
+		<property name="authURL" value="http://52.163.229.44:7878/OAuthEngine/oauth/token" 
+		/> <property name="xfusionOAuthURL" value="http://52.163.229.44:7878/XFusionPlatform/oauth/token" 
+		/> <property name="authResetPasswordURL" value="http://52.163.229.44:7878/OAuthEngine/passwordreset" 
+		/> <property name="authExpireURL" value="http://52.163.229.44:7878/OAuthEngine/oauth/token/expire" 
+		/> <property name="authForgotPasswordURL" value="http://52.163.229.44:7878/OAuthEngine/forgotpassword" 
+		/> <property name="authUpdateURL" value="http://52.163.229.44:7878/OAuthEngine/passwordupdate" 
+		/> <property name="xfusionURL" value="http://52.163.229.44:7878/XFusionPlatform/xfusionusers" 
+		/> <property name="xfusionServiceStatusDeviceGetManyWithoutData" value="http://52.163.229.44:7878/XFusionPlatform/servicestatus/device/get/many/without/data" 
+		/> <property name="xfusionInventoryStatusDeviceGetManyWithoutData" value="http://52.163.229.44:7878/XFusionPlatform/inventorystatus/device/get/many/without/data" 
+		/> <property name="xfusionPlatformDeviceGetMetaData" value="http://52.163.229.44:7878/XFusionPlatform/device/get/metadata" 
+		/> <property name="xfusionPlatformDeviceExecuteCommand" value="http://52.163.229.44:7878/XFusionPlatform/execute/command/tr069" 
+		/> <property name="xfusionPlatformThirdPartyIntegrationToken" value="http://52.163.229.44:7878/XFusionPlatform/thirdparty/integration/token" 
+		/> <property name="xfusionPlatformDeviceModelGetAllByDeviceTechnology" value="http://52.163.229.44:7878/XFusionPlatform/device/model/get/all/by/device/technology" 
+		/> <property name="xfusionPlatformUsersGetAllByUserOrganization" value="http://52.163.229.44:7878/XFusionPlatform/users/get/all/by/user/organization" 
+		/> <property name="xfusionPlatformDeviceRegister" value="http://52.163.229.44:7878/XFusionPlatform/deviceregister" 
+		/> <property name="xfusionPlatformPerformanceServiceStatusDevicesGetMany" 
+		value="http://52.163.229.44:7878/XFusionPlatform/performane/servicestatus/devices/get/many" 
+		/> <property name="xfusionPlatformPerformanceOrganizationGetAll" value="http://52.163.229.44:7878/XFusionPlatform/organization/get/all" 
+		/> <property name="xfusionPerformanceServiceMultipleDevicesStatusGetMany" 
+		value="http://52.163.229.44:7878/XFusionPlatform/performance/status/multipledevices/get/many" 
+		/> <property name="xfusionPerformanceServiceMultipleDevicesGetMany" value="http://52.163.229.44:7878/XFusionPlatform/performance/service/multipledevices/get/many" 
+		/> <property name="xfusionOrganizationCountryGet" value="http://52.163.229.44:7878/XFusionPlatform/country/get/country" 
+		/> <property name="xfusionOrganizationGetAll" value="http://52.163.229.44:7878/XFusionPlatform/organization/get/all" 
+		/> <property name="xfusionOrganizationStateGet" value="http://52.163.229.44:7878/XFusionPlatform/state/get/state" 
+		/> <property name="xfusionOrganizationCityGet" value="http://52.163.229.44:7878/XFusionPlatform/city/get/city" 
+		/> <property name="xfusionOrganizationInsert" value="http://52.163.229.44:7878/XFusionPlatform/organization/insert" 
+		/> <property name="xfusionOrganizationUpdate" value="http://52.163.229.44:7878/XFusionPlatform/organization/update" 
+		/> <property name="xfusionOrganizationDelete" value="http://52.163.229.44:7878/XFusionPlatform/organization/delete" 
+		/> <property name="userCreate" value="http://52.163.229.44:7878/OAuthEngine/user/profile/create" 
+		/> <property name="userUpdate" value="http://52.163.229.44:7878/OAuthEngine/user/profile/update" 
+		/> <property name="userDelete" value="http://52.163.229.44:7878/OAuthEngine/user/delete" 
+		/> <property name="userGetAll" value="http://52.163.229.44:7878/OAuthEngine/users/get/application" 
+		/> <property name="userRoleGetAll" value="http://52.163.229.44:7878/OAuthEngine/roles/get/all" 
+		/> <property name="attributeGetAllByUser" value="http://52.163.229.44:7878/OAuthEngine/xfusion/attributes/get/by/role" 
+		/> <property name="xfusionOrganizationUserMapping" value="http://52.163.229.44:7878/XFusionPlatform/user/organization/insert" 
+		/> <property name="oauthRolesGetALlUserApplication" value="http://52.163.229.44:7878/OAuthEngine/roles/get/all/user/application" 
+		/> <property name="oauthUserGetAttribute" value="http://52.163.229.44:7878/OAuthEngine/xfusion/user/get/attribute" 
+		/> <property name="oauthUserUpdateLockStatus" value="http://52.163.229.44:7878/OAuthEngine/user/update/lock/status" 
+		/> <property name="oauthApplictionUserRemove" value="http://52.163.229.44:7878/OAuthEngine/application/user/remove" 
+		/> <property name="oauthUsersGetAllExceptApplication" value="http://52.163.229.44:7878/OAuthEngine/users/get/all/except/application" 
+		/> <property name="oauthUserUpdateAttribute" value="http://52.163.229.44:7878/OAuthEngine/xfusion/user/update/attribute" 
+		/> <property name="oauthApplicationUserAdd" value="http://52.163.229.44:7878/OAuthEngine/application/user/add" 
+		/> <property name="oauthUserInactive" value="http://52.163.229.44:7878/OAuthEngine/user/inactive" 
+		/> <property name="oauthCountryGet" value="http://52.163.229.44:7878/OAuthEngine/country/get" 
+		/> <property name="oauthStateGet" value="http://52.163.229.44:7878/OAuthEngine/state/get/by/country/id" 
+		/> <property name="oauthCityGet" value="http://52.163.229.44:7878/OAuthEngine/city/get/by/state/id" 
+		/> <property name="oauthUserUpdate" value="http://52.163.229.44:7878/OAuthEngine/user/update" 
+		/> <property name="xFusionPlatformUsersList" value="http://52.163.229.44:7878/XFusionPlatform/users/list" 
+		/> <property name="xFusionPlatformOrganizationGetAllUser" value="http://52.163.229.44:7878/XFusionPlatform/organization/get/all/user" 
+		/> <property name="xFusionPlatformDeviceMApping" value="http://52.163.229.44:7878/XFusionPlatform/device/add/device" 
+		/> <property name="xFusionPlatformGetOrganizationByUser" value="http://52.163.229.44:7878/XFusionPlatform/organization/get/by/user" 
+		/> <property name="xFusionPlatformGetUserList" value="http://52.163.229.44:7878/XFusionPlatform/users/list" 
+		/> </bean> -->
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+	</bean>
+
+</beans>

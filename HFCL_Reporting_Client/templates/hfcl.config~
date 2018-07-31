@@ -1,0 +1,37 @@
+#define auth api url
+hfcl.auth.api.url=http://192.168.1.88:7878/XFusionPlatform/oauth/token
+hfcl.auth.third.party.url=http://192.168.1.88:7878/ThirdPartyHFCLApplication/oauth/token
+
+hfcl.get.devices.api.url=http://192.168.1.88:7878/XFusionPlatform/device/get/metadata/status/by/type
+
+
+hfcl.auth.user.name=hfcl@xfusion.in
+
+hfcl.auth.password=Admin@123
+
+hfcl.auth.application.id=9a959887-5946-11e6-9bb0-fe984cc15272
+
+hfcl.access.key=d3cd4e3f-5946-11e6-9bb0-fe984cc15272
+hfcl.user.key=db4c4236-30c3-11e7-be7d-000c29e31674
+
+hfcl.call.attempts.per.trx=http://192.168.1.88:7878/ThirdPartyHFCLApplication/call/attempts/per/trx
+hfcl.call.platform.performance.api=http://192.168.1.88:7878/XFusionPlatform/performance/service/multipledevices/get/many
+
+hfcl.number.paging.attempts=http://192.168.1.88:7878/ThirdPartyHFCLApplication/number/paging/attempts
+hfcl.total.downlink.data=http://192.168.1.88:7878/ThirdPartyHFCLApplication/total/downlink/data
+hfcl.get.devices.type=4
+hfcl.get.devices.host.type=0
+
+hfcl.downlink.data.throughput=http://192.168.1.88:7878/ThirdPartyHFCLApplication/downlink/data/throughput
+hfcl.uplink.data.throughput=http://192.168.1.88:7878/ThirdPartyHFCLApplication/uplink/data/throughput
+
+hfcl.sdcch.drop.rate.per.bts=http://192.168.1.88:7878/ThirdPartyHFCLApplication/sdcch/drop/rate/per/bts
+
+hfcl.db.driver=com.mysql.jdbc.Driver
+hfcl.db.url=jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+
+#Defined logger status
+#if 1 then logger start else logger closed
+hfcl.logger.status=1
+
+

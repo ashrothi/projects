@@ -1,0 +1,18 @@
+org.json.JSONException: JSONObject["object"] is not a JSONObject.
+	at org.json.JSONObject.getJSONObject(JSONObject.java:614)
+	at com.teramatrix.processData.VoiceData.CallSetupSuccessRate(VoiceData.java:191)
+	at com.teramatrix.processData.VoiceData.initial(VoiceData.java:28)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:13)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:157)
+org.json.JSONException: JSONObject["object"] is not a JSONObject.
+	at org.json.JSONObject.getJSONObject(JSONObject.java:614)
+	at com.teramatrix.processData.VoiceData.CallSetupSuccessRate(VoiceData.java:191)
+	at com.teramatrix.processData.VoiceData.initial(VoiceData.java:28)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:13)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:157)
+org.json.JSONException: JSONObject["object"] is not a JSONObject.
+	at org.json.JSONObject.getJSONObject(JSONObject.java:614)
+	at com.teramatrix.processData.VoiceData.CallSetupSuccessRate(VoiceData.java:191)
+	at com.teramatrix.processData.VoiceData.initial(VoiceData.java:28)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:13)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:157)

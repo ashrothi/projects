@@ -1,0 +1,51 @@
+#define auth api url
+hfcl.auth.api.url=http://192.168.1.73:7878/XFusionPlatform_v2/oauth/token
+hfcl.auth.third.party.url=http://192.168.1.73:4444/ThirdPartyFFTApplication/oauth/token
+
+hfcl.get.devices.api.url=http://192.168.1.73:4444/ThirdPartyFFTApplication/hfcl/get/all/active/devices
+
+hfcl.get.escalation.devices.api.url=http://192.168.1.73:4444/ThirdPartyFFTApplication/hfcl/get/escalation/tab/offline
+
+hfcl.get.insert.devices.escalation.api.url=http://192.168.1.73:4444/ThirdPartyFFTApplication/hfcl/escalation/insert
+
+hfcl.update.devices.api.url=http://192.168.1.73:4444/ThirdPartyFFTApplication/hfcl/user/logs/update
+hfcl.devices.sos.api.url=http://192.168.1.73:4444/ThirdPartyFFTApplication/hfcl/device/sos
+
+hfcl.get.data.api.url=http://192.168.1.73:7878/XFusionPlatform_v2/performane/servicestatus/devices/get/many
+
+hfcl.auth.user.name=preeti.burad@teramatrix.co
+
+hfcl.auth.password=Admin@123
+
+hfcl.auth.application.id=9a959887-5946-11e6-9bb0-fe984cc15272
+
+hfcl.user.key=dcfb5f5f-588e-11e6-85b9-fe984cc15272
+
+
+hfcl.access.key=d3cd4e3f-5946-11e6-9bb0-fe984cc15272
+
+hfcl.service.names=location_parameters,location_parameters,location_parameters,phone_parameters,host_status,phone_parameters
+
+hfcl.data.sources=latitude,longitude,location_accuracy,device_battery_percentage,host_status,device_charging_status
+
+
+
+hfcl.mail.smtp.detail=smtp.gmail.com
+hfcl.mail.smtp.port=587
+hfcl.mail.smtp.username=xfusiondonotreply@gmail.com
+hfcl.mail.smtp.password=temp@123
+hfcl.mail.smtp.from=xfusiondonotreply@gmail.com
+hfcl.mail.socket.port=465
+hfcl.mail.socket.class=javax.net.ssl.SSLSocketFactory
+hfcl.mail.smtp.auth=true
+hfcl.mail.smtp.email.title=Notification Center
+hfcl.mail.smtp.email.cc=ankita.shrothi@teramatrix.in
+hfcl.mail.smtp.email.bcc=
+hfcl.mail.smtp.email.subject.sos=SOS Alert
+hfcl.mail.smtp.email.status=hfcl_Veris
+hfcl.mail.smtp.email.subject.alert=hfcl - Device Offline
+
+
+#Defined logger status
+#if 1 then logger start else logger closed
+hfcl.logger.status=1

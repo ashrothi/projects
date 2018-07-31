@@ -1,0 +1,15 @@
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.CallSetupSuccessRate(BTS.java:351)
+	at com.teramatrix.processData.BTS.initial(BTS.java:33)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:163)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.CallSetupSuccessRate(BTS.java:351)
+	at com.teramatrix.processData.BTS.initial(BTS.java:33)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:163)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.CallSetupSuccessRate(BTS.java:351)
+	at com.teramatrix.processData.BTS.initial(BTS.java:33)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:163)

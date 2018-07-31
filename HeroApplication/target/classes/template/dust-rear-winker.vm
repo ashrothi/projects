@@ -1,0 +1,324 @@
+<html>
+<body>
+<table border="1" cellpadding="5" cellspacing="2" dir="ltr" style='table-layout: fixed; font-size: 9pt; width:100%;  border-collapse: collapse; font-family:"bookman Old Style"; border: 2px solid #ccc'>
+	 
+	<tr>
+		<td colspan="1" rowspan="2" style=' vertical-align: middle; border-top: 2px solid #000000; border-right: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000; text-align:center;'>
+		 
+		<img src="$!object.logo" alt=" " height="50" >
+		 </td>
+		<td colspan="12"  style=' vertical-align: middle; border-top: 2px solid #000000;  font-size:13pt; border-right: 2px solid #000000; border-bottom: 2px solid #000000;   color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; '>
+		 
+		 
+			<strong>PERFORMANCE AND ENDURANCE TESTING LAB REPORT </strong>
+		</td>
+	</tr>
+	 
+	<tr>
+		<td colspan="12"  style=' vertical-align: middle; border-top: 2px solid #000000;  font-size:13pt; border-right: 2px solid #000000; border-bottom: 2px solid #000000;   color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; '>
+		 
+		 
+		<strong>SQA HMCL GURGAON</strong></td>
+	</tr>
+	<tr>
+		<td colspan="2" rowspan="1" style=' vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000;   wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 26px;'>
+		<strong>&nbsp; PART NAME</strong></td>
+		<td colspan="2"  rowspan="1" style=' font-family:"Century"; vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;  wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 26px;'>
+		&nbsp; $!object.header.get(0).part_name</td>
+		<td colspan="2"  rowspan="1" style=' vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;   wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 26px;'>
+		<strong>&nbsp; HMCL PART CODE</strong></td>
+		<td colspan="2"  rowspan="1" style=' font-family:"Century"; vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;  wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 26px;'>
+		&nbsp; $!object.header.get(0).hmcl_part_code</td>
+		<td colspan="2" rowspan="2" style=' vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;   wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 26px;'>
+		<strong>&nbsp; REPORT DATE</strong></td>
+		<td colspan="3" rowspan="2" style=' font-family:"Century"; vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;  wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 26px;'>
+		&nbsp; $!object.header.get(0).report_date.replace("00:00:00.0","")</td>
+	</tr>
+	<tr >
+		<td colspan="2" rowspan="1" style=' vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000;   wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 27px;'>
+		<strong>&nbsp; VENDOR NAME</strong></td>
+		<td colspan="2" rowspan="1" style=' font-family:"Century"; vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;  wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 27px;'>
+		&nbsp; $!object.header.get(0).vendor_name/ $!object.header.get(0).vendor_code</td>
+		<td colspan="2"  rowspan="1" style=' vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;   wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 27px;'>
+		<strong>&nbsp; VENDOR PART CODE</strong></td>
+		<td colspan="2" rowspan="1" style=' font-family:"Century"; vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;  wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 27px;'>
+		&nbsp; $!object.header.get(0).vendor_part_code</td>
+		
+	</tr>
+	<tr >
+		<td colspan="2" rowspan="1" style=' vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000;   wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 26px;'>
+		<strong>&nbsp; PLANT</strong></td>
+		<td colspan="2" rowspan="1" style=' font-family:"Century"; vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;  wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 26px;'>
+		&nbsp; $!object.header.get(0).plant</td>
+		<td colspan="2" rowspan="1" style=' vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;   color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 26px;'>
+		<strong>&nbsp; VENDOR MFG LOCATION</strong></td>
+		<td colspan="2" rowspan="1" style=' font-family:"Century"; vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;  wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 26px;'>
+		&nbsp; $!object.header.get(0).vendor_mfg_location </td>
+		<td colspan="2" rowspan="1" style=' vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;   wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 26px;'>
+		<strong>&nbsp; TEST START DATE</strong></td>
+		<td colspan="3" rowspan="1" style=' font-family:"Century"; vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;  color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 26px;'>
+		&nbsp; $!object.header.get(0).test_start_date.replace("00:00:00.0","")</td>
+	</tr>
+	<tr >
+		<td colspan="2" rowspan="1" style=' vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000;   wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 26px;'>
+		<strong>&nbsp; INSPECTION LOT NO</strong></td>
+		<td colspan="2" rowspan="1" style=' font-family:"Century"; vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;   color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 26px;'>
+			&nbsp; $!object.header.get(0).inspection_lot_no 
+		 </td>
+		<td colspan="2"  rowspan="1" style=' vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;   wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 26px;'>
+		<strong>&nbsp; INSPECTION LOT QTY</strong></td>
+		<td colspan="2"  rowspan="1" style=' font-family:"Century"; vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;  wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 26px;'>
+		&nbsp; $!object.header.get(0).inspection_lot_qty</td>
+		<td colspan="2"  rowspan="1" style=' vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;   wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 26px;'>
+		<strong>&nbsp; TEST END DATE</strong></td>
+		<td colspan="3"  rowspan="1" style=' font-family:"Century"; vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;  color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 26px;'>
+		&nbsp; $!object.header.get(0).test_end_date.replace("00:00:00.0","")</td>
+	</tr>
+	<tr >
+		<td colspan="2"  rowspan="1" style=' vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000;   wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 26px;'>
+		<strong>&nbsp; INSPECTION LOT DATE</strong></td>
+<td colspan="2" rowspan="1" style=' font-family:"Century"; vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;   color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 26px;'>
+			&nbsp; $!object.header.get(0).inspection_lot_date.replace("00:00:00.0","") 
+		 </td>
+		<td colspan="2" rowspan="1" style=' vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;   wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 26px;'>
+		<strong>&nbsp; PART MFG DATE</strong></td>
+		<td colspan="2"   rowspan="1" style=' font-family:"Century"; vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;  color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 26px;'>
+		&nbsp; $!object.header.get(0).part_mfg_date.replace("00:00:00.0","")</td>
+		<td colspan="2"  rowspan="1" style=' vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;   wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 26px;'>
+		<strong>&nbsp; NO OF SAMPLES</strong></td>
+		<td colspan="3"   rowspan="1" style=' font-family:"Century"; vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;  wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 26px;'>
+		&nbsp; $!object.header.get(0).no_of_samples Nos</td>
+	</tr>
+	<tr >
+		<td colspan="2"   rowspan="1" style=' vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000;   wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 30px;'>
+		<strong>&nbsp; TYPE OF TEST</strong></td>
+		<td colspan="11"   rowspan="1" style=' font-family:"Century"; vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;  wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 30px;'>
+		&nbsp; $!object.header.get(0).testing_type </td>
+	</tr>
+	<tr >
+		<td colspan="2" rowspan="1" style=' vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000;   wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 30px;'>
+		<strong>&nbsp; OBJECTIVE</strong></td>
+		<td colspan="11" rowspan="1" style=' font-family:"Century"; vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;  wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 30px;'>
+		&nbsp; $!object.header.get(0).objective</td>
+	</tr>
+	<tr>
+		<td colspan="2"  rowspan="1" style=' vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000;   color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 32px;'>
+		<strong>&nbsp; DETAILS OF PART <br/> &nbsp; MODIFICATION</strong></td>
+		<td colspan="11"  rowspan="1" style=' font-family:"Century"; vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;  wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 32px;'>
+		&nbsp; $!object.header.get(0).part_modification_details </td>
+	</tr>
+	<tr >
+		<td colspan="2"  rowspan="2" style=' vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000;    color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left;'>
+		<span>
+		<div style='max-height: 170px;'>
+			<strong>&nbsp; TEST CONDITION AND <br/> &nbsp; METHOD</strong> </div>
+		</span></td>
+		<td colspan="5"  rowspan="1" style=' vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;    wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; height: 30px;'>
+		<strong> AS PER STANDARD</strong></td>
+		<td colspan="6" rowspan="1" style=' vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;    wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; height: 30px;'>
+		<strong>ACTUAL TEST CONDITION</strong></td>
+	</tr>
+	<tr style='height: 153px;'>
+		<td colspan="5" rowspan="1" style=' font-family:"Century"; vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;    wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left;'>
+		$!object.header.get(0).test_condition_as_per_specification
+		
+			#if ($!object.header.get(0).test_condition_as_per_specification_image && $!object.header.get(0).test_condition_as_per_specification_image != "null")
+				<img src="$!object.header.get(0).test_condition_as_per_specification_image" alt=" " height="80" >
+			#end
+		
+		</td>
+
+		<td colspan="6" rowspan="1" style=' font-family:"Century"; vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;   color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left;'>
+		$!object.header.get(0).test_actual_condition
+		
+			#if ($!object.header.get(0).test_actual_condition_image && $!object.header.get(0).test_actual_condition_image != "null")
+				<img src="$!object.header.get(0).test_actual_condition_image" alt=" " height="80" >
+			#end
+		
+		</td>
+
+	</tr>
+	<tr >
+		<td colspan="2"  rowspan="1" style=' vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000;    wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 38px;'>
+		<strong>&nbsp; TEST DURATION </strong></td>
+		<td colspan="2"  rowspan="1" bgcolor="#dbeef3" style=' vertical-align: middle; background-color: #dbeef3;  border-right: 2px solid #000000; border-bottom: 2px solid #000000;   wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 38px;'>
+		<strong>&nbsp; $!object.header.get(0).test_duration</strong></td>
+		<td colspan="3"  rowspan="1" style=' vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;    wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; height: 38px;'>
+		<strong>&nbsp; TEST STANDARD</strong></td>
+		<td colspan="6" rowspan="1" style=' vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;   wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; height: 38px;'>
+		&nbsp;
+
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" rowspan="2" style=' vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000;   wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;'>
+		<span>
+		<div style='max-height: 66px;'>
+			<strong>ITEMS</strong></div>
+		</span></td>
+		<td colspan="3" rowspan="2" style=' vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;   wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;'>
+		<span>
+		<div style='max-height: 66px;'>
+			<strong>TEST REQUIRMENT AND SPEC</strong></div>
+		</span></td>
+		<td colspan="2" rowspan="1"  bgcolor="#fde9d9" style=' vertical-align: middle; background-color: #fde9d9border-right: 2px solid #000000; border-bottom: 2px solid #000000;   color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;'>
+		<strong>BEFORE TEST RESULT</strong></td>
+		<td colspan="2"  rowspan="1" bgcolor="#dbe5f1" style=' vertical-align: middle; background-color: #dbe5f1;  border-right: 2px solid #000000; border-bottom: 2px solid #000000;   wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;'>
+		<strong>AFTER TEST RESULT</strong></td>
+		<td colspan="2" rowspan="1" bgcolor="#dbe5f1" style=' vertical-align: middle; background-color: #dbe5f1;  border-right: 2px solid #000000; border-bottom: 2px solid #000000;   color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;'>
+		<strong>% AGE DROP IN LUMINIOUS INTENSITY</strong></td>
+		<td colspan="2" rowspan="1" bgcolor="#dbe5f1" style=' vertical-align: middle; border-right: 2px solid #000000;background-color: #dbe5f1;  border-bottom: 2px solid #000000;   wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;'>
+		<strong>JUDGEMENT</strong></td>
+	</tr>
+	<tr >
+		<td   bgcolor="#fde9d9"style=' vertical-align: middle; background-color: #fde9d9; border-right: 2px solid #000000; border-bottom: 2px solid #000000;   wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; height: 30px;'>
+		<strong>N1(RRH)</strong></td>
+		<td   bgcolor="#fde9d9"style=' vertical-align: middle; background-color: #fde9d9 border-right: 2px solid #000000; border-bottom: 2px solid #000000;   wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; height: 30px;'>
+		<strong>N2(RLH)</strong></td>
+		<td  bgcolor="#dbe5f1" style=' vertical-align: middle; background-color: #dbe5f1;  border-right: 2px solid #000000; border-bottom: 2px solid #000000;   wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; height: 30px;'>
+		<strong>N1(RRH)</strong></td>
+		<td   bgcolor="#dbe5f1"style=' vertical-align: middle; background-color: #dbe5f1;  border-right: 2px solid #000000; border-bottom: 2px solid #000000;   wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; height: 30px;'>
+		<strong>N2(RLH)</strong></td>
+		<td rowspan="1"  bgcolor="#dbe5f1" style=' vertical-align: middle; background-color: #dbe5f1; border-right: 2px solid #000000; border-bottom: 2px solid #000000;   wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; height: 30px;'>
+		<strong>N1(RRH)</strong></td>
+		<td  bgcolor="#dbe5f1" style=' vertical-align: middle; background-color: #dbe5f1; border-right: 2px solid #000000; border-bottom: 2px solid #000000;   wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle;text-align: center; height: 30px;'>
+		<strong>N2(RLH)</strong></td>
+		<td  bgcolor="#dbe5f1" style=' vertical-align: middle; background-color: #dbe5f1; border-right: 2px solid #000000; border-bottom: 2px solid #000000;   wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; height: 30px;'>
+		<strong>N1(RRH)</strong></td>
+		<td  bgcolor="#dbe5f1" style=' vertical-align: middle; background-color: #dbe5f1; border-right: 2px solid #000000; border-bottom: 2px solid #000000;   wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; height: 30px;'>
+		<strong>N2(RLH)</strong></td>
+	</tr>
+	<tr>
+		<td colspan="2" rowspan="1" style=' font-family:"Century"; vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000;  wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;'>
+		$!object.grid.get(0).items</td>
+		<td colspan="3" rowspan="1" style=' font-family:"Century"; vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;   color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;'>
+		$!object.grid.get(0).test_requirement_and_specification</td>
+		<td style=' text-align:center; font-family:"Century"; vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;  color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; '>
+		$!object.grid.get(0).before_test_result_n1</td>
+		<td style='  text-align:center; font-family:"Century"; vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;  color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle;'>
+		$!object.grid.get(0).before_test_result_n2</td>
+		<td style='  text-align:center; font-family:"Century"; vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;  color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; '>
+		$!object.grid.get(0).after_test_result_n1</td>
+		<td style='  text-align:center; font-family:"Century"; vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;  color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle;'>
+		$!object.grid.get(0).after_test_result_n2</td>
+		<td  rowspan="1" style='  text-align:center; font-family:"Century"; vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;  wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle;'  >
+		$!object.grid.get(0).age_drop_in_luminious_intensity_n1</td>
+		<td style='  text-align:center; font-family:"Century"; vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;  wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; '>
+		$!object.grid.get(0).age_drop_in_luminious_intensity_n2</td>
+		<td style='  text-align:center; font-family:"Century"; vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;   wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle;  '>
+		<strong>#if($!object.grid.get(0).judgement_n1 == 1)
+		<span style='color: #00b058;'>OK</span> #else
+		<span style='color: #ff0000;'>NG</span> #end </strong></td>
+		<td style='  text-align:center; font-family:"Century"; vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;   wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle;  '>
+		<strong>#if($!object.grid.get(0).judgement_n2 == 1)
+		<span style='color: #00b058;'>OK</span> #else
+		<span style='color: #ff0000;'>NG</span> #end </strong></td>
+	</tr>
+	<tr style='height: 27px;'>
+		<td colspan="13"  rowspan="1" style=' vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000;    wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left;'>
+		<strong>PHOTOGRAPHS:-</strong></td>
+	</tr>
+	<tr >
+		<td colspan="6"  rowspan="1"  bgcolor="#ddd9c3" style=' vertical-align: middle; background-color: #ddd9c3;  border-right: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000;    wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; height: 36px;'>
+		<strong>BEFORE TEST</strong></td>
+		<td colspan="7"  rowspan="1"  bgcolor="#c5d9f1" style=' vertical-align: middle; background-color: #c5d9f1;  border-right: 2px solid #000000; border-bottom: 2px solid #000000;    wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; height: 36px;'>
+		<strong>AFTER TEST</strong></td>
+	</tr>
+	<tr >
+		<td colspan="3"  rowspan="1"  bgcolor="#ddd9c3" style=' vertical-align: middle;  background-color: #ddd9c3;   border-right: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000;    wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; height: 36px;'>
+		<strong>N1</strong></td>
+		<td colspan="3"  rowspan="1"  bgcolor="#ddd9c3" style=' vertical-align: middle;  background-color: #ddd9c3;   border-right: 2px solid #000000; border-bottom: 2px solid #000000;    wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; height: 36px;'>
+		<strong>N2</strong></td>
+		<td colspan="3" rowspan="1"  bgcolor="#c5d9f1" style=' vertical-align: middle;  background-color: #c5d9f1;  border-right: 2px solid #000000; border-bottom: 2px solid #000000;    wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; height: 36px;'>
+		<strong>N1</strong></td>
+		<td colspan="4"  rowspan="1"  bgcolor="#c5d9f1" style=' vertical-align: middle; border-right: 2px solid #000000; background-color: #c5d9f1;  border-bottom: 2px solid #000000;    wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; height: 36px;'>
+		<strong>N2</strong></td>
+	</tr>
+	<tr >
+		<td colspan="3" rowspan="1" style=' vertical-align: top; border-right: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000; text-align:center;'>
+			#foreach ($beforeN0 in $!object.beforeImageN0) 
+				#if ($beforeN0.image_path)
+					<img src="$beforeN0.image_path" alt=" " height="80" > <br>
+				#end
+						
+			#end </td>
+		<td colspan="3" rowspan="1" style=' vertical-align: top; border-right: 2px solid #000000; border-bottom: 2px solid #000000;  text-align:center;'>
+			#foreach ($beforeN1 in $!object.beforeImageN1) 
+				#if ($beforeN1.image_path)
+					<img src="$beforeN1.image_path" alt=" " height="80" > <br>
+				#end
+			#end 
+</td>
+		<td colspan="3" rowspan="1" style=' vertical-align: top; border-right: 2px solid #000000; border-bottom: 2px solid #000000;  text-align:center;'>
+			#foreach ($afterN0 in $!object.afterImageN0)
+				 #if ($afterN0.image_path)
+					<img src="$afterN0.image_path" alt=" " height="80" > <br>
+				#end
+						
+			#end </td>
+		<td colspan="4" rowspan="1" style=' vertical-align: top; border-right: 2px solid #000000; border-bottom: 2px solid #000000;  text-align:center;'>
+ 			#foreach ($afterN1 in $!object.afterImageN1)
+				#if ($afterN1.image_path)
+					<img src="$afterN1.image_path" alt=" " height="80" > <br>
+				#end 
+			#end</td>
+	</tr>
+	<tr >
+		<td colspan="2"  cellpadding = "5" rowspan="1"  style=' vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000;    wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left;'>
+		<strong>OBSERVATION :-</strong></td>
+		<td colspan="11" cellpadding = "5" rowspan="1" style=' font-family:"Century"; vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;   color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left;'>
+		#foreach ($observation in $!object.observation) $!observation.observation
+		<br>#end </td>
+	</tr>
+	<tr >
+		<td colspan="2" cellpadding = "5" rowspan="1" style=' vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000;    wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 27px;'>
+		<strong>ANALYSIS :-</strong></td>
+		<td colspan="11" cellpadding = "5" rowspan="1" style=' font-family:"Century"; vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;  wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 27px;'>
+		$!object.analysis.get(0).analysis </td>
+	</tr>
+	<tr>
+		<td colspan="2" cellpadding = "5"  rowspan="1" style=' vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000;    wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 25px;'>
+		<strong>CONCLUSION :-</strong></td>
+		<td colspan="11" cellpadding = "5" rowspan="1" style=' font-family:"Century"; vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;   color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 25px;'>
+		#foreach ($conclusion in $!object.conclusion) $!conclusion.conclusion
+		<br>#end</td>
+	</tr>
+	<tr>
+		<td colspan="2" cellpadding = "5" rowspan="1" style=' vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000;    wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 26px;'>
+		<strong>RESULT :-</strong></td>
+		<td colspan="11" cellpadding = "5" rowspan="1" style=' font-family:"Century"; vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;   wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left; height: 26px;'>
+		$!object.result.get(0).result</td>
+	</tr>
+	<tr >
+		<td colspan="3" rowspan="1" style=' vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000;  text-align:center;'>
+		#if ($object.signature.image_path_tested_by)
+				<br/><img alt="" align="center" height="30" src="$!object.signature.image_path_tested_by" ><br/>
+	    	#end
+
+		</td>
+		<td colspan="5" rowspan="1" style=' vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000; text-align:center;'>
+		#if ($object.signature.image_path_verified_by)
+				<br/><img alt="" align="center" height="30" src="$!object.signature.image_path_verified_by" ><br/>
+	    	#end
+
+		</td>
+		<td colspan="5" rowspan="1" style=' vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000; text-align:center;'>
+		#if ($object.signature.image_path_approved_by)
+				<br/><img alt="" align="center" height="30" src="$!object.signature.image_path_approved_by" ><br/>
+	    	#end
+
+		</td>
+	</tr>
+	<tr>
+		<td colspan="3" rowspan="1" style=' vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000;   wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;'>
+		<strong>TESTED BY</strong></td>
+		<td colspan="5" rowspan="1" style=' vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;   wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;'>
+		<strong>VERIFIED BY</strong></td>
+		<td colspan="5" rowspan="1" style=' vertical-align: middle; border-right: 2px solid #000000; border-bottom: 2px solid #000000;   wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;'>
+		<strong>APPROVED BY</strong></td>
+	</tr>
+</table>
+
+</body>
+
+</html>

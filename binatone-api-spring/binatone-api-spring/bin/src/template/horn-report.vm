@@ -1,0 +1,703 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>Untitled 1</title>
+<style type="text/css">
+td {border: 1px solid #ccc;}</style>
+</head>
+
+<body>
+
+ 
+
+<style type="text/css"><!--td {border: 1px solid #ccc;}br {
+}--></style>
+<table border="1" cellpadding="0" cellspacing="0" dir="ltr" style="table-layout:fixed; width:100%; font-size:8pt;font-family:Times New Roman;border-collapse:collapse;border:1px solid #ccc; vertical-align:middle !Important;">
+	<colgroup>
+		<col width="39"><col width="64"><col width="69"><col width="113">
+		<col width="94"><col width="44"><col width="64"><col width="123">
+		<col width="71"><col width="142"><col width="52"><col width="52">
+		<col width="69"><col width="64"><col width="71"><col width="75">
+	</colgroup>
+	<tr>
+		<td colspan="2" rowspan="2" style="padding:3px 3px 0px 3px;vertical-align:middle;border-top:1px solid #000000;border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;" class="auto-style1">
+		 
+		 	<img src="/home/dushyant/Dushyant/workspace/ThirdPartyHeroApplication/src/template/hero-logo.png" alt=" " height="55" style="margin:auto" >		 
+		 </td>
+		<td colspan="14" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;PERFORMANCE AND ENDURANCE TESTING LAB REPORT&quot;}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-top:1px solid #000000;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;" class="auto-style5">
+		<span>
+		<div style="max-height:39px">
+			<strong>PERFORMANCE AND ENDURANCE TESTING LAB REPORT</strong></div>
+		</span></td>
+	</tr>
+	<tr style="height:20px;">
+		<td colspan="14" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;SQA HMCL GURGAON&quot;}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:center; height: 26px;" class="auto-style4">
+		<strong>SQA HMCL GURGAON</strong></td>
+	</tr>
+	<tr style="height:48px;">
+		<td colspan="3" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;PART NAME&quot;}" rowspan="1" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:left;">
+		<strong>PART NAME</strong></td>
+		<td colspan="2" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;HORN ASSY&quot;}" rowspan="1" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:left;">
+		$!object.header.part_name</td>
+		<td colspan="3" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;HMCL PART CODE&quot;}" rowspan="1" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:left;">
+		<strong>HMCL PART CODE</strong></td>
+		<td colspan="2" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;38110-AAL-3010\n38110-KRY-9300\n38110-AAB-4010\n38110-KTP-8900&quot;}" rowspan="1" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Times New Roman;font-size:8pt;color:#000000;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:left;">
+		$!object.header.hmcl_part_code<br>38110-KRY-9300<br>38110-AAB-4010<br>38110-KTP-8900</td>
+		<td colspan="2" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;REPORT NO.&quot;}" rowspan="2" style="padding:3px 3px 0px 3px; text-transform:uppercase; vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:left;">
+		<strong>REPORT Creation Date</strong></td>
+		<td colspan="4" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;PETL:FF:HORN ASSY 16&quot;}" rowspan="2" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:left;">
+		$!object.header.report_date</td>
+	</tr>
+	<tr style="height:17px;">
+		<td colspan="3" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;VENDOR NAME / CODE&quot;}" rowspan="1" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:left;">
+		<strong>VENDOR NAME / CODE</strong></td>
+		<td colspan="2" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;BLOWELL / 100042&quot;}" rowspan="1" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:left;">
+		$!object.header.vendor_name/ $!object.header.vendor_code</td>
+		<td colspan="3" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;VENDOR MFG LOCATION&quot;}" rowspan="1" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:left;">
+		<strong>VENDOR MFG LOCATION</strong></td>
+		<td colspan="2" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;FARIDABAD&quot;}" rowspan="1" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;" class="auto-style6">
+		$!object.header.vendor_mfg_location</td>
+	</tr>
+	<tr style="height:20px;">
+		<td colspan="3" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;PLANT&quot;}" rowspan="1" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:left;">
+		<strong>PLANT</strong></td>
+		<td colspan="2" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;HM2G&quot;}" rowspan="1" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:left;">
+		$!object.header.plant</td>
+		<td colspan="3" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;PART MFG MONTH&quot;}" rowspan="1" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:left;">
+		<strong>PART MFG MONTH</strong></td>
+		<td colspan="2" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;NOVEMBER'2015&quot;}" rowspan="1" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:left;">
+		$!object.header.part_mfg_month</td>
+		<td colspan="2" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;TEST START\nDATE&quot;}" rowspan="1" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Times New Roman;font-size:8pt;color:#000000;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:left;">
+		<strong>TEST START DATE</strong></td>
+		<td colspan="4" data-sheets-numberformat="[null,2,&quot;dd.mm.yyyy&quot;,1]" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:42325}" rowspan="1" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;color:#000000;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:left;">
+		$!object.header.test_start_date</td>
+	</tr>
+	<tr style="height:16px;">
+		<td colspan="3" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;TYPE OF TEST&quot;}" rowspan="1" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:left;">
+		<strong>TYPE OF TEST</strong></td>
+		<td colspan="7" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;REPEATED OPERATION DURABILITY&quot;}" rowspan="1" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:left;">
+		$!object.header.testing_type</td>
+		<td colspan="2" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;TEST END DATE&quot;}" rowspan="1" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:left;">
+		<strong>TEST END DATE</strong></td>
+		<td colspan="4" data-sheets-numberformat="[null,2,&quot;dd.mm.yyyy&quot;,1]" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:42374}" rowspan="1" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;color:#000000;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:left;">
+		$!object.header.test_end_date</td>
+	</tr>
+	<tr style="height:20px;">
+		<td colspan="3" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;OBJECTIVE&quot;}" rowspan="1" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:left;">
+		<strong>OBJECTIVE</strong></td>
+		<td colspan="7" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;MASS PRODUCTION TESTING&quot;}" rowspan="1" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:left;">
+		$!object.header.objective</td>
+		<td colspan="2" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;NO. OF SAMPLES&quot;}" rowspan="1" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:left;">
+		<strong>NO. OF SAMPLES</strong></td>
+		<td colspan="4" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;12 Nos&quot;}" rowspan="1" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:left;">
+		$!object.header.no_of_samples</td>
+	</tr>
+	<tr style="height:22px;">
+		<td colspan="3" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;PART MODIFICATION\nDETAILS&quot;}" rowspan="1" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;font-family:Times New Roman;font-size:8pt;color:#000000;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:left;">
+		<strong>PART MODIFICATION DETAILS</strong></td>
+		<td colspan="13" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;NOT APPLICABLE&quot;}" rowspan="1" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:left;">
+		$!object.header.part_modification_details</td>
+	</tr>
+	<tr>
+		<td colspan="3" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;TEST CONDITION &amp; METHOD&quot;}" rowspan="2" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;text-align:left;">
+		<span>
+		<div style="max-height:40px">
+			<strong>TEST CONDITION &amp; METHOD</strong></div>
+		</span></td>
+		<td colspan="6" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;AS PER STANDARD&quot;}" rowspan="1" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:center;">
+		<strong>AS PER STANDARD</strong></td>
+		<td colspan="7" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;ACTUAL TEST CONDITION&quot;}" rowspan="1" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:center;">
+		<strong>ACTUAL TEST CONDITION</strong></td>
+	</tr>
+	<tr style="height:25px;">
+		<td colspan="6" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;REPEAT BLOW FOR 1 SECOND &amp; BREAK 3 SECONDS FOR 5 LAKH CYCLES TO BE DONE AT 13 \u00b1 0.5 V.&quot;}" rowspan="1" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:left; height: 34px;">
+		<strong>$!object.header.test_standart_condition</strong></td>
+		<td colspan="7" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;REPEATED OPERATION DURABILITY - 1 SEC ON ; 3 SEC OFF FOR 5 LAKH CYCLES DONE AT A VOLTAGE RANGE 12.77 V ~ 13.37 V&quot;}" rowspan="1" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:left; height: 34px;">
+		<strong>$!object.header.test_actual_condition</strong></td>
+	</tr>
+	<tr style="height:18px;">
+		<td colspan="8" rowspan="1" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;">
+		</td>
+		<td colspan="2" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;M/s HMCL Specification&quot;}" rowspan="1" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;" class="auto-style1">
+		<strong>M/s HMCL Specification</strong></td>
+		<td colspan="2" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Readings&quot;}" rowspan="1" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;" class="auto-style1">
+		<strong>Readings</strong></td>
+		<td colspan="1" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Difference&quot;}" rowspan="2" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;" class="auto-style1">
+		<span>
+		<div style="max-height:54px">
+			<strong>Difference</strong></div>
+		</span></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Readings&quot;}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;" class="auto-style1">
+		Readings</td>
+		<td colspan="1" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Difference&quot;}" rowspan="2" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;" class="auto-style1">
+		<span>
+		<div style="max-height:54px">
+			<strong>Difference</strong></div>
+		</span></td>
+		<td colspan="1" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Judgement&quot;}" rowspan="2" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;" class="auto-style1">
+		<span>
+		<div style="max-height:54px">
+			<strong>Judgement</strong></div>
+		</span></td>
+	</tr>
+	<tr style="height:37px;">
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;S.NO&quot;}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;" class="auto-style1">
+		<strong>S.NO</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;MODEL&quot;}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;" class="auto-style1">
+		<strong>MODEL</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;HORN TYPE&quot;}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;" class="auto-style1">
+		<strong>HORN TYPE</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;PART CODE&quot;}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;" class="auto-style1">
+		<strong>PART CODE</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;LOT NO.&quot;}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;" class="auto-style1">
+		<strong>LOT NO.</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;LOT QTY.&quot;}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;" class="auto-style1">
+		<strong>LOT QTY.</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;DATE&quot;}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;" class="auto-style1">
+		<strong>DATE</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;GEN. PERF. PARAMETERS&quot;}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;" class="auto-style1">
+		<strong>GEN. PERF. PARAMETERS</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Before Test&quot;}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;" class="auto-style1">
+		<strong>Before Test</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;After Test&quot;}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;" class="auto-style1">
+		<strong>After Test</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Before Test&quot;}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;" class="auto-style1">
+		<strong>Before Test</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;After Test&quot;}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;" class="auto-style1">
+		<strong>After Test</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;After 2 Hrs of keeping&quot;}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:center;">
+		<strong>After 2 Hrs of keeping</strong></td>
+	</tr>
+	<tr style="height:16px;">
+		<td colspan="1" data-sheets- data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}" rowspan="3" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;font-family:Domine;font-size:8pt;color:#000000;wrap-strategy:4;white-space:normal;word-wrap:break-word;text-align:center;">
+		<span>
+		<div >
+			1</div>
+		</span></td>
+		<td colspan="1" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;AAL&quot;}" rowspan="3" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;text-align:center;">
+		<span>
+		<div >
+			AAL</div>
+		</span></td>
+		<td colspan="1" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;\u042475 EXISTING MASS PRODN&quot;}" rowspan="3" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Times New Roman;font-size:8pt;color:#000000;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:center;">
+		<span>
+		<div >
+			EXISTING MASS PRODN</div>
+		</span></td>
+		<td colspan="1" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;38110-AAL-3010&quot;}" rowspan="3" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;text-align:left;">
+		<span>
+		<div class="auto-style1" >
+			38110-AAL-3010</div>
+		</span></td>
+		<td colspan="1" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:10045184766}" rowspan="3" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;color:#000000;wrap-strategy:4;white-space:normal;word-wrap:break-word;text-align:left;">
+		<span>
+		<div class="auto-style1" >
+			10045184766</div>
+		</span></td>
+		<td colspan="1" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:192}" rowspan="3" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;color:#000000;wrap-strategy:4;white-space:normal;word-wrap:break-word;text-align:left;">
+		<span>
+		<div class="auto-style1" >
+			192</div>
+		</span></td>
+		<td colspan="1" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:46675}" rowspan="3" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;color:#000000;wrap-strategy:4;white-space:normal;word-wrap:break-word;text-align:left;">
+		<span>
+		<div class="auto-style1" >
+			27.10.15</div>
+		</span></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;CURRENT (A)&quot;}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:left;">
+		CURRENT (A)</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;1.5 A Max&quot;}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;" class="auto-style1">
+		1.5 A Max</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;1.5 A Max&quot;}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:left;">
+		1.5 A Max</td>
+		<td data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1.52}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;color:#000000;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;" class="auto-style1">
+		1.52</td>
+		<td data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1.18}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;color:#000000;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;" class="auto-style1">
+		1.18</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;" class="auto-style1">
+		-</td>
+		<td data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1.27}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;color:#000000;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;" class="auto-style1">
+		1.27</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;" class="auto-style1">
+		-</td>
+		<td colspan="1" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;O.K.&quot;}" rowspan="3" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;text-align:center;">
+		<span>
+		<div >
+			O.K.</div>
+		</span></td>
+	</tr>
+	<tr style="height:16px;">
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;FREQUENCY (Hz)&quot;}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:left;">
+		FREQUENCY (Hz)</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;410 ~ 460&quot;}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;" class="auto-style1">
+		410 ~ 460</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;\u00b130 Hz of Initial value&quot;}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:left;">
+		±30 Hz of Initial value</td>
+		<td data-sheets- data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:460}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;color:#000000;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;" class="auto-style1">
+		460</td>
+		<td data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:426}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;color:#000000;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;" class="auto-style1">
+		426</td>
+		<td data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:34}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;color:#000000;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;" class="auto-style1">
+		34</td>
+		<td data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:434}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;color:#000000;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:center;">
+		434</td>
+		<td data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:26}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;color:#00af50;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;" class="auto-style1">
+		26</td>
+	</tr>
+	<tr style="height:16px;">
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;SOUND LEVEL (dB)&quot;}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:left;">
+		SOUND LEVEL (dB)</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;100 ~ 115&quot;}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;" class="auto-style1">
+		100 ~ 115</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;\u00b18 dB of Initial value&quot;}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;text-align:left;">
+		±8 dB of Initial value</td>
+		<td data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:107.33}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;color:#000000;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;" class="auto-style1">
+		107.33</td>
+		<td data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:103.21}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;color:#000000;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;" class="auto-style1">
+		103.21</td>
+		<td data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:4.12}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;color:#000000;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;" class="auto-style1">
+		4.12</td>
+		<td data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:103.39}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;color:#000000;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;" class="auto-style1">
+		103.39</td>
+		<td data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:3.94}" style="padding:3px 3px 0px 3px;vertical-align:middle;border-right:1px solid #000000;border-bottom:1px solid #000000;font-family:Domine;font-size:8pt;color:#00af50;wrap-strategy:4;white-space:normal;word-wrap:break-word;vertical-align:middle;" class="auto-style1">
+		3.94</td>
+	</tr>
+</table>
+ 
+
+<br>
+
+<style type="text/css"><!--td {border: 1px solid #000;}br {mso-data-placement:same-cell;}--></style>
+<table border="1" cellpadding="0" cellspacing="0" dir="ltr" style="table-layout:fixed; width:100%; font-size:8pt;font-family:Times New Roman;border-collapse:collapse;border:1px solid #ccc">
+	<colgroup>
+		<col width="175"><col width="113"><col width="403"><col width="142">
+		<col width="176"><col width="212">
+	</colgroup>
+	<tr style="height:25px;">
+		<td colspan="1" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;PHOTOGRAPH&quot;}" rowspan="2">
+		<span>
+		<div style="max-height:240px" class="auto-style1">
+			<strong>PHOTOGRAPH</strong></div>
+		</span></td>
+		<td colspan="2" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;BEFORE TEST&quot;}" rowspan="1" class="auto-style1">
+		<strong>BEFORE TEST</strong></td>
+		<td colspan="3" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;AFTER TEST&quot;}" rowspan="1" class="auto-style1">
+		<strong>AFTER TEST</strong></td>
+	</tr>
+	<tr style="height:80px;">
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Coil Retainer broken\nO.K HORN&quot;}" class="auto-style1">
+		<img alt="" height="30" src="/home/dushyant/Dushyant/workspace/ThirdPartyHeroApplication/src/template/2.jpg" width="50"></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Coil showing continuity\n&quot;}" class="auto-style1">
+		<img alt="" height="30" src="/home/dushyant/Dushyant/workspace/ThirdPartyHeroApplication/src/template/1.png" width="50">&nbsp;</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Coil\u00a0Retainer\u00a0broken\u00a0(KRY)&quot;}" class="auto-style1">
+		<img alt="" height="30" src="/home/dushyant/Dushyant/workspace/ThirdPartyHeroApplication/src/template/2.jpg" width="50"></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Rubbing\u00a0of\u00a0Contact\u00a0points\u00a0(KRY)\n&quot;}" class="auto-style1">
+		<img alt="" height="30" src="/home/dushyant/Dushyant/workspace/ThirdPartyHeroApplication/src/template/1.png" width="50"><br></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Coil\u00a0not\u00a0showing\u00a0continuity\n&quot;}" class="auto-style1">
+		<img alt="" height="30" src="/home/dushyant/Dushyant/workspace/ThirdPartyHeroApplication/src/template/2.jpg" width="50"><br></td>
+	</tr>
+</table>
+ 
+
+<br>
+
+<style type="text/css"><!--td {border: 1px solid #000;}br {mso-data-placement:same-cell;}
+.auto-style1 {
+	text-align: center;
+}
+--></style>
+<table border="1" cellpadding="0" cellspacing="0" dir="ltr" style="table-layout:fixed; width:100%; font-size:8pt;font-family:Times New Roman;border-collapse:collapse;border:1px solid #ccc">
+	<colgroup>
+		<col width="175"><col width="113"><col width="94"><col width="44">
+		<col width="64"><col width="123"><col width="71"><col width="142">
+		<col width="52"><col width="52"><col width="69"><col width="64">
+		<col width="71"><col width="75">
+	</colgroup>
+	<tr style="height:25px;">
+		<td colspan="1" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;SCREW ADJUSTMENT HISTORY&quot;}" rowspan="9">
+		<span>
+		<div style="max-height:295px" class="auto-style1">
+			<strong>SCREW ADJUSTMENT HISTORY</strong></div>
+		</span></td>
+		<td class="auto-style1">
+		<strong>S.NO IN HORN TEST EQUIP.</strong></td>
+		<td data-sheets- data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}" class="auto-style1">
+		<strong>1</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:2}" class="auto-style1">
+		<strong>2</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:3}" class="auto-style1">
+		<strong>3</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:4}" class="auto-style1">
+		<strong>4</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:5}" class="auto-style1">
+		<strong>5</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:6}" class="auto-style1">
+		<strong>6</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:7}" class="auto-style1">
+		<strong>7</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:8}" class="auto-style1">
+		<strong>8</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:9}" class="auto-style1">
+		<strong>9</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:10}" class="auto-style1">
+		<strong>10</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:11}" class="auto-style1">
+		<strong>11</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:12}" class="auto-style1">
+		<strong>12</strong></td>
+	</tr>
+	<tr style="height:68px;">
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;MODEL\nSCREW ADJUSTMENT CYCLE&quot;}">
+		<img alt="" height="30" src="/home/dushyant/Dushyant/workspace/ThirdPartyHeroApplication/src/template/1.jpg" width="50"><br></td>
+		
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;AAL&quot;}" class="auto-style1">
+		<strong>AAL</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;AAL&quot;}" class="auto-style1">
+		<strong>AAL</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;AAL&quot;}" class="auto-style1">
+		<strong>AAL</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;KRY&quot;}" class="auto-style1">
+		<strong>KRY</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;KRY&quot;}" class="auto-style1">
+		<strong>KRY</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;KRY&quot;}" class="auto-style1">
+		<strong>KRY</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;AAB&quot;}" class="auto-style1">
+		<strong>AAB</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;AAB&quot;}" class="auto-style1">
+		<strong>AAB</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;AAB&quot;}" class="auto-style1">
+		<strong>AAB</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;KTP&quot;}" class="auto-style1">
+		<strong>KTP</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;KTP&quot;}" class="auto-style1">
+		<strong>KTP</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;KTP&quot;}" class="auto-style1">
+		<strong>KTP</strong></td>
+	</tr>
+	<tr style="height:29px;">
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;1st Screw adjustment cycle&quot;}" class="auto-style1">
+		<strong>1st Screw adjustment cycle</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:-33137}" class="auto-style3">
+		33137</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:141302}" class="auto-style1">
+		141302</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:276610}" class="auto-style1">
+		276610</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+	</tr>
+	<tr style="height:29px;">
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;2nd Screw adjustment cycle&quot;}" class="auto-style1">
+		<strong>2nd Screw adjustment cycle</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:-141302}" class="auto-style3">
+		141302</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets- data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:458082}" class="auto-style1">
+		458082</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+	</tr>
+	<tr style="height:29px;">
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;3rd Screw adjustment cycle&quot;}" class="auto-style1">
+		<strong>3rd Screw adjustment cycle</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:-208637}" class="auto-style3">
+		208637</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:482800}" class="auto-style1">
+		482800</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+	</tr>
+	<tr style="height:29px;">
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;4th Screw adjustment cycle&quot;}" class="auto-style1">
+		<strong>4th Screw adjustment cycle</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:-264979}" class="auto-style3">
+		264979</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+	</tr>
+	<tr style="height:29px;">
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;5th Screw adjustment cycle&quot;}" class="auto-style1">
+		<strong>5th Screw adjustment cycle</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:-276610}" class="auto-style3">
+		276610</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+	</tr>
+	<tr style="height:29px;">
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;6th Screw adjustment cycle&quot;}" class="auto-style1">
+		<strong>6th Screw adjustment cycle</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:-295733}" class="auto-style3">
+		295733</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+	</tr>
+	<tr style="height:29px;">
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;7th Screw adjustment cycle&quot;}" class="auto-style1">
+		<strong>7th Screw adjustment cycle</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:-329500}" class="auto-style3">
+		329500</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style1">-</td>
+	</tr>
+</table>
+ 
+ 
+ <br>
+
+
+
+<style type="text/css"><!--td {border: 1px solid #ccc;}br {mso-data-placement:same-cell;}
+.auto-style2 {
+	text-align: center;
+	color: #00AF50;
+}
+.auto-style3 {
+	text-align: center;
+	color: #E31313;
+}
+.auto-style4 {
+	font-size: medium;
+}
+.auto-style5 {
+	text-align: center;
+	font-size: medium;
+}
+.auto-style6 {
+	text-align: left;
+}
+--></style>
+<table border="1" cellpadding="0" cellspacing="0" dir="ltr" style="table-layout:fixed;width:100%; font-size:8pt;font-family:Calibri;border-collapse:collapse;border:1px solid #ccc">
+	<colgroup>
+		<col width="105"><col width="83"><col width="212"><col width="113">
+		<col width="92"><col width="209"><col width="60">
+	</colgroup>
+	<tr style="height:18px;">
+		<td colspan="1" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;OBSERVATIONS&quot;}" rowspan="10" class="auto-style1">
+		<span>
+		<div style="max-height:283px">
+			<strong>OBSERVATIONS</strong></div>
+		</span></td>
+		<td colspan="6" style="padding-left:5px;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;1. HORN 1 (AAL) was found O.K after completion of test.&quot;}" rowspan="1">
+		1. HORN 1 (AAL) was found O.K after completion of test.</td>
+	</tr>
+	<tr style="height:18px;">
+		<td colspan="6" style="padding-left:5px;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;2. HORN 2 (AAL) was found O.K after completion of test.&quot;}" rowspan="1">
+		2. HORN 2 (AAL) was found O.K after completion of test.</td>
+	</tr>
+	<tr style="height:18px;">
+		<td colspan="6" style="padding-left:5px;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;3. HORN 3 (AAL) was found O.K after completion of test.&quot;}" rowspan="1">
+		3. HORN 3 (AAL) was found O.K after completion of test.</td>
+	</tr>
+	<tr style="height:37px;">
+		<td colspan="6" style="padding-left:5px;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;4. For HORN 4 (KRY), the contact point plating was found removed &amp; rubbing of contact points was observed after completion of 329500 cycles and it took 7 Nos Screw adjustment within 330000\nCycles (Screw setting done after completion of 33137, 141302, 208637, 264979, 276610, 295733 and 329500 cycles respectively)&quot;}" rowspan="1">
+		4. For HORN 4 (KRY), the contact point plating was found removed &amp; 
+		rubbing of contact points was observed after completion of 329500 cycles 
+		and it took 7 Nos Screw adjustment within 330000 Cycles (Screw 
+		setting done after completion of 33137, 141302, 208637, 264979, 276610, 
+		295733 and 329500 cycles respectively)</td>
+	</tr>
+	<tr style="height:18px;">
+		<td colspan="6" style="padding-left:5px;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;5. For HORN 5 (KRY), the coil retainer got broken after completion of 329400 cycles.&quot;}" rowspan="1">
+		5. For HORN 5 (KRY), the coil retainer got broken after completion of 
+		329400 cycles.</td>
+	</tr>
+	<tr style="height:18px;">
+		<td colspan="6" style="padding-left:5px;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;6. For HORN 6 (KRY), Intermittent High current was observed after completion of 32900 cycles.&quot;}" rowspan="1">
+		6. For HORN 6 (KRY), Intermittent High current was observed after 
+		completion of 32900 cycles.</td>
+	</tr>
+	<tr style="height:18px;">
+		<td colspan="6" style="padding-left:5px;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;7. HORN 7 (AAB) Showed variation in Frequency (Difference of 32 Hz obtained between Freq Before &amp; after Test) after completion of test.&quot;}" rowspan="1">
+		7. HORN 7 (AAB) Showed variation in Frequency (Difference of 32 Hz 
+		obtained between Freq Before &amp; after Test) after completion of test.</td>
+	</tr>
+	<tr style="height:18px;">
+		<td colspan="6" style="padding-left:5px;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;8. For HORN 8 (AAB), the coil was not showing continuity, contact point rubbing was observed and Plating was found removed after completion of 482800 Cycles.&quot;}" rowspan="1">
+		8. For HORN 8 (AAB), the coil was not showing continuity, contact point 
+		rubbing was observed and Plating was found removed after completion of 
+		482800 Cycles.</td>
+	</tr>
+	<tr style="height:18px;">
+		<td colspan="6" style="padding-left:5px;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;9. HORN 9 (AAB) was found O.K after completion of test.&quot;}" rowspan="1">
+		9. HORN 9 (AAB) was found O.K after completion of test.</td>
+	</tr>
+	<tr style="height:18px;">
+		<td colspan="6" style="padding-left:5px;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;10. HORN 10 (KTP) Showed variation in Frequency &amp; Sound level (Difference of 34 Hz &amp; 9.9 dB obtained between Freq &amp; Sound level Before &amp; after Test) after completion of test.&quot;}" rowspan="1">
+		10. HORN 10 (KTP) Showed variation in Frequency &amp; Sound level 
+		(Difference of 34 Hz &amp; 9.9 dB obtained between Freq &amp; Sound level Before 
+		&amp; after Test) after completion of test.</td>
+	</tr>
+	<tr style="height:18px;">
+		<td colspan="6" style="padding-left:5px;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;11. HORN 11 (KTP) Showed wide variation in Frequency (Difference of 56 Hz obtained between Freq Before &amp; after Test) after completion of test.&quot;}" rowspan="1">
+		11. HORN 11 (KTP) Showed wide variation in Frequency (Difference of 56 
+		Hz obtained between Freq Before &amp; after Test) after completion of test.</td>
+	</tr>
+	<tr style="height:18px;">
+		<td colspan="6" style="padding-left:5px;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;12. HORN 12 (KTP) Showed variation in Frequency (Difference of 36 Hz obtained between Freq Before &amp; after Test) after completion of test.&quot;}" rowspan="1">
+		12. HORN 12 (KTP) Showed variation in Frequency (Difference of 36 Hz 
+		obtained between Freq Before &amp; after Test) after completion of test.</td>
+	</tr>
+	<tr style="height:18px;">
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;ANALYSIS&quot;}" class="auto-style1">
+		<strong>ANALYSIS</strong></td>
+		<td colspan="6" style="padding-left:5px;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Pending at Supplier end.&quot;}" rowspan="1">
+		Pending at Supplier end.</td>
+	</tr>
+	<tr>
+		<td class="auto-style1" style="height: 22px"></td>
+		<td colspan="3" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;ACCEPTED HORNS - FOUND O.K.&quot;}" rowspan="1" class="auto-style2" style="height: 22px">
+		<strong>ACCEPTED HORNS - FOUND O.K.</strong></td>
+		<td colspan="3" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;REJECTED HORNS - FOUND N.G.&quot;}" rowspan="1" class="auto-style3" style="height: 22px">
+		<strong>REJECTED HORNS - FOUND N.G.</strong></td>
+	</tr>
+	<tr style="height:18px;">
+		<td colspan="1" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;RESULT&quot;}" rowspan="4" class="auto-style1">
+		<span>
+		<div style="max-height:71px">
+			<strong>RESULT</strong></div>
+		</span></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;MODEL&quot;}" class="auto-style2">
+		<strong>MODEL</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;HORN TYPE&quot;}" class="auto-style2">
+		<strong>HORN TYPE</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;QTY&quot;}" class="auto-style2">
+		<strong>QTY</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;MODEL&quot;}" class="auto-style3">
+		<strong>MODEL</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;HORN TYPE&quot;}" class="auto-style3">
+		<strong>HORN TYPE</strong></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;QTY&quot;}" class="auto-style3">
+		<strong>QTY</strong></td>
+	</tr>
+	<tr style="height:18px;">
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;AAL&quot;}" class="auto-style2">
+		AAL</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;EXISTING MASS PRODN.&quot;}" class="auto-style2">
+		EXISTING MASS PRODN.</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;3 Nos&quot;}" class="auto-style2">
+		3 Nos</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;KRY&quot;}" class="auto-style3">
+		KRY</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;EXISTING MASS PRODN.&quot;}" class="auto-style3">
+		EXISTING MASS PRODN.</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;3 Nos&quot;}" class="auto-style3">
+		3 Nos</td>
+	</tr>
+	<tr style="height:18px;">
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;AAB&quot;}" class="auto-style2">
+		AAB</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;EXISTING MASS PRODN.&quot;}" class="auto-style2">
+		EXISTING MASS PRODN.</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;1 Nos&quot;}" class="auto-style2">
+		1 Nos</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;AAB&quot;}" class="auto-style3">
+		AAB</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;EXISTING MASS PRODN.&quot;}" class="auto-style3">
+		EXISTING MASS PRODN.</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;2 Nos&quot;}" class="auto-style3">
+		2 Nos</td>
+	</tr>
+	<tr style="height:18px;">
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style2">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style2">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}" class="auto-style2">-</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;KTP&quot;}" class="auto-style3">
+		KTP</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;EXISTING MASS PRODN.&quot;}" class="auto-style3">
+		EXISTING MASS PRODN.</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;3 Nos&quot;}" class="auto-style3">
+		3 Nos</td>
+	</tr>
+	<tr style="height:18px;">
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;CONCLUSION&quot;}" class="auto-style1">
+		<strong>CONCLUSION</strong></td>
+		<td colspan="6" style="padding-left:5px;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Not Satisfactory. Supplier (M/s BLOWELL AUTO) has to Re-validate the Process and submit countermeasure.&quot;}" rowspan="1">
+		Not Satisfactory. Supplier (M/s BLOWELL AUTO) has to Re-validate the 
+		Process and submit countermeasure.</td>
+	</tr>
+	<tr style="height:18px;">
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;CONCLUSION&quot;}" class="auto-style1" colspan="7">
+		&nbsp;</td>
+	</tr>
+	<tr style="height:18px;">
+		<td class="auto-style1" colspan="2">
+		<img alt="" height="15" src="/home/dushyant/Dushyant/workspace/ThirdPartyHeroApplication/src/template/sign.jpg" ></td>
+		<td colspan="3" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;VERIFIED BY&quot;}" class="auto-style1">
+		<img alt="" height="15" src="/home/dushyant/Dushyant/workspace/ThirdPartyHeroApplication/src/template/sign.jpg" ></td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;APPROVED BY&quot;}" colspan="2" class="auto-style1">
+		<img alt="" height="15" src="/home/dushyant/Dushyant/workspace/ThirdPartyHeroApplication/src/template/sign.jpg" ></td>
+	</tr>
+	<tr style="height:18px;">
+		<td class="auto-style1" colspan="2">TESTED BY</td>
+		<td colspan="3" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;VERIFIED BY&quot;}" class="auto-style1">
+		VERIFIED BY</td>
+		<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;APPROVED BY&quot;}" class="auto-style1" colspan="2">
+		APPROVED BY</td>
+	</tr>
+</table>
+
+
+</body>
+
+</html>

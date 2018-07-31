@@ -1,0 +1,163 @@
+INFO - Inside Initialize method
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/get/devices/by/devicetype
+INFO - Para:   device_type=4&host_status=0
+INFO - Response Code is:   200
+INFO - Response : {"description":"Process Success","object":[{"device_devicetype_name":"BTS","city_alias":"Solan","device_devicemodel_icon":"/home/ttpl/Tomcat/apache-tomcat-8.0.36/webapps/tmpFiles/router-icon.png","device_device_imei":"0","device_device_lattitude":"30.9249052","device_device_elevation":"","device_devicetechnology_name":"GSM","state_name":"Haryana","state_id":1.0,"device_device_is_deleted":false,"organization_organization_alias":"HFCL","device_device_alias":"BTS 801","device_device_created_by":"1","device_devicevendor_alias":"Vanu","device_device_longitude":"77.0958173","device_device_modified_by":"db4c4236-30c3-11e7-be7d-000c29e31674","device_devicevendor_name":"Vanu","data_source":"ON","device_devicemodel_alias":"CRAN 2.0","organization_organization_path":"/teramatrix","device_device_iccid":null,"device_device_software_version":"","device_device_last_modified_date":1.51383994E12,"device_devicetype_alias":"BTS","device_devicevendor_id":3.0,"country_id":1.0,"city_id":1.0,"device_devicetechnology_id":3.0,"device_device_is_configurable":0.0,"device_device_name":"CRAN2_801","device_device_is_active":true,"device_device_ipaddress":"192.168.10.22","city_name":"gurgao","state_alias":"Himachal Pradesh","country_name":"india","device_devicemodel_gis_icon":"/home/ttpl/Tomcat/apache-tomcat-8.0.36/webapps/tmpFiles/router-icon.png","status_timestamp":1.516864688E12,"device_device_description":"","country_alias":"India","device_devicetype_id":4.0,"data_source_alias":"down","device_device_creation_date":null,"check_timestamp":1.516864514E12,"device_devicemodel_name":"VANU-BTS","device_device_parent_id":0.0,"device_device_hardware_version":"","device_devicemodel_id":4.0,"device_device_device_id":103.0,"device_device_mac_address":"","device_devicetechnology_alias":"GSM"},{"device_devicetype_name":"BTS","city_alias":"Solan","device_devicemodel_icon":"/home/ttpl/Tomcat/apache-tomcat-8.0.36/webapps/tmpFiles/router-icon.png","device_device_imei":"0","device_device_lattitude":"30.9249052","device_device_elevation":"","device_devicetechnology_name":"GSM","state_name":"Haryana","state_id":1.0,"device_device_is_deleted":false,"organization_organization_alias":"HFCL","device_device_alias":"BTS 802","device_device_created_by":"1","device_devicevendor_alias":"Vanu","device_device_longitude":"77.0958173","device_device_modified_by":"db4c4236-30c3-11e7-be7d-000c29e31674","device_devicevendor_name":"Vanu","data_source":"ON","device_devicemodel_alias":"CRAN 2.0","organization_organization_path":"/teramatrix","device_device_iccid":null,"device_device_software_version":"","device_device_last_modified_date":1.513839926E12,"device_devicetype_alias":"BTS","device_devicevendor_id":3.0,"country_id":1.0,"city_id":1.0,"device_devicetechnology_id":3.0,"device_device_is_configurable":0.0,"device_device_name":"CRAN2_802","device_device_is_active":true,"device_device_ipaddress":"192.168.10.20","city_name":"gurgao","state_alias":"Himachal Pradesh","country_name":"india","device_devicemodel_gis_icon":"/home/ttpl/Tomcat/apache-tomcat-8.0.36/webapps/tmpFiles/router-icon.png","status_timestamp":1.516864709E12,"device_device_description":"","country_alias":"India","device_devicetype_id":4.0,"data_source_alias":"down","device_device_creation_date":null,"check_timestamp":1.516855625E12,"device_devicemodel_name":"VANU-BTS","device_device_parent_id":0.0,"device_device_hardware_version":"","device_devicemodel_id":4.0,"device_device_device_id":104.0,"device_device_mac_address":"","device_devicetechnology_alias":"GSM"},{"device_devicetype_name":"BTS","city_alias":"Solan","device_devicemodel_icon":"/home/ttpl/Tomcat/apache-tomcat-8.0.36/webapps/tmpFiles/router-icon.png","device_device_imei":"0","device_device_lattitude":"30.9249052","device_device_elevation":"","device_devicetechnology_name":"GSM","state_name":"Haryana","state_id":1.0,"device_device_is_deleted":false,"organization_organization_alias":"HFCL","device_device_alias":"BTS 803","device_device_created_by":"1","device_devicevendor_alias":"Vanu","device_device_longitude":"77.0958173","device_device_modified_by":"db4c4236-30c3-11e7-be7d-000c29e31674","device_devicevendor_name":"Vanu","data_source":"OFF","device_devicemodel_alias":"CRAN 2.0","organization_organization_path":"/teramatrix","device_device_iccid":null,"device_device_software_version":"","device_device_last_modified_date":1.513839909E12,"device_devicetype_alias":"BTS","device_devicevendor_id":3.0,"country_id":1.0,"city_id":1.0,"device_devicetechnology_id":3.0,"device_device_is_configurable":0.0,"device_device_name":"CRAN2_803","device_device_is_active":true,"device_device_ipaddress":"192.168.10.21","city_name":"gurgao","state_alias":"Himachal Pradesh","country_name":"india","device_devicemodel_gis_icon":"/home/ttpl/Tomcat/apache-tomcat-8.0.36/webapps/tmpFiles/router-icon.png","status_timestamp":1.516864691E12,"device_device_description":"","country_alias":"India","device_devicetype_id":4.0,"data_source_alias":"up","device_device_creation_date":null,"check_timestamp":1.51636743E12,"device_devicemodel_name":"VANU-BTS","device_device_parent_id":0.0,"device_device_hardware_version":"","device_devicemodel_id":4.0,"device_device_device_id":105.0,"device_device_mac_address":"","device_devicetechnology_alias":"GSM"}],"list":null,"valid":true}
+INFO - Number of Devices  :  3
+INFO - Complete details : [103.0, 104.0, 105.0]
+INFO - Device List: [103.0, 104.0, 105.0]
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/call/attempts/per/trx
+INFO - Para:   end_date=1518173545168&device_id=103.0&from_date=1518173485168&service_name=geranBscTrxNumMeasurementReports,geranBscTrxNumMeasurementReports&data_source=lm,bm
+INFO - Response Code is:   200
+INFO - Response : {"description":null,"object":null,"list":null,"valid":false}
+INFO - Exception occur in getting devices.
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/call/attempts/per/trx
+INFO - Para:   end_date=1518173545168&device_id=103.0&from_date=1518173485168&service_name=geranBscBtsChannelBlockingCount&data_source=bm
+INFO - Response Code is:   200
+INFO - Response : UnAuthrization
+INFO - Exception occur in getting devices.
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/call/attempts/per/trx
+INFO - Para:   end_date=1518173545168&device_id=103.0&from_date=1518173485168&service_name=geranBscTrxSubsequentAssignmentSuccessCount,geranBscTrxSubsequentAssignmentSuccessCount,geranBscTrxSubsequentAssignmentSuccessCount,geranBscTrxSubsequentAssignmentSuccessCount&data_source=sdcch_lm,sdcch4_lm,sdcch_bm,sdcch4_bm
+INFO - Response Code is:   200
+INFO - Response : UnAuthrization
+INFO - Exception occur in getting devices.
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/call/attempts/per/trx
+INFO - Para:   end_date=1518173545168&device_id=103.0&from_date=1518173485168&service_name=geranBscTrxNumRadioConnectionFailures&data_source=lm
+INFO - Response Code is:   200
+INFO - Response : UnAuthrization
+INFO - Exception occur in getting devices.
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/call/attempts/per/trx
+INFO - Para:   end_date=1518173545168&device_id=103.0&from_date=1518173485168&service_name=geranBscTrxNumRadioConnectionFailures&data_source=bm
+INFO - Response : 
+INFO - Exception occur in getting devices.
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/downlink/data/throughput
+INFO - Para:   end_date=1518173545168&device_id=103.0&from_date=1518173485168
+INFO - Response : 
+INFO - Exception occur in getting devices.
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/uplink/data/throughput
+INFO - Para:   end_date=1518173545168&device_id=103.0&from_date=1518173485168
+INFO - Response : 
+INFO - Exception occur in getting devices.
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/sdcch/drop/rate/per/bts
+INFO - Para:   data_source_numerator=geranBscBtsImmAssignmentRejectCount_answerPaging,geranBscBtsImmAssignmentRejectCount_callOriginate,geranBscBtsImmAssignmentRejectCount_emergency,geranBscBtsImmAssignmentRejectCount_locUpd&end_date=1518173545168&service_name_numerator=geranBscBtsImmAssignmentRejectCount_answerPaging,geranBscBtsImmAssignmentRejectCount_callOriginate,geranBscBtsImmAssignmentRejectCount_emergency,geranBscBtsImmAssignmentRejectCount_locUpd&device_id=103.0&data_source_denominator=geranBscBtsImmAssignmentCommandCount_answerPaging,geranBscBtsImmAssignmentCommandCount_callOriginate,geranBscBtsImmAssignmentCommandCount_emergency,geranBscBtsImmAssignmentCommandCount_locUpd&from_date=1518173485168&service_name_denominator=geranBscBtsImmAssignmentCommandCount_answerPaging,geranBscBtsImmAssignmentCommandCount_callOriginate,geranBscBtsImmAssignmentCommandCount_emergency,geranBscBtsImmAssignmentCommandCount_locUpd
+INFO - Response : 
+INFO - Exception occur in getting devices.
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/sdcch/drop/rate/per/bts
+INFO - Para:   data_source_numerator=bm,lm&end_date=1518173545168&service_name_numerator=geranBscBtsChannelBlockingCount,geranBscBtsChannelBlockingCount&device_id=103.0&data_source_denominator=bm,lm&from_date=1518173485168&service_name_denominator=geranBscBtsChannelBlockingCount,geranBscBtsChannelBlockingCount,geranBscTrxSubsequentAssignmentCommandCount,geranBscTrxSubsequentAssignmentCommandCount
+INFO - Response : 
+INFO - Exception occur in getting devices.
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/sdcch/drop/rate/per/bts
+INFO - Para:   data_source_numerator=sdcch,sdcch4&end_date=1518173545168&service_name_numerator=geranBscTrxImmAssignmentSuccessCount,geranBscTrxImmAssignmentSuccessCount&device_id=103.0&data_source_denominator=sdcch,sdcch4&from_date=1518173485168&service_name_denominator=geranBscTrxImmAssignmentCommandCount,geranBscTrxImmAssignmentCommandCount
+INFO - Response : 
+INFO - Exception occur in getting devices.
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/call/attempts/per/trx
+INFO - Para:   end_date=1518173545168&device_id=104.0&from_date=1518173485168&service_name=geranBscTrxNumMeasurementReports,geranBscTrxNumMeasurementReports&data_source=lm,bm
+INFO - Response : 
+INFO - Exception occur in getting devices.
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/call/attempts/per/trx
+INFO - Para:   end_date=1518173545168&device_id=104.0&from_date=1518173485168&service_name=geranBscBtsChannelBlockingCount&data_source=bm
+INFO - Response : 
+INFO - Exception occur in getting devices.
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/call/attempts/per/trx
+INFO - Para:   end_date=1518173545168&device_id=104.0&from_date=1518173485168&service_name=geranBscTrxSubsequentAssignmentSuccessCount,geranBscTrxSubsequentAssignmentSuccessCount,geranBscTrxSubsequentAssignmentSuccessCount,geranBscTrxSubsequentAssignmentSuccessCount&data_source=sdcch_lm,sdcch4_lm,sdcch_bm,sdcch4_bm
+INFO - Response : 
+INFO - Exception occur in getting devices.
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/call/attempts/per/trx
+INFO - Para:   end_date=1518173545168&device_id=104.0&from_date=1518173485168&service_name=geranBscTrxNumRadioConnectionFailures&data_source=lm
+INFO - Response : 
+INFO - Exception occur in getting devices.
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/call/attempts/per/trx
+INFO - Para:   end_date=1518173545168&device_id=104.0&from_date=1518173485168&service_name=geranBscTrxNumRadioConnectionFailures&data_source=bm
+INFO - Response : 
+INFO - Exception occur in getting devices.
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/downlink/data/throughput
+INFO - Para:   end_date=1518173545168&device_id=104.0&from_date=1518173485168
+INFO - Response : 
+INFO - Exception occur in getting devices.
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/uplink/data/throughput
+INFO - Para:   end_date=1518173545168&device_id=104.0&from_date=1518173485168
+INFO - Response : 
+INFO - Exception occur in getting devices.
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/sdcch/drop/rate/per/bts
+INFO - Para:   data_source_numerator=geranBscBtsImmAssignmentRejectCount_answerPaging,geranBscBtsImmAssignmentRejectCount_callOriginate,geranBscBtsImmAssignmentRejectCount_emergency,geranBscBtsImmAssignmentRejectCount_locUpd&end_date=1518173545168&service_name_numerator=geranBscBtsImmAssignmentRejectCount_answerPaging,geranBscBtsImmAssignmentRejectCount_callOriginate,geranBscBtsImmAssignmentRejectCount_emergency,geranBscBtsImmAssignmentRejectCount_locUpd&device_id=104.0&data_source_denominator=geranBscBtsImmAssignmentCommandCount_answerPaging,geranBscBtsImmAssignmentCommandCount_callOriginate,geranBscBtsImmAssignmentCommandCount_emergency,geranBscBtsImmAssignmentCommandCount_locUpd&from_date=1518173485168&service_name_denominator=geranBscBtsImmAssignmentCommandCount_answerPaging,geranBscBtsImmAssignmentCommandCount_callOriginate,geranBscBtsImmAssignmentCommandCount_emergency,geranBscBtsImmAssignmentCommandCount_locUpd
+INFO - Response : 
+INFO - Exception occur in getting devices.
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/sdcch/drop/rate/per/bts
+INFO - Para:   data_source_numerator=bm,lm&end_date=1518173545168&service_name_numerator=geranBscBtsChannelBlockingCount,geranBscBtsChannelBlockingCount&device_id=104.0&data_source_denominator=bm,lm&from_date=1518173485168&service_name_denominator=geranBscBtsChannelBlockingCount,geranBscBtsChannelBlockingCount,geranBscTrxSubsequentAssignmentCommandCount,geranBscTrxSubsequentAssignmentCommandCount
+INFO - Response : 
+INFO - Exception occur in getting devices.
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/sdcch/drop/rate/per/bts
+INFO - Para:   data_source_numerator=sdcch,sdcch4&end_date=1518173545168&service_name_numerator=geranBscTrxImmAssignmentSuccessCount,geranBscTrxImmAssignmentSuccessCount&device_id=104.0&data_source_denominator=sdcch,sdcch4&from_date=1518173485168&service_name_denominator=geranBscTrxImmAssignmentCommandCount,geranBscTrxImmAssignmentCommandCount
+INFO - Response : 
+INFO - Exception occur in getting devices.
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/call/attempts/per/trx
+INFO - Para:   end_date=1518173545168&device_id=105.0&from_date=1518173485168&service_name=geranBscTrxNumMeasurementReports,geranBscTrxNumMeasurementReports&data_source=lm,bm
+INFO - Response : 
+INFO - Exception occur in getting devices.
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/call/attempts/per/trx
+INFO - Para:   end_date=1518173545168&device_id=105.0&from_date=1518173485168&service_name=geranBscBtsChannelBlockingCount&data_source=bm
+INFO - Response : 
+INFO - Exception occur in getting devices.
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/call/attempts/per/trx
+INFO - Para:   end_date=1518173545168&device_id=105.0&from_date=1518173485168&service_name=geranBscTrxSubsequentAssignmentSuccessCount,geranBscTrxSubsequentAssignmentSuccessCount,geranBscTrxSubsequentAssignmentSuccessCount,geranBscTrxSubsequentAssignmentSuccessCount&data_source=sdcch_lm,sdcch4_lm,sdcch_bm,sdcch4_bm
+INFO - Response : 
+INFO - Exception occur in getting devices.
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/call/attempts/per/trx
+INFO - Para:   end_date=1518173545168&device_id=105.0&from_date=1518173485168&service_name=geranBscTrxNumRadioConnectionFailures&data_source=lm
+INFO - Response : 
+INFO - Exception occur in getting devices.
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/call/attempts/per/trx
+INFO - Para:   end_date=1518173545168&device_id=105.0&from_date=1518173485168&service_name=geranBscTrxNumRadioConnectionFailures&data_source=bm
+INFO - Response : 
+INFO - Exception occur in getting devices.
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/downlink/data/throughput
+INFO - Para:   end_date=1518173545168&device_id=105.0&from_date=1518173485168
+INFO - Response : 
+INFO - Exception occur in getting devices.
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/uplink/data/throughput
+INFO - Para:   end_date=1518173545168&device_id=105.0&from_date=1518173485168
+INFO - Response : 
+INFO - Exception occur in getting devices.
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/sdcch/drop/rate/per/bts
+INFO - Para:   data_source_numerator=geranBscBtsImmAssignmentRejectCount_answerPaging,geranBscBtsImmAssignmentRejectCount_callOriginate,geranBscBtsImmAssignmentRejectCount_emergency,geranBscBtsImmAssignmentRejectCount_locUpd&end_date=1518173545168&service_name_numerator=geranBscBtsImmAssignmentRejectCount_answerPaging,geranBscBtsImmAssignmentRejectCount_callOriginate,geranBscBtsImmAssignmentRejectCount_emergency,geranBscBtsImmAssignmentRejectCount_locUpd&device_id=105.0&data_source_denominator=geranBscBtsImmAssignmentCommandCount_answerPaging,geranBscBtsImmAssignmentCommandCount_callOriginate,geranBscBtsImmAssignmentCommandCount_emergency,geranBscBtsImmAssignmentCommandCount_locUpd&from_date=1518173485168&service_name_denominator=geranBscBtsImmAssignmentCommandCount_answerPaging,geranBscBtsImmAssignmentCommandCount_callOriginate,geranBscBtsImmAssignmentCommandCount_emergency,geranBscBtsImmAssignmentCommandCount_locUpd
+INFO - Response : 
+INFO - Exception occur in getting devices.
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/sdcch/drop/rate/per/bts
+INFO - Para:   data_source_numerator=bm,lm&end_date=1518173545168&service_name_numerator=geranBscBtsChannelBlockingCount,geranBscBtsChannelBlockingCount&device_id=105.0&data_source_denominator=bm,lm&from_date=1518173485168&service_name_denominator=geranBscBtsChannelBlockingCount,geranBscBtsChannelBlockingCount,geranBscTrxSubsequentAssignmentCommandCount,geranBscTrxSubsequentAssignmentCommandCount
+INFO - Response : 
+INFO - Exception occur in getting devices.
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/sdcch/drop/rate/per/bts
+INFO - Para:   data_source_numerator=sdcch,sdcch4&end_date=1518173545168&service_name_numerator=geranBscTrxImmAssignmentSuccessCount,geranBscTrxImmAssignmentSuccessCount&device_id=105.0&data_source_denominator=sdcch,sdcch4&from_date=1518173485168&service_name_denominator=geranBscTrxImmAssignmentCommandCount,geranBscTrxImmAssignmentCommandCount
+INFO - Response : 
+INFO - Exception occur in getting devices.

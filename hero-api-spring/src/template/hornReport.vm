@@ -1,0 +1,473 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+<body>
+<table border="1" cellpadding="5" cellspacing="0" dir="ltr" style="table-layout: fixed; width: 80%; font-size: 9pt; font-family:"bookman Old Style"; border-collapse: collapse; border: 1px solid #ccc; vertical-align: middle !Important; text-align: center;">
+	<tr>
+		<td colspan="2" rowspan="2" align="center" style="padding: 5px 3px 5px 5px; vertical-align:middle; border-top: 1px solid #000000; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; text-align: center;">
+		<div style="margin:auto; width:80px"><img alt=" " height="65" src="$object.logo" ></div></td>
+		<td colspan="14" style="padding: 5px 3px 5px 5px; vertical-align: middle; text-align: center; font-size: 15px; border-top: 1px solid #000000; border-right: 1px solid #000000; border-bottom: 1px solid #000000; vertical-align: middle;">
+		 <strong> PERFORMANCE AND ENDURANCE TESTING LAB REPORT    </strong>   </td>
+	</tr>
+	<tr style="height: 20px;">
+		<td class="auto-style4" colspan="14" style="padding: 5px 3px 5px 5px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 13px; vertical-align: middle; text-align: center; height: 26px;">
+		 <strong> SQA HMCL GURGAON    </strong>  </td>
+	</tr>
+	<tr style="height: 48px;">
+		<td colspan="3" rowspan="1" style="padding: 5px 3px 5px 5px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-size: 9pt; vertical-align: middle; text-align: left;">
+		 <strong> PART NAME    </strong>  </td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 5px 5px;  font-family:"Century";  vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle; text-align: left;">
+		$!object.header.part_name</td>
+		<td colspan="3" rowspan="1" style="padding: 5px 3px 5px 5px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle; text-align: left;">
+		 <strong> HMCL PART CODE    </strong>  </td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 5px 5px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; color: #000000; vertical-align: middle; text-align: left;">
+		#foreach ($element in $!object.header.hmcl_part_code.split(",")) 
+			$element<br>
+		#end </td>
+		<td colspan="2" rowspan="2" style="padding: 5px 3px 5px 5px; text-transform: uppercase; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle; text-align: left;">
+		 <strong> REPORT DATE    </strong>  </td>
+		<td colspan="4" rowspan="2" style="padding: 5px 3px 5px 5px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle; text-align: left;">
+		$!object.header.report_date.replace("00:00:00.0","")</td>
+	</tr>
+	<tr style="height: 17px;">
+		<td colspan="3" rowspan="1" style="padding: 5px 3px 5px 5px; vertical-align: middle; text-align:left !Important; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-size: 9pt; vertical-align: middle; ">
+		 <strong> VENDOR NAME / CODE    </strong>  </td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 5px 5px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle; text-align: left;">
+		$!object.header.vendor_name/ $!object.header.vendor_code</td>
+		<td colspan="3" rowspan="1" style="padding: 5px 3px 5px 5px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle; text-align: left;">
+		 <strong> VENDOR MFG LOCATION    </strong>  </td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 5px 5px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle;">
+		$!object.header.vendor_mfg_location</td>
+	</tr>
+	<tr style="height: 20px;">
+		<td colspan="3" rowspan="1" style="padding: 5px 3px 5px 5px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-size: 9pt; vertical-align: middle; text-align:left;">
+		 <strong> PLANT    </strong>  </td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 5px 5px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle; text-align: left;">
+		$!object.header.plant</td>
+		<td colspan="3" rowspan="1" style="padding: 5px 3px 5px 5px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle; text-align: left;">
+		 <strong> PART MFG MONTH    </strong>  </td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 5px 5px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle; text-align: left;">
+		$!object.header.part_mfg_month</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 5px 5px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; color: #000000; vertical-align: middle; text-align: left;">
+		 <strong> TEST START DATE    </strong>  </td>
+		<td colspan="4" rowspan="1" style="padding: 5px 3px 5px 5px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; color: #000000; vertical-align: middle; text-align: left;">
+		$!object.header.test_start_date.replace("00:00:00.0","")</td>
+	</tr>
+	<tr style="height: 16px;">
+		<td colspan="3" rowspan="1" style="padding: 5px 3px 5px 5px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-size: 9pt; vertical-align: middle; text-align: left;">
+		 <strong> TYPE OF TEST    </strong>  </td>
+		<td colspan="7" rowspan="1" style="padding: 5px 3px 5px 5px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle; text-align: left;">
+		$!object.header.testing_type</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 5px 5px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle; text-align: left;">
+		 <strong> TEST END DATE    </strong>  </td>
+		<td colspan="4" rowspan="1" style="padding: 5px 3px 5px 5px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; color: #000000; vertical-align: middle; text-align: left;">
+		$!object.header.test_end_date.replace("00:00:00.0","")</td>
+	</tr>
+	<tr style="height: 20px;">
+		<td colspan="3" rowspan="1" style="padding: 5px 3px 5px 5px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-size: 9pt; vertical-align: middle; text-align:left;">
+		 <strong> OBJECTIVE    </strong>  </td>
+		<td colspan="7" rowspan="1" style="padding: 5px 3px 5px 5px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle; text-align: left;">
+		$!object.header.objective</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 5px 5px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle; text-align: left;">
+		 <strong> NO. OF SAMPLES    </strong>  </td>
+		<td colspan="4" rowspan="1" style="padding: 5px 3px 5px 5px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle; text-align: left;">
+		$!object.header.no_of_samples</td>
+	</tr>
+	<tr style="height: 22px;">
+		<td colspan="3" rowspan="1" style="padding: 5px 3px 5px 5px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-size: 9pt; color: #000000; vertical-align: middle; text-align: left;">
+		 <strong> PART MODIFICATION DETAILS    </strong>  </td>
+		<td colspan="13" rowspan="1" style="padding: 5px 3px 5px 5px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle; text-align: left;">
+		$!object.header.part_modification_details</td>
+	</tr>
+	<tr>
+		<td colspan="3" rowspan="2" style="padding: 5px 3px 5px 5px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-size: 9pt; text-align: left;">
+		<span>
+		<div style="max-height: 40px">
+			 <strong> TEST CONDITION &amp; METHOD    </strong>  </div>
+		</span></td>
+		<td colspan="6" rowspan="1" style="padding: 5px 3px 5px 5px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle; text-align: center;">
+		 <strong> AS PER STANDARD    </strong>  
+		</td>
+		<td colspan="7" rowspan="1" style="padding: 5px 3px 5px 5px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle; text-align: center;">
+		 <strong> ACTUAL TEST CONDITION    </strong>  
+		</td>
+		
+	</tr>
+	<tr style="height: 25px;">
+		<td colspan="6" rowspan="1" height="50" style="padding: 5px 3px 5px 5px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle; text-align: center; height: 34px;  text-align:left;">
+		 <strong>   $!object.header.test_standart_condition     </strong>  </td>
+		<td colspan="7" rowspan="1" height="50" style="padding: 5px 3px 5px 5px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle; text-align: center; height: 34px; text-align:left;">
+		 <strong> $!object.header.test_actual_condition     </strong>  </td>
+	</tr>
+	<tr style="height: 18px;">
+		<td colspan="8" rowspan="1" style="padding: 5px 3px 5px 5px; text-align: center; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000;">
+		</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 5px 5px; text-align: center; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle;">
+		 <strong> M/s HMCL Specification    </strong>  </td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 5px 5px; text-align: center; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle;">
+		 <strong> Readings    </strong>  </td>
+		<td colspan="1" rowspan="2" style="padding: 5px 3px 5px 5px; vertical-align: middle; border-right: 1px solid #000000; text-align: center; border-bottom: 1px solid #000000; font-size: 9pt;">
+		<span>
+		<div style="max-height: 54px">
+			 <strong> Difference    </strong>  </div>
+		</span></td>
+		<td style="padding: 5px 3px 5px 5px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle;">
+		 <strong> Readings    </strong>  </td>
+		<td colspan="1" rowspan="2" style="padding: 5px 3px 5px 5px; vertical-align: middle; text-align: center; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt;">
+		<span>
+		<div style="max-height: 54px">
+			 <strong> Difference    </strong>  </div>
+		</span></td>
+		<td colspan="1" rowspan="2" style="padding: 5px 3px 5px 5px; vertical-align: middle; text-align: center; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt;">
+		<span>
+		<div style="max-height: 54px">
+			 <strong> Judgement    </strong>  </div>
+		</span></td>
+	</tr>
+	<tr>
+		<td width="20" style="width:20px ; text-align: center; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-size: 9pt; vertical-align:middle;">
+		 <strong> S.NO    </strong>  </td>
+		<td width="20" style="width:20px ;padding: 5px 3px 5px 5px; text-align: center; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle;">
+		 <strong> MODEL    </strong>  </td>
+		<td width="20" style="width:20px ;padding: 5px 3px 5px 5px; text-align: center; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle;">
+		 <strong> HORN TYPE    </strong>  </td>
+		<td width="80" style="width:80px ;padding: 5px 3px 5px 5px; text-align: center; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle;" width="150" >
+		 <strong>  PART CODE  </strong>  </td>
+		<td width="20" style="width:20px ;padding: 5px 3px 5px 5px; text-align: center; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle;">
+		 <strong> LOT NO.    </strong>  </td>
+		<td width="20" style="width:20px ;padding: 5px 3px 5px 5px; text-align: center; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle;">
+		 <strong> LOT QTY.    </strong>  </td>
+		<td width="40" style="width:40px ;padding: 5px 3px 5px 5px; text-align: center; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle;">
+		 <strong> DATE    </strong>  </td>
+		<td   style="padding: 10px 2px 10px 2px; width:500px; vertical-align: middle; text-align: center; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle; " width="200"  >
+		 <strong> GEN. PERF. PARAMETERS   </strong>  </td>
+		<td width="50" style="width:50px ;padding: 5px 3px 5px 5px; vertical-align: middle; text-align: center; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle;">
+		 <strong> Before Test    </strong>  </td>
+		<td width="60" style="width:60px ;padding: 5px 3px 5px 5px; vertical-align: middle; text-align: center; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle;">
+		 <strong> After Test    </strong>  </td>
+		<td width="20" style="width:20px ;padding: 5px 3px 5px 5px; vertical-align: middle; text-align: center; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle;">
+		 <strong> Before Test    </strong>  </td>
+		<td width="20" style="width:20px ;padding: 5px 3px 5px 5px; vertical-align: middle; text-align: center; border-right:  1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle;">
+		 <strong> After Test    </strong>  </td>
+		<td width="20" style="width:20px ;padding: 5px 3px 5px 5px; vertical-align: middle; text-align: center; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle; text-align: center;">
+		 <strong> After 2 Hrs of keeping    </strong>  </td>
+	</tr>
+	#set($description = $!object.current.size()) #set($size =$description - 1) #foreach 
+	($!i in [0..$size])
+	<tr>
+		<td colspan="1" rowspan="3" width="26" style="padding: 5px 3px 5px 5px; font-family:"Century"; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-size: 9pt; color: #000000; text-align: center; width:26px;">
+		#set($j=$i + 1)
+            $j 
+		</td>
+		<td colspan="1" rowspan="3" style="padding: 5px 3px 5px 5px;  font-family:"Century"; word-break:word-break; white-space:nowrap; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; text-align: center;">
+		$!object.current.get($i).model</td>
+		<td colspan="1" rowspan="3" style="padding: 5px 3px 5px 5px;  font-family:"Century"; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; color: #000000; vertical-align: middle; text-align: center;">
+		$!object.current.get($i).horn_type</td>
+		<td colspan="1" rowspan="3" style="padding: 5px 3px 5px 5px;  font-family:"Century"; word-break:word-break; white-space:nowrap; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; text-align: center;">
+		$!object.current.get($i).part_code</td>
+		<td colspan="1" rowspan="3" style="padding: 5px 3px 5px 5px; font-family:"Century";  vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; color: #000000; text-align: center;">
+		$!object.current.get($i).lot_no</td>
+		<td colspan="1" rowspan="3" style="padding: 5px 3px 5px 5px;  font-family:"Century"; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; color: #000000; text-align: center;">
+		$!object.current.get($i).lot_quantity</td>
+		<td colspan="1" rowspan="3" style="padding: 5px 3px 5px 5px; font-family:"Century";  vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; color: #000000; text-align: center;">
+		$!object.current.get($i).report_date</td>
+		<td  style="padding: 10px 10px 10px 10px; word-break:word-break;  font-family:"Century"; white-space:nowrap; vertical-align: middle; text-align: center; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle; width: 366px;" >
+		CURRENT (A)</td>
+		<td style="padding: 5px 3px 5px 5px; vertical-align: middle;  font-family:"Century"; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle; text-align: center;">
+		$!object.current.get($i).hmcl_specification_before_test_max_specification 
+		A Max</td>
+		<td style="padding: 5px 3px 5px 5px;  font-family:"Century"; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle; text-align: center;">
+		$!object.current.get($i).hmcl_specification_after_test_max_specification 
+		A Max</td>
+		<td style="padding: 5px 3px 5px 5px;  font-family:"Century"; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; color: #000000; vertical-align: middle; text-align: center;">
+		$!object.current.get($i).reading_before_test</td>
+		<td style="padding: 5px 3px 5px 5px;  font-family:"Century"; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; color: #000000; vertical-align: middle; text-align: center;">
+		$!object.current.get($i).reading_after_test</td>
+		<td style="padding: 5px 3px 5px 5px; vertical-align: middle; font-family:"Century";  border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle; text-align: center;">
+		$!object.current.get($i).difference</td>
+		<td   style="padding: 5px 3px 5px 5px;  font-family:"Century"; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; color: #000000; vertical-align: middle; text-align: center;">
+		$!object.current.get($i).reading_after_2_hrs</td>
+		<td style="padding: 5px 3px 5px 5px; vertical-align: middle;  font-family:"Century"; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle; text-align: center;">
+		$!object.current.get($i).difference_after_2_hrs</td>
+		<td colspan="1"  rowspan="3" style="padding: 5px 3px 5px 5px;  font-family:"Century"; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; text-align: center;">
+		#if($!object.current.get($i).judgement == 1)
+			 
+			<span  style="text-align: center; color:#009900; padding:5px 3px; font-family:"bookman Old Style"; font-weight:bold;">
+			<strong>OK</strong></span>
+		#else
+		 	<span  style="text-align: center; color:#FF0000; padding:5px 3px;  font-family:"bookman Old Style"; font-weight:bold;">
+			<strong>N.G</strong></span>
+		 
+		 #end	
+		
+			 </td>
+	</tr>
+	<tr style="height: 16px;" width="100">
+		<td  style="padding: 10px 10px 10px 10px; font-family:"Century";  vertical-align: middle;white-space:nowrap; text-align: center; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle; width: 366px;" >
+		<div style="width:150px; text-align: center;" width="150">FREQUENCY (Hz)</div></td>
+		<td style="padding: 5px 3px 5px 5px;  font-family:"Century"; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle; text-align: center;">
+		$!object.frequency.get($i).hmcl_specification_before_test_max_specification 
+		</td>
+		<td  style="padding: 5px 3px 5px 5px;  font-family:"Century"; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle; text-align: center;">
+		&plusmn; $!object.frequency.get($i).hmcl_specification_after_test_max_specification 
+		Hz of Initial value</td>
+		<td style="padding: 5px 3px 5px 5px; vertical-align: middle;  font-family:"Century"; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; color: #000000; vertical-align: middle; text-align: center;">
+		$!object.frequency.get($i).reading_before_test</td>
+		<td  style="padding: 5px 3px 5px 5px; vertical-align: middle;  font-family:"Century"; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; color: #000000; vertical-align: middle; text-align: center;">
+		$!object.frequency.get($i).reading_after_test</td>
+		<td style="padding: 5px 3px 5px 5px; vertical-align: middle;  font-family:"Century"; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle; text-align: center;">
+		$!object.frequency.get($i).difference</td>
+		<td style="padding: 5px 3px 5px 5px; vertical-align: middle;   font-family:"Century"; font-family:"Century"; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; color: #000000; vertical-align: middle; text-align: center;">
+		$!object.frequency.get($i).reading_after_2_hrs</td>
+		<td style="padding: 5px 3px 5px 5px; vertical-align: middle;  font-family:"Century"; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle; text-align: center;">
+		$!object.frequency.get($i).difference_after_2_hrs</td>
+	</tr>
+	<tr style="height: 16px;">
+		<td  style="padding: 10px 10px 10px 10px;  font-family:"Century"; white-space:nowrap; vertical-align: middle; text-align: center; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle; width: 366px;" >
+		<div style="width:150px; text-align: center;" width="150">SOUND LEVEL (dB)</div></td>
+		<td  style="padding: 5px 3px 5px 5px; vertical-align: middle;  font-family:"Century"; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle; text-align: center;">
+		 $!object.sound.get($i).hmcl_specification_before_test_max_specification 
+		 
+		</td>
+		<td style="padding: 5px 3px 5px 5px; vertical-align: middle;  font-family:"Century"; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle; text-align: center;">
+		 &plusmn; $!object.sound.get($i).hmcl_specification_after_test_max_specification dB of Initial value 
+		  </td>
+		<td   style="padding: 5px 3px 5px 5px; vertical-align: middle;  font-family:"Century"; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; color: #000000; vertical-align: middle; text-align: center;">
+		 $!object.sound.get($i).reading_before_test </td>
+		<td   style="padding: 5px 3px 5px 5px; vertical-align: middle;  font-family:"Century"; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; color: #000000; vertical-align: middle; text-align: center;">
+		 $!object.sound.get($i).reading_after_test</td>
+		<td style="padding: 5px 3px 5px 5px; vertical-align: middle; font-family:"Century";  border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle; text-align: center;">
+		$!object.sound.get($i).difference</td>
+		<td style="padding: 5px 3px 5px 5px; vertical-align: middle; font-family:"Century"; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; color: #000000; vertical-align: middle; text-align: center;">
+		$!object.sound.get($i).reading_after_2_hrs</td>
+		<td style="padding: 5px 3px 5px 5px; vertical-align: middle; font-family:"Century"; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 9pt; vertical-align: middle; text-align: center;">
+		$!object.sound.get($i).difference_after_2_hrs</td>
+	</tr>
+	#end
+</table>
+<br>
+
+<br>
+<br>
+<br>
+
+<table border="1" cellpadding="0" cellspacing="0" dir="ltr" style="table-layout: fixed; width: 100%; font-size: 9pt; font-family:"bookman Old Style"; border-collapse: collapse; border: 1px solid #ccc">
+
+	<tr style="text-align: center;">
+		<td style="font-size: 10px; text-align: center;vertical-align: middle;padding: 5px 3px 5px 5px;" align="center" rowspan="2"> <strong> PHOTOGRAPH    </strong>  </td>
+		<td style="font-size: 10px; text-align: center;vertical-align: middle;padding: 5px 3px 5px 5px;" align="center"> <strong> BEFORE TEST    </strong>  </td>
+		<td style="font-size: 10px; text-align: center;vertical-align: middle;padding: 5px 3px 5px 5px;" align="center"> <strong> AFTER TEST    </strong>  </td>
+	</tr>
+	<tr>
+		<td align="left">
+		 #foreach ($beforeImage in $!object.beforeImage)
+				<div  style="margin-right: 5px;">
+				<p  style="font-size: 9pt;"> $!beforeImage.image_name</p>
+				
+				#if ($beforeImage.image_path)
+					<img alt=""  src="$!beforeImage.image_path">
+			    #end
+    			
+			</div>
+		#end
+		
+		</td>
+
+		<td align="left">
+			 #foreach ($afterImage in $!object.afterImage)
+					<div  style="margin-right: 5px;">
+					<p  style="font-size: 9pt;"> $!afterImage.image_name</p>
+					
+					#if ($afterImage.image_path)
+						<img alt=""  src="$!afterImage.image_path">
+			    	#end
+					
+					
+				</div>
+			#end
+			
+		</td>
+	</tr>
+</table>
+
+
+
+ 
+ 
+ 
+<table border="1" cellpadding="0" cellspacing="0" dir="ltr" style="table-layout: fixed; width: 100%; font-family:"bookman Old Style"; font-size: 9pt; border-collapse: collapse; border: 1px solid #ccc">
+
+	<tr>
+		<td class="auto-style1" colspan="1" rowspan="9">
+		<span>
+		<div style="max-height: 295px">
+			 <strong> SCREW ADJUSTMENT HISTORY    </strong>  </div>
+		</span></td>
+		<td style="text-align: center; font-size: 8px;"> <strong> S.NO IN HORN TEST 
+		EQUIP.    </strong>  </td>
+		<td style="text-align: center; font-size: 10px;"> <strong> 1    </strong>  </td>
+		<td style="text-align: center; font-size: 10px;"> <strong> 2    </strong>  </td>
+		<td style="text-align: center; font-size: 10px;"> <strong> 3    </strong>  </td>
+		<td style="text-align: center; font-size: 10px;"> <strong> 4    </strong>  </td>
+		<td style="text-align: center; font-size: 10px;"> <strong> 5    </strong>  </td>
+		<td style="text-align: center; font-size: 10px;"> <strong> 6    </strong>  </td>
+		<td style="text-align: center; font-size: 10px;"> <strong> 7    </strong>  </td>
+		<td style="text-align: center; font-size: 10px;"> <strong> 8    </strong>  </td>
+		<td style="text-align: center; font-size: 10px;"> <strong> 9    </strong>  </td>
+		<td style="text-align: center; font-size: 10px;"> <strong> 10    </strong>  </td>
+		<td style="text-align: center; font-size: 10px;"> <strong> 11    </strong>  </td>
+		<td style="text-align: center; font-size: 10px;"> <strong> 12    </strong>  </td>
+	</tr>
+	<tr >
+		<td align="center" style="text-align:center">
+		<img alt=""  src="$!object.dignol" width="80"><br></td>
+		<td style="text-align: center"> <strong> $!object.screw.get(0).slot1     </strong>  </td>
+		<td style="text-align: center"> <strong> $!object.screw.get(0).slot2     </strong>  </td>
+		<td style="text-align: center"> <strong> $!object.screw.get(0).slot3     </strong>  </td>
+		<td style="text-align: center"> <strong> $!object.screw.get(0).slot4     </strong>  </td>
+		<td style="text-align: center"> <strong> $!object.screw.get(0).slot5     </strong>  </td>
+		<td style="text-align: center"> <strong> $!object.screw.get(0).slot6     </strong>  </td>
+		<td style="text-align: center"> <strong> $!object.screw.get(0).slot7     </strong>  </td>
+		<td style="text-align: center"> <strong> $!object.screw.get(0).slot8     </strong>  </td>
+		<td style="text-align: center"> <strong> $!object.screw.get(0).slot9     </strong>  </td>
+		<td style="text-align: center"> <strong> $!object.screw.get(0).slot10     </strong>  </td>
+		<td style="text-align: center"> <strong> $!object.screw.get(0).slot11     </strong>  </td>
+		<td style="text-align: center"> <strong> $!object.screw.get(0).slot12     </strong>  </td>
+	</tr>
+	#set($description = $!object.screw.size()) #set($size =$description - 1) 
+#if($size>0)
+	#foreach($!i in [0..$size])
+	<tr>
+		<td align="center" style="text-align:center"> <strong> $i st Screw adjustment 
+		cycle    </strong>  </td>
+		<td align="center" style="text-align: center"> <strong> $!object.screw.get($i).slot1     </strong>  </td>
+		<td align="center" style="text-align: center"> <strong> $!object.screw.get($i).slot2     </strong>  </td>
+		<td align="center" style="text-align: center"> <strong> $!object.screw.get($i).slot3     </strong>  </td>
+		<td align="center" style="text-align: center"> <strong> $!object.screw.get($i).slot4     </strong>  </td>
+		<td align="center" style="text-align: center"> <strong> $!object.screw.get($i).slot5     </strong>  </td>
+		<td align="center" style="text-align: center"> <strong> $!object.screw.get($i).slot6     </strong>  </td>
+		<td align="center" style="text-align: center"> <strong> $!object.screw.get($i).slot7     </strong>  </td>
+		<td align="center" style="text-align: center"> <strong> $!object.screw.get($i).slot8     </strong>  </td>
+		<td align="center" style="text-align: center"> <strong> $!object.screw.get($i).slot9     </strong>  </td>
+		<td align="center" style="text-align: center"> <strong> $!object.screw.get($i).slot10     </strong>  </td>
+		<td align="center" style="text-align: center"> <strong> $!object.screw.get($i).slot11     </strong>  </td>
+		<td align="center" style="text-align: center"> <strong> $!object.screw.get($i).slot12     </strong>  </td>
+	</tr>
+	#end
+#end	
+</table>
+<br>
+<table border="1" cellpadding="2" cellspacing="0" dir="ltr" style="table-layout: fixed; width: 100%; font-size:9pt; font-family:"bookman Old Style"; border-collapse: collapse; border: 1px solid #ccc ">
+	<tr>
+		<td colspan="1"style="text-align: center; padding:5px 3px;"><span>
+		<div style="max-height: 283px text-align: center;">
+			 <strong>  OBSERVATIONS    </strong>  </div>
+		</span></td>
+		<td colspan="6" rowspan="1" style="5px 3px 5px 5px; vertical-align:middle;">
+		<table border="1" cellpadding="0" cellspacing="0" dir="ltr" style="table-layout: fixed; width: 100%; font-size: 9pt; font-family: 'bookman Old Style'; border-collapse: collapse; border: 1px solid #ccc">
+			#set($description = $!object.observation.size())
+			 #set($size =$description - 1)
+			 #if($size>0)
+			 	 #foreach ($i in [0..$size])
+				<tr>
+					<td colspan="6"style="5px 3px 5px 5px; vertical-align:middle;">$!object.observation.get(i).observation  </td>
+				</tr>
+				#end
+			#end
+			#if($size==0)
+			 	<tr>
+					<td colspan="6"style="5px 3px 5px 5px; vertical-align:middle;">$!object.observation.get(0).observation  </td>
+				</tr>
+			#end
+		</table>
+		</td>
+	</tr>
+	<tr >
+		<td align="center" style="text-align: center; padding:5px 3px;"> <strong> ANALYSIS    </strong>  </td>
+		<td colspan="6" style="5px 3px 5px 5px; vertical-align: middle;">$!object.analysis.analysis</td>
+	</tr>
+			<tr>
+		<td style="text-align: center; padding:5px 3px;">  <strong> RESULT    </strong>  </td>
+			<td colspan="6" >
+				<table border="1" cellpadding="0" cellspacing="0" style="table-layout: fixed; width: 100%; font-size: 9pt;  font-family:"bookman Old Style"; border-collapse: collapse; border: 1px solid #ccc; vertical-align: middle !Important; text-align: center;">
+					<tr>
+					 <td colspan="3" rowspan="1" style="text-align: center; color:#009900;  padding:5px 3px;"> <strong> ACCEPTED HORNS - FOUND O.K.    </strong>  </td>
+					 <td colspan="3" rowspan="1"  style="text-align: center; color:#FF0000; padding:5px 3px;"> <strong> REJECTED HORNS - FOUND N.G.    </strong>  </td>
+					</tr>	
+
+				<tr>
+					<td align="center" style="text-align: center; color:#009900; padding:5px 3px; height: 24px;"> <strong> MODEL    </strong>  </td>
+					<td align="center" style="text-align: center; color:#009900;  padding:5px 3px; height: 24px;"> <strong> HORN TYPE    </strong>  </td>
+					<td align="center" style="text-align: center; color:#009900; padding:5px 3px; height: 24px;"> <strong> QTY    </strong>  </td>
+					<td align="center" style="text-align: center; color:#FF0000; padding:5px 3px; height: 24px;"> <strong> MODEL    </strong>  </td>
+					<td align="center" style="text-align: center; color:#FF0000; padding:5px 3px; height: 24px;"> <strong> HORN TYPE    </strong>  </td>
+					<td align="center" style="text-align: center; color:#FF0000; padding:5px 3px; height: 24px;"> <strong> QTY    </strong>  </td>
+				</tr>
+				#set($description = $object.posativeResult.size()) 
+					#set($size =$description - 1) 
+					#foreach ($!i in [0..$size])
+						<tr >
+							<td align="center" style="text-align: center; color:#009900; padding:5px 3px;"> $!object.posativeResult.get($i).model     </td>
+							<td align="center" style="text-align: center; color:#009900; padding:5px 3px;">  $!object.posativeResult.get($i).horn_type      </td>
+							<td align="center" style="text-align: center; color:#009900; padding:5px 3px;">  $!object.posativeResult.get($i).qunatity Nos      </td>
+							<td align="center" style="text-align: center; color:#FF0000; padding:5px 3px;">  $!object.negativeResult.get($i).model     </td>
+							<td align="center" style="text-align: center; color:#FF0000; padding:5px 3px;">  $!object.negativeResult.get($i).horn_type     </td>
+							<td align="center" style="text-align: center; color:#FF0000; padding:5px 3px;">  $!object.negativeResult.get($i).qunatity Nos      </td>
+						</tr>
+					#end
+				
+	
+				</table>
+			</td>
+		
+	</tr>
+	
+	<tr >
+		<td align="center" style="text-align: center; vertical-align:middle;">  <strong> CONCLUSION    </strong>  </td>
+		<td colspan="6">$!object.conclusion.conclusion</td>
+	</tr>
+	
+	<tr style="height:100px;">
+		
+		
+		<td colspan="2" align="center" style="text-align: center; vertical-align:middle;" valign="middle">
+			#if ($object.signature.image_path_tested_by)
+				<br/><img alt="" align="center" height="30" src="$!object.signature.image_path_tested_by"><br/>
+	    	#end
+		
+		</td>
+		<td colspan="3"   align="center" style="text-align: center;  vertical-align:middle; " >
+			#if ($object.signature.image_path_verified_by)
+				<img alt="" align="center" height="30" src="$!object.signature.image_path_verified_by">
+	    	#end
+		
+		</td>
+		<td colspan="2"  align="center" style="text-align: center; vertical-align:middle;  " >
+			#if ($object.signature.image_path_approved_by)
+				<img alt="" align="center" height="30" src="$!object.signature.image_path_approved_by">
+			#end
+		
+		</td>
+		
+		
+		
+		
+	</tr>
+	<tr>
+		<td colspan="2" align="center" style="text-align: center; padding:5px 3px">
+		 <strong> TESTED BY    </strong>  </td>
+		<td colspan="3" align="center" style="text-align: center; padding:5px 3px">
+		 <strong> VERIFIED BY    </strong>  </td>
+		<td colspan="2" align="center" style="text-align: center; padding:5px 3px">
+		 <strong> APPROVED BY    </strong>  </td>
+	</tr>
+</table>
+
+ 
+
+</body>
+
+</html>
+
+ 

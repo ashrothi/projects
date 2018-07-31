@@ -1,0 +1,17 @@
+com/springiot/response/Message.class
+com/springiot/constant/ProcessParameter.class
+com/springiot/swagger/response/UploadImageSwagger.class
+com/springiot/http/client/HttpURLCalling.class
+com/springiot/genericDao/GenericDao.class
+com/springiot/swagger/response/XfusionUsersGetApiAccessSwagger.class
+com/springiot/controllers/BarcController.class
+com/springiot/controllers/UserMappingController.class
+com/springiot/constant/Constant.class
+com/springiot/filter/TokenFilter.class
+com/springiot/services/KafkaServices.class
+com/springiot/swagger/response/UserCreationSignup.class
+com/springiot/swagger/response/test.class
+com/springiot/services/MimeUtils.class
+com/springiot/services/GenericProcess.class
+com/springiot/genericService/GenericService.class
+com/springiot/services/MediaUrlServices.class

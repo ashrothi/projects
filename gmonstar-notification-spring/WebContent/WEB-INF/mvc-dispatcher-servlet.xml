@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd
+  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+  http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+	<context:component-scan base-package="org.gmonstar.notification.*" />
+
+	<mvc:annotation-driven />
+
+	<bean id="loggingAspect" class="org.gmonstar.notification.logging.AOPLogging" />
+
+	<aop:aspectj-autoproxy />
+
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	<!-- <mvc:resources mapping="/resources/**" location="/resources/" cache-period="10000" 
+		/> -->
+
+	<bean id="swagger2Config"
+		class="springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration" />
+
+	<context:property-placeholder location="classpath:/swagger.properties" />
+
+	<mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/" />
+	<mvc:resources mapping="/webjars/**"
+		location="classpath:/META-INF/resources/webjars/" />
+
+	<!-- applicationContext.xml -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="embedded-database" />
+		<property name="packagesToScan" value="com.springiot.modal" />
+		<property name="hibernateProperties">
+			<value>
+				hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect
+				hibernate.connection.useUnicode=true
+				hibernate.connection.characterEncoding=UTF-8
+				hibernate.connection.charSet=UTF-8
+				hibernate.ejb.naming_strategy=org.hibernate.cfg.ImprovedNamingStrategy
+				hibernate.show_sql=true
+
+				hibernate.c3p0.msize=20
+				hibernate.c3p0.max_size=40
+				hibernate.c3p0.timeout=300
+				hibernate.c3p0.max_statements=50
+				hibernate.c3p0.idle_test_period=3000
+				hibernate.connection.zeroDateTimeBehavior=convertToNull
+			</value>
+		</property>
+	</bean>
+
+	<bean class="org.springframework.orm.hibernate4.HibernateTransactionManager"
+		id="transactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<bean class="org.gmonstar.notification.constant.ProcessParameter"
+		id="processParameter">
+		<property name="maps">
+			<map>
+				<entry key="1" value="call  gmonstar_is_user_valid(token)" />
+				<entry key="2" value="call gmonstar_system_config_get(kafka_type)" />
+				<entry key="3"
+					value="call gmonstar_notification_audit_log_insert(log_id,end_node_id,users_id,is_successful,log_description,name,value)" />
+				<entry key="4" value="call  gmonstar_audit_log_get_by_log_id(log_id)" />
+				<entry key="5"
+					value="call gmonstar_audit_log_get_by_token(token,start_time,end_time)" />
+				<entry key="6"
+					value="call gmonstar_notification_get_gm_plan_id(bss_plan_id)" />
+				<entry key="7"
+					value="call gmonstar_notification_get_bss_plan_id(gm_plan_id)" />
+
+			</map>
+		</property>
+	</bean>
+
+</beans>

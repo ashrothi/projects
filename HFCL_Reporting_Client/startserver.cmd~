@@ -1,0 +1,5 @@
+set TCP_Client=D:\VOTA_Data_Processing
+
+java -jar D:\VOTA_Data_Processing\bin\vata_processing.jar 
+
+exit

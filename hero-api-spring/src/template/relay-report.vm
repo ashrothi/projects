@@ -1,0 +1,583 @@
+<html>
+
+<body>
+
+<table border="1" cellpadding="2" cellspacing="0" style=" font-family:"Bookman Old Style"; font-size: 8pt; width: 100%;">
+	<tr >
+		<td align="center" style="padding: 3px 3px 4px 3px; vertical-align: middle; width: 126px; text-align: center">
+		<img alt="" height="50" src="$!object.logo" style="margin:auto;" align="center"> </td>
+		<td colspan="5" style="padding: 3px 3px 4px 3px; vertical-align: middle; text-align: center; font-size: 13pt;">
+		<strong> PERFORMANCE AND ENDURANCE TESTING LAB REPORT </strong> </td>
+		
+	</tr>
+	<tr>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle;"></td>
+		<td colspan="5" style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 25px; font-size: 13pt; text-align: center">
+		<strong> SQA HMCL GURGAON </strong> </td>
+		
+	</tr>
+	<tr>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle;"><strong>PART NAME	</strong>	
+		</td>
+		<td rowspan="1" style="padding: 3px 3px 4px 3px; vertical-align: middle; font-family:"Century";"> 
+		$!object.header.get(0).part_name </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle;"><strong>HMCL 
+		PART CODE </strong> </td>
+		<td rowspan="1" style="padding: 3px 3px 4px 3px; vertical-align: middle; font-family:"Century";"> 
+		$!object.header.get(0).hmcl_part_code </td>
+		<td rowspan="2"  style="padding: 3px 3px 4px 3px; vertical-align: middle;"><strong>REPORT DATE</strong>
+		 </td>
+		<td rowspan="2" style="padding: 3px 3px 4px 3px; vertical-align: middle; font-family:"Century";"> 
+		$!object.header.get(0).report_date.replace("00:00:00.0","") </td>
+	</tr>
+	<tr>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle;"><strong>VENDOR 
+		NAME/CODE</strong> </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; font-family:"Century";"> 
+		$!object.header.get(0).vendor_name/ $!object.header.get(0).vendor_code
+		</td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle;"><strong>VENDOR 
+		PART CODE</strong> </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; font-family:"Century";"> 
+		$!object.header.get(0).vendor_part_code </td>
+		
+	</tr>
+	<tr>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle;"><strong>PLANT</strong>
+		</td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; font-family:"Century";"> 
+		$!object.header.get(0).plant </td>
+		<td rowspan="1" style="padding: 3px 3px 4px 3px; vertical-align: middle;">
+		<strong>VENDOR MFG LOCATION</strong> </td>
+		<td rowspan="1" style="padding: 3px 3px 4px 3px; vertical-align: middle; font-family:"Century";"> 
+		$!object.header.get(0).vendor_mfg_location </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle;"><strong>TEST 
+		START DATE</strong> </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; font-family:"Century";">$!object.header.get(0).test_start_date.replace("00:00:00.0","")
+		</td>
+	</tr>
+	<tr>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle;"><strong>INSPECTION LOT NO </strong> </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; font-family:"Century";"> 
+		$!object.header.get(0).inspection_lot_no </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle;"><strong>INSPECTION LOT QTY </strong> </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; font-family:"Century";"> 
+		$!object.header.get(0).inspection_lot_qty </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle;"><strong>TEST END DATE </strong></td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; font-family:"Century";">$!object.header.get(0).test_end_date.replace("00:00:00.0","")
+		</td>
+	</tr>
+	<tr>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle;"><strong>INSPECTION LOT DATE</strong> </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; font-family:"Century";"> 
+		$!object.header.get(0).inspection_lot_date.replace("00:00:00.0","") </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle;"><strong>PART MFG DATE </strong></td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; font-family:"Century";"> 
+		$!object.header.get(0).part_mfg_date.replace("00:00:00.0","") </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle;"><strong>NO OF SAMPLES </strong></td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; font-family:"Century";"> 
+		$!object.header.get(0).no_of_samples Nos </td>
+	</tr>
+	<tr>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle;"><strong>TYPE OF TEST </strong></td>
+		<td colspan="5" style="padding: 3px 3px 4px 3px; vertical-align: middle; font-family:"Century";"> 
+		$!object.header.get(0).testing_type </td>
+	</tr>
+	<tr>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 24px;"><strong>OBJECTIVE</strong>
+		</td>
+		<td colspan="5" style="padding: 3px 3px 4px 3px; vertical-align: middle; font-family:"Century";; height: 24px;"> 
+		$!object.header.get(0).objective </td>
+	</tr>
+	<tr>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; ">
+		<strong>DETAILS OF MODIFICATION </strong></td>
+		<td colspan="5" style="padding: 3px 3px 4px 3px; vertical-align: middle; font-family:"Century";"> 
+		$!object.header.get(0).modification_details </td>
+	</tr>
+	<tr>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle;"><strong>TEST 
+		STANDARD </strong></td>
+		<td colspan="5" style="padding: 3px 3px 4px 3px; vertical-align: middle; font-family:"Century";"> 
+		$!object.header.get(0).test_standard </td>
+	</tr>
+	<tr >
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; font-weight:bold; white-space:nowrap;"><strong>TEST 
+		CONDITION AND METHOD </strong> </td>
+		<td colspan="5" style="padding: 3px 3px 4px 3px; vertical-align: middle; font-family:"Century";"> 
+		$!object.header.get(0).test_condition_and_methord </td>
+	</tr>
+	<tr>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle;"><strong>TEST 
+		DURATION </strong> </td>
+		<td colspan="5" style="padding: 3px 3px 4px 3px; vertical-align: middle; font-family:"Century";">
+		$!object.header.get(0).test_duration CYCLES </td>
+	</tr>
+</table>
+
+<table border="1" cellpadding="0" cellspacing="0" dir="ltr" style="table-layout: fixed; width: 100%; font-size: 8pt; border-collapse: collapse; border: 1px solid #ccc; font-family:"Century";;">
+	<tr>
+		<td  colspan="2" rowspan="2" style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center; font-family:"Bookman Old Style"; width: 259px;">
+		<strong>PARAMETER</strong> </td>
+		<td rowspan="2" style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center; font-family:"Bookman Old Style";">
+		<strong>SPECIFICATION</strong> </td>
+		<td colspan="5" style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center; font-family:"Bookman Old Style"; background: #6A95A9;">
+		<strong>BEFORE TEST RESULT</strong> </td>
+		<td colspan="5" style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center; font-family:"Bookman Old Style"; background: #C7C78A;">
+		<strong>AFTER TEST RESULT</strong> </td>
+	</tr>
+	<tr>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center; background: #6A95A9; font-family:"Bookman Old Style";">
+		<strong>N1</strong> </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center; background: #6A95A9; font-family:"Bookman Old Style";">
+		<strong>N2</strong> </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center; background: #6A95A9; font-family:"Bookman Old Style";">
+		<strong>N3</strong> </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center; background: #6A95A9; font-family:"Bookman Old Style";">
+		<strong>N4 </strong> </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center; background: #6A95A9; font-family:"Bookman Old Style";">
+		<strong>N5 </strong></td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center; background: #C7C78A; font-family:"Bookman Old Style";">
+		<strong>N1 </strong></td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center; background: #C7C78A; font-family:"Bookman Old Style";">
+		<strong>N2</strong> </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center; background: #C7C78A; font-family:"Bookman Old Style";">
+		<strong>N3</strong> </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center; background: #C7C78A; font-family:"Bookman Old Style";">
+		<strong>N4</strong> </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center; background: #C7C78A; font-family:"Bookman Old Style";">
+		<strong>N5</strong> </td>
+	</tr>
+	<tr >
+		<td colspan="2" style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center; width: 259px;">
+		<strong>CONTACT POINT<br>VOLTAGE DROP</strong> </td>
+		<td  style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(0).contact_point_voltage_drop_min_specification V Max. 
+		At $!object.grid.get(0).contact_point_voltage_drop_max_specification A
+		</td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(0).contact_point_voltage_drop_before </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(1).contact_point_voltage_drop_before </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(2).contact_point_voltage_drop_before </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(3).contact_point_voltage_drop_before </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(4).contact_point_voltage_drop_before </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(0).contact_point_voltage_drop_after </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(1).contact_point_voltage_drop_after </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(2).contact_point_voltage_drop_after </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(3).contact_point_voltage_drop_after </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(4).contact_point_voltage_drop_after </td>
+	</tr>
+	<tr>
+		<td colspan="2" style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; width: 259px; text-align: center;">
+		<strong>COIL CURRENT</strong> </td>
+		<td  style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(0).coil_current_min_specification 
+		A Max. At $!object.grid.get(0).coil_current_max_specification 
+		V</td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(0).coil_current_before </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(1).coil_current_before </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(2).coil_current_before </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(3).coil_current_before </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(4).coil_current_before </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(0).coil_current_after </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(1).coil_current_after </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(2).coil_current_after </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(3).coil_current_after </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(4).coil_current_after </td>
+	</tr>
+	<tr>
+		<td colspan="2" style="padding: 3px 3px 4px 3px; vertical-align: middle; width: 259px; text-align: center">
+		<strong>STARTING VOLTAGE </strong></td>
+		<td  rowspan="1" style="padding: 3px 3px 4px 3px; text-align:center; vertical-align: middle; height: 56px;">
+		SHOULD START BELOW<br>$!object.grid.get(0).starting_voltage_max_specification 
+		V 
+		WHEN STARTED<br>FROM $!object.grid.get(0).starting_voltage_min_specification 
+		V </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(0).starting_voltage_before </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(1).starting_voltage_before </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(2).starting_voltage_before </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(3).starting_voltage_before </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(4).starting_voltage_before </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(0).starting_voltage_after </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(1).starting_voltage_after </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(2).starting_voltage_after </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(3).starting_voltage_after </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(4).starting_voltage_after </td>
+	</tr>
+	<tr style="height: 56px;">
+		<td colspan="2" style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center; width: 259px;">
+		<strong>RECOVERY VOLTAGE</strong> </td>
+		<td  style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		SHOULD RECOVER<br>BELOW $!object.grid.get(0).recovery_voltage_min_specification 
+		V WHEN<br>DECREASED FROM $!object.grid.get(0).recovery_voltage_max_specification 
+		V </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(0).recovery_voltage_before </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(1).recovery_voltage_before </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(2).recovery_voltage_before </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(3).recovery_voltage_before </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(4).recovery_voltage_before </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(0).recovery_voltage_after </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(1).recovery_voltage_after </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(2).recovery_voltage_after </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(3).recovery_voltage_after </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(4).recovery_voltage_after </td>
+	</tr>
+	<tr >
+		<td colspan="2" style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center; width: 259px;">
+		<strong>APPEARANCE</strong> </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(0).appearance_max_specification </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(0).appearance_before </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(1).appearance_before </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(2).appearance_before </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(3).appearance_before </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(4).appearance_before </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(0).appearance_after </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(1).appearance_after </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(2).appearance_after </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(3).appearance_after </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(4).appearance_after </td>
+	</tr>
+	<tr >
+		<td colspan="2" style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center; width: 259px;">
+		<strong>INSULATION<br>RESISTANCE</strong> </td>
+		<td  style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(0).insulation_resistance_min_specification
+		<font face="Symbol">W</font>  MIN. WITH $!object.grid.get(0).insulation_resistance_max_specification 
+		V MEGGAR </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(0).insulation_resistance_before <font face="Symbol">W</font>
+		</td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(1).insulation_resistance_before <font face="Symbol">W</font>
+		</td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(2).insulation_resistance_before <font face="Symbol">W</font>
+		</td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(3).insulation_resistance_before <font face="Symbol">W</font>
+		</td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(4).insulation_resistance_before <font face="Symbol">W</font>
+		</td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(0).insulation_resistance_after <font face="Symbol">W</font>
+		</td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(1).insulation_resistance_after <font face="Symbol">W</font></td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(2).insulation_resistance_after <font face="Symbol">W</font>
+		</td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(3).insulation_resistance_after <font face="Symbol">W</font>
+		</td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(4).insulation_resistance_after <font face="Symbol">W</font>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center; width: 259px;">
+		<strong>LOAD CURRENT</strong> </td>
+		<td  style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(0).load_current_max_specification A</td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(0).load_current_before </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(1).load_current_before </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(2).load_current_before </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(3).load_current_before </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(4).load_current_before </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(0).load_current_after </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(1).load_current_after </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(2).load_current_after </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(3).load_current_after </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(4).load_current_after </td>
+	</tr>
+	<tr>
+		<td colspan="3" style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center; width: 259px;">
+		<strong>CYCLE</strong> </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(0).cycle_before </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(1).cycle_before </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(2).cycle_before </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(3).cycle_before </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(4).cycle_before </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(0).cycle_after </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(1).cycle_after </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(2).cycle_after </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(3).cycle_after </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		$!object.grid.get(4).cycle_after </td>
+	</tr>
+	<tr>
+		<td colspan="3" style="padding: 3px 3px 4px 3px; vertical-align: middle;  height: 18px; text-align: center; width: 259px;">
+		<strong> JUDGEMENT </strong></td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle;  height: 18px;  text-align:center;">
+		<strong>#if($!object.grid.get(0).judgement_before == 1)
+		<span style="color: #00b058; text-align:center;"> OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		<strong>#if($!object.grid.get(1).judgement_before == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		<strong>#if($!object.grid.get(2).judgement_before == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		<strong>#if($!object.grid.get(3).judgement_before == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		<strong>#if($!object.grid.get(4).judgement_before == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		<strong>#if($!object.grid.get(0).judgement_after == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		<strong>#if($!object.grid.get(1).judgement_after == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong> </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		<strong>#if($!object.grid.get(2).judgement_after == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		<strong>#if($!object.grid.get(3).judgement_after == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 18px; text-align: center;">
+		<strong>#if($!object.grid.get(4).judgement_after == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+	</tr>
+</table>
+<br>
+<table border="1" cellpadding="0" cellspacing="0" dir="ltr" style="table-layout: fixed; width: 100%; font-size: 8pt; border-collapse: collapse; border: 1px solid #ccc; font-family:"Bookman Old Style";">
+	<tr>
+		<td colspan="2"><strong>PHOTOGRAPHS:-</strong> </td>
+	</tr>
+	<tr>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; background: #6A95A9; text-align: center;">
+		<strong>BEFORE TEST </strong></td>
+		<td style="padding: 3px 3px 4px 3px; background: #C7C78A; vertical-align: middle; text-align: center;">
+		<strong>AFTER TEST </strong></td>
+	</tr>
+	<tr>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: top;">
+		<table border="1" cellpadding="0" cellspacing="0" dir="ltr" style="table-layout: fixed; width: 100%; font-size: 8pt; border-collapse: collapse; border: 1px solid #ccc">
+			<tr>
+				<td style="padding: 3px 3px 4px 3px; vertical-align: middle; text-align: center;">
+				<strong>N1</strong> </td>
+				<td style="padding: 3px 3px 4px 3px; vertical-align: middle; text-align: center;">
+				<strong>N2</strong> </td>
+				<td style="padding: 3px 3px 4px 3px; vertical-align: middle; text-align: center;">
+				<strong>N3</strong> </td>
+			</tr>
+			<tr>
+				<td style="padding: 3px 3px 4px 3px; vertical-align: middle; text-align: center;">
+				#foreach ($beforeN1 in $!object.beforeImageN1) #if ($beforeN1.image_path)
+				<img alt=" " height="80" src="$beforeN1.image_path"> <br>#end #end
+				</td>
+				<td style="padding: 3px 3px 4px 3px; vertical-align: middle;">#foreach 
+				($beforeN2 in $!object.beforeImageN2) #if ($beforeN2.image_path)
+				<img alt=" " height="80" src="$beforeN2.image_path"> <br>#end #end
+				</td>
+				<td style="padding: 3px 3px 4px 3px; vertical-align: middle;">#foreach 
+				($beforeN3 in $!object.beforeImageN3) #if ($beforeN3.image_path)
+				<img alt=" " height="80" src="$beforeN3.image_path"> <br>#end #end
+				</td>
+			</tr>
+			<tr>
+				<td style="padding: 3px 3px 4px 3px; vertical-align: middle; text-align: center;">
+				<strong>N4 </strong></td>
+				<td style="padding: 3px 3px 4px 3px; vertical-align: middle; text-align: center;">
+				<strong>N5</strong> </td>
+				<td style="padding: 3px 3px 4px 3px; vertical-align: middle; text-align: center;">
+				</td>
+			</tr>
+			<tr>
+				<td style="padding: 3px 3px 4px 3px; vertical-align: middle;">#foreach 
+				($beforeN4 in $!object.beforeImageN4) #if ($beforeN4.image_path)
+				<img alt=" " height="80" src="$beforeN4.image_path"> <br>#end #end
+				</td>
+				<td style="padding: 3px 3px 4px 3px; vertical-align: middle;">#foreach 
+				($beforeN5 in $!object.beforeImageN5) #if ($beforeN5.image_path)
+				<img alt=" " height="80" src="$beforeN5.image_path"> <br>#end #end
+				</td>
+				<td style="padding: 3px 3px 4px 3px; vertical-align: middle;">
+				</td>
+			</tr>
+		</table>
+		</td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 28px;">
+		<table border="1" cellpadding="0" cellspacing="0" dir="ltr" style="table-layout: fixed; width: 100%; font-size: 8pt; border-collapse: collapse; border: 1px solid #ccc">
+			<tr>
+				<td style="padding: 3px 3px 4px 3px; vertical-align: middle; text-align: center;">
+				<strong>N1</strong> </td>
+				<td style="padding: 3px 3px 4px 3px; vertical-align: middle; text-align: center;">
+				<strong>N2 </strong></td>
+				<td style="padding: 3px 3px 4px 3px; vertical-align: middle; text-align: center;">
+				<strong>N3</strong> </td>
+			</tr>
+			<tr>
+				<td style="padding: 3px 3px 4px 3px; vertical-align: middle;">#foreach 
+				($afterN1 in $!object.afterImageN1) #if ($afterN1.image_path)
+				<img alt=" " height="80" src="$afterN1.image_path"> <br>#end #end
+				</td>
+				<td style="padding: 3px 3px 4px 3px; vertical-align: middle;">#foreach 
+				($afterN2 in $!object.afterImageN2) #if ($afterN2.image_path)
+				<img alt=" " height="80" src="$afterN2.image_path"> <br>#end #end
+				</td>
+				<td style="padding: 3px 3px 4px 3px; vertical-align: middle;">#foreach 
+				($afterN3 in $!object.afterImageN3) #if ($afterN3.image_path)
+				<img alt=" " height="80" src="$afterN3.image_path"> <br>#end #end
+				</td>
+			</tr>
+			<tr>
+				<td style="padding: 3px 3px 4px 3px; vertical-align: middle; text-align: center">
+				<strong>N4</strong> </td>
+				<td style="padding: 3px 3px 4px 3px; vertical-align: middle; text-align: center">
+				<strong>N5 </strong></td>
+				<td style="padding: 3px 3px 4px 3px; vertical-align: middle; text-align: center">
+				</td>
+			</tr>
+			<tr>
+				<td style="padding: 3px 3px 4px 3px; vertical-align: middle;">#foreach 
+				($afterN4 in $!object.afterImageN4) #if ($afterN4.image_path)
+				<img alt=" " height="80" src="$afterN4.image_path"> <br>#end #end
+				</td>
+				<td style="padding: 3px 3px 4px 3px; vertical-align: middle;">#foreach 
+				($afterN5 in $!object.afterImageN5) #if ($afterN5.image_path)
+				<img alt=" " height="80" src="$afterN5.image_path"> <br>#end #end
+				</td>
+				<td style="padding: 3px 3px 4px 3px; vertical-align: middle;">
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+<table border="1" cellpadding="0" cellspacing="0" dir="ltr" style="table-layout: fixed; width: 100%; font-size: 8pt; border-collapse: collapse; border: 1px solid #ccc">
+	<tr >
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; font-family:"Bookman Old Style";">
+		<strong>OBSERVATION :-</strong> </td>
+		<td colspan="3" >#foreach ($observation in $!object.observation) 
+		$!observation.observation <br>#end </td>
+	</tr>
+	<tr>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; font-family:"Bookman Old Style";">
+		<strong>ANALYSIS :-</strong> </td>
+		<td colspan="3">$!object.analysis.get(0).analysis </td>
+	</tr>
+	<tr>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; height: 37px; width: 126px; font-family:"Bookman Old Style";">
+		<strong>CONCLUSION :-</strong> </td>
+		<td colspan="3" style="padding: 3px 3px 4px 3px; vertical-align: middle; ">
+		#foreach ($conclusion in $!object.conclusion) $!conclusion.conclusion
+		<br>#end </td>
+	</tr>
+	<tr>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; font-family:"Bookman Old Style";">
+		<strong>RESULTS :-</strong> </td>
+		<td colspan="3" >$!object.result.get(0).result
+		</td>
+	</tr>
+</table>
+<table border="1" cellpadding="0" cellspacing="0" dir="ltr" style="table-layout: fixed; width: 100%; font-size: 8pt; border-collapse: collapse; border: 1px solid #ccc">
+	<tr>
+		<td align="center" style="text-align: center; vertical-align: middle;">#if 
+		($object.signature.image_path_tested_by) <br />
+		<img align="center" alt="" height="30" src="$!object.signature.image_path_tested_by"><br />
+		#end </td>
+		<td align="center" style="text-align: center; vertical-align: middle;">#if 
+		($object.signature.image_path_verified_by)<br />
+		<img align="center" alt="" height="30" src="$!object.signature.image_path_verified_by">
+		<br />
+		#end </td>
+		<td align="center" style="text-align: center; vertical-align: middle;">#if 
+		($object.signature.image_path_approved_by)<br />
+		<img align="center" alt="" height="30" src="$!object.signature.image_path_approved_by">
+		<br />
+		#end </td>
+	</tr>
+	<tr>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; text-align: center; font-family:"Bookman Old Style";">
+		<strong>TESTED BY </strong></td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; text-align: center; font-family:"Bookman Old Style";">
+		<strong>VERIFIED BY</strong> </td>
+		<td style="padding: 3px 3px 4px 3px; vertical-align: middle; text-align: center; font-family:"Bookman Old Style";">
+		<strong>APPROVED BY</strong> </td>
+	</tr>
+</table>
+
+</body>
+
+</html>

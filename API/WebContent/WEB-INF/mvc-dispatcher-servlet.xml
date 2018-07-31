@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd
+  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+  http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+	<context:component-scan base-package="com.springiot.*" />
+
+	<mvc:annotation-driven />
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	<!-- <mvc:resources mapping="/resources/**" location="/resources/" cache-period="10000" 
+		/> -->
+
+	<bean id="swagger2Config"
+		class="springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration" />
+
+	<context:property-placeholder location="classpath:/swagger.properties" />
+
+	<mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/" />
+	<mvc:resources mapping="/webjars/**"
+		location="classpath:/META-INF/resources/webjars/" />
+
+	<!-- applicationContext.xml -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="embedded-database" />
+		<property name="packagesToScan" value="com.springiot.modal" />
+		<property name="hibernateProperties">
+			<value>
+				hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect
+				hibernate.connection.useUnicode=true
+				hibernate.connection.characterEncoding=UTF-8
+				hibernate.connection.charSet=UTF-8
+				hibernate.ejb.naming_strategy=org.hibernate.cfg.ImprovedNamingStrategy
+				hibernate.show_sql=true
+
+				hibernate.c3p0.min_size=20
+				hibernate.c3p0.max_size=40
+				hibernate.c3p0.timeout=300
+				hibernate.c3p0.max_statements=50
+				hibernate.c3p0.idle_test_period=3000
+				<!-- hibernate.connection.zeroDateTimeBehavior=convertToNull -->
+			</value>
+		</property>
+	</bean>
+
+	<bean class="org.springframework.orm.hibernate4.HibernateTransactionManager"
+		id="transactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<bean class="com.springiot.constant.ProcessParameter" id="processParameter">
+		<property name="maps">
+			<map>
+				<entry key="1"
+					value="call gmr_poi_insert(user_key,label,description,latitude,longitude,image_path,poi_type,city,state,address)" />
+				<entry key="2"
+					value="call gmr_poi_update(user_key,poi_id,label,description,latitude,longitude,image_path,is_deleted,poi_type,city,state,address)" />
+
+				<entry key="3" value="call gmr_get_poi(poi_id)" />
+				<entry key="4" value="call gmr_get_poi_list()" />
+				<entry key="5" value="call gmr_get_poi_by_state(state)" />
+				<entry key="6"
+					value="call gmr_get_report_trip_summary(from_date,end_date)" />
+				<entry key="7"
+					value="call gmr_get_report_vehicle_details(from_date,end_date)" />
+				<entry key="8" value="call gmr_get_report_alerts(from_date, end_date)" />
+				<entry key="9"
+					value="call gmr_get_report_alert_graph(from_date,end_date,limit)" />
+				<entry key="10"
+					value="call gmr_get_report_trip_summary_graph(from_date,end_date,limit)" />
+				<entry key="11"
+					value="call gmr_trip_details_insert(user_key,title,description,remarks,assigned_to,trip_datetime,start_time,end_time,source_latitude,source_longitude,source_poi_id,source_location,source_associated_email,source_contact_number,source_remarks,destination_latitude,destination_longitude,destination_poi_id,destination_location,destination_associated_email,destination_contact_number,destination_remarks,user_id)" />
+				<entry key="12"
+					value="call gmr_trip_details_update(user_key,title,description,remarks,assigned_to,trip_datetime,start_time,end_time,source_latitude,source_longitude,source_poi_id,source_location,source_associated_email,source_contact_number,source_remarks,destination_latitude,destination_longitude,destination_poi_id,destination_location,destination_associated_email,destination_contact_number,destination_remarks,trip_id,status,trip_alias,user_id,is_deleted)" />
+				<entry key="13"
+					value="call gmr_open_trips_get_by_vehicle_id(vehicle_id,user_key,user_id)" />
+				<entry key="14"
+					value="call gmr_open_trips_activity_get_by_trip_alias(user_key,user_id,trip_alias,from_date,end_date)" />
+				<entry key="15" value="call gmr_get_activity_list()" />
+				<entry key="16"
+					value="call gmr_close_trips_get_by_vehicle_id(vehicle_id,from_date,end_date,user_key,user_id)" />
+				<entry key="17"
+					value="call gmr_close_trips_activity_get_by_trip_alias(user_key,user_id,trip_alias,from_date,end_date)" />
+				<entry key="18"
+					value="call gmr_insert_open_ticket(registration_number,order_number,customer_name,customer_email_id,customer_primary_address,customer_secondary_address,customer_contact_no,source_lat,source_long,destination_lat,destination_long,start_date,end_date,warehouse_id)" />
+				<entry key="19" value="call gmr_open_tickets_get_all(from_date,to_date)" />
+
+				<entry key="20"
+					value="call gmr_open_tickets_activity_get_all(order_number,registration_number)" />
+				<entry key="21"
+					value="call gmr_closed_tickets_get_all(from_date,to_date)" />
+				<entry key="22"
+					value="call gmr_closed_tickets_activity_get_all(order_number,registration_number)" />
+				<entry key="23" value="call gmr_open_ticket_vehicle_get_all()" />
+				<entry key="24"
+					value="call gmr_update_open_ticket(registration_number,order_number,status_id,remarks,cool_dolly_id,warehouse_id)" />
+				<entry key="25"
+					value="call gmr_open_tickets_get_by_order_number(order_number)" />
+				<entry key="26"
+					value="call gmr_update_open_ticket_activity(registration_number,truck_status,tdg,bag,untz,rlsd,cmbr,cmbrno)" />
+
+
+
+
+			</map>
+		</property>
+	</bean>
+
+
+	<!-- <bean class="com.springiot.constant.URLParameter" id="urlParameter"> 
+		<property name="authURL" value="http://192.168.1.73:7878/OAuthEngine/oauth/token" 
+		/> <property name="authResetPasswordURL" value="http://192.168.1.73:7878/OAuthEngine/passwordreset" 
+		/> <property name="authExpireURL" value="http://192.168.1.73:7878/OAuthEngine/oauth/token/expire" 
+		/> <property name="authForgotPasswordURL" value="http://192.168.1.73:7878/OAuthEngine/forgotpassword" 
+		/> <property name="authUpdateURL" value="http://192.168.1.73:7878/OAuthEngine/passwordupdate" 
+		/> <property name="XfusionPlatformDeviceGetMetadataStatusByTypeLimit" value="http://192.168.1.73:7878/XFusionPlatform/device/get/metadata/status/by/type/limit" 
+		/> <property name="xfusionPerformanceServiceMultipleDevicesGetMany" value="http://192.168.1.73:7878/XFusionPlatform/performance/service/multipledevices/get/many" 
+		/> <property name="XfusionPerformanceEventstatusAlertDeviceGetAllLimit" value="http://192.168.1.73:7878/XFusionPlatform/performance/performanceevent/device/get/all/limit" 
+		/> <property name="EventstatusAlertDeviceGetAllLimit" value="http://192.168.1.73:7878/XFusionPlatform/performance/eventstatus/alert/device/get/all/limit" 
+		/> <property name="xfusionPlatformPerformanceServiceStatusDevicesGetMany" 
+		value="http://192.168.1.73:7878/XFusionPlatform/performane/servicestatus/devices/get/many" 
+		/> <property name="xfusionPlatformGetDeviceByUser" value="http://192.168.1.73:7878/XFusionPlatform/get/device/by/user" 
+		/> <property name="validateToken" value="http://192.168.1.73:7878/OAuthEngine/oauth/validate/token" 
+		/> </bean> -->
+
+	<bean class="com.springiot.constant.URLParameter" id="urlParameter">
+		<property name="authURL"
+			value="http://13.94.42.90:7878/OAuthEngine/oauth/token" />
+		<property name="authResetPasswordURL"
+			value="http://13.94.42.90:7878/OAuthEngine/passwordreset" />
+		<property name="authExpireURL"
+			value="http://13.94.42.90:7878/OAuthEngine/oauth/token/expire" />
+		<property name="authForgotPasswordURL"
+			value="http://13.94.42.90:7878/OAuthEngine/forgotpassword" />
+		<property name="authUpdateURL"
+			value="http://13.94.42.90:7878/OAuthEngine/passwordupdate" />
+		<property name="XfusionPlatformDeviceGetMetadataStatusByTypeLimit"
+			value="http://13.94.42.90:7878/XFusionPlatform/device/get/metadata/status/by/type/limit" />
+		<property name="xfusionPerformanceServiceMultipleDevicesGetMany"
+			value="http://13.94.42.90:7878/XFusionPlatform/performance/service/multipledevices/get/many" />
+		<property name="XfusionPerformanceEventstatusAlertDeviceGetAllLimit"
+			value="http://13.94.42.90:7878/XFusionPlatform/performance/performanceevent/device/get/all/limit" />
+		<property name="EventstatusAlertDeviceGetAllLimit"
+			value="http://13.94.42.90:7878/XFusionPlatform/performance/eventstatus/alert/device/get/all/limit" />
+		<property name="xfusionPlatformPerformanceServiceStatusDevicesGetMany"
+			value="http://13.94.42.90:7878/XFusionPlatform/performane/servicestatus/devices/get/many" />
+		<property name="xfusionPlatformGetDeviceByUser"
+			value="http://13.94.42.90:7878/XFusionPlatform/get/device/by/user" />
+		<property name="validateToken"
+			value="http://13.94.42.90:7878/OAuthEngine/oauth/validate/token" />
+	</bean>
+
+	<!-- <bean class="com.springiot.constant.URLParameter" id="urlParameter"> 
+		<property name="authURL" value="http://127.0.0.1:7878/OAuthEngine/oauth/token" 
+		/> <property name="authResetPasswordURL" value="http://127.0.0.1:7878/OAuthEngine/passwordreset" 
+		/> <property name="authExpireURL" value="http://127.0.0.1:7878/OAuthEngine/oauth/token/expire" 
+		/> <property name="authForgotPasswordURL" value="http://127.0.0.1:7878/OAuthEngine/forgotpassword" 
+		/> <property name="authUpdateURL" value="http://127.0.0.1:7878/OAuthEngine/passwordupdate" 
+		/> <property name="XfusionPlatformDeviceGetMetadataStatusByTypeLimit" value="http://127.0.0.1:7878/XFusionPlatform/device/get/metadata/status/by/type/limit" 
+		/> <property name="xfusionPerformanceServiceMultipleDevicesGetMany" value="http://127.0.0.1:7878/XFusionPlatform/performance/service/multipledevices/get/many" 
+		/> <property name="XfusionPerformanceEventstatusAlertDeviceGetAllLimit" value="http://127.0.0.1:7878/XFusionPlatform/performance/performanceevent/device/get/all/limit" 
+		/> <property name="EventstatusAlertDeviceGetAllLimit" value="http://127.0.0.1:7878/XFusionPlatform/performance/eventstatus/alert/device/get/all/limit" 
+		/> <property name="xfusionPlatformPerformanceServiceStatusDevicesGetMany" 
+		value="http://127.0.0.1:7878/XFusionPlatform/performane/servicestatus/devices/get/many" 
+		/> <property name="xfusionPlatformGetDeviceByUser" value="http://127.0.0.1:7878/XFusionPlatform/get/device/by/user" 
+		/> <property name="validateToken" value="http://127.0.0.1:7878/OAuthEngine/oauth/validate/token" 
+		/> </bean> -->
+
+</beans>

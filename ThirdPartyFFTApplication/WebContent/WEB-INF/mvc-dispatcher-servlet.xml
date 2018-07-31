@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd
+  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+  http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+	<context:component-scan base-package="com.springiot.*" />
+
+	<mvc:annotation-driven />
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	<!-- <mvc:resources mapping="/resources/**" location="/resources/" cache-period="10000" 
+		/> -->
+
+	<bean id="swagger2Config"
+		class="springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration" />
+
+
+	<context:property-placeholder location="classpath:/swagger.properties" />
+
+	<mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/" />
+	<mvc:resources mapping="/webjars/**"
+		location="classpath:/META-INF/resources/webjars/" />
+
+	<!-- applicationContext.xml -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="embedded-database" />
+		<property name="packagesToScan" value="com.springiot.modal" />
+		<property name="hibernateProperties">
+			<value>
+				hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect
+				hibernate.connection.useUnicode=true
+				hibernate.connection.characterEncoding=UTF-8
+				hibernate.connection.charSet=UTF-8
+				hibernate.ejb.naming_strategy=org.hibernate.cfg.ImprovedNamingStrategy
+				hibernate.show_sql=true
+
+				hibernate.c3p0.min_size=20
+				hibernate.c3p0.max_size=40
+				hibernate.c3p0.timeout=300
+				hibernate.c3p0.max_statements=50
+				hibernate.c3p0.idle_test_period=3000
+				<!-- hibernate.connection.zeroDateTimeBehavior=convertToNull -->
+			</value>
+		</property>
+	</bean>
+
+	<bean class="org.springframework.orm.hibernate4.HibernateTransactionManager"
+		id="transactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+
+	<bean class="com.springiot.constant.ProcessParameter" id="processParameter">
+		<property name="maps">
+			<map>
+				<entry key="1"
+					value="call fft_user_details_get_by_licence_key(licence_key,imei,gcm_id)" />
+				<entry key="2"
+					value="call fft_device_details_update(device_id,imei,licence_key,gcm_id)" />
+				<entry key="3"
+					value="call fft_geofences_coordinates_get_by_id(geofence_id)" />
+				<entry key="4" value="call fft_geofences_get_all()" />
+				<entry key="5"
+					value="call fft_release_device(device_id,imei,licence_key,is_active,is_deleted)" />
+				<entry key="6"
+					value="call fft_geofence_insert(geofence_name,speed_limit,color,description,latitude,longitude,geofence_radius,x_coordinate,y_coordinate,z_coordinate,coordinate_index)" />
+				<entry key="7"
+					value="call fft_geofence_update(geofence_id,geofence_name,speed_limit,color,description,latitude,longitude,geofence_radius,x_coordinate,y_coordinate,z_coordinate,coordinate_index)" />
+				<entry key="8"
+					value="call fft_user_logs_insert(user_id,device_id,licence_key,imei,geofence_id,latitude,longitude,address,log_type)" />
+				<entry key="9" value="call fft_geofence_delete(geofence_id,is_deleted)" />
+				<entry key="10"
+					value="call fft_geofence_assign_to_user(geofence_id,assign_user_id)" />
+				<entry key="11"
+					value="call fft_user_details_get_by_licence_key_for_sos(licence_key,imei)" />
+				<entry key="12" value="call fft_get_all_active_devices()" />
+				<entry key="13" value="call fft_get_geofence_report(from_date,to_date)" />
+				<entry key="14"
+					value="call fft_geofences_coordinates_get_all_by_id(user_user_id,geofence_id)" />
+				<entry key="15" value="call fft_geofence_id_get_by_device_id(device_id)" />
+				<entry key="16" value="call fft_user_details_get_all()" />
+				<entry key="17"
+					value="call fft_fcm_id_get_all_by_geofence_id(geofence_id)" />
+				<entry key="18"
+					value="call fft_user_logs_update(device_id,last_online_time)" />
+				<entry key="19" value="call fft_get_escalation_tab_offline()" />
+				<entry key="20"
+					value="call fft_escalation_insert(device_id,imei,licence_key,email,escalation_time,is_escalated)" />
+				<entry key="21" value="call fft_user_licence_get_all()" />
+
+
+
+			</map>
+		</property>
+	</bean>
+	<!-- <bean class="com.springiot.constant.URLParameter" id="urlParameter"> 
+		<property name="authURL" value="http://192.168.1.73:7878/OAuthEngine_v3/oauth/token" 
+		/> <property name="xfusionOAuthURL" value="http://192.168.1.73:7878/XFusionPlatform_v3/oauth/token" 
+		/> <property name="authResetPasswordURL" value="http://192.168.1.73:7878/OAuthEngine_v3/passwordreset" 
+		/> <property name="authExpireURL" value="http://192.168.1.73:7878/OAuthEngine_v3/oauth/token/expire" 
+		/> <property name="authForgotPasswordURL" value="http://192.168.1.73:7878/OAuthEngine_v3/forgotpassword" 
+		/> <property name="authUpdateURL" value="http://192.168.1.73:7878/OAuthEngine_v3/passwordupdate" 
+		/> <property name="xfusionURL" value="http://192.168.1.73:7878/XFusionPlatform_v3/xfusionusers" 
+		/> <property name="xfusionPlatformThirdPartyIntegrationToken" value="http://192.168.1.73:7878/XFusionPlatform_v3/thirdparty/integration/token" 
+		/> <property name="XfusionPlatformDeviceGetMetadataStatusByTypeLimit" value="http://192.168.1.73:7878/XFusionPlatform_v3/device/get/metadata/status/by/type/limit" 
+		/> <property name="xfusionPerformanceServiceMultipleDevicesGetMany" value="http://192.168.1.73:7878/XFusionPlatform_v3/performance/service/multipledevices/get/many" 
+		/> <property name="xfusionPlatformPerformanceServiceStatusDevicesGetMany" 
+		value="http://192.168.1.73:7878/XFusionPlatform_v3/performane/servicestatus/devices/get/many" 
+		/> <property name="xFusionPlatformOrganizationGetAllUser" value="http://192.168.1.73:7878/XFusionPlatform_v3/organization/get/all/user" 
+		/> <property name="xfusionPlatformDeviceRegister" value="http://192.168.1.73:7878/XFusionPlatform_v3/deviceregister" 
+		/> <property name="xFusionPlatformDeviceMApping" value="http://192.168.1.73:7878/XFusionPlatform_v3/device/add/device" 
+		/> <property name="xfusionPlatformDeviceGetMetadataStatusByTypeLimit" value="http://192.168.1.73:7878/XFusionPlatform_v3/device/get/metadata/status/by/type/limit" 
+		/> <property name="validateToken" value="http://192.168.1.73:7878/OAuthEngine_v3/oauth/validate/token" 
+		/> <property name="rootOrganization" value="http://192.168.1.73:7878/XFusionPlatform_v3/organization/root/by/user" 
+		/> </bean> -->
+	<bean class="com.springiot.constant.URLParameter" id="urlParameter">
+		<property name="authURL"
+			value="http://127.0.0.1:7878/OAuthEngine/oauth/token" />
+		<property name="xfusionOAuthURL"
+			value="http://127.0.0.1:7878/XFusionPlatform/oauth/token" />
+		<property name="authResetPasswordURL"
+			value="http://127.0.0.1:7878/OAuthEngine/passwordreset" />
+		<property name="authExpireURL"
+			value="http://127.0.0.1:7878/OAuthEngine/oauth/token/expire" />
+		<property name="authForgotPasswordURL"
+			value="http://127.0.0.1:7878/OAuthEngine/forgotpassword" />
+		<property name="authUpdateURL"
+			value="http://127.0.0.1:7878/OAuthEngine/passwordupdate" />
+		<property name="xfusionURL"
+			value="http://127.0.0.1:7878/XFusionPlatform/xfusionusers" />
+		<property name="xfusionPlatformThirdPartyIntegrationToken"
+			value="http://127.0.0.1:7878/XFusionPlatform/thirdparty/integration/token" />
+		<property name="XfusionPlatformDeviceGetMetadataStatusByTypeLimit"
+			value="http://127.0.0.1:7878/XFusionPlatform/device/get/metadata/status/by/type/limit" />
+		<property name="xfusionPerformanceServiceMultipleDevicesGetMany"
+			value="http://127.0.0.1:7878/XFusionPlatform/performance/service/multipledevices/get/many" />
+		<property name="xfusionPlatformPerformanceServiceStatusDevicesGetMany"
+			value="http://127.0.0.1:7878/XFusionPlatform/performane/servicestatus/devices/get/many" />
+		<property name="xFusionPlatformOrganizationGetAllUser"
+			value="http://127.0.0.1:7878/XFusionPlatform/organization/get/all/user" />
+		<property name="xfusionPlatformDeviceRegister"
+			value="http://127.0.0.1:7878/XFusionPlatform/deviceregister" />
+		<property name="xFusionPlatformDeviceMApping"
+			value="http://127.0.0.1:7878/XFusionPlatform/device/add/device" />
+		<property name="xfusionPlatformDeviceGetMetadataStatusByTypeLimit"
+			value="http://127.0.0.1:7878/XFusionPlatform/device/get/metadata/status/by/type/limit" />
+		<property name="validateToken"
+			value="http://127.0.0.1:7878/OAuthEngine/oauth/validate/token" />
+		<property name="rootOrganization"
+			value="http://127.0.0.1:7878/XFusionPlatform/organization/root/by/user" />
+	</bean>
+
+
+</beans>

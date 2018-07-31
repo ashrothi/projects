@@ -1,0 +1,120 @@
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.CallSuccessRateDR(BTS.java:302)
+	at com.teramatrix.processData.BTS.initial(BTS.java:34)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:163)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.TotalChannelDrops(BTS.java:434)
+	at com.teramatrix.processData.BTS.initial(BTS.java:37)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:163)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.TCHDropCount(BTS.java:617)
+	at com.teramatrix.processData.BTS.initial(BTS.java:42)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:163)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.TCHDropRate(BTS.java:678)
+	at com.teramatrix.processData.BTS.initial(BTS.java:43)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:163)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.TCHDropRateDR(BTS.java:758)
+	at com.teramatrix.processData.BTS.initial(BTS.java:45)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:163)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.SmartPagingSuccessRate(BTS.java:2088)
+	at com.teramatrix.processData.BTS.initial(BTS.java:110)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:163)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.SmartPagingSuccessRateNR(BTS.java:2117)
+	at com.teramatrix.processData.BTS.initial(BTS.java:111)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:163)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.NumberOfLocationUpdates(BTS.java:2192)
+	at com.teramatrix.processData.BTS.initial(BTS.java:114)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:163)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.CallSuccessRateDR(BTS.java:302)
+	at com.teramatrix.processData.BTS.initial(BTS.java:34)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:163)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.TotalChannelDrops(BTS.java:434)
+	at com.teramatrix.processData.BTS.initial(BTS.java:37)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:163)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.TCHDropCount(BTS.java:617)
+	at com.teramatrix.processData.BTS.initial(BTS.java:42)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:163)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.TCHDropRate(BTS.java:678)
+	at com.teramatrix.processData.BTS.initial(BTS.java:43)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:163)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.TCHDropRateDR(BTS.java:758)
+	at com.teramatrix.processData.BTS.initial(BTS.java:45)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:163)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.SmartPagingSuccessRate(BTS.java:2088)
+	at com.teramatrix.processData.BTS.initial(BTS.java:110)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:163)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.SmartPagingSuccessRateNR(BTS.java:2117)
+	at com.teramatrix.processData.BTS.initial(BTS.java:111)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:163)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.NumberOfLocationUpdates(BTS.java:2192)
+	at com.teramatrix.processData.BTS.initial(BTS.java:114)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:163)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.CallSuccessRateDR(BTS.java:302)
+	at com.teramatrix.processData.BTS.initial(BTS.java:34)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:163)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.TotalChannelDrops(BTS.java:434)
+	at com.teramatrix.processData.BTS.initial(BTS.java:37)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:163)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.TCHDropCount(BTS.java:617)
+	at com.teramatrix.processData.BTS.initial(BTS.java:42)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:163)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.TCHDropRate(BTS.java:678)
+	at com.teramatrix.processData.BTS.initial(BTS.java:43)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:163)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.TCHDropRateDR(BTS.java:758)
+	at com.teramatrix.processData.BTS.initial(BTS.java:45)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:163)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.SmartPagingSuccessRate(BTS.java:2088)
+	at com.teramatrix.processData.BTS.initial(BTS.java:110)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:163)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.SmartPagingSuccessRateNR(BTS.java:2117)
+	at com.teramatrix.processData.BTS.initial(BTS.java:111)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:163)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.NumberOfLocationUpdates(BTS.java:2192)
+	at com.teramatrix.processData.BTS.initial(BTS.java:114)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:163)

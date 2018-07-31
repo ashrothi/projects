@@ -1,0 +1,8 @@
+org.json.JSONException: A JSONObject text must begin with '{' at character 1
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:413)
+	at org.json.JSONObject.<init>(JSONObject.java:180)
+	at org.json.JSONObject.<init>(JSONObject.java:420)
+	at com.teramatrix.processData.VoiceData.CSErlangs(VoiceData.java:57)
+	at com.teramatrix.processData.VoiceData.initial(VoiceData.java:26)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:13)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:152)

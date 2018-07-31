@@ -1,0 +1,8 @@
+INFO - Inside Initialize method
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/XFusionPlatform/device/get/metadata/status/by/type
+INFO - Para:   device_type=4&host_status=0
+INFO - Response Code is:   200
+INFO - Response : {"description":"Process Fail","object":null,"list":null,"valid":false}
+INFO - Exception occur in getting devices.
+INFO - Device List: []

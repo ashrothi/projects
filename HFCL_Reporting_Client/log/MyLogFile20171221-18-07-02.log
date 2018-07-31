@@ -1,0 +1,9 @@
+INFO - Inside Initialize method
+INFO - Exception in Initialize method: java.lang.NullPointerException
+INFO -  Api Url:null
+INFO - Response : 
+INFO - Exception occur in getting devices.
+INFO -  Api Url:null
+INFO - apiResponse  : 
+INFO -  Api Url:null
+INFO - apiResponse : 

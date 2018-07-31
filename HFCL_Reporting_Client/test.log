@@ -1,0 +1,25 @@
+<object-stream>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Rule [1]</activationId>
+  <rule>Rule</rule>
+  <declarations>ticket_id=TICKETID-188(1); escalationBean=EscalationBean [person_email=garima.joshi@teramatrix.co, person_phone=9468605426, notification_status=email,sms, condition=null, value1=60, value2=8630, ticket_id=TICKETID-188, description=c2,preeti.burad@teramatrix.co,LMD/BUS,Raghuvanshi,Pankaj Khandal,DL-3366, escalation_level_id=4, organize_id=1](1); emails=garima.joshi@teramatrix.co(1); escalationTime=8630(1); notificationType=email,sms(1); description=c2,preeti.burad@teramatrix.co,LMD/BUS,Raghuvanshi,Pankaj Khandal,DL-3366(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>1</factId>
+  <objectToString>EscalationBean [person_email=garima.joshi@teramatrix.co, person_phone=9468605426, notification_status=email,sms, condition=null, value1=60, value2=8630, ticket_id=TICKETID-188, description=c2,preeti.burad@teramatrix.co,LMD/BUS,Raghuvanshi,Pankaj Khandal,DL-3366, escalation_level_id=4, organize_id=1]</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Rule [1]</activationId>
+  <rule>Rule</rule>
+  <declarations>ticket_id=TICKETID-188(1); escalationBean=EscalationBean [person_email=garima.joshi@teramatrix.co, person_phone=9468605426, notification_status=email,sms, condition=null, value1=60, value2=8630, ticket_id=TICKETID-188, description=c2,preeti.burad@teramatrix.co,LMD/BUS,Raghuvanshi,Pankaj Khandal,DL-3366, escalation_level_id=4, organize_id=1](1); emails=garima.joshi@teramatrix.co(1); escalationTime=8630(1); notificationType=email,sms(1); description=c2,preeti.burad@teramatrix.co,LMD/BUS,Raghuvanshi,Pankaj Khandal,DL-3366(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Rule [1]</activationId>
+  <rule>Rule</rule>
+  <declarations>ticket_id=TICKETID-188(1); escalationBean=EscalationBean [person_email=garima.joshi@teramatrix.co, person_phone=9468605426, notification_status=email,sms, condition=null, value1=60, value2=8630, ticket_id=TICKETID-188, description=c2,preeti.burad@teramatrix.co,LMD/BUS,Raghuvanshi,Pankaj Khandal,DL-3366, escalation_level_id=4, organize_id=1](1); emails=garima.joshi@teramatrix.co(1); escalationTime=8630(1); notificationType=email,sms(1); description=c2,preeti.burad@teramatrix.co,LMD/BUS,Raghuvanshi,Pankaj Khandal,DL-3366(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+</object-stream>

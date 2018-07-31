@@ -1,0 +1,3 @@
+java.lang.NullPointerException
+	at com.teramatrix.processData.GetData.devicesByUser(GetData.java:72)
+	at com.teramatrix.main.FftEscalationApp.main(FftEscalationApp.java:119)

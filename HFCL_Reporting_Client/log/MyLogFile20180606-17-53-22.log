@@ -1,0 +1,338 @@
+INFO - Inside Initialize method
+INFO - From Date : 1528050600000 End Time : 1528093799000
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/XFusionPlatform/device/get/metadata/status/by/type
+INFO - Para:   access_key=d3cd4e3f-5946-11e6-9bb0-fe984cc15272&device_type=4&host_status=0
+INFO - Response Code is:   200
+INFO - Response : {"description":"Process Success","object":[{"device_devicetype_name":"BTS","city_alias":"Solan","device_devicemodel_icon":"/home/ttpl/Tomcat/apache-tomcat-8.0.36/webapps/tmpFiles/router-icon.png","device_device_imei":"0","device_device_lattitude":"30.9249052","device_device_elevation":"","device_devicetechnology_name":"GSM","state_name":"Haryana","state_id":1,"device_device_is_deleted":false,"organization_organization_alias":"HFCL","device_device_alias":"BTS 801","device_device_created_by":"1","device_devicevendor_alias":"Vanu","device_device_longitude":"77.0958173","device_device_modified_by":"db4c4236-30c3-11e7-be7d-000c29e31674","device_devicevendor_name":"Vanu","data_source":"ON","device_devicemodel_alias":"CRAN 2.0","organization_organization_path":"/teramatrix","device_device_iccid":null,"device_device_software_version":"","device_device_last_modified_date":1513839940000,"device_devicetype_alias":"BTS","device_devicevendor_id":3,"country_id":1,"city_id":1,"device_devicetechnology_id":3,"device_device_is_configurable":0,"device_device_name":"CRAN2_801","device_device_is_active":true,"device_device_ipaddress":"192.168.10.22","city_name":"gurgao","state_alias":"Himachal Pradesh","country_name":"india","device_devicemodel_gis_icon":"/home/ttpl/Tomcat/apache-tomcat-8.0.36/webapps/tmpFiles/router-icon.png","status_timestamp":1528287735000,"device_device_description":"","country_alias":"India","device_devicetype_id":4,"data_source_alias":"down","device_device_creation_date":null,"check_timestamp":1528287317000,"device_devicemodel_name":"VANU-BTS","device_device_parent_id":0,"device_device_hardware_version":"","device_devicemodel_id":4,"device_device_device_id":103,"device_device_mac_address":"","device_devicetechnology_alias":"GSM"},{"device_devicetype_name":"BTS","city_alias":"Solan","device_devicemodel_icon":"/home/ttpl/Tomcat/apache-tomcat-8.0.36/webapps/tmpFiles/router-icon.png","device_device_imei":"0","device_device_lattitude":"30.9249052","device_device_elevation":"","device_devicetechnology_name":"GSM","state_name":"Haryana","state_id":1,"device_device_is_deleted":false,"organization_organization_alias":"HFCL","device_device_alias":"BTS 802","device_device_created_by":"1","device_devicevendor_alias":"Vanu","device_device_longitude":"77.0958173","device_device_modified_by":"db4c4236-30c3-11e7-be7d-000c29e31674","device_devicevendor_name":"Vanu","data_source":"ON","device_devicemodel_alias":"CRAN 2.0","organization_organization_path":"/teramatrix","device_device_iccid":null,"device_device_software_version":"","device_device_last_modified_date":1513839926000,"device_devicetype_alias":"BTS","device_devicevendor_id":3,"country_id":1,"city_id":1,"device_devicetechnology_id":3,"device_device_is_configurable":0,"device_device_name":"CRAN2_802","device_device_is_active":true,"device_device_ipaddress":"192.168.10.20","city_name":"gurgao","state_alias":"Himachal Pradesh","country_name":"india","device_devicemodel_gis_icon":"/home/ttpl/Tomcat/apache-tomcat-8.0.36/webapps/tmpFiles/router-icon.png","status_timestamp":1528287772000,"device_device_description":"","country_alias":"India","device_devicetype_id":4,"data_source_alias":"down","device_device_creation_date":null,"check_timestamp":1528287367000,"device_devicemodel_name":"VANU-BTS","device_device_parent_id":0,"device_device_hardware_version":"","device_devicemodel_id":4,"device_device_device_id":104,"device_device_mac_address":"","device_devicetechnology_alias":"GSM"},{"device_devicetype_name":"BTS","city_alias":"Solan","device_devicemodel_icon":"/home/ttpl/Tomcat/apache-tomcat-8.0.36/webapps/tmpFiles/router-icon.png","device_device_imei":"0","device_device_lattitude":"30.9249052","device_device_elevation":"","device_devicetechnology_name":"GSM","state_name":"Haryana","state_id":1,"device_device_is_deleted":false,"organization_organization_alias":"HFCL","device_device_alias":"BTS 803","device_device_created_by":"1","device_devicevendor_alias":"Vanu","device_device_longitude":"77.0958173","device_device_modified_by":"db4c4236-30c3-11e7-be7d-000c29e31674","device_devicevendor_name":"Vanu","data_source":"OFF","device_devicemodel_alias":"CRAN 2.0","organization_organization_path":"/teramatrix","device_device_iccid":null,"device_device_software_version":"","device_device_last_modified_date":1513839909000,"device_devicetype_alias":"BTS","device_devicevendor_id":3,"country_id":1,"city_id":1,"device_devicetechnology_id":3,"device_device_is_configurable":0,"device_device_name":"CRAN2_803","device_device_is_active":true,"device_device_ipaddress":"192.168.10.21","city_name":"gurgao","state_alias":"Himachal Pradesh","country_name":"india","device_devicemodel_gis_icon":"/home/ttpl/Tomcat/apache-tomcat-8.0.36/webapps/tmpFiles/router-icon.png","status_timestamp":1528287724000,"device_device_description":"","country_alias":"India","device_devicetype_id":4,"data_source_alias":"up","device_device_creation_date":null,"check_timestamp":1527863737000,"device_devicemodel_name":"VANU-BTS","device_device_parent_id":0,"device_device_hardware_version":"","device_devicemodel_id":4,"device_device_device_id":105,"device_device_mac_address":"","device_devicetechnology_alias":"GSM"}],"list":null,"valid":true}
+INFO - Number of Devices  :  3
+INFO - Complete details : [103, 104, 105]
+INFO - Device List: [103, 104, 105]
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/XFusionPlatform/performance/service/multipledevices/get/many
+INFO - Para:   end_date=1528093799000&device_id=103&from_date=1528050600000&service_name= &access_key=d3cd4e3f-5946-11e6-9bb0-fe984cc15272&data_source= 
+INFO - Response Code is:   200
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@4ec6a292
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','StartTime','1528050600000','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - Start Time KPI value : 1528050600000
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@71c7db30
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','End Time','1528093799000','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - End Time KPI value : 1528093799000
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@5e025e70
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','Call Setup Success Rate','1','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - Call Setup Success Rate KPI value : 1.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@66d33a
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','Call Setup Success Rate - NR','82','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - Call Setup Success Rate - NR KPI value : 82.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@5ba23b66
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','Call Setup Success Rate - DR','82','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - Call Setup Success Rate - DR KPI value : 82.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@7dc36524
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','Call Success Rate','98.16','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - Call Success Rate KPI value :98.15950920245399
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@3cb5cdba
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','Call Success Rate - NR','3','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - Call Success Rate - NR KPI value :3.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@1b0375b3
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','Call Success Rate - DR','163','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - Call Success Rate - DR KPI value :163.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@6b71769e
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','CS Erlangs','22.71','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - CS Erlangs KPI value : 22.704
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@7c75222b
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','LCLS CS Erlangs','0','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - LCLS CS Erlangs KPI value : 0.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@48140564
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','Total Channel Drops','3','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - Total Channel Drops KPI value :3.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@2133c8f8
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','SDCCH Drop Count','0','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - SDCCH Drop Count KPI value : 0.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@6a5fc7f7
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','SDCCH Drop Rate','0','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - SDCCH Drop Rate KPI value : 0.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@7a79be86
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','SDCCH Drop Rate - NR','0','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - SDCCH Drop Rate - NR KPI value : 0.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@3f3afe78
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','SDCCH Drop Rate - DR','1908','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - SDCCH Drop Rate - DR KPI value : 1908.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@340f438e
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','TCH Drop Count ','3','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - TCH Drop Count KPI value :3.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@19dfb72a
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','TCH Drop Rate','3','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - TCH Drop Rate KPI value :3.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@59a6e353
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','TCH Drop Rate - NR','0','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - TCH Drop Rate - NR KPI value :0.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@17f6480
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','TCH Drop Rate - DR','163','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - TCH Drop Rate - DR KPI value :163.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@506e6d5e
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','TCH Drop Rate Prime','0','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - TCH Drop Rate Prime KPI value :0.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@4411d970
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','TCH Drop Rate Prime -NR','0','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - TCH Drop Rate Prime -NR KPI value :0.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@7f690630
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','TCH Drop Rate Prime -DR','163','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - TCH Drop Rate Prime -DR KPI value :163.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@6108b2d7
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','Immediate Assignment Procedure Success Rate','0.97','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - Immediate Assignment Procedure Success Rate KPI value : 0.9626639757820383
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@22f71333
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','Immediate Assignment Procedure Success Rate - NR','1908','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - Immediate Assignment Procedure Success Rate - NR KPI value : 1908.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@1a407d53
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','Immediate Assignment Procedure Success Rate - DR','1982','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - Immediate Assignment Procedure Success Rate - DR KPI value : 1982.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@380fb434
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','SDCCH Blocking Count','0','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - SDCCH Blocking Count KPI value : 0.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@3fb6a447
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','SDCCH Blocking Rate','0','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - SDCCH Blocking Rate KPI value : 0.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@73f792cf
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','SDCCH Blocking Rate - NR','0','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - SDCCH Blocking Rate - NR KPI value : 0.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@42d3bd8b
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','SDCCH Blocking Rate - DR','1110','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - SDCCH Blocking Rate - DR KPI value : 1110.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@64616ca2
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','TCH Blocking Count','0','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - TCH Blocking Count KPI value : 0.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@17550481
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','TCH Blocking Rate','0','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - TCH Blocking Rate KPI value : 0.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@2c6a3f77
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','TCH Blocking Rate - NR','0','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - TCH Blocking Rate - NR KPI value : 0.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@2ef9b8bc
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','TCH Blocking Rate - DR','82','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - TCH Blocking Rate - DR KPI value : 82.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@3f2a3a5
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','Number of TCH-F Attempts Per TRX','10','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - Number of TCH-F Attempts Per TRX KPI value : 10.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@77b52d12
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','Number of TCH-F Success per TRX','10','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - Number of TCH-F Success per TRX KPI value : 10.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@3567135c
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','Number of TCH-H Attempts Per TRX','72','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - Number of TCH-H Attempts Per TRX KPI value : 72.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@47f6473
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','Number of TCH-H Success per TRX','72','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - Number of TCH-H Success per TRX KPI value : 72.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@6615435c
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','Number Of SDCCH Assignment Attempts','1982','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - Number Of SDCCH Assignment Attempts KPI value : 1982.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@617c74e5
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','Number Of Successful SDCCH Assignments','1908','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - Number Of Successful SDCCH Assignments KPI value : 1908.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@366e2eef
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','External Handover Success Rate','103.41','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - External Handover Success Rate KPI value :103.4090909090909
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@7225790e
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','External Handover Success Rate - NR','9100','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - External Handover Success Rate - NR KPI value :9100.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@3551a94
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','External Handover Success Rate - DR','88','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - External Handover Success Rate - DR KPI value :88.0
+INFO - Exception occur in getting devices.
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@2096442d
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','Internal Handover Success Rate - NR','0','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - Internal Handover Success Rate - NR KPI value :0.0
+INFO - Exception occur in getting devices.
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@50f8360d
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','Internal Handover Success Rate Prime','�','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - Internal Handover Success Rate Prime KPI value :NaN
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@3dd3bcd
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','Internal Handover Success Rate Prime - NR','0','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - Internal Handover Success Rate Prime - NR KPI value :0.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@7f560810
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','Internal Handover Success Rate Prime - DR','0','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - Internal Handover Success Rate Prime - DR KPI value :0.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@337d0578
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','Total Voice Call Minutes','56.76','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - Total Voice Call Minutes KPI value : 56.76
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@6276ae34
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','Mean Holding Time In Secs ','20.04','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - Mean Holding Time In Secs KPI value :20.032941176470587
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@b97c004
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','Mean Holding Time In Secs - NR','3405.6','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - Mean Holding Time In Secs - NR KPI value : 3405.6
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@6574b225
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','Mean Holding Time In Secs - DR','163','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - Mean Holding Time In Secs - DR KPI value : 163.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@5afa04c
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','DL TCH RxQual_0','5423','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - DL TCH RxQual_0 KPI value : 5423.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@174d20a
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','DL TCH RxQual_1','163','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - DL TCH RxQual_1 KPI value : 163.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@4de8b406
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','DL TCH RxQual_2','462','1528050600','1528093799','BTS 801');
+INFO - Inserted: 
+INFO - DL TCH RxQual_2 KPI value : 462.0
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@402f32ff
+INFO - Query to be called :-insert into hfcl_kpi_testing(device_id,tag,kpi,current_value,systime,endtime,device_name) value('103','BTS','DL TCH RxQual_3','407','1528050600','1528093799','BTS 801');

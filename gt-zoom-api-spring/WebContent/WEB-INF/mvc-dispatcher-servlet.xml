@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd
+  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+  http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+	<context:component-scan base-package="com.springiot.*" />
+
+	<mvc:annotation-driven />
+
+	<bean id="loggingAspect" class="com.springiot.logging.AOPLogging" />
+
+	<aop:aspectj-autoproxy />
+
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	<!-- <mvc:resources mapping="/resources/**" location="/resources/" cache-period="10000" 
+		/> -->
+
+	<bean id="swagger2Config"
+		class="springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration" />
+
+	<context:property-placeholder location="classpath:/swagger.properties" />
+
+	<mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/" />
+	<mvc:resources mapping="/webjars/**"
+		location="classpath:/META-INF/resources/webjars/" />
+
+	<!-- applicationContext.xml -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="embedded-database" />
+		<property name="packagesToScan" value="com.springiot.modal" />
+		<property name="hibernateProperties">
+			<value>
+				hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect
+				hibernate.connection.useUnicode=true
+				hibernate.connection.characterEncoding=UTF-8
+				hibernate.connection.charSet=UTF-8
+				hibernate.ejb.naming_strategy=org.hibernate.cfg.ImprovedNamingStrategy
+				hibernate.show_sql=true
+
+				hibernate.c3p0.msize=20
+				hibernate.c3p0.max_size=40
+				hibernate.c3p0.timeout=300
+				hibernate.c3p0.max_statements=50
+				hibernate.c3p0.idle_test_period=3000
+				<!-- hibernate.connection.zeroDateTimeBehavior=convertToNull -->
+			</value>
+		</property>
+	</bean>
+
+	<bean class="org.springframework.orm.hibernate4.HibernateTransactionManager"
+		id="transactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<bean class="com.springiot.constant.ProcessParameter" id="processParameter">
+		<property name="maps">
+			<map>
+				<!--Audit Log -->
+				<entry key="1"
+					value="call gtzoom_audit_log_count(user_key,user_id,application_key,from_date,end_date,organization_id,condition)" />
+				<entry key="2"
+					value="call gtzoom_audit_log_get_all(user_key,user_id,application_key,from_date,end_date,organization_id,condition)" />
+				<entry key="3"
+					value="call gtzoom_audit_log_get_all_limit(user_key,user_id,application_key,from_date,end_date,limit,offset,organization_id,condition)" />
+				<entry key="4"
+					value="call gtzoom_audit_log_insert(controller_name,input_parameters,ip_address,url_accessed,user_key,user_id,application_key,organization_id)" />
+
+				<!-- Procedure for Trip details -->
+				<entry key="5"
+					value="call gtzoom_get_vehicle_trips(start_time,end_time,device_id)" />
+
+				<entry key="6"
+					value="call gtzoom_vehicle_get_all(user_key,user_id,limit,offset)" />
+				<entry key="7" value="call gtzoom_state_get_by_country_id(country_id)" />
+				<entry key="8" value="call gtzoom_country_get()" />
+				<entry key="9" value="call gtzoom_city_get_by_state_id(state_id)" />
+				<entry key="10"
+					value="call gtzoom_vehicle_get_by_device_id(user_key,user_id,device_id)" />
+				<entry key="11"
+					value="call gtzoom_vehicle_get_all_by_device_type(user_key,user_id,device_type)" />
+				<entry key="12"
+					value="call gtzoom_get_device_details_by_vehicle_id(user_key,user_id,vehicle_id)" />
+
+				<entry key="14"
+					value="call gtzoom_lat_long_address_insert(address,latitude,longitude)" />
+				<entry key="15"
+					value="call gtzoom_address_get_by_lat_long(latitude,longitude)" />
+
+				<entry key="16"
+					value="call gtzoom_get_vehicle_details_by_vehicle_id(user_key,user_id,vehicle_id)" />
+				<entry key="17"
+					value="call gtzoom_get_fuel_cost(from_date,vehicle_type_id)" />
+
+				<!-- User management page -->
+				<entry key="18"
+					value="call gtzoom_user_insert(user_key,user_id,user_name,role_id,role_name,group_id)" />
+				<entry key="19"
+					value="call gtzoom_users_get_all(user_key,user_id)" />
+				<entry key="20"	
+					value="call gtzoom_user_get_by_id(id)" />
+					
+				<!-- Procedures for video of trip. -->
+				<entry key="22"	
+					value="call gtzoom_ftp_details_get()" />
+				<entry key="23"
+					value="call gtzoom_device_frame_get(device_id,trip_start,start_time,end_time)" />
+				<entry key="24"
+					value="call gtzoom_device_frame_insert(device_id,trip_start,number_of_frames,folder_path,file_name,end_time)" />
+
+				<!-- Sign UP -->
+				<entry key="25" value="call gtzoom_organization_check(organization_name)" />
+				<entry key="26"
+					value="call gtzoom_signup(organization_name,currency,time_format,userKey,userId,user_name,user_image,
+						role_id,role_name,fleet_size,gender,phone_number)" />
+
+				<!-- Get MetaData -->
+				<entry key="27" value="call gtzoom_units_get_all()" />
+				<entry key="28" value="call gtzoom_vehicle_manufacturers_get_all()" />
+				<entry key="29" value="call gtzoom_vehicle_status_get_all()" />
+				<entry key="30" value="call gtzoom_vehicle_types_get_all()" />
+				<entry key="31" value="call gtzoom_fueltypes_get_all()" />
+				<entry key="32" value="call gtzoom_currency_get_all()" />
+
+				<!-- Group -->
+				<entry key="33"
+					value="call gtzoom_group_insert(user_key,user_id,organization_name,vehicle_list,parent_group_id,color)" />
+				<entry key="34" value="call gtzoom_group_get_all(user_key,user_id)" />
+				<entry key="35"
+					value="call gtzoom_group_update(user_key,user_id,group_id,organization_name,vehicle_list,parent_group_id,color)" />
+				<entry key="36"
+					value="call gtzoom_group_delete(user_key,user_id,group_id)" />
+
+				<!-- Business tag -->
+				<entry key="38"
+					value="call gtzoom_vehicle_trip_tag_insert(vehicle_id,tags_id,trip_id,vehicle_tags_id)" />
+				<entry key="39"
+					value="call gtzoom_get_vehicle_trips_by_trip_id(from_date,end_date,trip_id)" />
+
+				<!-- Vehicle Creation APIs. -->
+				<entry key="40"
+					value="call gtzoom_vehicle_insert(user_key,user_id,vin,vehicle_type,year,make,model,vehicle_image1,vehicle_image2,
+						vehicle_image3,vehicle_status,vehicle_color,vehicle_body_type,license_plate,registration_state,spec_width,spec_height,
+						spec_interior_vol,spec_passenger_vol,spec_cargo_vol,spec_ground_clearence,spec_bed_length,spec_curb_weight,
+						spec_weight_ratings,spec_towing_capcity,spec_max_payload,spec_epa_city,spec_epa_highway,spec_epa_combined,
+						engine_summary,engine_brand,engine_aspiration,engine_block_type,engine_bore,engine_cam_type,engine_compression,
+						engine_cylinders,engine_displacement,engine_fuel_induction,engine_fuel_quality,engine_max_hp,engine_max_torque,
+						engine_redline_rpm,engine_stroke,engine_valves,transmission_summary,transmission_brand,transmission_type,
+						transmission_gears,fuel_type,fuel_quality,fuel_cap_tank1,fuel_cap_tank2,oil_cap,distance_unit,fuel_volumne_unit,
+						measurement_unit,vehicle_name,engine_number,chasis_number,condition,mileage,fleet_account_id)" />
+				<entry key="41"
+					value="call gtzoom_vehicle_update(user_key,user_id,vehicle_id,vin,vehicle_type,year,make,model,vehicle_image1,vehicle_image2,
+						vehicle_image3,vehicle_status,vehicle_color,vehicle_body_type,license_plate,registration_state,spec_width,
+						spec_height,spec_interior_vol,spec_passenger_vol,spec_cargo_vol,spec_ground_clearence,spec_bed_length,
+						spec_curb_weight,spec_weight_ratings,spec_towing_capcity,spec_max_payload,spec_epa_city,spec_epa_highway,
+						spec_epa_combined,engine_summary,engine_brand,engine_aspiration,engine_block_type,engine_bore,engine_cam_type,
+						engine_compression,engine_cylinders,engine_displacement,engine_fuel_induction,engine_fuel_quality,engine_max_hp,
+						engine_max_torque,engine_redline_rpm,engine_stroke,engine_valves,transmission_summary,transmission_brand,
+						transmission_type,transmission_gears,fuel_type,fuel_quality,fuel_cap_tank1,fuel_cap_tank2,oil_cap,distance_unit,
+						fuel_volumne_unit,measurement_unit,vehicle_name,engine_number,chasis_number,condition,mileage,fleet_account_id)" />
+				<entry key="42"
+					value="call gtzoom_vehicle_delete(user_key,user_id,vehicle_id)" />
+
+				<entry key="43"
+					value="call gtzoom_vehicle_trip_insert(trip_id,device_id,fuel_consuption,distance,mileage_kmpl,start_time,end_time,
+						tag_id,country,state,city,duration,harsh_brake,avg_speed,hard_acceleration,driver_score,vehicle_score,
+						start_latitude,start_longitude,start_address,end_latitude,end_longitude,end_address,fuel_score)" />
+				<entry key="44"
+					value="call gtzoom_lat_long_address_insert(address,latitude,longitude)" />
+				<entry key="45"
+					value="call gtzoom_address_get_by_lat_long(latitude,longitude)" />
+					
+			</map>
+		</property>
+	</bean>
+
+
+	<bean class="com.springiot.constant.TableParameter" id="tableParameter">
+		<property name="table_name" value="trip_lat_long" />
+		<property name="report_header_mapping" value="report_header_mapping" />
+	</bean>
+
+	<!-- <bean class="com.springiot.constant.URLParameter" id="urlParameter">
+		<property name="authURL" 
+			value="http://192.168.1.242:7878/OAuthEngine_v2/oauth/token" />
+		<property name="xfusionPlatformDeviceRegister" 
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/deviceregister" />
+		<property name="xfusionPlatformPerformanceServiceStatusDevicesGetMany" 
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/performane/servicestatus/devices/get/many" />
+		<property name="xfusionPerformanceServiceMultipleDevicesGetMany" 
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/performance/service/multipledevices/get/many" />
+		<property name="xFusionPlatformDeviceMApping" 
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/device/add/device" />
+		<property name="xFusionPlatformOrganizationGetAllUser" 
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/organization/get/all/user" />
+		<property name="xfusionperformanceDeviceStatusDeviceGetAll" 
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/performance/servicestatus/device/get/all" />
+		<property name="xfusionDeviceGetByUser" 
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/get/device/by/user" />
+		<property name="XfusionPlatformDeviceGetMetadataStatusByTypeLimit" 
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/device/get/metadata/status/by/type/limit" /> 
+		<property name="EventstatusAlertDeviceGetAllLimit" 
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/performance/eventstatus/alert/device/get/all/limit" /> 
+		<property name="XfusionPerformanceEventstatusAlertDeviceGetAllLimit" 
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/performance/performanceevent/device/get/all/limit" />
+		<property name="validateToken" 
+			value="http://192.168.1.242:7878/OAuthEngine_v2/oauth/validate/token" />
+		<property name="rootOrganization"
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/organization/root/by/user" />
+		<property name="xfusionPerformanceServicedailyDeviceGetManyLimitWithoutData" 
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/service/daily/device/get/many/limit/without/data" />
+		<property name="platformOrganizationCheck" 
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/organization/check" />
+		<property name="platformUserCreation" 
+			value="http://192.168.1.242:7878/OAuthEngine_v2/user/creation/signup"	/>
+		<property name="authLogout" 
+			value="http://192.168.1.242:7878/OAuthEngine_v2/oauth/token/expire" />
+		<property name="platformLogin" 
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/oauth/token" />
+		<property name="platformOrgInsert" 
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/organization/insert" />
+		<property name="platformUserOrgMapping" 
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/user/organization/insert" />
+		<property name="platformInheritTemplate" 
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/device/template/inherit" />
+		<property name="platformLogout" 
+			value="http://192.168.1.242:7878/XFusionPlatform_v2/oauth/token/expire" />
+		<property name="userCreate"
+			value="http://192.168.1.242:7878/OAuthEngine_v2/user/create" />
+	</bean> -->
+
+	<bean class="com.springiot.constant.URLParameter" id="urlParameter">
+		<property name="authURL"
+			value="http://192.168.1.242:4444/OAuthEngine/oauth/token" />
+		<property name="xfusionPlatformDeviceRegister"
+			value="http://192.168.1.242:4444/XFusionPlatform/deviceregister" />
+		<property name="xfusionPlatformPerformanceServiceStatusDevicesGetMany"
+			value="http://192.168.1.242:4444/XFusionPlatform/performane/servicestatus/devices/get/many" />
+		<property name="xfusionPerformanceServiceMultipleDevicesGetMany"
+			value="http://192.168.1.242:4444/XFusionPlatform/performance/service/multipledevices/get/many" />
+		<property name="xFusionPlatformDeviceMApping"
+			value="http://192.168.1.242:4444/XFusionPlatform/device/add/device" />
+		<property name="xFusionPlatformOrganizationGetAllUser"
+			value="http://192.168.1.242:4444/XFusionPlatform/organization/get/all/user" />
+		<property name="xfusionperformanceDeviceStatusDeviceGetAll"
+			value="http://192.168.1.242:4444/XFusionPlatform/performance/servicestatus/device/get/all" />
+		<property name="xfusionDeviceGetByUser"
+			value="http://192.168.1.242:4444/XFusionPlatform/get/device/by/user" />
+		<property name="XfusionPlatformDeviceGetMetadataStatusByTypeLimit"
+			value="http://192.168.1.242:4444/XFusionPlatform/device/get/metadata/status/by/type/limit" />
+		<property name="EventstatusAlertDeviceGetAllLimit"
+			value="http://192.168.1.242:4444/XFusionPlatform/performance/eventstatus/alert/device/get/all/limit" />
+		<property name="XfusionPerformanceEventstatusAlertDeviceGetAllLimit"
+			value="http://192.168.1.242:4444/XFusionPlatform/performance/performanceevent/device/get/all/limit" />
+		<property name="validateToken"
+			value="http://192.168.1.242:4444/OAuthEngine/oauth/validate/token" />
+		<property name="rootOrganization"
+			value="http://192.168.1.242:4444/XFusionPlatform/organization/root/by/user" />
+		<property
+			name="xfusionPerformanceServicedailyDeviceGetManyLimitWithoutData"
+			value="http://192.168.1.242:4444/XFusionPlatform/service/daily/device/get/many/limit/without/data" />
+		<property name="platformOrganizationCheck"
+			value="http://192.168.1.242:4444/XFusionPlatform/organization/check" />
+		<property name="platformUserCreation"
+			value="http://192.168.1.242:4444/OAuthEngine/user/creation/signup" />
+		<property name="authLogout"
+			value="http://192.168.1.242:4444/OAuthEngine/oauth/token/expire" />
+		<property name="platformLogin"
+			value="http://192.168.1.242:4444/XFusionPlatform/oauth/token" />
+		<property name="platformOrgInsert"
+			value="http://192.168.1.242:4444/XFusionPlatform/organization/insert" />
+		<property name="platformUserOrgMapping"
+			value="http://192.168.1.242:4444/XFusionPlatform/user/organization/insert" />
+		<property name="platformInheritTemplate"
+			value="http://192.168.1.242:4444/XFusionPlatform/device/template/inherit" />
+		<property name="platformLogout"
+			value="http://192.168.1.242:4444/XFusionPlatform/oauth/token/expire" />
+			
+		<property name="userCreate"
+			value="http://192.168.1.242:4444/OAuthEngine/user/create" />
+	</bean>
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+	</bean>
+	<bean class="com.springiot.constant.GrafanaParameter" id="GrafanaParameter">
+		<property name="grafanaAPI" value="http://192.168.1.242:4444/gtZoom/" />
+	</bean>
+</beans>

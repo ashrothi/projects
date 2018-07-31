@@ -1,0 +1,5 @@
+export TCP_Client=/home/mandeepsingh/Desktop/ETL_Client/GMR_Reporting_Client
+
+java -jar /home/mandeepsingh/Desktop/ETL_Client/GMR_Reporting_Client/gmrReporting.jar /home/mandeepsingh/Desktop/ETL_Client/GMR_Reporting_Client/templates/GmrReportingConf.config
+
+exit

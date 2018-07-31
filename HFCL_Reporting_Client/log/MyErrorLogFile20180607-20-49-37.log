@@ -1,0 +1,680 @@
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.TotalDataCalls(PCU.java:2340)
+	at com.teramatrix.processData.PCU.initial(PCU.java:35)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.TotalDownlinkDataInKByte(PCU.java:2302)
+	at com.teramatrix.processData.PCU.initial(PCU.java:36)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.TotalUplinkDataInKByte(PCU.java:2266)
+	at com.teramatrix.processData.PCU.initial(PCU.java:37)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DownlinkDataThroughputInKbps(PCU.java:2224)
+	at com.teramatrix.processData.PCU.initial(PCU.java:38)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DownlinkDataThroughputInKbpsNR(PCU.java:2135)
+	at com.teramatrix.processData.PCU.initial(PCU.java:39)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DownlinkDataThroughputInKbpsDR(PCU.java:2094)
+	at com.teramatrix.processData.PCU.initial(PCU.java:40)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UplinkDataThroughputInKbps(PCU.java:2175)
+	at com.teramatrix.processData.PCU.initial(PCU.java:41)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UplinkDataThroughputInKbpsNR(PCU.java:2050)
+	at com.teramatrix.processData.PCU.initial(PCU.java:42)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UplinkDataThroughputInKbpsDR(PCU.java:2012)
+	at com.teramatrix.processData.PCU.initial(PCU.java:43)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.TbfAbnormalReleaseRate(PCU.java:197)
+	at com.teramatrix.processData.PCU.initial(PCU.java:44)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.TbfAbnormalReleaseRateNR(PCU.java:147)
+	at com.teramatrix.processData.PCU.initial(PCU.java:45)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.TbfAbnormalReleaseRateDR(PCU.java:115)
+	at com.teramatrix.processData.PCU.initial(PCU.java:46)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.EgprsDownlinkDataThroughputInKbps(PCU.java:949)
+	at com.teramatrix.processData.PCU.initial(PCU.java:47)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.EgprsDownlinkDataThroughputInKbpsNR(PCU.java:978)
+	at com.teramatrix.processData.PCU.initial(PCU.java:48)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.EgprsDownlinkDataThroughputInKbpsDR(PCU.java:1005)
+	at com.teramatrix.processData.PCU.initial(PCU.java:49)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.EgprsUplinkDataThroughputInKbps(PCU.java:1043)
+	at com.teramatrix.processData.PCU.initial(PCU.java:50)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.EgprsUplinkDataThroughputInKbpsNR(PCU.java:1072)
+	at com.teramatrix.processData.PCU.initial(PCU.java:51)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.EgprsUplinkDataThroughputInKbpsDR(PCU.java:1098)
+	at com.teramatrix.processData.PCU.initial(PCU.java:52)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.GprsDownlinkDataThroughputInKbps(PCU.java:1138)
+	at com.teramatrix.processData.PCU.initial(PCU.java:53)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.GprsDownlinkDataThroughputInKbpsNR(PCU.java:1167)
+	at com.teramatrix.processData.PCU.initial(PCU.java:54)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.GprsDownlinkDataThroughputInKbpsDR(PCU.java:1193)
+	at com.teramatrix.processData.PCU.initial(PCU.java:55)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.GprsUplinkDataThroughputInKbps(PCU.java:1231)
+	at com.teramatrix.processData.PCU.initial(PCU.java:56)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.GprsUplinkDataThroughputInKbpsNR(PCU.java:1260)
+	at com.teramatrix.processData.PCU.initial(PCU.java:57)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.GprsUplinkDataThroughputInKbpsDR(PCU.java:1286)
+	at com.teramatrix.processData.PCU.initial(PCU.java:58)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DownlinkDataRetransmissionRate(PCU.java:1329)
+	at com.teramatrix.processData.PCU.initial(PCU.java:59)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DownlinkDataRetransmissionRateNR(PCU.java:1371)
+	at com.teramatrix.processData.PCU.initial(PCU.java:60)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DownlinkDataRetransmissionRateDR(PCU.java:251)
+	at com.teramatrix.processData.PCU.initial(PCU.java:61)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UplinkDataRetransmissionRate(PCU.java:1409)
+	at com.teramatrix.processData.PCU.initial(PCU.java:62)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UplinkDataRetransmissionRateNR(PCU.java:1445)
+	at com.teramatrix.processData.PCU.initial(PCU.java:63)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UplinkDataRetransmissionRateDR(PCU.java:1478)
+	at com.teramatrix.processData.PCU.initial(PCU.java:64)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.GprsUplinkTbfBlockingRate(PCU.java:1527)
+	at com.teramatrix.processData.PCU.initial(PCU.java:65)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.GprsUplinkTbfBlockingRateNR(PCU.java:1563)
+	at com.teramatrix.processData.PCU.initial(PCU.java:66)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.GprsUplinkTbfBlockingRateDR(PCU.java:1594)
+	at com.teramatrix.processData.PCU.initial(PCU.java:67)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.GprsDownlinkTbfBlockingRate(PCU.java:1639)
+	at com.teramatrix.processData.PCU.initial(PCU.java:68)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.GprsDownlinkTbfBlockingRateNR(PCU.java:1677)
+	at com.teramatrix.processData.PCU.initial(PCU.java:69)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.GprsDownlinkTbfBlockingRateDR(PCU.java:1717)
+	at com.teramatrix.processData.PCU.initial(PCU.java:70)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.EgprsDownlinkTbfBlockingRate(PCU.java:1769)
+	at com.teramatrix.processData.PCU.initial(PCU.java:71)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.EgprsDownlinkTbfBlockingRateNR(PCU.java:1809)
+	at com.teramatrix.processData.PCU.initial(PCU.java:72)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.EgprsDownlinkTbfBlockingRateDR(PCU.java:1843)
+	at com.teramatrix.processData.PCU.initial(PCU.java:73)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.EgprsUplinkTbfBlockingRate(PCU.java:1892)
+	at com.teramatrix.processData.PCU.initial(PCU.java:74)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.EgprsUplinkTbfBlockingRateNR(PCU.java:1934)
+	at com.teramatrix.processData.PCU.initial(PCU.java:75)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.EgprsUplinkTbfBlockingRateDR(PCU.java:1975)
+	at com.teramatrix.processData.PCU.initial(PCU.java:76)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DlMcs1Count(PCU.java:910)
+	at com.teramatrix.processData.PCU.initial(PCU.java:77)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DlMcs2Count(PCU.java:885)
+	at com.teramatrix.processData.PCU.initial(PCU.java:78)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DlMcs3Count(PCU.java:859)
+	at com.teramatrix.processData.PCU.initial(PCU.java:79)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DlMcs4Count(PCU.java:834)
+	at com.teramatrix.processData.PCU.initial(PCU.java:80)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DlMcs5Count(PCU.java:809)
+	at com.teramatrix.processData.PCU.initial(PCU.java:81)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DlMcs6Count(PCU.java:784)
+	at com.teramatrix.processData.PCU.initial(PCU.java:82)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DlMcs7Count(PCU.java:759)
+	at com.teramatrix.processData.PCU.initial(PCU.java:83)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DlMcs8Count(PCU.java:734)
+	at com.teramatrix.processData.PCU.initial(PCU.java:84)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DlMcs9Count(PCU.java:709)
+	at com.teramatrix.processData.PCU.initial(PCU.java:85)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UlMcs1Count(PCU.java:683)
+	at com.teramatrix.processData.PCU.initial(PCU.java:86)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UlMcs2Count(PCU.java:658)
+	at com.teramatrix.processData.PCU.initial(PCU.java:87)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UlMcs3Count(PCU.java:633)
+	at com.teramatrix.processData.PCU.initial(PCU.java:88)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UlMcs4Count(PCU.java:608)
+	at com.teramatrix.processData.PCU.initial(PCU.java:89)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UlMcs5Count(PCU.java:583)
+	at com.teramatrix.processData.PCU.initial(PCU.java:90)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UlMcs6Count(PCU.java:558)
+	at com.teramatrix.processData.PCU.initial(PCU.java:91)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UlMcs7Count(PCU.java:533)
+	at com.teramatrix.processData.PCU.initial(PCU.java:92)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UlMcs8Count(PCU.java:508)
+	at com.teramatrix.processData.PCU.initial(PCU.java:93)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UlMcs9Count(PCU.java:483)
+	at com.teramatrix.processData.PCU.initial(PCU.java:94)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DlCs1Count(PCU.java:458)
+	at com.teramatrix.processData.PCU.initial(PCU.java:95)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DlCs2Count(PCU.java:433)
+	at com.teramatrix.processData.PCU.initial(PCU.java:96)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DlCs3Count(PCU.java:408)
+	at com.teramatrix.processData.PCU.initial(PCU.java:97)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DlCs4Count(PCU.java:383)
+	at com.teramatrix.processData.PCU.initial(PCU.java:98)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UlCs1Count(PCU.java:358)
+	at com.teramatrix.processData.PCU.initial(PCU.java:99)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UlCs2Count(PCU.java:332)
+	at com.teramatrix.processData.PCU.initial(PCU.java:100)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UlCs3Count(PCU.java:307)
+	at com.teramatrix.processData.PCU.initial(PCU.java:101)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UlCs4Count(PCU.java:282)
+	at com.teramatrix.processData.PCU.initial(PCU.java:102)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.TotalDataCalls(PCU.java:2340)
+	at com.teramatrix.processData.PCU.initial(PCU.java:35)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.TotalDownlinkDataInKByte(PCU.java:2302)
+	at com.teramatrix.processData.PCU.initial(PCU.java:36)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.TotalUplinkDataInKByte(PCU.java:2266)
+	at com.teramatrix.processData.PCU.initial(PCU.java:37)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DownlinkDataThroughputInKbps(PCU.java:2224)
+	at com.teramatrix.processData.PCU.initial(PCU.java:38)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DownlinkDataThroughputInKbpsNR(PCU.java:2135)
+	at com.teramatrix.processData.PCU.initial(PCU.java:39)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DownlinkDataThroughputInKbpsDR(PCU.java:2094)
+	at com.teramatrix.processData.PCU.initial(PCU.java:40)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UplinkDataThroughputInKbps(PCU.java:2175)
+	at com.teramatrix.processData.PCU.initial(PCU.java:41)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UplinkDataThroughputInKbpsNR(PCU.java:2050)
+	at com.teramatrix.processData.PCU.initial(PCU.java:42)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UplinkDataThroughputInKbpsDR(PCU.java:2012)
+	at com.teramatrix.processData.PCU.initial(PCU.java:43)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.TbfAbnormalReleaseRate(PCU.java:197)
+	at com.teramatrix.processData.PCU.initial(PCU.java:44)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.TbfAbnormalReleaseRateNR(PCU.java:147)
+	at com.teramatrix.processData.PCU.initial(PCU.java:45)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.TbfAbnormalReleaseRateDR(PCU.java:115)
+	at com.teramatrix.processData.PCU.initial(PCU.java:46)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.EgprsDownlinkDataThroughputInKbps(PCU.java:949)
+	at com.teramatrix.processData.PCU.initial(PCU.java:47)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.EgprsDownlinkDataThroughputInKbpsNR(PCU.java:978)
+	at com.teramatrix.processData.PCU.initial(PCU.java:48)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.EgprsDownlinkDataThroughputInKbpsDR(PCU.java:1005)
+	at com.teramatrix.processData.PCU.initial(PCU.java:49)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.EgprsUplinkDataThroughputInKbps(PCU.java:1043)
+	at com.teramatrix.processData.PCU.initial(PCU.java:50)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.EgprsUplinkDataThroughputInKbpsNR(PCU.java:1072)
+	at com.teramatrix.processData.PCU.initial(PCU.java:51)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.EgprsUplinkDataThroughputInKbpsDR(PCU.java:1098)
+	at com.teramatrix.processData.PCU.initial(PCU.java:52)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.GprsDownlinkDataThroughputInKbps(PCU.java:1138)
+	at com.teramatrix.processData.PCU.initial(PCU.java:53)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.GprsDownlinkDataThroughputInKbpsNR(PCU.java:1167)
+	at com.teramatrix.processData.PCU.initial(PCU.java:54)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.GprsDownlinkDataThroughputInKbpsDR(PCU.java:1193)
+	at com.teramatrix.processData.PCU.initial(PCU.java:55)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.GprsUplinkDataThroughputInKbps(PCU.java:1231)
+	at com.teramatrix.processData.PCU.initial(PCU.java:56)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.GprsUplinkDataThroughputInKbpsNR(PCU.java:1260)
+	at com.teramatrix.processData.PCU.initial(PCU.java:57)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.GprsUplinkDataThroughputInKbpsDR(PCU.java:1286)
+	at com.teramatrix.processData.PCU.initial(PCU.java:58)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DownlinkDataRetransmissionRate(PCU.java:1329)
+	at com.teramatrix.processData.PCU.initial(PCU.java:59)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DownlinkDataRetransmissionRateNR(PCU.java:1371)
+	at com.teramatrix.processData.PCU.initial(PCU.java:60)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DownlinkDataRetransmissionRateDR(PCU.java:251)
+	at com.teramatrix.processData.PCU.initial(PCU.java:61)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UplinkDataRetransmissionRate(PCU.java:1409)
+	at com.teramatrix.processData.PCU.initial(PCU.java:62)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UplinkDataRetransmissionRateNR(PCU.java:1445)
+	at com.teramatrix.processData.PCU.initial(PCU.java:63)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UplinkDataRetransmissionRateDR(PCU.java:1478)
+	at com.teramatrix.processData.PCU.initial(PCU.java:64)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.GprsUplinkTbfBlockingRate(PCU.java:1527)
+	at com.teramatrix.processData.PCU.initial(PCU.java:65)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.GprsUplinkTbfBlockingRateNR(PCU.java:1563)
+	at com.teramatrix.processData.PCU.initial(PCU.java:66)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.GprsUplinkTbfBlockingRateDR(PCU.java:1594)
+	at com.teramatrix.processData.PCU.initial(PCU.java:67)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.GprsDownlinkTbfBlockingRate(PCU.java:1639)
+	at com.teramatrix.processData.PCU.initial(PCU.java:68)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.GprsDownlinkTbfBlockingRateNR(PCU.java:1677)
+	at com.teramatrix.processData.PCU.initial(PCU.java:69)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.GprsDownlinkTbfBlockingRateDR(PCU.java:1717)
+	at com.teramatrix.processData.PCU.initial(PCU.java:70)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.EgprsDownlinkTbfBlockingRate(PCU.java:1769)
+	at com.teramatrix.processData.PCU.initial(PCU.java:71)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.EgprsDownlinkTbfBlockingRateNR(PCU.java:1809)
+	at com.teramatrix.processData.PCU.initial(PCU.java:72)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.EgprsDownlinkTbfBlockingRateDR(PCU.java:1843)
+	at com.teramatrix.processData.PCU.initial(PCU.java:73)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.EgprsUplinkTbfBlockingRate(PCU.java:1892)
+	at com.teramatrix.processData.PCU.initial(PCU.java:74)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.EgprsUplinkTbfBlockingRateNR(PCU.java:1934)
+	at com.teramatrix.processData.PCU.initial(PCU.java:75)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.EgprsUplinkTbfBlockingRateDR(PCU.java:1975)
+	at com.teramatrix.processData.PCU.initial(PCU.java:76)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DlMcs1Count(PCU.java:910)
+	at com.teramatrix.processData.PCU.initial(PCU.java:77)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DlMcs2Count(PCU.java:885)
+	at com.teramatrix.processData.PCU.initial(PCU.java:78)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DlMcs3Count(PCU.java:859)
+	at com.teramatrix.processData.PCU.initial(PCU.java:79)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DlMcs4Count(PCU.java:834)
+	at com.teramatrix.processData.PCU.initial(PCU.java:80)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DlMcs5Count(PCU.java:809)
+	at com.teramatrix.processData.PCU.initial(PCU.java:81)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DlMcs6Count(PCU.java:784)
+	at com.teramatrix.processData.PCU.initial(PCU.java:82)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DlMcs7Count(PCU.java:759)
+	at com.teramatrix.processData.PCU.initial(PCU.java:83)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DlMcs8Count(PCU.java:734)
+	at com.teramatrix.processData.PCU.initial(PCU.java:84)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DlMcs9Count(PCU.java:709)
+	at com.teramatrix.processData.PCU.initial(PCU.java:85)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UlMcs1Count(PCU.java:683)
+	at com.teramatrix.processData.PCU.initial(PCU.java:86)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UlMcs2Count(PCU.java:658)
+	at com.teramatrix.processData.PCU.initial(PCU.java:87)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UlMcs3Count(PCU.java:633)
+	at com.teramatrix.processData.PCU.initial(PCU.java:88)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UlMcs4Count(PCU.java:608)
+	at com.teramatrix.processData.PCU.initial(PCU.java:89)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UlMcs5Count(PCU.java:583)
+	at com.teramatrix.processData.PCU.initial(PCU.java:90)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UlMcs6Count(PCU.java:558)
+	at com.teramatrix.processData.PCU.initial(PCU.java:91)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UlMcs7Count(PCU.java:533)
+	at com.teramatrix.processData.PCU.initial(PCU.java:92)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UlMcs8Count(PCU.java:508)
+	at com.teramatrix.processData.PCU.initial(PCU.java:93)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UlMcs9Count(PCU.java:483)
+	at com.teramatrix.processData.PCU.initial(PCU.java:94)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DlCs1Count(PCU.java:458)
+	at com.teramatrix.processData.PCU.initial(PCU.java:95)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DlCs2Count(PCU.java:433)
+	at com.teramatrix.processData.PCU.initial(PCU.java:96)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DlCs3Count(PCU.java:408)
+	at com.teramatrix.processData.PCU.initial(PCU.java:97)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.DlCs4Count(PCU.java:383)
+	at com.teramatrix.processData.PCU.initial(PCU.java:98)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UlCs1Count(PCU.java:358)
+	at com.teramatrix.processData.PCU.initial(PCU.java:99)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UlCs2Count(PCU.java:332)
+	at com.teramatrix.processData.PCU.initial(PCU.java:100)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UlCs3Count(PCU.java:307)
+	at com.teramatrix.processData.PCU.initial(PCU.java:101)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long
+	at com.teramatrix.processData.PCU.UlCs4Count(PCU.java:282)
+	at com.teramatrix.processData.PCU.initial(PCU.java:102)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)

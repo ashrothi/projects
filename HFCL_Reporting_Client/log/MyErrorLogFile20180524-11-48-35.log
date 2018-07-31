@@ -1,0 +1,30 @@
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.SDCCHBlockingRate(BTS.java:559)
+	at com.teramatrix.processData.BTS.initial(BTS.java:50)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.SDCCHBlockingRateNR(BTS.java:591)
+	at com.teramatrix.processData.BTS.initial(BTS.java:51)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.SDCCHBlockingRate(BTS.java:559)
+	at com.teramatrix.processData.BTS.initial(BTS.java:50)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.SDCCHBlockingRateNR(BTS.java:591)
+	at com.teramatrix.processData.BTS.initial(BTS.java:51)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.SDCCHBlockingRate(BTS.java:559)
+	at com.teramatrix.processData.BTS.initial(BTS.java:50)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.SDCCHBlockingRateNR(BTS.java:591)
+	at com.teramatrix.processData.BTS.initial(BTS.java:51)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)

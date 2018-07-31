@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html>
+<body>
+<table border="1" cellpadding="2" cellspacing="0" style="table-layout: fixed; width: 100%;   border: 1px solid #000000; font-size:9pt;  font-family:"Bookman Old Style"; border-collapse: collapse;  ">
+	<tr>
+		<td colspan="1" rowspan="2" align="center" style="padding: 5px 5px 5px 5px; border-top: 1px solid #000000; text-align:center; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000;">
+		 	<img src="$!object.logo" alt=" " style="height:30px; margin:auto;" height="50" >
+		 </td>
+		<td colspan="10" align="center"  style="padding: 5px 5px 5px 5px;  border-top: 1px solid #000000; border-right: 1px solid #000000; border-bottom: 1px solid #000000; width: 100%;  font-family:"Bookman Old Style"; font-weight:bold; font-size:25pt;  text-align:center; vertical-align: middle; height: 50px;">
+		<strong>PERFORMANCE AND ENDURANCE TESTING LAB REPORT </strong></td>
+	</tr>
+	<tr>
+		<td colspan="10" rowspan="1" align="center"  style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-size:11pt; font-weight:bold; vertical-align:middle; vertical-align:middle; text-align:center;  height: 28px;">
+		<strong> SQA HMCL GURGAON </strong></td>
+	</tr>
+	<tr >
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; font-weight:bold; vertical-align:middle; vertical-align:middle; text-align:left;">
+		<strong>PART NAME</strong></td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:left;">
+		$!object.header.get(0).part_name</td>
+		<td colspan="3" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; vertical-align:middle; font-weight:bold; vertical-align:middle; text-align:left;">
+		<strong>HMCL PART CODE</strong></td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:left;">
+		$!object.header.get(0).hmcl_part_code</td>
+		<td style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; font-weight:bold; vertical-align:middle; vertical-align:middle; text-align:left;" rowspan="2">
+		<strong>REPORT DATE</strong></td>
+		<td rowspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:left;">
+		$!object.header.get(0).report_date.replace("00:00:00.0","")</td>
+	</tr>
+	<tr >
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:left;">
+		<strong>VENDOR NAME/CODE</strong></td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:left;">
+		$!object.header.get(0).vendor_name/ $!object.header.get(0).vendor_code</td>
+		<td colspan="3" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:left;">
+		<strong>VENDOR PART CODE</strong></td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:left;">
+		$!object.header.get(0).vendor_part_code</td>
+	</tr>
+	<tr >
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:left;">
+		<strong>PLANT</strong></td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:left;">
+		$!object.header.get(0).plant</td>
+		<td colspan="3" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:left;">
+		<strong>VENDOR MFG LOCATION</strong></td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:left;">
+		$!object.header.get(0).vendor_mfg_location</td>
+		<td style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:left;">
+		<strong>TEST START DATE</strong></td>
+		<td rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.header.get(0).test_start_date.replace("00:00:00.0","")</td>
+	</tr>
+	<tr >
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:left;">
+		<strong>INSPECTION LOT NO</strong></td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.header.get(0).inspection_lot_no</td>
+		<td colspan="3" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:left;">
+		<strong>INSPECTION LOT QTY</strong></td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.header.get(0).inspection_lot_qty</td>
+		<td style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:left;">
+		<strong>TEST END DATE</strong></td>
+		<td rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.header.get(0).test_end_date.replace("00:00:00.0","")</td>
+	</tr>
+	<tr >
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:left;">
+		<strong>INSPECTION LOT DATE</strong></td>
+		<td colspan="2"style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.header.get(0).inspection_lot_date.replace("00:00:00.0","")</td>
+		<td colspan="3" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:left;">
+		<strong>PART MFG DATE</strong></td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">
+		$!object.header.get(0).part_mfg_date.replace("00:00:00.0","")</td>
+		<td style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:left;">
+		<strong>NO OF SAMPLES</strong></td>
+		<td rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:left;">
+		$!object.header.get(0).no_of_samples Nos</td>
+	</tr>
+	<tr >
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:left;">
+		<strong>NATURE OF TEST</strong></td>
+		<td colspan="9" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:left;">
+		$!object.header.get(0).nature_of_test</td>
+	</tr>
+	<tr >
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:left;">
+		<strong>OBJECTIVE</strong></td>
+		<td colspan="9" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:left;">
+		$!object.header.get(0).objective</td>
+	</tr>
+	<tr >
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		<strong>DETAILS OF MODIFICATION</strong></td>
+		<td colspan="9" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:left;">
+		$!object.header.get(0).modification_details</td>
+	</tr>
+	<tr >
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		<strong>TEST CONDITION AND METHOD</strong></td>
+		<td colspan="9" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:left;">
+		$!object.header.get(0).test_condition_and_methord</td>
+	</tr>
+	<tr >
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:left;">
+		<strong>TEST DURATION</strong></td>
+		<td colspan="3" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; vertical-align:middle; text-align:left;">
+		$!object.header.get(0).test_duration CYCLES</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-size: 10px; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>TEST STANDARD</strong></td>
+		<td colspan="4" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; vertical-align:middle; text-align:center;">
+		$!object.header.get(0).test_standard</td>
+	</tr>
+	<tr>
+		<td colspan="2" rowspan="1" align="center"  style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-size: 10px; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>ITEMS</strong></td>
+		<td colspan="4" rowspan="1" align="center"  style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-size: 10px; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>TEST REQUIRMENT AND SPEC</strong></td>
+		<td colspan="2" rowspan="1" align="center"  style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-size: 10px; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>BEFORE TEST RESULT</strong></td>
+		<td colspan="2" rowspan="1" align="center"  style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-size: 10px; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>AFTER TEST RESULT</strong></td>
+		<td rowspan="1" align="center"  style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-family:"Bookman Old Style"; font-size: 10px; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>JUDGEMENT</strong></td>
+	</tr>
+	<tr>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; vertical-align:middle; text-align:left;">
+		$!object.grid.get(0).items</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;  font-family:"Century"; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.grid.get(0).test_requirement</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:center;">
+		$!object.grid.get(0).test_max_specification mV<font face="Symbol">&plusmn;</font> OR LESS</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(0).before_test_result</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(0).after_test_result</td>
+		<td rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>#if($!object.grid.get(0).judgement == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+	</tr>
+	<tr>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; vertical-align:middle; text-align:left;">
+		$!object.grid.get(1).items</td>
+		<td colspan="2"  style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;  font-family:"Century"; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.grid.get(1).test_requirement</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:center;">
+		$!object.grid.get(1).test_min_specification M<font face="Symbol">W</font> <font face="Symbol">&plusmn;</font> OR MORE</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(1).before_test_result</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(1).after_test_result</td>
+		<td rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>#if($!object.grid.get(1).judgement == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+	</tr>
+#if ($!object.header.get(0).hmcl_part_code.contains("AAN"))
+	<tr>
+		<td colspan="2" rowspan="6" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; vertical-align:middle; text-align:left;">
+		$!object.grid.get(2).items</td>
+		<td colspan="2" colspan="2"  style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;  font-family:"Century"; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.grid.get(2).test_requirement</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:center;">
+		$!object.grid.get(2).test_min_specification  <font face="Symbol">&plusmn;</font> $!object.grid.get(2).test_max_specification kgf-cm</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(2).before_test_result</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(2).after_test_result</td>
+		<td rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>#if($!object.grid.get(2).judgement == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+	</tr>
+	<tr>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;  font-family:"Century"; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.grid.get(3).test_requirement</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:center;">
+		$!object.grid.get(3).test_min_specification  <font face="Symbol">&plusmn;</font> $!object.grid.get(3).test_max_specification kgf-cm</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(3).before_test_result</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(3).after_test_result</td>
+		<td rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>#if($!object.grid.get(3).judgement == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+	</tr>
+	<tr>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;  font-family:"Century"; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.grid.get(4).test_requirement</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:center;">
+		$!object.grid.get(4).test_min_specification <font face="Symbol">&plusmn;</font> $!object.grid.get(4).test_max_specification kgf-cm</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(4).before_test_result</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(4).after_test_result</td>
+		<td rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>#if($!object.grid.get(4).judgement == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+	</tr>
+	
+	
+	<tr>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;  font-family:"Century"; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.grid.get(17).test_requirement</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:center;">
+		$!object.grid.get(17).test_min_specification <font face="Symbol">&plusmn;</font> $!object.grid.get(17).test_max_specification kgf-cm</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(17).before_test_result</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(17).after_test_result</td>
+		<td rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>#if($!object.grid.get(17).judgement == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+	</tr>
+	<tr>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;  font-family:"Century"; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.grid.get(18).test_requirement</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:center;">
+		$!object.grid.get(18).test_min_specification <font face="Symbol">&plusmn;</font> $!object.grid.get(18).test_max_specification kgf-cm</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(18).before_test_result</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(18).after_test_result</td>
+		<td rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>#if($!object.grid.get(18).judgement == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+	</tr>
+	<tr>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;  font-family:"Century"; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.grid.get(5).test_requirement</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:center;">
+		$!object.grid.get(5).test_min_specification <font face="Symbol">&plusmn;</font> $!object.grid.get(5).test_max_specification kgf-cm</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(5).before_test_result</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(5).after_test_result</td>
+		<td rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>#if($!object.grid.get(5).judgement == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2" rowspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; vertical-align:middle; text-align:left;">
+		$!object.grid.get(6).items</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;  font-family:"Century"; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.grid.get(6).test_requirement</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:center;">
+		$!object.grid.get(6).test_min_specification <font face="Symbol">&plusmn;</font> $!object.grid.get(6).test_max_specification N</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(6).before_test_result</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(6).after_test_result</td>
+		<td rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>#if($!object.grid.get(6).judgement == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+	</tr>
+	<tr>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;  font-family:"Century"; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.grid.get(7).test_requirement</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:center;">
+		$!object.grid.get(7).test_min_specification <font face="Symbol">&plusmn;</font> $!object.grid.get(7).test_max_specification N</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(7).before_test_result</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(7).after_test_result</td>
+		<td rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>#if($!object.grid.get(7).judgement == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+	</tr>
+	<tr>
+		<td colspan="2" rowspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; vertical-align:middle; text-align:left;">
+		$!object.grid.get(8).items</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;  font-family:"Century"; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.grid.get(8).test_requirement</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:center;">
+		$!object.grid.get(8).test_min_specification <font face="Symbol">&plusmn;</font> $!object.grid.get(8).test_max_specification N</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(8).before_test_result</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(8).after_test_result</td>
+		<td rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>#if($!object.grid.get(8).judgement == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+	</tr>
+	<tr>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;  font-family:"Century"; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.grid.get(9).test_requirement</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:center;">
+		$!object.grid.get(9).test_min_specification <font face="Symbol">&plusmn;</font> $!object.grid.get(9).test_max_specification N</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(9).before_test_result</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(9).after_test_result</td>
+		<td rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>#if($!object.grid.get(9).judgement == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+	</tr>
+	<tr>
+		<td colspan="2" rowspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; vertical-align:middle; text-align:left;">
+		$!object.grid.get(10).items</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;  font-family:"Century"; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.grid.get(10).test_requirement</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:center;">
+		$!object.grid.get(10).test_min_specification <font face="Symbol">&plusmn;</font> $!object.grid.get(10).test_max_specification N</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(10).before_test_result</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(10).after_test_result</td>
+		<td rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>#if($!object.grid.get(10).judgement == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+	</tr>
+	<tr>
+		<td colspan="2"  style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;  font-family:"Century"; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.grid.get(11).test_requirement</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:center;">
+		$!object.grid.get(11).test_min_specification <font face="Symbol">&plusmn;</font> $!object.grid.get(11).test_max_specification N</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(11).before_test_result</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(11).after_test_result</td>
+		<td rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>#if($!object.grid.get(11).judgement == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+	</tr>
+	<tr>
+	<td colspan="2" rowspan="4" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; vertical-align:middle; text-align:left;">
+		$!object.grid.get(12).items</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;  font-family:"Century"; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.grid.get(12).test_requirement</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:center;">
+		$!object.grid.get(12).test_max_specification MM</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(12).before_test_result</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(12).after_test_result</td>
+		<td rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>#if($!object.grid.get(12).judgement == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+	</tr>
+	<tr>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;  font-family:"Century"; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.grid.get(13).test_requirement</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:center;">
+		$!object.grid.get(13).test_max_specification MM</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(13).before_test_result</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(13).after_test_result</td>
+		<td rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>#if($!object.grid.get(13).judgement == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+	</tr>
+	<tr>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;  font-family:"Century"; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.grid.get(14).test_requirement</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:center;">
+		$!object.grid.get(14).test_max_specification MM</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(14).before_test_result</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(14).after_test_result</td>
+		<td rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>#if($!object.grid.get(14).judgement == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+	</tr>
+	<tr>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;  font-family:"Century"; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.grid.get(15).test_requirement</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:center;">
+	 	$!object.grid.get(15).test_max_specification <font face="Symbol">&deg;</font> Max </td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(15).before_test_result</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(15).after_test_result</td>
+		<td rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>#if($!object.grid.get(15).judgement == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+	</tr>
+	<tr>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; vertical-align:middle; text-align:left;">
+		$!object.grid.get(16).items</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;  font-family:"Century"; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.grid.get(16).test_requirement</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:center;">
+		 $!object.grid.get(16).test_max_specification</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(16).before_test_result</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(16).after_test_result</td>
+		<td rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>#if($!object.grid.get(16).judgement == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+	</tr>
+#else
+	<tr>
+		<td colspan="2" rowspan="4" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; vertical-align:middle; text-align:left;">
+		$!object.grid.get(2).items</td>
+		<td colspan="2" colspan="2"  style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;  font-family:"Century"; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.grid.get(2).test_requirement</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:center;">
+		$!object.grid.get(2).test_min_specification  <font face="Symbol">&plusmn;</font> $!object.grid.get(2).test_max_specification  kgf-cm</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(2).before_test_result</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(2).after_test_result</td>
+		<td rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>#if($!object.grid.get(2).judgement == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+	</tr>
+	<tr>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;  font-family:"Century"; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.grid.get(3).test_requirement</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:center;">
+		$!object.grid.get(3).test_min_specification <font face="Symbol">&plusmn;</font> $!object.grid.get(3).test_max_specification  kgf-cm</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(3).before_test_result</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(3).after_test_result</td>
+		<td rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>#if($!object.grid.get(3).judgement == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+	</tr>
+	<tr>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;  font-family:"Century"; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.grid.get(4).test_requirement</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:center;">
+		$!object.grid.get(4).test_min_specification <font face="Symbol">&plusmn;</font> $!object.grid.get(4).test_max_specification  kgf-cm</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(4).before_test_result</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(4).after_test_result</td>
+		<td rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>#if($!object.grid.get(4).judgement == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+	</tr>
+	<tr>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;  font-family:"Century"; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.grid.get(5).test_requirement</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:center;">
+		$!object.grid.get(5).test_min_specification <font face="Symbol">&plusmn;</font> $!object.grid.get(5).test_max_specification  kgf-cm</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(5).before_test_result</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(5).after_test_result</td>
+		<td rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>#if($!object.grid.get(5).judgement == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+	</tr>
+
+	
+	<tr>
+		<td colspan="2" rowspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; vertical-align:middle; text-align:left;">
+		$!object.grid.get(6).items</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;  font-family:"Century"; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.grid.get(6).test_requirement</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:center;">
+		$!object.grid.get(6).test_min_specification <font face="Symbol">&plusmn;</font> $!object.grid.get(6).test_max_specification  N</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(6).before_test_result</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(6).after_test_result</td>
+		<td rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>#if($!object.grid.get(6).judgement == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+	</tr>
+	<tr>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;  font-family:"Century"; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.grid.get(7).test_requirement</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:center;">
+		$!object.grid.get(7).test_min_specification <font face="Symbol">&plusmn;</font> $!object.grid.get(7).test_max_specification N</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(7).before_test_result</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(7).after_test_result</td>
+		<td rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>#if($!object.grid.get(7).judgement == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+	</tr>
+	<tr>
+		<td colspan="2" rowspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; vertical-align:middle; text-align:left;">
+		$!object.grid.get(8).items</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;  font-family:"Century"; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.grid.get(8).test_requirement</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:center;">
+		$!object.grid.get(8).test_min_specification <font face="Symbol">&plusmn;</font> $!object.grid.get(8).test_max_specification N</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(8).before_test_result</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(8).after_test_result</td>
+		<td rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>#if($!object.grid.get(8).judgement == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+	</tr>
+	<tr>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;  font-family:"Century"; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.grid.get(9).test_requirement</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:center;">
+		$!object.grid.get(9).test_min_specification <font face="Symbol">&plusmn;</font> $!object.grid.get(9).test_max_specification N</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(9).before_test_result</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(9).after_test_result</td>
+		<td rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>#if($!object.grid.get(9).judgement == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+	</tr>
+	<tr>
+		<td colspan="2" rowspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; vertical-align:middle; text-align:left;">
+		$!object.grid.get(10).items</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;  font-family:"Century"; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.grid.get(10).test_requirement</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:center;">
+		$!object.grid.get(10).test_min_specification <font face="Symbol">&plusmn;</font> $!object.grid.get(10).test_max_specification N</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(10).before_test_result</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(10).after_test_result</td>
+		<td rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>#if($!object.grid.get(10).judgement == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+	</tr>
+	<tr>
+		<td colspan="2"  style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;  font-family:"Century"; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.grid.get(11).test_requirement</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:center;">
+		$!object.grid.get(11).test_min_specification <font face="Symbol">&plusmn;</font> $!object.grid.get(11).test_max_specification N</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(11).before_test_result</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(11).after_test_result</td>
+		<td rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>#if($!object.grid.get(11).judgement == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+	</tr>
+	<tr>
+	<td colspan="2" rowspan="4" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; vertical-align:middle; text-align:left;">
+		$!object.grid.get(12).items</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;  font-family:"Century"; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.grid.get(12).test_requirement</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:center;">
+		$!object.grid.get(1).test_max_specification MM</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(12).before_test_result</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(12).after_test_result</td>
+		<td rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>#if($!object.grid.get(12).judgement == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+	</tr>
+	<tr>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;  font-family:"Century"; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.grid.get(13).test_requirement</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:center;">
+		 $!object.grid.get(1).test_max_specification MM</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(13).before_test_result</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(13).after_test_result</td>
+		<td rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>#if($!object.grid.get(13).judgement == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+	</tr>
+	<tr>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;  font-family:"Century"; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.grid.get(14).test_requirement</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:center;">
+		 $!object.grid.get(1).test_max_specification MM </td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(14).before_test_result</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(14).after_test_result</td>
+		<td rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>#if($!object.grid.get(14).judgement == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+	</tr>
+	<tr>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;  font-family:"Century"; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.grid.get(15).test_requirement</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:center;">
+		 $!object.grid.get(1).test_max_specification <font face="Symbol">&deg;</font> Max</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(15).before_test_result</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(15).after_test_result</td>
+		<td rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>#if($!object.grid.get(15).judgement == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+	</tr>
+	<tr>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; vertical-align:middle; text-align:left;">
+		$!object.grid.get(16).items</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;  font-family:"Century"; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		$!object.grid.get(16).test_requirement</td>
+		<td colspan="2" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:center;">
+		$!object.grid.get(16).test_max_specification</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(16).before_test_result</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		$!object.grid.get(16).after_test_result</td>
+		<td rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:center;">
+		<strong>#if($!object.grid.get(16).judgement == 1)
+		<span style="color: #00b058;">OK</span> #else
+		<span style="color: #ff0000;">NG</span> #end </strong></td>
+	</tr>
+#end		
+	
+	<tr>
+		<td colspan="11" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:left;">
+		<strong>PHOTOGRAPHS:-</strong></td>
+	</tr>
+	<tr>
+		<td align="center" BGCOLOR="#DCE6F1" colspan="11"   style="padding:5px 0px 5px 5px; border-top: 1px solid #000; border-bottom: 0px solid #000; border-left: 1px solid #000; border-right: 0px solid #000; text-align:center;" >
+		<strong>  BEFORE TEST</strong></td>
+	</tr>
+	<tr>
+		<td align="center" colspan="2" BGCOLOR="#DCE6F1"   style="padding:5px 0px 5px 5px; border-top: 1px solid #000; border-bottom: 0px solid #000; border-left: 1px solid #000; border-right: 0px solid #000; text-align:center;" >
+		<strong>  Image1</strong></td>
+		<td align="center" colspan="3" BGCOLOR="#DCE6F1"  style="padding:5px 0px 5px 5px; border-top: 1px solid #000; border-bottom: 0px solid #000; border-left: 1px solid #000; border-right: 0px solid #000; text-align:center;" >
+		<strong>  Image2</strong></td>
+		<td align="center" colspan="3" BGCOLOR="#DCE6F1" style="padding:5px 0px 5px 5px; border-top: 1px solid #000; border-bottom: 0px solid #000; border-left: 1px solid #000; border-right: 0px solid #000; text-align:center;" >
+		<strong>  Image3</strong></td>
+		<td align="center" colspan="3" BGCOLOR="#DCE6F1" style="padding:5px 0px 5px 5px; border-top: 1px solid #000; border-bottom: 0px solid #000; border-left: 1px solid #000; border-right: 0px solid #000; text-align:center;" >
+		<strong>  Image4</strong></td>
+	</tr>
+	<tr>
+		<td align="center" colspan="2"   style="padding:5px 0px 5px 5px; border-top: 1px solid #000; border-bottom: 0px solid #000; border-left: 1px solid #000; border-right: 0px solid #000" VALIGN="top">
+		<br/>
+					#foreach ($beforeN0 in $!object.beforeImageN0) 
+						#if ($beforeN0.image_path)
+							<img src="$beforeN0.image_path" alt=" " height="200"> <br/>
+			    		#end
+						
+					#end 
+
+</td>
+		<td align="center" colspan="3"  style="padding:5px 0px 5px 5px; border-top: 1px solid #000; border-bottom: 0px solid #000; border-left: 1px solid #000; border-right: 0px solid #000" VALIGN="top">
+		<br/>
+					#foreach ($beforeN1 in $!object.beforeImageN1) 
+						#if ($beforeN1.image_path)
+							<img src="$beforeN1.image_path" alt=" " height="200"> <br/>
+			    		#end
+						
+					#end 
+
+</td>
+		<td align="center" colspan="3"  style="padding:5px 0px 5px 5px; border-top: 1px solid #000; border-bottom: 0px solid #000; border-left: 1px solid #000; border-right: 0px solid #000" VALIGN="top">
+		<br/>
+					#foreach ($beforeN2 in $!object.beforeImageN2) 
+						#if ($beforeN2.image_path)
+							<img src="$beforeN2.image_path" alt=" " height="200"> <br/>
+			    		#end
+						
+					#end 
+
+</td>
+		<td align="center" colspan="3"  style="padding:5px 0px 5px 5px; border-top: 1px solid #000; border-bottom: 0px solid #000; border-left: 1px solid #000; border-right: 0px solid #000" VALIGN="top">
+		<br/>
+					#foreach ($beforeN3 in $!object.beforeImageN3) 
+						#if ($beforeN3.image_path)
+							<img src="$beforeN3.image_path" alt=" " height="200"  > <br/>
+			    		#end
+						
+					#end 
+
+</td>
+	</tr>
+	<tr>
+		<td align="center" colspan="11" BGCOLOR="#DDD9C4"   style="padding:5px 0px 5px 5px; border-top: 1px solid #000; border-bottom: 0px solid #000; border-left: 1px solid #000; border-right: 0px solid #000; text-align:center;" >
+		<strong>   AFTER TEST</strong></td>
+	</tr>
+	<tr>
+		<td align="center" colspan="2" BGCOLOR="#DDD9C4"   style="padding:5px 0px 5px 5px; border-top: 1px solid #000; border-bottom: 0px solid #000; border-left: 1px solid #000; border-right: 0px solid #000; text-align:center;" >
+		<strong> Image1</strong></td>
+		<td align="center" colspan="3" BGCOLOR="#DDD9C4"  style="padding:5px 0px 5px 5px; border-top: 1px solid #000; border-bottom: 0px solid #000; border-left: 1px solid #000; border-right: 0px solid #000; text-align:center;" >
+		<strong>  Image2</strong></td>
+		<td align="center" colspan="3" BGCOLOR="#DDD9C4" style="padding:5px 0px 5px 5px; border-top: 1px solid #000; border-bottom: 0px solid #000; border-left: 1px solid #000; border-right: 0px solid #000; text-align:center;" >
+		<strong> Image3</strong></td>
+		<td align="center" colspan="3" BGCOLOR="#DDD9C4" style="padding:5px 0px 5px 5px; border-top: 1px solid #000; border-bottom: 0px solid #000; border-left: 1px solid #000; border-right: 0px solid #000; text-align:center;" >
+		<strong>  Image4</strong></td>
+	</tr>
+	<tr>
+		<td align="center" colspan="2"   style="padding:5px 0px 5px 5px; border-top: 1px solid #000; border-bottom: 0px solid #000; border-left: 1px solid #000; border-right: 0px solid #000" VALIGN="top">
+		<br/>
+					#foreach ($afterN0 in $!object.afterImageN0)
+						 #if ($afterN0.image_path)
+							<img src="$afterN0.image_path" alt=" " height="200"> <br/>
+			    		#end
+						
+					#end </td>
+		<td align="center" colspan="3"  style="padding:5px 0px 5px 5px; border-top: 1px solid #000; border-bottom: 0px solid #000; border-left: 1px solid #000; border-right: 0px solid #000" VALIGN="top">
+		<br/>
+					#foreach ($afterN1 in $!object.afterImageN1)
+						 #if ($afterN1.image_path)
+							<img src="$afterN1.image_path" alt=" " height="200"> <br/>
+			    		#end
+						
+					#end </td>
+		<td align="center" colspan="3"  style="padding:5px 0px 5px 5px; border-top: 1px solid #000; border-bottom: 0px solid #000; border-left: 1px solid #000; border-right: 0px solid #000" VALIGN="top">
+		<br/>
+						#foreach ($afterN2 in $!object.afterImageN2)
+						 #if ($afterN2.image_path)
+							<img src="$afterN2.image_path" alt=" " height="200" > <br/>
+			    		#end
+						
+					#end </td>
+		<td align="center" colspan="3"  style="padding:5px 0px 5px 5px; border-top: 1px solid #000; border-bottom: 0px solid #000; border-left: 1px solid #000; border-right: 0px solid #000" VALIGN="top">
+		<br/>
+					#foreach ($afterN3 in $!object.afterImageN3)
+						 #if ($afterN3.image_path)
+							<img src="$afterN3.image_path" alt=" " height="200"> <br/>
+			    		#end
+						
+					#end </td>
+	</tr>
+	<tr >
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:left;">
+		<strong>OBSERVATIONS :-</strong></td>
+		<td colspan="9" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; color: #000000; vertical-align:middle; text-align:left;">
+		#foreach ($observation in $!object.observation) $!observation.observation
+		<br/>#end</td>
+	</tr>
+	<tr >
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:left;">
+		<strong>ANALYSIS:-</strong></td>
+		<td colspan="9" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:left;">
+		$!object.analysis.get(0).analysis</td>
+	</tr>
+	<tr >
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:left;">
+		<strong>CONCLUSION :-</strong></td>
+		<td colspan="9" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:left;">
+		#foreach ($conclusion in $!object.conclusion) $!conclusion.conclusion
+		<br/>#end</td>
+	</tr>
+	<tr >
+		<td colspan="2" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Bookman Old Style"; font-size:9pt; vertical-align:middle; vertical-align:middle; text-align:left;">
+		<strong>RESULT :-</strong></td>
+		<td colspan="9" rowspan="1" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size:9pt; vertical-align:middle; text-align:left;">
+		<span style="color:#23b050"><strong>$!object.result.get(0).result</strong></span></td>
+	</tr>
+	
+	<tr>
+		<td colspan="4" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-family:"Century"; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+			#if ($object.signature.image_path_tested_by)
+				<br/><img alt="" align="center" height="30" src="$!object.signature.image_path_tested_by"><br/>
+	    	#end
+		</td> 
+		<td colspan="4" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000;  font-family:"Century"; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+			#if ($object.signature.image_path_verified_by)
+				<img alt="" align="center" height="30" src="$!object.signature.image_path_verified_by">
+	    	#end
+		</td> 
+		<td colspan="3" style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000;  font-family:"Century"; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+			#if ($object.signature.image_path_approved_by)
+				<img alt="" align="center" height="30" src="$!object.signature.image_path_approved_by">
+			#end
+		</td> 
+	</tr>
+	<tr >
+		<td colspan="4" rowspan="1" align="center"  style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000;  font-family:"Bookman Old Style"; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		<strong>TESTED BY </strong></td>
+		<td colspan="4" rowspan="1" align="center"  style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000;  font-family:"Bookman Old Style"; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		<strong>VERIFIED BY</strong> </td>
+		<td colspan="3" rowspan="1" align="center"  style="padding: 5px 5px 5px 5px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000;  font-family:"Bookman Old Style"; font-size:9pt; color: #000000; vertical-align:middle; text-align:center;">
+		<strong>APPROVED BY</strong></td>
+	</tr>
+</table>
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.NumberOfLocationUpdates(BTS.java:1481)
+	at com.teramatrix.processData.BTS.initial(BTS.java:114)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:163)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DownlinkDataRetransmissionRate(PCU.java:971)
+	at com.teramatrix.processData.PCU.initial(PCU.java:55)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DownlinkDataRetransmissionRateDR(PCU.java:105)
+	at com.teramatrix.processData.PCU.initial(PCU.java:57)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UplinkDataRetransmissionRate(PCU.java:1023)
+	at com.teramatrix.processData.PCU.initial(PCU.java:58)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UplinkDataRetransmissionRateDR(PCU.java:1073)
+	at com.teramatrix.processData.PCU.initial(PCU.java:60)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.NumberOfLocationUpdates(BTS.java:1481)
+	at com.teramatrix.processData.BTS.initial(BTS.java:114)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:163)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DownlinkDataRetransmissionRate(PCU.java:971)
+	at com.teramatrix.processData.PCU.initial(PCU.java:55)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DownlinkDataRetransmissionRateDR(PCU.java:105)
+	at com.teramatrix.processData.PCU.initial(PCU.java:57)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UplinkDataRetransmissionRate(PCU.java:1023)
+	at com.teramatrix.processData.PCU.initial(PCU.java:58)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UplinkDataRetransmissionRateDR(PCU.java:1073)
+	at com.teramatrix.processData.PCU.initial(PCU.java:60)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.NumberOfLocationUpdates(BTS.java:1481)
+	at com.teramatrix.processData.BTS.initial(BTS.java:114)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:163)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DownlinkDataRetransmissionRate(PCU.java:971)
+	at com.teramatrix.processData.PCU.initial(PCU.java:55)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DownlinkDataRetransmissionRateDR(PCU.java:105)
+	at com.teramatrix.processData.PCU.initial(PCU.java:57)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UplinkDataRetransmissionRate(PCU.java:1023)
+	at com.teramatrix.processData.PCU.initial(PCU.java:58)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UplinkDataRetransmissionRateDR(PCU.java:1073)
+	at com.teramatrix.processData.PCU.initial(PCU.java:60)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:164)

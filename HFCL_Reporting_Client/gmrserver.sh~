@@ -1,0 +1,5 @@
+export wulian=/home/mandeepsingh/Desktop/ETL_Client/wulian
+
+java -jar /home/mandeepsingh/Desktop/ETL_Client/wulian/bin/wulian.jar
+
+exit

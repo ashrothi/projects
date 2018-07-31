@@ -1,0 +1,501 @@
+java.lang.IllegalArgumentException: Cannot format given Object as a Number
+	at java.text.DecimalFormat.format(DecimalFormat.java:507)
+	at java.text.Format.format(Format.java:157)
+	at com.teramatrix.processData.BTS.StartTime(BTS.java:129)
+	at com.teramatrix.processData.BTS.initial(BTS.java:23)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.LCLSCSErlangs(BTS.java:310)
+	at com.teramatrix.processData.BTS.initial(BTS.java:36)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.SDCCHBlockingRate(BTS.java:557)
+	at com.teramatrix.processData.BTS.initial(BTS.java:50)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.SDCCHBlockingRateNR(BTS.java:589)
+	at com.teramatrix.processData.BTS.initial(BTS.java:51)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.TCHBlockingRate(BTS.java:668)
+	at com.teramatrix.processData.BTS.initial(BTS.java:54)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.TCHBlockingRateDR(BTS.java:727)
+	at com.teramatrix.processData.BTS.initial(BTS.java:56)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.ULTCHRxQual0To5Percent(BTS.java:990)
+	at com.teramatrix.processData.BTS.initial(BTS.java:92)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs1Count(PCU.java:704)
+	at com.teramatrix.processData.PCU.initial(PCU.java:72)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs2Count(PCU.java:680)
+	at com.teramatrix.processData.PCU.initial(PCU.java:73)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs3Count(PCU.java:656)
+	at com.teramatrix.processData.PCU.initial(PCU.java:74)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs4Count(PCU.java:632)
+	at com.teramatrix.processData.PCU.initial(PCU.java:75)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs5Count(PCU.java:608)
+	at com.teramatrix.processData.PCU.initial(PCU.java:76)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs6Count(PCU.java:584)
+	at com.teramatrix.processData.PCU.initial(PCU.java:77)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs7Count(PCU.java:560)
+	at com.teramatrix.processData.PCU.initial(PCU.java:78)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs8Count(PCU.java:536)
+	at com.teramatrix.processData.PCU.initial(PCU.java:79)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs9Count(PCU.java:512)
+	at com.teramatrix.processData.PCU.initial(PCU.java:80)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlMcs1Count(PCU.java:488)
+	at com.teramatrix.processData.PCU.initial(PCU.java:81)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlMcs2Count(PCU.java:464)
+	at com.teramatrix.processData.PCU.initial(PCU.java:82)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlMcs3Count(PCU.java:440)
+	at com.teramatrix.processData.PCU.initial(PCU.java:83)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlMcs4Count(PCU.java:416)
+	at com.teramatrix.processData.PCU.initial(PCU.java:84)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlMcs5Count(PCU.java:392)
+	at com.teramatrix.processData.PCU.initial(PCU.java:85)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlMcs6Count(PCU.java:368)
+	at com.teramatrix.processData.PCU.initial(PCU.java:86)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlMcs7Count(PCU.java:344)
+	at com.teramatrix.processData.PCU.initial(PCU.java:87)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlMcs8Count(PCU.java:320)
+	at com.teramatrix.processData.PCU.initial(PCU.java:88)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlMcs9Count(PCU.java:296)
+	at com.teramatrix.processData.PCU.initial(PCU.java:89)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlCs1Count(PCU.java:272)
+	at com.teramatrix.processData.PCU.initial(PCU.java:90)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlCs2Count(PCU.java:248)
+	at com.teramatrix.processData.PCU.initial(PCU.java:91)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlCs3Count(PCU.java:224)
+	at com.teramatrix.processData.PCU.initial(PCU.java:92)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlCs4Count(PCU.java:200)
+	at com.teramatrix.processData.PCU.initial(PCU.java:93)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlCs1Count(PCU.java:176)
+	at com.teramatrix.processData.PCU.initial(PCU.java:94)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlCs2Count(PCU.java:152)
+	at com.teramatrix.processData.PCU.initial(PCU.java:95)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlCs3Count(PCU.java:128)
+	at com.teramatrix.processData.PCU.initial(PCU.java:96)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlCs4Count(PCU.java:104)
+	at com.teramatrix.processData.PCU.initial(PCU.java:97)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.IllegalArgumentException: Cannot format given Object as a Number
+	at java.text.DecimalFormat.format(DecimalFormat.java:507)
+	at java.text.Format.format(Format.java:157)
+	at com.teramatrix.processData.BTS.StartTime(BTS.java:129)
+	at com.teramatrix.processData.BTS.initial(BTS.java:23)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.LCLSCSErlangs(BTS.java:310)
+	at com.teramatrix.processData.BTS.initial(BTS.java:36)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.SDCCHBlockingRate(BTS.java:557)
+	at com.teramatrix.processData.BTS.initial(BTS.java:50)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.SDCCHBlockingRateNR(BTS.java:589)
+	at com.teramatrix.processData.BTS.initial(BTS.java:51)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.TCHBlockingRate(BTS.java:668)
+	at com.teramatrix.processData.BTS.initial(BTS.java:54)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.TCHBlockingRateDR(BTS.java:727)
+	at com.teramatrix.processData.BTS.initial(BTS.java:56)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.ULTCHRxQual0To5Percent(BTS.java:990)
+	at com.teramatrix.processData.BTS.initial(BTS.java:92)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs1Count(PCU.java:704)
+	at com.teramatrix.processData.PCU.initial(PCU.java:72)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs2Count(PCU.java:680)
+	at com.teramatrix.processData.PCU.initial(PCU.java:73)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs3Count(PCU.java:656)
+	at com.teramatrix.processData.PCU.initial(PCU.java:74)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs4Count(PCU.java:632)
+	at com.teramatrix.processData.PCU.initial(PCU.java:75)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs5Count(PCU.java:608)
+	at com.teramatrix.processData.PCU.initial(PCU.java:76)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs6Count(PCU.java:584)
+	at com.teramatrix.processData.PCU.initial(PCU.java:77)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs7Count(PCU.java:560)
+	at com.teramatrix.processData.PCU.initial(PCU.java:78)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs8Count(PCU.java:536)
+	at com.teramatrix.processData.PCU.initial(PCU.java:79)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs9Count(PCU.java:512)
+	at com.teramatrix.processData.PCU.initial(PCU.java:80)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlMcs1Count(PCU.java:488)
+	at com.teramatrix.processData.PCU.initial(PCU.java:81)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlMcs2Count(PCU.java:464)
+	at com.teramatrix.processData.PCU.initial(PCU.java:82)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlMcs3Count(PCU.java:440)
+	at com.teramatrix.processData.PCU.initial(PCU.java:83)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlMcs4Count(PCU.java:416)
+	at com.teramatrix.processData.PCU.initial(PCU.java:84)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlMcs5Count(PCU.java:392)
+	at com.teramatrix.processData.PCU.initial(PCU.java:85)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlMcs6Count(PCU.java:368)
+	at com.teramatrix.processData.PCU.initial(PCU.java:86)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlMcs7Count(PCU.java:344)
+	at com.teramatrix.processData.PCU.initial(PCU.java:87)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlMcs8Count(PCU.java:320)
+	at com.teramatrix.processData.PCU.initial(PCU.java:88)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlMcs9Count(PCU.java:296)
+	at com.teramatrix.processData.PCU.initial(PCU.java:89)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlCs1Count(PCU.java:272)
+	at com.teramatrix.processData.PCU.initial(PCU.java:90)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlCs2Count(PCU.java:248)
+	at com.teramatrix.processData.PCU.initial(PCU.java:91)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlCs3Count(PCU.java:224)
+	at com.teramatrix.processData.PCU.initial(PCU.java:92)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlCs4Count(PCU.java:200)
+	at com.teramatrix.processData.PCU.initial(PCU.java:93)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlCs1Count(PCU.java:176)
+	at com.teramatrix.processData.PCU.initial(PCU.java:94)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlCs2Count(PCU.java:152)
+	at com.teramatrix.processData.PCU.initial(PCU.java:95)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlCs3Count(PCU.java:128)
+	at com.teramatrix.processData.PCU.initial(PCU.java:96)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlCs4Count(PCU.java:104)
+	at com.teramatrix.processData.PCU.initial(PCU.java:97)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.IllegalArgumentException: Cannot format given Object as a Number
+	at java.text.DecimalFormat.format(DecimalFormat.java:507)
+	at java.text.Format.format(Format.java:157)
+	at com.teramatrix.processData.BTS.StartTime(BTS.java:129)
+	at com.teramatrix.processData.BTS.initial(BTS.java:23)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.LCLSCSErlangs(BTS.java:310)
+	at com.teramatrix.processData.BTS.initial(BTS.java:36)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.SDCCHBlockingRate(BTS.java:557)
+	at com.teramatrix.processData.BTS.initial(BTS.java:50)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.SDCCHBlockingRateNR(BTS.java:589)
+	at com.teramatrix.processData.BTS.initial(BTS.java:51)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.TCHBlockingRate(BTS.java:668)
+	at com.teramatrix.processData.BTS.initial(BTS.java:54)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.TCHBlockingRateDR(BTS.java:727)
+	at com.teramatrix.processData.BTS.initial(BTS.java:56)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.ULTCHRxQual0To5Percent(BTS.java:990)
+	at com.teramatrix.processData.BTS.initial(BTS.java:92)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs1Count(PCU.java:704)
+	at com.teramatrix.processData.PCU.initial(PCU.java:72)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs2Count(PCU.java:680)
+	at com.teramatrix.processData.PCU.initial(PCU.java:73)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs3Count(PCU.java:656)
+	at com.teramatrix.processData.PCU.initial(PCU.java:74)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs4Count(PCU.java:632)
+	at com.teramatrix.processData.PCU.initial(PCU.java:75)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs5Count(PCU.java:608)
+	at com.teramatrix.processData.PCU.initial(PCU.java:76)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs6Count(PCU.java:584)
+	at com.teramatrix.processData.PCU.initial(PCU.java:77)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs7Count(PCU.java:560)
+	at com.teramatrix.processData.PCU.initial(PCU.java:78)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs8Count(PCU.java:536)
+	at com.teramatrix.processData.PCU.initial(PCU.java:79)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs9Count(PCU.java:512)
+	at com.teramatrix.processData.PCU.initial(PCU.java:80)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlMcs1Count(PCU.java:488)
+	at com.teramatrix.processData.PCU.initial(PCU.java:81)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlMcs2Count(PCU.java:464)
+	at com.teramatrix.processData.PCU.initial(PCU.java:82)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlMcs3Count(PCU.java:440)
+	at com.teramatrix.processData.PCU.initial(PCU.java:83)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlMcs4Count(PCU.java:416)
+	at com.teramatrix.processData.PCU.initial(PCU.java:84)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlMcs5Count(PCU.java:392)
+	at com.teramatrix.processData.PCU.initial(PCU.java:85)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlMcs6Count(PCU.java:368)
+	at com.teramatrix.processData.PCU.initial(PCU.java:86)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlMcs7Count(PCU.java:344)
+	at com.teramatrix.processData.PCU.initial(PCU.java:87)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlMcs8Count(PCU.java:320)
+	at com.teramatrix.processData.PCU.initial(PCU.java:88)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlMcs9Count(PCU.java:296)
+	at com.teramatrix.processData.PCU.initial(PCU.java:89)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlCs1Count(PCU.java:272)
+	at com.teramatrix.processData.PCU.initial(PCU.java:90)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlCs2Count(PCU.java:248)
+	at com.teramatrix.processData.PCU.initial(PCU.java:91)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlCs3Count(PCU.java:224)
+	at com.teramatrix.processData.PCU.initial(PCU.java:92)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlCs4Count(PCU.java:200)
+	at com.teramatrix.processData.PCU.initial(PCU.java:93)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlCs1Count(PCU.java:176)
+	at com.teramatrix.processData.PCU.initial(PCU.java:94)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlCs2Count(PCU.java:152)
+	at com.teramatrix.processData.PCU.initial(PCU.java:95)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlCs3Count(PCU.java:128)
+	at com.teramatrix.processData.PCU.initial(PCU.java:96)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.UlCs4Count(PCU.java:104)
+	at com.teramatrix.processData.PCU.initial(PCU.java:97)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)

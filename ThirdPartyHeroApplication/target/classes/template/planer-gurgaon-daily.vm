@@ -1,0 +1,314 @@
+<html>
+<head>
+</head>
+
+<body style="font-family:"bookman Old Style";">
+
+ 
+<table border="1" cellpadding="0" cellspacing="0" style="table-layout: fixed; width:100%; font-size: 8px; border-collapse: collapse; border: 2px solid #000">
+ 
+	<tr>
+		<td colspan="2" align="center" rowspan="3" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-top: 1px solid #000000; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; text-align:center;">
+		 <img src="$!object.logo" height="50" style="margin:auto;" align="center" />
+		 </td>
+		<td colspan="13" style="padding: 5px 3px 5px 3px; vertical-align: middle; font-weight:bold; text-transform:uppercase; background-color: #ffffff; font-size:13pt; border-top: 1px solid #000000; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; height: 38px;">
+		#if( $object.plannerHeader.size()> 0 )
+			#set($description = $!object.plannerHeader.size()) #set($size =$description - 1)
+			$!object.plannerHeader.get(0).planner_name $!object.date ($!object.plannerno .V $!object.plannerHeader.get($size).planner_version)
+		
+		#end</td>
+		
+	</tr>
+	<tr>
+		<td colspan="7" rowspan="1" style="padding: 5px 3px 5px 3px;  font-weight:bold; font-size:11pt; vertical-align: middle; background-color: #ffffff; border-top: 1px solid #000000; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; height: 38px;">
+		SQA HMCL GURGAON</td>
+		
+		<td colspan="6" rowspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle;  font-size:10pt; font-weight:bold; border-top: 1px solid #000000; border-right: 1px solid #000000; font-weight: bold; color: #000000; vertical-align: middle; text-align: center;">
+		TEST PLAN &amp; TEST DURATION</td>
+	</tr>
+	<tr>
+		<td style="padding: 5px 3px 5px 3px; vertical-align: middle; background-color: #ffffff; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;">
+		PLANNER No.</td>
+		<td style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; color: #000000; wrap-strategy: 0; white-space: nowrap; vertical-align: middle; text-align: center;">
+		$!object.plannerno</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; background-color: #ffffff; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;">
+		PLANNER REVISION No.</td>
+		<td colspan="3" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000;text-align: center;">
+		
+		#if( $object.plannerHeader.size()> 0 )
+			#set($descriptions = $!object.plannerHeader.size()) #set($sizes =$descriptions - 1)
+			$!object.plannerHeader.get($sizes).planner_version
+		
+		#end
+		</td>
+		
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;">
+		REPEATED OPERATION DURABILITY</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;">
+		SHOWER DURABILITY</td>
+		<td colspan="2" rowspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;">
+		DUST DURABILITY</td>
+	</tr>
+	<tr>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; background-color: #ffffff; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; height: 20px;">
+		<span>
+			SL. No</span>
+			</td>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; background-color: #ffffff; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; height: 20px;">
+		<span>
+		
+			PART CODE
+		</span></td>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; background-color: #ffffff; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; height: 20px;">
+		<span>
+		
+			COMPONENT NAME
+		</span></td>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; background-color: #ffffff; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; height: 20px;">
+		<span>
+		
+			MODEL
+		</span></td>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; background-color: #ffffff; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; height: 20px;">
+		<span>
+		
+			VENDOR
+		</span></td>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; height: 20px;">
+		<span>
+		
+			VENDOR CODE
+		</span></td>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; height: 20px;">
+		<span>
+		
+			VENDOR LOCATION
+		</span></td>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; height: 20px;">
+		<span>
+		
+			HMCL LOCATION
+		</span></td>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; height: 20px;">
+		<span>
+		
+			TOTAL NO. OF SAMPLES
+		</span></td>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; height: 20px;">
+		<span>
+		
+			DURATION(Hours)
+		</span></td>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; height: 20px;">
+		<span>
+		
+			NO. OF SAMPLES
+		</span></td>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; height: 20px;">
+		<span>
+		
+			DURATION(Hours)
+		</span></td>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; height: 20px;">
+		<span>
+		
+			NO. OF SAMPLES
+		</span></td>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; height: 20px;">
+		<span>
+		
+			DURATION(Hours)
+		</span></td>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; height: 20px;">
+		<span>
+		
+			NO. OF SAMPLES
+		</span></td>
+	</tr>
+	#foreach($!plannerHeader in $object.plannerHeader)
+	
+	#if($!plannerHeader.vehicle_model && "$plannerHeader.vehicle_model" != "")
+
+		<tr style="height: 22px;">
+			<td style="padding: 5px 3px 5px 3px; text-align: center; vertical-align: middle; border-right: 0px solid #000000; border-bottom: 1px solid #000000; border-left: 0px solid #000000;">
+			$!plannerHeader.S_No</td>
+			<td style="padding: 5px 3px 5px 3px; text-align: center; vertical-align: middle; background-color: #ffffff; border-right: 1px solid #000000;  border-bottom: 1px solid #000000;border-left: 0px solid #000000;">
+			$!plannerHeader.part_code</td>
+			<td style="padding: 5px 3px 5px 3px;  text-align: center; vertical-align: middle; background-color: #ffffff; border-right: 1px solid #000000; border-bottom: 1px solid #000000;border-left: 0px solid #000000;">
+			$!plannerHeader.part_name</td>
+			<td style="padding: 5px 3px 5px 3px;  text-align: center; vertical-align: middle; background-color: #ffffff; border-right: 1px solid #000000; border-bottom: 1px solid #000000;border-left: 0px solid #000000;">
+			$!plannerHeader.vehicle_model</td>
+			<td style="padding: 5px 3px 5px 3px;  text-align: center; vertical-align: middle; background-color: #ffffff; border-right: 1px solid #000000; border-bottom: 1px solid #000000;border-left: 0px solid #000000;">
+			$!plannerHeader.vendor</td>
+			<td style="padding: 5px 3px 5px 3px;  text-align: center; vertical-align: middle; background-color: #ffffff; border-right: 1px solid #000000; border-bottom: 1px solid #000000;border-left: 0px solid #000000;">
+			$!plannerHeader.vendor_code</td>
+			<td style="padding: 5px 3px 5px 3px;  text-align: center; vertical-align: middle; background-color: #ffffff; border-right: 1px solid #000000; border-bottom: 1px solid #000000;border-left: 0px solid #000000;">
+			$!plannerHeader.part_manufacturing_location</td>
+			<td style="padding: 5px 3px 5px 3px;  text-align: center; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000;border-left: 0px solid #000000;">
+			$!plannerHeader.plant</td> 
+			<td style="padding: 5px 3px 5px 3px;  text-align: center; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000;border-left: 0px solid #000000;">
+			$!plannerHeader.no_of_samples</td>
+			<td style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; text-align: center;border-left: 0px solid #000000;">
+			$!plannerHeader.repeated_operation_duration</td>
+			<td style="padding: 5px 3px 5px 3px;  text-align: center; vertical-align: middle; border-right: 0px solid #000000; border-bottom: 1px solid #000000;border-left: 0px solid #000000;">
+			$!plannerHeader.ro_sample</td>
+			<td style="padding: 5px 3px 5px 3px;  text-align: center; vertical-align: middle; border-right: 0px solid #000000; border-bottom: 1px solid #000000;border-left: 0px solid #000000;">
+			$!plannerHeader.shower_duration</td>
+			<td style="padding: 5px 3px 5px 3px;  text-align: center; vertical-align: middle; border-right: 0px solid #000000; border-bottom: 1px solid #000000;border-left: 0px solid #000000;">
+			$!plannerHeader.shower_sample</td>
+			<td style="padding: 5px 3px 5px 3px;  text-align: center; vertical-align: middle; border-right: 0px solid #000000; border-bottom: 1px solid #000000;border-left: 0px solid #000000;">
+			$!plannerHeader.dust_duration</td>
+			<td style="padding: 5px 3px 5px 3px;  text-align: center; vertical-align: middle; border-right: 0px solid #000000; border-bottom: 1px solid #000000;border-left: 0px solid #000000;">
+			$!plannerHeader.dust_sample</td>
+		</tr>
+	#else	
+		<tr style="height: 22px; background-color: #DAF7A6;">
+			<td style="padding: 5px 3px 5px 3px; text-align: center; vertical-align: middle; border-right: 0px solid #000000; border-bottom: 1px solid #000000; border-left: 0px solid #000000;">
+			$!plannerHeader.S_No</td>
+			<td style="padding: 5px 3px 5px 3px; text-align: center; vertical-align: middle;  border-right: 1px solid #000000;  border-bottom: 1px solid #000000;border-left: 0px solid #000000;">
+			$!plannerHeader.part_code</td>
+			<td style="padding: 5px 3px 5px 3px;  text-align: center; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000;border-left: 0px solid #000000;">
+			$!plannerHeader.part_name</td>
+			<td style="padding: 5px 3px 5px 3px;  text-align: center; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000;border-left: 0px solid #000000;">
+			$!plannerHeader.vehicle_model</td>
+			<td style="padding: 5px 3px 5px 3px;  text-align: center; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000;border-left: 0px solid #000000;">
+			$!plannerHeader.vendor</td>
+			<td style="padding: 5px 3px 5px 3px;  text-align: center; vertical-align: middle;  border-right: 1px solid #000000; border-bottom: 1px solid #000000;border-left: 0px solid #000000;">
+			$!plannerHeader.vendor_code</td>
+			<td style="padding: 5px 3px 5px 3px;  text-align: center; vertical-align: middle; background-color: #ffffff; border-right: 1px solid #000000; border-bottom: 1px solid #000000;border-left: 0px solid #000000;">
+			$!plannerHeader.part_manufacturing_location</td>
+			<td style="padding: 5px 3px 5px 3px;  text-align: center; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000;border-left: 0px solid #000000;">
+			$!plannerHeader.plant</td>  
+			<td style="padding: 5px 3px 5px 3px;  text-align: center; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000;border-left: 0px solid #000000;">
+			$!plannerHeader.no_of_samples</td>
+			<td style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 1px solid #000000; text-align: center;border-left: 0px solid #000000;">
+			$!plannerHeader.repeated_operation_duration</td>
+			<td style="padding: 5px 3px 5px 3px;  text-align: center; vertical-align: middle; border-right: 0px solid #000000; border-bottom: 1px solid #000000;border-left: 0px solid #000000;">
+			$!plannerHeader.ro_sample</td>
+			<td style="padding: 5px 3px 5px 3px;  text-align: center; vertical-align: middle; border-right: 0px solid #000000; border-bottom: 1px solid #000000;border-left: 0px solid #000000;">
+			$!plannerHeader.shower_duration</td>
+			<td style="padding: 5px 3px 5px 3px;  text-align: center; vertical-align: middle; border-right: 0px solid #000000; border-bottom: 1px solid #000000;border-left: 0px solid #000000;">
+			$!plannerHeader.shower_sample</td>
+			<td style="padding: 5px 3px 5px 3px;  text-align: center; vertical-align: middle; border-right: 0px solid #000000; border-bottom: 1px solid #000000;border-left: 0px solid #000000;">
+			$!plannerHeader.dust_duration</td>
+			<td style="padding: 5px 3px 5px 3px;  text-align: center; vertical-align: middle; border-right: 0px solid #000000; border-bottom: 1px solid #000000;border-left: 0px solid #000000;">
+			$!plannerHeader.dust_sample</td>
+		</tr>
+	#end
+	#end
+	
+	<tr>
+			<td colspan="15" style="border:0px;" border="0">
+			
+
+	<table border="1" cellpadding="0" cellspacing="0" style="width: 100%; table-layout: fixed; font-size: 8px; border-collapse: collapse; border: 0px solid #000; text-align: center;">
+	<tr>
+		<td colspan="5" rowspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 0px solid #000000; border-bottom: 1px solid #000000; font-size: 10px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; border-left: 0px solid #000000;">
+		EQUIPMENT ENGAGEMENT</td>
+	</tr>
+	<tr>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 0px solid #000000; border-bottom: 1px solid #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;border-left: 0px solid #000000; color:#0000FF;">
+		EQUIPMENT </td>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 0px solid #000000; border-bottom: 1px solid #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;border-left: 0px solid #000000; color:#0000FF;">
+		ENGAGEMENT TIME PER DAY (In Hours)</td>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 0px solid #000000; border-bottom: 1px solid #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;border-left: 0px solid #000000; color:#0000FF;">
+		TOTAL AVAILABLE TESTING DAYS IN THIS MONTH MONTH</td>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 0px solid #000000; border-bottom: 1px solid #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;border-left: 0px solid #000000; color:#0000FF;">
+		HOURS OF ENGAGEMENT IN THIS MONTH MONTH</td>
+		<td colspan="1" style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 0px solid #000000; border-bottom: 1px solid #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;border-left: 0px solid #000000; color:#0000FF;">
+		EQUIPMENT ENGAGEMENT AS PER ABOVE PLAN</td>
+	</tr>
+	#foreach($!plannerEquipment in $object.plannerEquipment)
+	<tr>
+		<td style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 0px solid #000000; border-bottom: 1px solid #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;border-left: 0px solid #000000;" ><p>$!plannerEquipment.equipment</p></td>
+		<td style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 0px solid #000000; border-bottom: 1px solid #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;border-left: 0px solid #000000;"><p>$!plannerEquipment.running_hours_per_day</p></td>
+		<td style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 0px solid #000000; border-bottom: 1px solid #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;border-left: 0px solid #000000;"><p>$!plannerEquipment.total_testing_day</p></td>
+		<td style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 0px solid #000000; border-bottom: 1px solid #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;border-left: 0px solid #000000;"><p>$!plannerEquipment.total_testing_hours</p></td>
+		<td style="padding: 5px 3px 5px 3px; vertical-align: middle; border-right: 0px solid #000000; border-bottom: 1px solid #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center;border-left: 0px solid #000000;"><p>$!plannerEquipment.equipment_engagement_plan</p></td>
+	</tr>
+	#end
+	
+	<tr>
+		<td colspan="5" style="border:1px;" ><p>&nbsp;</p></td>
+					
+	</tr>
+	<tr>
+		<td colspan="5" style="border:1px;" ><p>&nbsp;</p></td>
+					
+	</tr>
+	
+	
+	<tr>
+		<td colspan="5" style="border:0px;" border="0" >
+			
+			<table border="1" cellpadding="0" cellspacing="0" dir="ltr" style="width: 100%; table-layout: fixed; font-size: 8px; border-collapse: collapse; border: 0px solid #000; border-top: 1px solid #000; ">
+	<tr>
+		<td colspan="2" style="padding: 5px 3px 5px 15px; vertical-align: middle; border-right: 0px solid #000000; border-bottom: 1px solid #000000; font-size: 10px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left;border-left: 0px solid #000000;">ASSUMPTIONS</td>
+	</tr>
+	<tr >
+		<td colspan="2" style="padding: 5px 3px 5px 15px; vertical-align: middle; border-right: 0px solid #000000; border-bottom: 1px solid #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left;border-left: 0px solid #000000;">1. Planner is made based upon 100% Utilization 
+		of testing Equipments</td>
+	</tr>
+	<tr >
+		<td colspan="2" style="padding: 5px 3px 5px 15px; vertical-align: middle; border-right: 0px solid #000000; border-bottom: 1px solid #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: left;border-left: 0px solid #000000; ">2. Equipment Running time per day is based 
+		upon the total effective time available excluding Setup/ Data logging time 
+		and Before / After test parameters checking time.</td>
+	</tr>
+	
+	
+	<tr >
+		<td style="padding: 5px 3px 5px 15px; vertical-align: middle; border-right: 1px solid #000000; border-bottom: 0px solid #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; border-left: 0px solid #000000;">
+			<p>
+				#foreach($plannerSign in $object.plannerSignature)
+					#if ($plannerSign.image_path && $plannerSign.category=="prepared")
+							
+						<img src="$!plannerSign.image_path" height="50" width="50" />&nbsp;&nbsp;
+					#end
+					
+				#end
+				 
+			</P>
+			<p>Prepared By</P>
+			
+		</td>
+		<td style="padding: 5px 3px 5px 15px; vertical-align: middle; border-right: 0px solid #000000; border-bottom: 0px solid #000000; font-size: 8px; font-weight: bold; color: #000000; wrap-strategy: 4; white-space: normal; word-wrap: break-word; vertical-align: middle; text-align: center; border-left: 0px solid #000000;">
+			<p>
+				#foreach($!plannerSign in $object.plannerSignature)
+					#if ($plannerSign.image_path && $plannerSign.category=="Approved")
+							
+						<img src="$!plannerSign.image_path" height="50" width="50" />&nbsp;&nbsp;
+					#end
+					
+				#end
+			</P>
+			<p>Approved By</P>
+		</td>
+	</tr>
+
+	
+	
+</table>
+
+			
+		</td>
+		
+	</tr>
+	
+	
+</table>
+			
+
+			
+			</td>
+	
+	</tr>
+	
+	
+	
+</table>
+ 
+ 
+
+</body>
+
+</html>

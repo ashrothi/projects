@@ -1,0 +1,59 @@
+#define auth api url
+gmr.auth.api.url=http://52.163.229.44:7878/XFusionPlatform_v2/oauth/token
+
+gmr.get.devices.api.url=http://52.163.229.44:7878/XFusionPlatform_v2/device/get/metadata/status/by/type
+
+gmr.get.data.api.url=http://52.163.229.44:7878/XFusionPlatform_v2/performance/service/multipledevices/get/many
+
+gmr.get.alerts.api.url=http://52.163.229.44:7878/XFusionPlatform_v2/performance/performanceevent/device/get/all
+
+gmr.get.trips.api.url=http://52.163.229.44:7878/XFusionPlatform_v2/performanceservice/device/get/many/without/data
+
+gmr.get.device.alias.api.url=http://52.163.229.44:7878/XFusionPlatform_v2/device/get/metadata
+
+gmr.auth.user.name=gmr@teramatrix.in
+
+gmr.auth.password=Admin@123
+
+gmr.auth.application.id=9a959887-5946-11e6-9bb0-fe984cc15272
+
+gmr.user.key=a384b944-dd61-11e6-9724-000d3aa01ce9
+
+gmr.device.type=0
+
+gmr.host.status=0
+
+gmr.limit=100
+gmr.offset=0
+gmr.in.condition=
+
+gmr.access.key=d3cd4e3f-5946-11e6-9bb0-fe984cc15272
+
+gmr.service.names=gmr_distance_travelled,gmr_time_travelled
+
+gmr.data.sources=gmr_distance_travelled,gmr_time_travelled
+
+gmr.trips.service.names=score,score,score,score
+
+gmr.trips.data.sources=start_time,end_time,total_time,total_distance
+
+gmr.db.connection.string=jdbc:mysql://192.168.1.122:3306/gmr_development?user=developer&password=admin@123
+#gmr.db.connection.string=jdbc:mysql://52.163.56.42:3306/gmr_live?user=developer&password=admin@123
+
+gmr.db.driver.name=com.mysql.jdbc.Driver
+
+gmr.db.insert.data.query=INSERT INTO vehicle_report_raw_data(severity, device_id, service_name, check_timestamp, service_servicedatasource_unit, service_servicedatasource_max_value, service_servicedatasource_min_value, data_source, current_value, service_servicedatasource_alias, device_name, service_service_alias, sys_timestamp, device_alias, organization_alias, organization_path) values
+
+gmr.db.insert.alerts.query=INSERT INTO vehicle_alerts_raw_data(severity, device_id, service_name, check_timestamp, service_servicedatasource_unit, service_servicedatasource_max_value, severity_colour, service_servicedatasource_min_value, data_source,current_value, service_servicedatasource_alias, rule_id, device_name, service_service_alias, sys_timestamp, device_alias, organization_alias, organization_path) values
+
+gmr.db.insert.trips.query=INSERT INTO vehicle_trip_raw_data(severity, min_value, device_id, service_name, check_timestamp, avg_value, id, sys_timestamp, data_source, current_value, max_value, device_alias, organization_alias, organization_path) values
+
+gmr.db.procedure.name=gmr_distribute_reports_data()
+
+gmr.db.truncate.procedure.name=gmr_truncate_vehicle_report_raw_data(),gmr_truncate_alert_raw_data(),gmr_truncate_vehicle_trip_raw_data()
+
+gmr.db.registration.table=registration
+
+#Defined logger status
+#if 1 then logger start else logger closed
+gmr.logger.status = 1

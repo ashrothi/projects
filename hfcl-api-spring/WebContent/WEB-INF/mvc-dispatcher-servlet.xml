@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd
+  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+  http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+	<context:component-scan base-package="com.springiot.*" />
+
+	<mvc:annotation-driven />
+
+	<bean id="loggingAspect" class="com.springiot.logging.AOPLogging" />
+	<aop:aspectj-autoproxy />
+
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	<!-- <mvc:resources mapping="/resources/**" location="/resources/" cache-period="10000" 
+		/> -->
+
+	<bean id="swagger2Config"
+		class="springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration" />
+
+
+	<!-- <context:property-placeholder location="classpath:/swagger.properties" /> -->
+
+	<mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/" />
+	<mvc:resources mapping="/webjars/**"
+		location="classpath:/META-INF/resources/webjars/" />
+		
+		
+		
+		<!-- applicationContext.xml -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="embedded-database" />
+		<property name="packagesToScan" value="com.springiot.modal" />
+		<property name="hibernateProperties">
+			<value>
+				hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
+				hibernate.connection.useUnicode=true
+				hibernate.connection.characterEncoding=UTF-8
+				hibernate.connection.charSet=UTF-8
+				hibernate.ejb.naming_strategy=org.hibernate.cfg.ImprovedNamingStrategy
+				hibernate.show_sql=true
+
+				hibernate.c3p0.min_size=20
+				hibernate.c3p0.max_size=40
+				hibernate.c3p0.timeout=300
+				hibernate.c3p0.max_statements=50
+				hibernate.c3p0.idle_test_period=3000
+				<!-- hibernate.connection.zeroDateTimeBehavior=convertToNull -->
+			</value>
+		</property>
+	</bean>
+
+	<!-- applicationContext.xml -->
+	<bean id="sessionFactoryConfig"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="embedded-database" />
+		<property name="packagesToScan" value="com.springiot.modal" />
+		<property name="hibernateProperties">
+			<value>
+				hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
+				hibernate.connection.useUnicode=true
+				hibernate.connection.characterEncoding=UTF-8
+				hibernate.connection.charSet=UTF-8
+				hibernate.ejb.naming_strategy=org.hibernate.cfg.ImprovedNamingStrategy
+				hibernate.show_sql=true
+
+				hibernate.c3p0.min_size=20
+				hibernate.c3p0.max_size=40
+				hibernate.c3p0.timeout=300
+				hibernate.c3p0.max_statements=50
+				hibernate.c3p0.idle_test_period=3000
+				<!-- hibernate.connection.zeroDateTimeBehavior=convertToNull -->
+			</value>
+		</property>
+	</bean>
+
+	<!-- applicationContext.xml -->
+	<bean id="sessionFactoryMetaData"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="embedded-database" />
+		<property name="packagesToScan" value="com.springiot.modal" />
+		<property name="hibernateProperties">
+			<value>
+				hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
+				hibernate.connection.useUnicode=true
+				hibernate.connection.characterEncoding=UTF-8
+				hibernate.connection.charSet=UTF-8
+				hibernate.ejb.naming_strategy=org.hibernate.cfg.ImprovedNamingStrategy
+				hibernate.show_sql=true
+
+				hibernate.c3p0.min_size=20
+				hibernate.c3p0.max_size=40
+				hibernate.c3p0.timeout=300
+				hibernate.c3p0.max_statements=50
+				hibernate.c3p0.idle_test_period=3000
+				<!-- hibernate.connection.zeroDateTimeBehavior=convertToNull -->
+			</value>
+		</property>
+	</bean>
+
+	<bean class="org.springframework.orm.hibernate4.HibernateTransactionManager"
+		id="transactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<bean class="org.springframework.orm.hibernate4.HibernateTransactionManager"
+		id="transactionManagerconfig">
+		<property name="sessionFactory" ref="sessionFactoryConfig"></property>
+	</bean>
+
+	<bean class="org.springframework.orm.hibernate4.HibernateTransactionManager"
+		id="transactionManagermetadata">
+		<property name="sessionFactory" ref="sessionFactoryMetaData"></property>
+	</bean>
+
+		
+		
+		
+		
+<bean class="com.springiot.constant.ProcessParameter" id="processParameter">
+		<property name="maps">
+			<map>
+
+			</map>
+		</property>
+	</bean>
+<bean class="com.springiot.constant.URLParameter" id="urlParameter">
+		<property name="authURL"
+			value="http://127.0.0.1:7878/OAuthEngine/oauth/token" />
+		<property name="xfusionOAuthURL"
+			value="http://127.0.0.1:7878/XFusionPlatform/oauth/token" />
+		<property name="authResetPasswordURL"
+			value="http://127.0.0.1:7878/OAuthEngine/passwordreset" />
+		<property name="authExpireURL"
+			value="http://127.0.0.1:7878/OAuthEngine/oauth/token/expire" />
+		<property name="authForgotPasswordURL"
+			value="http://127.0.0.1:7878/OAuthEngine/forgotpassword" />
+		<property name="authUpdateURL"
+			value="http://127.0.0.1:7878/OAuthEngine/passwordupdate" />
+		<property name="xfusionURL"
+			value="http://127.0.0.1:7878/XFusionPlatform/xfusionusers" />
+		<property name="xfusionServiceStatusDeviceGetManyWithoutData"
+			value="http://127.0.0.1:7878/XFusionPlatform/servicestatus/device/get/many/without/data" />
+		<property name="xfusionInventoryStatusDeviceGetManyWithoutData"
+			value="http://127.0.0.1:7878/XFusionPlatform/inventorystatus/device/get/many/without/data" />
+		<property name="xfusionPlatformDeviceGetMetaData"
+			value="http://127.0.0.1:7878/XFusionPlatform/device/get/metadata" />
+		<property name="xfusionPlatformDeviceExecuteCommand"
+			value="http://127.0.0.1:7878/XFusionPlatform/execute/command/tr069" />
+		<property name="xfusionPlatformThirdPartyIntegrationToken"
+			value="http://127.0.0.1:7878/XFusionPlatform/thirdparty/integration/token" />
+		<property name="xfusionPlatformDeviceModelGetAllByDeviceTechnology"
+			value="http://127.0.0.1:7878/XFusionPlatform/device/model/get/all/by/device/technology" />
+		<property name="xfusionPlatformUsersGetAllByUserOrganization"
+			value="http://127.0.0.1:7878/XFusionPlatform/users/get/all/by/user/organization" />
+		<property name="xfusionPlatformDeviceRegister"
+			value="http://127.0.0.1:7878/XFusionPlatform/deviceregister" />
+		<property name="xfusionPlatformPerformanceServiceStatusDevicesGetMany"
+			value="http://127.0.0.1:7878/XFusionPlatform/performane/servicestatus/devices/get/many" />
+		<property name="xfusionPlatformPerformanceOrganizationGetAll"
+			value="http://127.0.0.1:7878/XFusionPlatform/organization/get/all" />
+		<property name="xfusionPerformanceServiceMultipleDevicesStatusGetMany"
+			value="http://127.0.0.1:7878/XFusionPlatform/performance/status/multipledevices/get/many" />
+		<property name="xfusionPerformanceServiceMultipleDevicesGetMany"
+			value="http://127.0.0.1:7878/XFusionPlatform/performance/service/multipledevices/get/many" />
+		<property name="xfusionOrganizationCountryGet"
+			value="http://127.0.0.1:7878/XFusionPlatform/country/get/country" />
+		<property name="xfusionOrganizationGetAll"
+			value="http://127.0.0.1:7878/XFusionPlatform/organization/get/all" />
+		<property name="xfusionOrganizationStateGet"
+			value="http://127.0.0.1:7878/XFusionPlatform/state/get/state" />
+		<property name="xfusionOrganizationCityGet"
+			value="http://127.0.0.1:7878/XFusionPlatform/city/get/city" />
+		<property name="xfusionOrganizationInsert"
+			value="http://127.0.0.1:7878/XFusionPlatform/organization/insert" />
+		<property name="xfusionOrganizationUpdate"
+			value="http://127.0.0.1:7878/XFusionPlatform/organization/update" />
+		<property name="xfusionOrganizationDelete"
+			value="http://127.0.0.1:7878/XFusionPlatform/organization/delete" />
+		<property name="userCreate"
+			value="http://127.0.0.1:7878/OAuthEngine/user/profile/create" />
+		<property name="userUpdate"
+			value="http://127.0.0.1:7878/OAuthEngine/user/profile/update" />
+		<property name="userDelete"
+			value="http://127.0.0.1:7878/OAuthEngine/user/delete" />
+		<property name="userGetAll"
+			value="http://127.0.0.1:7878/OAuthEngine/users/get/application" />
+		<property name="userRoleGetAll"
+			value="http://127.0.0.1:7878/OAuthEngine/roles/get/all" />
+		<property name="attributeGetAllByUser"
+			value="http://127.0.0.1:7878/OAuthEngine/xfusion/attributes/get/by/role" />
+		<property name="xfusionOrganizationUserMapping"
+			value="http://127.0.0.1:7878/XFusionPlatform/user/organization/insert" />
+		<property name="oauthRolesGetALlUserApplication"
+			value="http://127.0.0.1:7878/OAuthEngine/roles/get/all/user/application" />
+		<property name="oauthUserGetAttribute"
+			value="http://127.0.0.1:7878/OAuthEngine/xfusion/user/get/attribute" />
+		<property name="oauthUserUpdateLockStatus"
+			value="http://127.0.0.1:7878/OAuthEngine/user/update/lock/status" />
+		<property name="oauthApplictionUserRemove"
+			value="http://127.0.0.1:7878/OAuthEngine/application/user/remove" />
+		<property name="oauthUsersGetAllExceptApplication"
+			value="http://127.0.0.1:7878/OAuthEngine/users/get/all/except/application" />
+		<property name="oauthUserUpdateAttribute"
+			value="http://127.0.0.1:7878/OAuthEngine/xfusion/user/update/attribute" />
+		<property name="oauthApplicationUserAdd"
+			value="http://127.0.0.1:7878/OAuthEngine/application/user/add" />
+		<property name="oauthUserInactive"
+			value="http://127.0.0.1:7878/OAuthEngine/user/inactive" />
+		<property name="oauthCountryGet"
+			value="http://127.0.0.1:7878/OAuthEngine/country/get" />
+		<property name="oauthStateGet"
+			value="http://127.0.0.1:7878/OAuthEngine/state/get/by/country/id" />
+		<property name="oauthCityGet"
+			value="http://127.0.0.1:7878/OAuthEngine/city/get/by/state/id" />
+		<property name="deviceGetMetadataStatusBytType"
+			value="http://127.0.0.1:7878/XFusionPlatform/device/get/metadata/status/by/type" />
+
+		<property name="performanceService"
+			value="http://127.0.0.1:7878/XFusionPlatform/performance/service/multipledevices/get/many" />
+	</bean>
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+	</bean>
+
+</beans>

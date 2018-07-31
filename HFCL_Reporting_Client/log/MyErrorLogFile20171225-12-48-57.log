@@ -1,0 +1,51 @@
+java.lang.NullPointerException
+	at com.teramatrix.processData.GetData.devicesByUser(GetData.java:76)
+	at com.teramatrix.main.FftEscalationApp.main(FftEscalationApp.java:119)
+java.lang.NullPointerException
+	at com.teramatrix.processData.GetData.insertKPI(GetData.java:157)
+	at com.teramatrix.processData.VoiceData.CSErlangs(VoiceData.java:78)
+	at com.teramatrix.processData.VoiceData.initial(VoiceData.java:27)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:13)
+	at com.teramatrix.main.FftEscalationApp.main(FftEscalationApp.java:124)
+java.lang.NullPointerException
+	at com.teramatrix.processData.GetData.insertKPI(GetData.java:157)
+	at com.teramatrix.processData.VoiceData.SDCCHDropRate(VoiceData.java:129)
+	at com.teramatrix.processData.VoiceData.initial(VoiceData.java:28)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:13)
+	at com.teramatrix.main.FftEscalationApp.main(FftEscalationApp.java:124)
+java.lang.NullPointerException
+	at com.teramatrix.processData.GetData.insertKPI(GetData.java:157)
+	at com.teramatrix.processData.VoiceData.CallSetupSuccessRate(VoiceData.java:178)
+	at com.teramatrix.processData.VoiceData.initial(VoiceData.java:29)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:13)
+	at com.teramatrix.main.FftEscalationApp.main(FftEscalationApp.java:124)
+java.lang.NullPointerException
+	at com.teramatrix.processData.GetData.insertKPI(GetData.java:157)
+	at com.teramatrix.processData.VoiceData.NumberOfRadioConnectionFailuresTCH_H(VoiceData.java:225)
+	at com.teramatrix.processData.VoiceData.initial(VoiceData.java:30)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:13)
+	at com.teramatrix.main.FftEscalationApp.main(FftEscalationApp.java:124)
+java.lang.NullPointerException
+	at com.teramatrix.processData.GetData.insertKPI(GetData.java:157)
+	at com.teramatrix.processData.VoiceData.NumberOfRadioConnectionFailuresTCH_F(VoiceData.java:273)
+	at com.teramatrix.processData.VoiceData.initial(VoiceData.java:31)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:13)
+	at com.teramatrix.main.FftEscalationApp.main(FftEscalationApp.java:124)
+java.lang.NullPointerException
+	at com.teramatrix.processData.GetData.insertKPI(GetData.java:157)
+	at com.teramatrix.processData.VoiceCapacity.SDCCHBlockingRate(VoiceCapacity.java:79)
+	at com.teramatrix.processData.VoiceCapacity.initial(VoiceCapacity.java:28)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:21)
+	at com.teramatrix.main.FftEscalationApp.main(FftEscalationApp.java:126)
+java.lang.NullPointerException
+	at com.teramatrix.processData.GetData.insertKPI(GetData.java:157)
+	at com.teramatrix.processData.VoiceCapacity.TCHBlockingRate(VoiceCapacity.java:131)
+	at com.teramatrix.processData.VoiceCapacity.initial(VoiceCapacity.java:29)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:21)
+	at com.teramatrix.main.FftEscalationApp.main(FftEscalationApp.java:126)
+java.lang.NullPointerException
+	at com.teramatrix.processData.GetData.insertKPI(GetData.java:157)
+	at com.teramatrix.processData.VoiceCapacity.ImmediateAssignmentProcedureSuccessRate(VoiceCapacity.java:185)
+	at com.teramatrix.processData.VoiceCapacity.initial(VoiceCapacity.java:30)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:21)
+	at com.teramatrix.main.FftEscalationApp.main(FftEscalationApp.java:126)

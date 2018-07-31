@@ -1,0 +1,369 @@
+INFO - Inside Initialize method
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/get/devices/by/devicetype
+INFO - Para:   device_type=4&host_status=0
+INFO - Response Code is:   200
+INFO - Response : {"description":"Process Success","object":[{"device_devicetype_name":"BTS","city_alias":"Solan","device_devicemodel_icon":"/home/ttpl/Tomcat/apache-tomcat-8.0.36/webapps/tmpFiles/router-icon.png","device_device_imei":"0","device_device_lattitude":"30.9249052","device_device_elevation":"","device_devicetechnology_name":"GSM","state_name":"Haryana","state_id":1.0,"device_device_is_deleted":false,"organization_organization_alias":"HFCL","device_device_alias":"BTS 801","device_device_created_by":"1","device_devicevendor_alias":"Vanu","device_device_longitude":"77.0958173","device_device_modified_by":"db4c4236-30c3-11e7-be7d-000c29e31674","device_devicevendor_name":"Vanu","data_source":"OFF","device_devicemodel_alias":"CRAN 2.0","organization_organization_path":"/teramatrix","device_device_iccid":null,"device_device_software_version":"","device_device_last_modified_date":1.51383994E12,"device_devicetype_alias":"BTS","device_devicevendor_id":3.0,"country_id":1.0,"city_id":1.0,"device_devicetechnology_id":3.0,"device_device_is_configurable":0.0,"device_device_name":"CRAN2_801","device_device_is_active":true,"device_device_ipaddress":"192.168.10.22","city_name":"gurgao","state_alias":"Himachal Pradesh","country_name":"india","device_devicemodel_gis_icon":"/home/ttpl/Tomcat/apache-tomcat-8.0.36/webapps/tmpFiles/router-icon.png","status_timestamp":1.514186882E12,"device_device_description":"","country_alias":"India","device_devicetype_id":4.0,"data_source_alias":"up","device_device_creation_date":null,"check_timestamp":1.513938916E12,"device_devicemodel_name":"VANU-BTS","device_device_parent_id":0.0,"device_device_hardware_version":"","device_devicemodel_id":4.0,"device_device_device_id":103.0,"device_device_mac_address":"","device_devicetechnology_alias":"GSM"},{"device_devicetype_name":"BTS","city_alias":"Solan","device_devicemodel_icon":"/home/ttpl/Tomcat/apache-tomcat-8.0.36/webapps/tmpFiles/router-icon.png","device_device_imei":"0","device_device_lattitude":"30.9249052","device_device_elevation":"","device_devicetechnology_name":"GSM","state_name":"Haryana","state_id":1.0,"device_device_is_deleted":false,"organization_organization_alias":"HFCL","device_device_alias":"BTS 802","device_device_created_by":"1","device_devicevendor_alias":"Vanu","device_device_longitude":"77.0958173","device_device_modified_by":"db4c4236-30c3-11e7-be7d-000c29e31674","device_devicevendor_name":"Vanu","data_source":"OFF","device_devicemodel_alias":"CRAN 2.0","organization_organization_path":"/teramatrix","device_device_iccid":null,"device_device_software_version":"","device_device_last_modified_date":1.513839926E12,"device_devicetype_alias":"BTS","device_devicevendor_id":3.0,"country_id":1.0,"city_id":1.0,"device_devicetechnology_id":3.0,"device_device_is_configurable":0.0,"device_device_name":"CRAN2_802","device_device_is_active":true,"device_device_ipaddress":"192.168.10.20","city_name":"gurgao","state_alias":"Himachal Pradesh","country_name":"india","device_devicemodel_gis_icon":"/home/ttpl/Tomcat/apache-tomcat-8.0.36/webapps/tmpFiles/router-icon.png","status_timestamp":1.514186887E12,"device_device_description":"","country_alias":"India","device_devicetype_id":4.0,"data_source_alias":"up","device_device_creation_date":null,"check_timestamp":1.513938925E12,"device_devicemodel_name":"VANU-BTS","device_device_parent_id":0.0,"device_device_hardware_version":"","device_devicemodel_id":4.0,"device_device_device_id":104.0,"device_device_mac_address":"","device_devicetechnology_alias":"GSM"},{"device_devicetype_name":"BTS","city_alias":"Solan","device_devicemodel_icon":"/home/ttpl/Tomcat/apache-tomcat-8.0.36/webapps/tmpFiles/router-icon.png","device_device_imei":"0","device_device_lattitude":"30.9249052","device_device_elevation":"","device_devicetechnology_name":"GSM","state_name":"Haryana","state_id":1.0,"device_device_is_deleted":false,"organization_organization_alias":"HFCL","device_device_alias":"BTS 803","device_device_created_by":"1","device_devicevendor_alias":"Vanu","device_device_longitude":"77.0958173","device_device_modified_by":"db4c4236-30c3-11e7-be7d-000c29e31674","device_devicevendor_name":"Vanu","data_source":"OFF","device_devicemodel_alias":"CRAN 2.0","organization_organization_path":"/teramatrix","device_device_iccid":null,"device_device_software_version":"","device_device_last_modified_date":1.513839909E12,"device_devicetype_alias":"BTS","device_devicevendor_id":3.0,"country_id":1.0,"city_id":1.0,"device_devicetechnology_id":3.0,"device_device_is_configurable":0.0,"device_device_name":"CRAN2_803","device_device_is_active":true,"device_device_ipaddress":"192.168.10.21","city_name":"gurgao","state_alias":"Himachal Pradesh","country_name":"india","device_devicemodel_gis_icon":"/home/ttpl/Tomcat/apache-tomcat-8.0.36/webapps/tmpFiles/router-icon.png","status_timestamp":1.514186892E12,"device_device_description":"","country_alias":"India","device_devicetype_id":4.0,"data_source_alias":"up","device_device_creation_date":null,"check_timestamp":1.513944009E12,"device_devicemodel_name":"VANU-BTS","device_device_parent_id":0.0,"device_device_hardware_version":"","device_devicemodel_id":4.0,"device_device_device_id":105.0,"device_device_mac_address":"","device_devicetechnology_alias":"GSM"}],"list":null,"valid":true}
+INFO - Number of Devices  :  3
+INFO - Complete details : [103.0, 104.0, 105.0]
+INFO - Device List: [103.0, 104.0, 105.0]
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/call/attempts/per/trx
+INFO - Para:   end_date=1514140199999&device_id=103.0&from_date=1514053800000&service_name=geranBscTrxNumMeasurementReports,geranBscTrxNumMeasurementReports&data_source=lm,bm
+INFO - Response Code is:   200
+INFO - Response : {"description":"Process Success","object":{"data":2.89328876E8},"list":null,"valid":true}
+INFO -  Response : {"data":2.89328876E8}
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@18eed359
+INFO - Query to be called :-insert into hfcl_kpi(device_id,tag,kpi,current_value,systime,device_name) value('103.0','Voice','CSErlangs','133.94855370370368','1514053800','BTS 801');
+INFO - Inserted: 
+INFO - KPI value : 133.94855370370368
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/call/attempts/per/trx
+INFO - Para:   end_date=1514140199999&device_id=103.0&from_date=1514053800000&service_name=geranBscBtsChannelBlockingCount&data_source=bm
+INFO - Response Code is:   200
+INFO - Response : {"description":"Process Success","object":{"data":288.0},"list":null,"valid":true}
+INFO -  Response : {"data":288}
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@335eadca
+INFO - Query to be called :-insert into hfcl_kpi(device_id,tag,kpi,current_value,systime,device_name) value('103.0','Voice','SDCCH Drop Rate','288','1514053800','BTS 801');
+INFO - Inserted: 
+INFO - KPI value : 288
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/call/attempts/per/trx
+INFO - Para:   end_date=1514140199999&device_id=103.0&from_date=1514053800000&service_name=geranBscTrxSubsequentAssignmentSuccessCount,geranBscTrxSubsequentAssignmentSuccessCount,geranBscTrxSubsequentAssignmentSuccessCount,geranBscTrxSubsequentAssignmentSuccessCount&data_source=sdcch_lm,sdcch4_lm,sdcch_bm,sdcch4_bm
+INFO - Response Code is:   200
+INFO - Response : {"description":"Process Success","object":{"data":1246640.0},"list":null,"valid":true}
+INFO -  Response : {"data":1246640}
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@6ddf90b0
+INFO - Query to be called :-insert into hfcl_kpi(device_id,tag,kpi,current_value,systime,device_name) value('103.0','Voice','Call Setup Success Rate','1246640','1514053800','BTS 801');
+INFO - Inserted: 
+INFO - KPI value : 1246640
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/call/attempts/per/trx
+INFO - Para:   end_date=1514140199999&device_id=103.0&from_date=1514053800000&service_name=geranBscTrxNumRadioConnectionFailures&data_source=lm
+INFO - Response Code is:   200
+INFO - Response : {"description":"Process Success","object":{"data":9455.0},"list":null,"valid":true}
+INFO -  Response : {"data":9455}
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@4b4523f8
+INFO - Query to be called :-insert into hfcl_kpi(device_id,tag,kpi,current_value,systime,device_name) value('103.0','Voice','Number Of Radio Connection Failures TCH_H','9455','1514053800','BTS 801');
+INFO - Inserted: 
+INFO - KPI value : 9455
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/call/attempts/per/trx
+INFO - Para:   end_date=1514140199999&device_id=103.0&from_date=1514053800000&service_name=geranBscTrxNumRadioConnectionFailures&data_source=bm
+INFO - Response Code is:   200
+INFO - Response : {"description":"Process Success","object":{"data":5856.0},"list":null,"valid":true}
+INFO -  Response : {"data":5856}
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@7d907bac
+INFO - Query to be called :-insert into hfcl_kpi(device_id,tag,kpi,current_value,systime,device_name) value('103.0','Voice','Number Of Radio Connection Failures TCH_F','5856','1514053800','BTS 801');
+INFO - Inserted: 
+INFO - KPI value : 5856
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/downlink/data/throughput
+INFO - Para:   end_date=1514140199999&device_id=103.0&from_date=1514053800000
+INFO - Response Code is:   200
+INFO - Response : {"description":"Process Success","object":{"data":22.136871097348685},"list":null,"valid":true}
+INFO -  Response : {"data":22.136871097348685}
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@2b9627bc
+INFO - Query to be called :-insert into hfcl_kpi(device_id,tag,kpi,current_value,systime,device_name) value('103.0','Performance','Downlink Data Throughput In Kbps','22.136871097348685','1514053800','BTS 801');
+INFO - Inserted: 
+INFO - KPI value : 22.136871097348685
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/uplink/data/throughput
+INFO - Para:   end_date=1514140199999&device_id=103.0&from_date=1514053800000
+INFO - Response Code is:   200
+INFO - Response : {"description":"Process Success","object":{"data":6.079243381152798},"list":null,"valid":true}
+INFO -  Response : {"data":6.079243381152798}
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@7b49cea0
+INFO - Query to be called :-insert into hfcl_kpi(device_id,tag,kpi,current_value,systime,device_name) value('103.0','Performance','Uplink Data Throughput In Kbps','6.079243381152798','1514053800','BTS 801');
+INFO - Inserted: 
+INFO - KPI value : 6.079243381152798
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/sdcch/drop/rate/per/bts
+INFO - Para:   data_source_numerator=geranBscBtsImmAssignmentRejectCount_answerPaging,geranBscBtsImmAssignmentRejectCount_callOriginate,geranBscBtsImmAssignmentRejectCount_emergency,geranBscBtsImmAssignmentRejectCount_locUpd&end_date=1514140199999&service_name_numerator=geranBscBtsImmAssignmentRejectCount_answerPaging,geranBscBtsImmAssignmentRejectCount_callOriginate,geranBscBtsImmAssignmentRejectCount_emergency,geranBscBtsImmAssignmentRejectCount_locUpd&device_id=103.0&data_source_denominator=geranBscBtsImmAssignmentCommandCount_answerPaging,geranBscBtsImmAssignmentCommandCount_callOriginate,geranBscBtsImmAssignmentCommandCount_emergency,geranBscBtsImmAssignmentCommandCount_locUpd&from_date=1514053800000&service_name_denominator=geranBscBtsImmAssignmentCommandCount_answerPaging,geranBscBtsImmAssignmentCommandCount_callOriginate,geranBscBtsImmAssignmentCommandCount_emergency,geranBscBtsImmAssignmentCommandCount_locUpd
+INFO - Response Code is:   200
+INFO - Response : {"description":"Process Success","object":{"data":0.008185440674424171},"list":null,"valid":true}
+INFO -  Response : {"data":0.008185440674424171}
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@5bc79255
+INFO - Query to be called :-insert into hfcl_kpi(device_id,tag,kpi,current_value,systime,device_name) value('103.0','VoiceCapacity','SDCCH Blocking Rate','0.01','1514053800','BTS 801');
+INFO - Inserted: 
+INFO - KPI value : 0.008185440674424171
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/sdcch/drop/rate/per/bts
+INFO - Para:   data_source_numerator=bm,lm&end_date=1514140199999&service_name_numerator=geranBscBtsChannelBlockingCount,geranBscBtsChannelBlockingCount&device_id=103.0&data_source_denominator=bm,lm&from_date=1514053800000&service_name_denominator=geranBscBtsChannelBlockingCount,geranBscBtsChannelBlockingCount,geranBscTrxSubsequentAssignmentCommandCount,geranBscTrxSubsequentAssignmentCommandCount
+INFO - Response Code is:   200
+INFO - Response : {"description":"Process Success","object":{"data":1.0},"list":null,"valid":true}
+INFO -  Response : {"data":1}
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@5ae63ade
+INFO - Query to be called :-insert into hfcl_kpi(device_id,tag,kpi,current_value,systime,device_name) value('103.0','VoiceCapacity','TCH Blocking Rate','1','1514053800','BTS 801');
+INFO - Inserted: 
+INFO - KPI value : 1
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/sdcch/drop/rate/per/bts
+INFO - Para:   data_source_numerator=sdcch,sdcch4&end_date=1514140199999&service_name_numerator=geranBscTrxImmAssignmentSuccessCount,geranBscTrxImmAssignmentSuccessCount&device_id=103.0&data_source_denominator=sdcch,sdcch4&from_date=1514053800000&service_name_denominator=geranBscTrxImmAssignmentCommandCount,geranBscTrxImmAssignmentCommandCount
+INFO - Response Code is:   200
+INFO - Response : {"description":"Process Success","object":{"data":0.9236594438552856},"list":null,"valid":true}
+INFO -  Response : {"data":0.9236594438552856}
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@3701eaf6
+INFO - Query to be called :-insert into hfcl_kpi(device_id,tag,kpi,current_value,systime,device_name) value('103.0','VoiceCapacity','Immediate Assignment Procedure Success Rate','92.36594438552856','1514053800','BTS 801');
+INFO - Inserted: 
+INFO - KPI value : 92.36594438552856
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/call/attempts/per/trx
+INFO - Para:   end_date=1514140199999&device_id=104.0&from_date=1514053800000&service_name=geranBscTrxNumMeasurementReports,geranBscTrxNumMeasurementReports&data_source=lm,bm
+INFO - Response Code is:   200
+INFO - Response : {"description":"Process Success","object":{"data":1.85967548E8},"list":null,"valid":true}
+INFO -  Response : {"data":1.85967548E8}
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@1f36e637
+INFO - Query to be called :-insert into hfcl_kpi(device_id,tag,kpi,current_value,systime,device_name) value('104.0','Voice','CSErlangs','86.09608703703702','1514053800','BTS 802');
+INFO - Inserted: 
+INFO - KPI value : 86.09608703703702
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/call/attempts/per/trx
+INFO - Para:   end_date=1514140199999&device_id=104.0&from_date=1514053800000&service_name=geranBscBtsChannelBlockingCount&data_source=bm
+INFO - Response Code is:   200
+INFO - Response : {"description":"Process Success","object":{"data":0.0},"list":null,"valid":true}
+INFO -  Response : {"data":0}
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@1dfe2924
+INFO - Query to be called :-insert into hfcl_kpi(device_id,tag,kpi,current_value,systime,device_name) value('104.0','Voice','SDCCH Drop Rate','0','1514053800','BTS 802');
+INFO - Inserted: 
+INFO - KPI value : 0
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/call/attempts/per/trx
+INFO - Para:   end_date=1514140199999&device_id=104.0&from_date=1514053800000&service_name=geranBscTrxSubsequentAssignmentSuccessCount,geranBscTrxSubsequentAssignmentSuccessCount,geranBscTrxSubsequentAssignmentSuccessCount,geranBscTrxSubsequentAssignmentSuccessCount&data_source=sdcch_lm,sdcch4_lm,sdcch_bm,sdcch4_bm
+INFO - Response Code is:   200
+INFO - Response : {"description":"Process Success","object":{"data":674464.0},"list":null,"valid":true}
+INFO -  Response : {"data":674464}
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@3cef309d
+INFO - Query to be called :-insert into hfcl_kpi(device_id,tag,kpi,current_value,systime,device_name) value('104.0','Voice','Call Setup Success Rate','674464','1514053800','BTS 802');
+INFO - Inserted: 
+INFO - KPI value : 674464
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/call/attempts/per/trx
+INFO - Para:   end_date=1514140199999&device_id=104.0&from_date=1514053800000&service_name=geranBscTrxNumRadioConnectionFailures&data_source=lm
+INFO - Response Code is:   200
+INFO - Response : {"description":"Process Success","object":{"data":13147.0},"list":null,"valid":true}
+INFO -  Response : {"data":13147}
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@cd2dae5
+INFO - Query to be called :-insert into hfcl_kpi(device_id,tag,kpi,current_value,systime,device_name) value('104.0','Voice','Number Of Radio Connection Failures TCH_H','13147','1514053800','BTS 802');
+INFO - Inserted: 
+INFO - KPI value : 13147
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/call/attempts/per/trx
+INFO - Para:   end_date=1514140199999&device_id=104.0&from_date=1514053800000&service_name=geranBscTrxNumRadioConnectionFailures&data_source=bm
+INFO - Response Code is:   200
+INFO - Response : {"description":"Process Success","object":{"data":40176.0},"list":null,"valid":true}
+INFO -  Response : {"data":40176}
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@79be0360
+INFO - Query to be called :-insert into hfcl_kpi(device_id,tag,kpi,current_value,systime,device_name) value('104.0','Voice','Number Of Radio Connection Failures TCH_F','40176','1514053800','BTS 802');
+INFO - Inserted: 
+INFO - KPI value : 40176
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/downlink/data/throughput
+INFO - Para:   end_date=1514140199999&device_id=104.0&from_date=1514053800000
+INFO - Response Code is:   200
+INFO - Response : {"description":"Process Success","object":{"data":13.218120952905776},"list":null,"valid":true}
+INFO -  Response : {"data":13.218120952905776}
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@1efed156
+INFO - Query to be called :-insert into hfcl_kpi(device_id,tag,kpi,current_value,systime,device_name) value('104.0','Performance','Downlink Data Throughput In Kbps','13.218120952905776','1514053800','BTS 802');
+INFO - Inserted: 
+INFO - KPI value : 13.218120952905776
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/uplink/data/throughput
+INFO - Para:   end_date=1514140199999&device_id=104.0&from_date=1514053800000
+INFO - Response Code is:   200
+INFO - Response : {"description":"Process Success","object":{"data":2.831896417506003},"list":null,"valid":true}
+INFO -  Response : {"data":2.831896417506003}
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@68bbe345
+INFO - Query to be called :-insert into hfcl_kpi(device_id,tag,kpi,current_value,systime,device_name) value('104.0','Performance','Uplink Data Throughput In Kbps','2.831896417506003','1514053800','BTS 802');
+INFO - Inserted: 
+INFO - KPI value : 2.831896417506003
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/sdcch/drop/rate/per/bts
+INFO - Para:   data_source_numerator=geranBscBtsImmAssignmentRejectCount_answerPaging,geranBscBtsImmAssignmentRejectCount_callOriginate,geranBscBtsImmAssignmentRejectCount_emergency,geranBscBtsImmAssignmentRejectCount_locUpd&end_date=1514140199999&service_name_numerator=geranBscBtsImmAssignmentRejectCount_answerPaging,geranBscBtsImmAssignmentRejectCount_callOriginate,geranBscBtsImmAssignmentRejectCount_emergency,geranBscBtsImmAssignmentRejectCount_locUpd&device_id=104.0&data_source_denominator=geranBscBtsImmAssignmentCommandCount_answerPaging,geranBscBtsImmAssignmentCommandCount_callOriginate,geranBscBtsImmAssignmentCommandCount_emergency,geranBscBtsImmAssignmentCommandCount_locUpd&from_date=1514053800000&service_name_denominator=geranBscBtsImmAssignmentCommandCount_answerPaging,geranBscBtsImmAssignmentCommandCount_callOriginate,geranBscBtsImmAssignmentCommandCount_emergency,geranBscBtsImmAssignmentCommandCount_locUpd
+INFO - Response Code is:   200
+INFO - Response : {"description":"Process Success","object":{"data":"0"},"list":null,"valid":true}
+INFO -  Response : {"data":"0"}
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@7c29daf3
+INFO - Query to be called :-insert into hfcl_kpi(device_id,tag,kpi,current_value,systime,device_name) value('104.0','VoiceCapacity','SDCCHBlockingRate','0','1514053800','BTS 802');
+INFO - Inserted: 
+INFO - KPI value : 0.0
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/sdcch/drop/rate/per/bts
+INFO - Para:   data_source_numerator=bm,lm&end_date=1514140199999&service_name_numerator=geranBscBtsChannelBlockingCount,geranBscBtsChannelBlockingCount&device_id=104.0&data_source_denominator=bm,lm&from_date=1514053800000&service_name_denominator=geranBscBtsChannelBlockingCount,geranBscBtsChannelBlockingCount,geranBscTrxSubsequentAssignmentCommandCount,geranBscTrxSubsequentAssignmentCommandCount
+INFO - Response Code is:   200
+INFO - Response : {"description":"Process Success","object":{"data":"0"},"list":null,"valid":true}
+INFO -  Response : {"data":"0"}
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@5e853265
+INFO - Query to be called :-insert into hfcl_kpi(device_id,tag,kpi,current_value,systime,device_name) value('104.0','VoiceCapacity','TCH Blocking Rate','0','1514053800','BTS 802');
+INFO - Inserted: 
+INFO - KPI value : 0
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/sdcch/drop/rate/per/bts
+INFO - Para:   data_source_numerator=sdcch,sdcch4&end_date=1514140199999&service_name_numerator=geranBscTrxImmAssignmentSuccessCount,geranBscTrxImmAssignmentSuccessCount&device_id=104.0&data_source_denominator=sdcch,sdcch4&from_date=1514053800000&service_name_denominator=geranBscTrxImmAssignmentCommandCount,geranBscTrxImmAssignmentCommandCount
+INFO - Response Code is:   200
+INFO - Response : {"description":"Process Success","object":{"data":0.9261263608932495},"list":null,"valid":true}
+INFO -  Response : {"data":0.9261263608932495}
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@2a17b7b6
+INFO - Query to be called :-insert into hfcl_kpi(device_id,tag,kpi,current_value,systime,device_name) value('104.0','VoiceCapacity','Immediate Assignment Procedure Success Rate','92.61263608932495','1514053800','BTS 802');
+INFO - Inserted: 
+INFO - KPI value : 92.61263608932495
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/call/attempts/per/trx
+INFO - Para:   end_date=1514140199999&device_id=105.0&from_date=1514053800000&service_name=geranBscTrxNumMeasurementReports,geranBscTrxNumMeasurementReports&data_source=lm,bm
+INFO - Response Code is:   200
+INFO - Response : {"description":"Process Success","object":{"data":9.3568355E7},"list":null,"valid":true}
+INFO -  Response : {"data":9.3568355E7}
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@614ddd49
+INFO - Query to be called :-insert into hfcl_kpi(device_id,tag,kpi,current_value,systime,device_name) value('105.0','Voice','CSErlangs','43.31868287037037','1514053800','BTS 803');
+INFO - Inserted: 
+INFO - KPI value : 43.31868287037037
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/call/attempts/per/trx
+INFO - Para:   end_date=1514140199999&device_id=105.0&from_date=1514053800000&service_name=geranBscBtsChannelBlockingCount&data_source=bm
+INFO - Response Code is:   200
+INFO - Response : {"description":"Process Success","object":{"data":0.0},"list":null,"valid":true}
+INFO -  Response : {"data":0}
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@131276c2
+INFO - Query to be called :-insert into hfcl_kpi(device_id,tag,kpi,current_value,systime,device_name) value('105.0','Voice','SDCCH Drop Rate','0','1514053800','BTS 803');
+INFO - Inserted: 
+INFO - KPI value : 0
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/call/attempts/per/trx
+INFO - Para:   end_date=1514140199999&device_id=105.0&from_date=1514053800000&service_name=geranBscTrxSubsequentAssignmentSuccessCount,geranBscTrxSubsequentAssignmentSuccessCount,geranBscTrxSubsequentAssignmentSuccessCount,geranBscTrxSubsequentAssignmentSuccessCount&data_source=sdcch_lm,sdcch4_lm,sdcch_bm,sdcch4_bm
+INFO - Response Code is:   200
+INFO - Response : {"description":"Process Success","object":{"data":386289.0},"list":null,"valid":true}
+INFO -  Response : {"data":386289}
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@71bbf57e
+INFO - Query to be called :-insert into hfcl_kpi(device_id,tag,kpi,current_value,systime,device_name) value('105.0','Voice','Call Setup Success Rate','386289','1514053800','BTS 803');
+INFO - Inserted: 
+INFO - KPI value : 386289
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/call/attempts/per/trx
+INFO - Para:   end_date=1514140199999&device_id=105.0&from_date=1514053800000&service_name=geranBscTrxNumRadioConnectionFailures&data_source=lm
+INFO - Response Code is:   200
+INFO - Response : {"description":"Process Success","object":{"data":6232.0},"list":null,"valid":true}
+INFO -  Response : {"data":6232}
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@23faf8f2
+INFO - Query to be called :-insert into hfcl_kpi(device_id,tag,kpi,current_value,systime,device_name) value('105.0','Voice','Number Of Radio Connection Failures TCH_H','6232','1514053800','BTS 803');
+INFO - Inserted: 
+INFO - KPI value : 6232
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/call/attempts/per/trx
+INFO - Para:   end_date=1514140199999&device_id=105.0&from_date=1514053800000&service_name=geranBscTrxNumRadioConnectionFailures&data_source=bm
+INFO - Response Code is:   200
+INFO - Response : {"description":"Process Success","object":{"data":15826.0},"list":null,"valid":true}
+INFO -  Response : {"data":15826}
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@10bbd20a
+INFO - Query to be called :-insert into hfcl_kpi(device_id,tag,kpi,current_value,systime,device_name) value('105.0','Voice','Number Of Radio Connection Failures TCH_F','15826','1514053800','BTS 803');
+INFO - Inserted: 
+INFO - KPI value : 15826
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/downlink/data/throughput
+INFO - Para:   end_date=1514140199999&device_id=105.0&from_date=1514053800000
+INFO - Response Code is:   200
+INFO - Response : {"description":"Process Success","object":{"data":18.410024398909446},"list":null,"valid":true}
+INFO -  Response : {"data":18.410024398909446}
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@56aac163
+INFO - Query to be called :-insert into hfcl_kpi(device_id,tag,kpi,current_value,systime,device_name) value('105.0','Performance','Downlink Data Throughput In Kbps','18.410024398909446','1514053800','BTS 803');
+INFO - Inserted: 
+INFO - KPI value : 18.410024398909446
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/uplink/data/throughput
+INFO - Para:   end_date=1514140199999&device_id=105.0&from_date=1514053800000
+INFO - Response Code is:   200
+INFO - Response : {"description":"Process Success","object":{"data":3.2296383149908623},"list":null,"valid":true}
+INFO -  Response : {"data":3.2296383149908623}
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@394e1a0f
+INFO - Query to be called :-insert into hfcl_kpi(device_id,tag,kpi,current_value,systime,device_name) value('105.0','Performance','Uplink Data Throughput In Kbps','3.2296383149908623','1514053800','BTS 803');
+INFO - Inserted: 
+INFO - KPI value : 3.2296383149908623
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/sdcch/drop/rate/per/bts
+INFO - Para:   data_source_numerator=geranBscBtsImmAssignmentRejectCount_answerPaging,geranBscBtsImmAssignmentRejectCount_callOriginate,geranBscBtsImmAssignmentRejectCount_emergency,geranBscBtsImmAssignmentRejectCount_locUpd&end_date=1514140199999&service_name_numerator=geranBscBtsImmAssignmentRejectCount_answerPaging,geranBscBtsImmAssignmentRejectCount_callOriginate,geranBscBtsImmAssignmentRejectCount_emergency,geranBscBtsImmAssignmentRejectCount_locUpd&device_id=105.0&data_source_denominator=geranBscBtsImmAssignmentCommandCount_answerPaging,geranBscBtsImmAssignmentCommandCount_callOriginate,geranBscBtsImmAssignmentCommandCount_emergency,geranBscBtsImmAssignmentCommandCount_locUpd&from_date=1514053800000&service_name_denominator=geranBscBtsImmAssignmentCommandCount_answerPaging,geranBscBtsImmAssignmentCommandCount_callOriginate,geranBscBtsImmAssignmentCommandCount_emergency,geranBscBtsImmAssignmentCommandCount_locUpd
+INFO - Response Code is:   200
+INFO - Response : {"description":"Process Success","object":{"data":4.800196984433569E-5},"list":null,"valid":true}
+INFO -  Response : {"data":4.800196984433569E-5}
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@167fdd33
+INFO - Query to be called :-insert into hfcl_kpi(device_id,tag,kpi,current_value,systime,device_name) value('105.0','VoiceCapacity','SDCCH Blocking Rate','0','1514053800','BTS 803');
+INFO - Inserted: 
+INFO - KPI value : 4.800196984433569E-5
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/sdcch/drop/rate/per/bts
+INFO - Para:   data_source_numerator=bm,lm&end_date=1514140199999&service_name_numerator=geranBscBtsChannelBlockingCount,geranBscBtsChannelBlockingCount&device_id=105.0&data_source_denominator=bm,lm&from_date=1514053800000&service_name_denominator=geranBscBtsChannelBlockingCount,geranBscBtsChannelBlockingCount,geranBscTrxSubsequentAssignmentCommandCount,geranBscTrxSubsequentAssignmentCommandCount
+INFO - Response Code is:   200
+INFO - Response : {"description":"Process Success","object":{"data":"0"},"list":null,"valid":true}
+INFO -  Response : {"data":"0"}
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@3b088d51
+INFO - Query to be called :-insert into hfcl_kpi(device_id,tag,kpi,current_value,systime,device_name) value('105.0','VoiceCapacity','TCH Blocking Rate','0','1514053800','BTS 803');
+INFO - Inserted: 
+INFO - KPI value : 0
+INFO - 
+ ** Api Url:http://192.168.1.88:7878/ThirdPartyHFCLApplication/sdcch/drop/rate/per/bts
+INFO - Para:   data_source_numerator=sdcch,sdcch4&end_date=1514140199999&service_name_numerator=geranBscTrxImmAssignmentSuccessCount,geranBscTrxImmAssignmentSuccessCount&device_id=105.0&data_source_denominator=sdcch,sdcch4&from_date=1514053800000&service_name_denominator=geranBscTrxImmAssignmentCommandCount,geranBscTrxImmAssignmentCommandCount
+INFO - Response Code is:   200
+INFO - Response : {"description":"Process Success","object":{"data":0.9399387836456299},"list":null,"valid":true}
+INFO -  Response : {"data":0.9399387836456299}
+INFO - Connection DriverName: com.mysql.jdbc.Driver
+INFO - Connection url: jdbc:mysql://192.168.1.88:3306/hfcl_gateway?user=developer&password=admin@123
+INFO - Connection Established: com.mysql.jdbc.Connection@6acdbdf5
+INFO - Query to be called :-insert into hfcl_kpi(device_id,tag,kpi,current_value,systime,device_name) value('105.0','VoiceCapacity','Immediate Assignment Procedure Success Rate','93.99387836456299','1514053800','BTS 803');
+INFO - Inserted: 
+INFO - KPI value : 93.99387836456299

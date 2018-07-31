@@ -1,0 +1,480 @@
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.LCLSCSErlangs(BTS.java:312)
+	at com.teramatrix.processData.BTS.initial(BTS.java:36)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.SDCCHBlockingRate(BTS.java:559)
+	at com.teramatrix.processData.BTS.initial(BTS.java:50)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.SDCCHBlockingRateNR(BTS.java:591)
+	at com.teramatrix.processData.BTS.initial(BTS.java:51)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.TCHBlockingRate(BTS.java:670)
+	at com.teramatrix.processData.BTS.initial(BTS.java:54)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.TCHBlockingRateDR(BTS.java:729)
+	at com.teramatrix.processData.BTS.initial(BTS.java:56)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.ULTCHRxQual0To5Percent(BTS.java:992)
+	at com.teramatrix.processData.BTS.initial(BTS.java:92)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs1Count(PCU.java:707)
+	at com.teramatrix.processData.PCU.initial(PCU.java:73)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs2Count(PCU.java:683)
+	at com.teramatrix.processData.PCU.initial(PCU.java:74)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs3Count(PCU.java:659)
+	at com.teramatrix.processData.PCU.initial(PCU.java:75)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs4Count(PCU.java:635)
+	at com.teramatrix.processData.PCU.initial(PCU.java:76)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs5Count(PCU.java:611)
+	at com.teramatrix.processData.PCU.initial(PCU.java:77)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs6Count(PCU.java:587)
+	at com.teramatrix.processData.PCU.initial(PCU.java:78)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs7Count(PCU.java:563)
+	at com.teramatrix.processData.PCU.initial(PCU.java:79)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs8Count(PCU.java:539)
+	at com.teramatrix.processData.PCU.initial(PCU.java:80)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs9Count(PCU.java:515)
+	at com.teramatrix.processData.PCU.initial(PCU.java:81)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlMcs1Count(PCU.java:487)
+	at com.teramatrix.processData.PCU.initial(PCU.java:82)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlMcs2Count(PCU.java:463)
+	at com.teramatrix.processData.PCU.initial(PCU.java:83)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlMcs3Count(PCU.java:439)
+	at com.teramatrix.processData.PCU.initial(PCU.java:84)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlMcs4Count(PCU.java:415)
+	at com.teramatrix.processData.PCU.initial(PCU.java:85)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlMcs5Count(PCU.java:391)
+	at com.teramatrix.processData.PCU.initial(PCU.java:86)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlMcs6Count(PCU.java:367)
+	at com.teramatrix.processData.PCU.initial(PCU.java:87)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlMcs7Count(PCU.java:343)
+	at com.teramatrix.processData.PCU.initial(PCU.java:88)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlMcs8Count(PCU.java:319)
+	at com.teramatrix.processData.PCU.initial(PCU.java:89)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlMcs9Count(PCU.java:295)
+	at com.teramatrix.processData.PCU.initial(PCU.java:90)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.DlCs1Count(PCU.java:271)
+	at com.teramatrix.processData.PCU.initial(PCU.java:91)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.DlCs2Count(PCU.java:247)
+	at com.teramatrix.processData.PCU.initial(PCU.java:92)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.DlCs3Count(PCU.java:223)
+	at com.teramatrix.processData.PCU.initial(PCU.java:93)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.DlCs4Count(PCU.java:199)
+	at com.teramatrix.processData.PCU.initial(PCU.java:94)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlCs1Count(PCU.java:175)
+	at com.teramatrix.processData.PCU.initial(PCU.java:95)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlCs2Count(PCU.java:151)
+	at com.teramatrix.processData.PCU.initial(PCU.java:96)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlCs3Count(PCU.java:127)
+	at com.teramatrix.processData.PCU.initial(PCU.java:97)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlCs4Count(PCU.java:103)
+	at com.teramatrix.processData.PCU.initial(PCU.java:98)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.LCLSCSErlangs(BTS.java:312)
+	at com.teramatrix.processData.BTS.initial(BTS.java:36)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.SDCCHBlockingRate(BTS.java:559)
+	at com.teramatrix.processData.BTS.initial(BTS.java:50)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.SDCCHBlockingRateNR(BTS.java:591)
+	at com.teramatrix.processData.BTS.initial(BTS.java:51)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.TCHBlockingRate(BTS.java:670)
+	at com.teramatrix.processData.BTS.initial(BTS.java:54)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.TCHBlockingRateDR(BTS.java:729)
+	at com.teramatrix.processData.BTS.initial(BTS.java:56)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.ULTCHRxQual0To5Percent(BTS.java:992)
+	at com.teramatrix.processData.BTS.initial(BTS.java:92)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs1Count(PCU.java:707)
+	at com.teramatrix.processData.PCU.initial(PCU.java:73)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs2Count(PCU.java:683)
+	at com.teramatrix.processData.PCU.initial(PCU.java:74)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs3Count(PCU.java:659)
+	at com.teramatrix.processData.PCU.initial(PCU.java:75)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs4Count(PCU.java:635)
+	at com.teramatrix.processData.PCU.initial(PCU.java:76)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs5Count(PCU.java:611)
+	at com.teramatrix.processData.PCU.initial(PCU.java:77)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs6Count(PCU.java:587)
+	at com.teramatrix.processData.PCU.initial(PCU.java:78)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs7Count(PCU.java:563)
+	at com.teramatrix.processData.PCU.initial(PCU.java:79)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs8Count(PCU.java:539)
+	at com.teramatrix.processData.PCU.initial(PCU.java:80)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs9Count(PCU.java:515)
+	at com.teramatrix.processData.PCU.initial(PCU.java:81)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlMcs1Count(PCU.java:487)
+	at com.teramatrix.processData.PCU.initial(PCU.java:82)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlMcs2Count(PCU.java:463)
+	at com.teramatrix.processData.PCU.initial(PCU.java:83)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlMcs3Count(PCU.java:439)
+	at com.teramatrix.processData.PCU.initial(PCU.java:84)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlMcs4Count(PCU.java:415)
+	at com.teramatrix.processData.PCU.initial(PCU.java:85)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlMcs5Count(PCU.java:391)
+	at com.teramatrix.processData.PCU.initial(PCU.java:86)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlMcs6Count(PCU.java:367)
+	at com.teramatrix.processData.PCU.initial(PCU.java:87)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlMcs7Count(PCU.java:343)
+	at com.teramatrix.processData.PCU.initial(PCU.java:88)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlMcs8Count(PCU.java:319)
+	at com.teramatrix.processData.PCU.initial(PCU.java:89)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlMcs9Count(PCU.java:295)
+	at com.teramatrix.processData.PCU.initial(PCU.java:90)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.DlCs1Count(PCU.java:271)
+	at com.teramatrix.processData.PCU.initial(PCU.java:91)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.DlCs2Count(PCU.java:247)
+	at com.teramatrix.processData.PCU.initial(PCU.java:92)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.DlCs3Count(PCU.java:223)
+	at com.teramatrix.processData.PCU.initial(PCU.java:93)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.DlCs4Count(PCU.java:199)
+	at com.teramatrix.processData.PCU.initial(PCU.java:94)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlCs1Count(PCU.java:175)
+	at com.teramatrix.processData.PCU.initial(PCU.java:95)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlCs2Count(PCU.java:151)
+	at com.teramatrix.processData.PCU.initial(PCU.java:96)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlCs3Count(PCU.java:127)
+	at com.teramatrix.processData.PCU.initial(PCU.java:97)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlCs4Count(PCU.java:103)
+	at com.teramatrix.processData.PCU.initial(PCU.java:98)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.LCLSCSErlangs(BTS.java:312)
+	at com.teramatrix.processData.BTS.initial(BTS.java:36)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.SDCCHBlockingRate(BTS.java:559)
+	at com.teramatrix.processData.BTS.initial(BTS.java:50)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.SDCCHBlockingRateNR(BTS.java:591)
+	at com.teramatrix.processData.BTS.initial(BTS.java:51)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.TCHBlockingRate(BTS.java:670)
+	at com.teramatrix.processData.BTS.initial(BTS.java:54)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.TCHBlockingRateDR(BTS.java:729)
+	at com.teramatrix.processData.BTS.initial(BTS.java:56)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.BTS.ULTCHRxQual0To5Percent(BTS.java:992)
+	at com.teramatrix.processData.BTS.initial(BTS.java:92)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:29)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:166)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs1Count(PCU.java:707)
+	at com.teramatrix.processData.PCU.initial(PCU.java:73)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs2Count(PCU.java:683)
+	at com.teramatrix.processData.PCU.initial(PCU.java:74)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs3Count(PCU.java:659)
+	at com.teramatrix.processData.PCU.initial(PCU.java:75)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs4Count(PCU.java:635)
+	at com.teramatrix.processData.PCU.initial(PCU.java:76)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs5Count(PCU.java:611)
+	at com.teramatrix.processData.PCU.initial(PCU.java:77)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs6Count(PCU.java:587)
+	at com.teramatrix.processData.PCU.initial(PCU.java:78)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs7Count(PCU.java:563)
+	at com.teramatrix.processData.PCU.initial(PCU.java:79)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs8Count(PCU.java:539)
+	at com.teramatrix.processData.PCU.initial(PCU.java:80)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.NullPointerException
+	at com.teramatrix.processData.PCU.DlMcs9Count(PCU.java:515)
+	at com.teramatrix.processData.PCU.initial(PCU.java:81)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlMcs1Count(PCU.java:487)
+	at com.teramatrix.processData.PCU.initial(PCU.java:82)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlMcs2Count(PCU.java:463)
+	at com.teramatrix.processData.PCU.initial(PCU.java:83)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlMcs3Count(PCU.java:439)
+	at com.teramatrix.processData.PCU.initial(PCU.java:84)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlMcs4Count(PCU.java:415)
+	at com.teramatrix.processData.PCU.initial(PCU.java:85)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlMcs5Count(PCU.java:391)
+	at com.teramatrix.processData.PCU.initial(PCU.java:86)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlMcs6Count(PCU.java:367)
+	at com.teramatrix.processData.PCU.initial(PCU.java:87)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlMcs7Count(PCU.java:343)
+	at com.teramatrix.processData.PCU.initial(PCU.java:88)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlMcs8Count(PCU.java:319)
+	at com.teramatrix.processData.PCU.initial(PCU.java:89)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlMcs9Count(PCU.java:295)
+	at com.teramatrix.processData.PCU.initial(PCU.java:90)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.DlCs1Count(PCU.java:271)
+	at com.teramatrix.processData.PCU.initial(PCU.java:91)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.DlCs2Count(PCU.java:247)
+	at com.teramatrix.processData.PCU.initial(PCU.java:92)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.DlCs3Count(PCU.java:223)
+	at com.teramatrix.processData.PCU.initial(PCU.java:93)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.DlCs4Count(PCU.java:199)
+	at com.teramatrix.processData.PCU.initial(PCU.java:94)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlCs1Count(PCU.java:175)
+	at com.teramatrix.processData.PCU.initial(PCU.java:95)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlCs2Count(PCU.java:151)
+	at com.teramatrix.processData.PCU.initial(PCU.java:96)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlCs3Count(PCU.java:127)
+	at com.teramatrix.processData.PCU.initial(PCU.java:97)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to java.util.Map
+	at com.teramatrix.processData.PCU.UlCs4Count(PCU.java:103)
+	at com.teramatrix.processData.PCU.initial(PCU.java:98)
+	at com.teramatrix.initiator.ReportInitiatorClient.start(ReportInitiatorClient.java:33)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:167)

@@ -1,0 +1,424 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+       
+        <meta property="og:title" content="*|MC:SUBJECT|*" />
+        
+        <title>*|MC:SUBJECT|*</title>
+		<style type="text/css">
+		 
+			#outlook a{padding:0;}  
+			body{width:100% !important;} .ReadMsgBody{width:100%;} .ExternalClass{width:100%;}  
+			body{-webkit-text-size-adjust:none;}  
+
+			 
+			body{margin:0; padding:0;}
+			img{border:0; height:auto; line-height:100%; outline:none; text-decoration:none;}
+			table td{border-collapse:collapse;}
+			#backgroundTable{height:100% !important; margin:0; padding:0; width:100% !important;}
+
+		 
+			body, #backgroundTable{
+				  background-color:#FAFAFA;
+			}
+
+			 
+			#templateContainer{
+				  border: 1px solid #DDDDDD;
+			}
+
+		 
+			h1, .h1{
+				  color:#202020;
+				display:block;
+				 font-family:Arial;
+				 font-size:34px;
+				 font-weight:bold;
+				 line-height:100%;
+				margin-top:0;
+				margin-right:0;
+				margin-bottom:10px;
+				margin-left:0;
+				 text-align:left;
+			}
+
+			 
+			h2, .h2{
+				 color:#202020;
+				display:block;
+				 font-family:Arial;
+				 font-size:30px;
+				 font-weight:bold;
+				 line-height:100%;
+				margin-top:0;
+				margin-right:0;
+				margin-bottom:10px;
+				margin-left:0;
+				 text-align:left;
+			}
+
+			 
+			h3, .h3{
+				 color:#202020;
+				display:block;
+				 font-family:Arial;
+				 font-size:26px;
+				 font-weight:bold;
+				 line-height:100%;
+				margin-top:0;
+				margin-right:0;
+				margin-bottom:10px;
+				margin-left:0;
+				 text-align:left;
+			}
+
+			 
+			h4, .h4{
+				 color:#202020;
+				display:block;
+				 font-family:Arial;
+				 font-size:22px;
+				 font-weight:bold;
+				 line-height:100%;
+				margin-top:0;
+				margin-right:0;
+				margin-bottom:10px;
+				margin-left:0;
+				 text-align:left;
+			}
+
+			 
+			#templatePreheader{
+				 background-color:#FAFAFA;
+			}
+
+			 
+			.preheaderContent div{
+				 color:#505050;
+				 font-family:Arial;
+				 font-size:10px;
+				 line-height:100%;
+				 text-align:left;
+			}
+
+		 
+			.preheaderContent div a:link, .preheaderContent div a:visited,   .preheaderContent div a .yshortcuts  {
+				 color:#336699;
+				 font-weight:normal;
+				 text-decoration:underline;
+			}
+
+		 
+
+			 
+			#templateHeader{
+				 background-color:#FFFFFF;
+				 border-bottom:0;
+			}
+
+			 
+			.headerContent{
+				 color:#202020;
+				 font-family:Arial;
+				 font-size:34px;
+				 font-weight:bold;
+				 line-height:100%;
+				 padding:0;
+				 text-align:center;
+				 vertical-align:middle;
+			}
+
+			 
+			.headerContent a:link, .headerContent a:visited,   .headerContent a .yshortcuts  {
+				 color:#336699;
+				 font-weight:normal;
+				 text-decoration:underline;
+			}
+
+			#headerImage{
+				height:auto;
+				max-width:600px !important;
+			}
+
+			 
+			#templateContainer, .bodyContent{
+				 background-color:#FFFFFF;
+			}
+
+			 
+			.bodyContent div{
+				 color:#505050;
+				 font-family:Arial;
+				 font-size:14px;
+				 line-height:150%;
+				 text-align:left;
+			}
+
+			 
+			.bodyContent div a:link, .bodyContent div a:visited, /* Yahoo! Mail Override */ .bodyContent div a .yshortcuts /* Yahoo! Mail Override */{
+				 color:#336699;
+				 font-weight:normal;
+				 text-decoration:underline;
+			}
+
+			.bodyContent img{
+				display:inline;
+				height:auto;
+			}
+
+			 
+			#templateFooter{
+				 background-color:#FFFFFF;
+				 border-top:0;
+			}
+
+			 
+			.footerContent div{
+				 color:#707070;
+				 font-family:Arial;
+				 font-size:12px;
+				 line-height:125%;
+				 text-align:left;
+			}
+
+			 
+			.footerContent div a:link, .footerContent div a:visited, /* Yahoo! Mail Override */ .footerContent div a .yshortcuts /* Yahoo! Mail Override */{
+				 color:#336699;
+				 font-weight:normal;
+				 text-decoration:underline;
+			}
+
+			.footerContent img{
+				display:inline;
+			}
+
+			 
+			#social{
+				 background-color:#FAFAFA;
+				 border:0;
+			}
+
+			 
+			#social div{
+				 text-align:center;
+			}
+
+			 
+			#utility{
+				 background-color:#FFFFFF;
+				 border:0;
+			}
+
+			 
+			#utility div{
+				 text-align:center;
+			}
+
+			#monkeyRewards img{
+				max-width:190px;
+			}
+			
+			
+			.data-table{}
+			.data-table tr th{ background:#f1f1f1; color:#000; width:150px}
+			.data-table tr td{ color:#000}
+			
+			
+		</style>
+	</head>
+    <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+    	<center>
+        	<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="backgroundTable">
+            	<tr>
+                	<td align="center" valign="top">
+                        
+                        <table border="0" cellpadding="10" cellspacing="0" width="600" id="templatePreheader">
+                            <tr>
+                                <td valign="top" class="preheaderContent">
+                                
+                                	
+                                
+                                </td>
+                            </tr>
+                        </table>
+                        
+                    	<table border="0" cellpadding="0" cellspacing="0" width="600" id="templateContainer" style="border:1px #ccc solid">
+                        	<tr>
+                            	<td align="center" valign="top">
+                                    
+                                 
+                                    <table border="0" id="templateHeader" cellpadding="10" style="background:#0077be;" bgcolor="#0077be"  cellspacing="0" width="100%">
+                                    	<tr>
+                                        	<td valign="top">
+                                            	<div mc:edit="std_preheader_content">
+                                                	<a href="http://www.teramatrix.in/" style="color:#ffffff;  font-size:24px; line-height:40px; text-decoration:none; font-family:Arial, Helvetica, sans-serif">CargoCEL Truck</a>
+                                                </div>
+                                            </td>
+                                          
+											<td valign="top" width="190" align="right">
+                                            	<div mc:edit="std_preheader_links">
+                                                	<a href="#" target="_blank"><img width="70" src="http://www.celebicargo.com.tr/sites/default/files/logolar/celebi-kanatli-logo-renkli-kullanim.png" /></a>.
+                                                </div>
+                                            </td>
+											 
+                                        </tr>
+                                    </table>
+                                	 
+                                    
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td align="center" valign="top">
+                                     
+                                	<table border="0" cellpadding="0" cellspacing="0" width="600" id="templateBody">
+                                    	<tr>
+                                            <td valign="top" class="bodyContent">
+                                   
+                                                <table border="0" cellpadding="20" cellspacing="0" width="100%">
+                                                    <tr>
+                                                        <td valign="top">
+                                                            <div> 
+                                                          
+                                                            <strong>Dear Admin</strong> <br/>
+                                                          
+                                                             <p><strong>Greetings from  CELEBI!!</strong></p>
+                                                               
+                                                               <p>You have following query</p>
+                                                               
+                                                           
+                                                                <table cellpadding="5" width="570" style="width:570px;" border="1" style="border:1px #f1f1f1 solid;">
+									 <tr>
+								<td width="100" style="color:#5B5B5B; background:#CECECE; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:600;" valign="middle"> Name</td>
+								<td width="140" style="color:#5B5B5B; font-family:Arial, Helvetica, sans-serif; font-size:12px;" valign="middle" align="center">$!object.name</td>
+								
+							</tr>
+							<tr>
+								<td width="100" style="color:#5B5B5B; background:#CECECE; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:600;" valign="middle">Email</td>
+								<td width="140" style="color:#5B5B5B; font-family:Arial, Helvetica, sans-serif; font-size:12px;" valign="middle" align="center"> $!object.email</td>
+								
+							</tr>
+							
+							
+						 <tr>
+								<td width="100" style="color:#5B5B5B; background:#CECECE; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:600;" valign="middle">
+								Contact Number</td>
+								<td style="color:#5B5B5B; font-family:Arial, Helvetica, sans-serif; font-size:12px; width: 280px;" valign="middle" align="center" > 
+								$!object.contact_number</td>
+
+
+								
+							</tr>
+ <tr>
+								<td width="100" style="color:#5B5B5B; background:#CECECE; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:600;" valign="middle">
+								Message </td>
+								<td style="color:#5B5B5B; font-family:Arial, Helvetica, sans-serif; font-size:12px; width: 280px;" valign="middle" align="center" > 
+								$!object.query</td>
+
+							</tr>
+							  
+								</table>
+                                                               
+
+				
+
+							
+
+															<p><strong>Thanks,</strong></p>
+															<p>CELEBI</p>
+                                                                
+                                                                
+                                                                
+                                                                
+														<div style="text-align:left; font-size:11px;">
+														<p><div><em><strong style="text-align:left; font-size:11px;"> Note :-</strong> </em></div>
+														<div style="text-align:left; font-size:11px;">
+														<em>This is System genreted Mail Please do not reply to this mail. 
+														for more information mail us on <a href="mailto:info@celebiaviation.in">info@celebiaviation.in</a> </em></div></p>
+														</div>
+														
+                                                     
+                                                                
+                                                                
+                                                            </div>
+														</td>
+														</tr>
+														
+                                                </table>
+                                               
+                                                
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td align="center" valign="top">
+                                   
+                                	<table border="0" cellpadding="10" cellspacing="0" width="600" id="templateFooter" style="background:#0077be" bgcolor="#0077be">
+                                    	<tr>
+                                        	<td valign="top" class="footerContent">
+                                            
+                                                
+                                                <table border="0" cellpadding="10" cellspacing="0" width="100%">
+                                                    <!--<tr>
+                                                        <td colspan="2" valign="middle" id="social" bgcolor="#fff" style="text-align:center;  background:#fff;" >
+                                                            <div mc:edit="std_social">
+                                                                &nbsp;<a href="https://www.facebook.com/teramatrixtechnologies/">follow on Facebook</a> | <a href="https://twitter.com/teramatrixtech">find us on Twitter</a> | &nbsp;<a href="https://www.linkedin.com/company/teramatrix-technologies-pvt-ltd-">Find us on Linkedin</a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>-->
+                                                    <tr>
+                                                        <td valign="top" width="400" style="color:#fff;">
+                                                            <div style="color:#fff;">
+																<em style="color:#fff;">Copyright &copy; 2018 CargoCEL Truck Terminal Management India Pvt. Ltd.</em>
+																<br />
+																 <strong style="color:#fff;">Address :- <br/></strong>
+																 Room No.CE-05, First Floor, Import Building – II,<br/> International Cargo Terminal, IGI Airport,
+																	New Delhi – 110037 INDIA<br/>
+																	Tel: <a style="color:#fff;" href="callto:+91-11-25601310/1300">+91-11-25601310/1300</a>
+																	<br/>
+																	Fax: <a style="color:#fff;" href="callto:+91-11-25601320">++91-11-25601320</a>
+																	<br/>
+																	Email: <a style="color:#fff;" href="mailto:info@celebiaviation.in">info@celebiaviation.in</a>
+
+
+																
+																 
+																 
+																  
+                                                            </div>
+                                                        </td>
+                                                        <td valign="top" width="100" id="monkeyRewards">
+                                                            <div mc:edit="monkeyrewards">
+                                                              
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2" valign="middle" id="utility" style="text-align:center;  background:#fff;" bgcolor="#fff">
+                                                            <div mc:edit="std_utility">
+                                                                <a href="#">unsubscribe from this list</a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                
+                                            
+                                            </td>
+                                        </tr>
+                                    </table>
+                                     
+                                </td>
+                            </tr>
+                        </table>
+                        <br />
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </body>
+</html>

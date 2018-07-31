@@ -1,0 +1,1153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd
+  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd">
+
+	<context:component-scan base-package="com.springiot.*" />
+
+	<mvc:annotation-driven />
+	<context:annotation-config />
+
+	<mvc:default-servlet-handler />
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	<!-- <mvc:resources mapping="/resources/**" location="/resources/" cache-period="10000" 
+		/> -->
+	<bean id="swagger2Config"
+		class="springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration" />
+
+	<!-- <context:property-placeholder location="classpath:/swagger.properties" 
+		/> -->
+
+	<mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/" />
+	<mvc:resources mapping="/webjars/**"
+		location="classpath:/META-INF/resources/webjars/" />
+
+	<!-- <mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/lib/" 
+		/> <mvc:resources mapping="/webjars/**" location="classpath:/META-INF/lib/" 
+		/> -->
+
+	<!-- applicationContext.xml -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="embedded-database" />
+		<property name="packagesToScan" value="com.springiot.modal" />
+		<property name="hibernateProperties">
+			<value>
+				hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
+				hibernate.connection.useUnicode=true
+				hibernate.connection.characterEncoding=UTF-8
+				hibernate.connection.charSet=UTF-8
+				hibernate.ejb.naming_strategy=org.hibernate.cfg.ImprovedNamingStrategy
+				hibernate.show_sql=true
+				hibernate.generate_statistics=true
+
+				hibernate.c3p0.min_size=20
+				hibernate.c3p0.max_size=40
+				hibernate.c3p0.timeout=300
+				hibernate.c3p0.max_statements=50
+				hibernate.c3p0.idle_test_period=3000
+				<!-- hibernate.connection.zeroDateTimeBehavior=convertToNull -->
+			</value>
+		</property>
+	</bean>
+
+	<!-- applicationContext.xml -->
+	<bean id="sessionFactoryConfig"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="embeddeddatabaseconfig" />
+		<property name="packagesToScan" value="com.springiot.modal" />
+		<property name="hibernateProperties">
+			<value>
+				hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
+				hibernate.connection.useUnicode=true
+				hibernate.connection.characterEncoding=UTF-8
+				hibernate.connection.charSet=UTF-8
+				hibernate.ejb.naming_strategy=org.hibernate.cfg.ImprovedNamingStrategy
+				hibernate.show_sql=true
+				hibernate.generate_statistics=true
+
+				hibernate.c3p0.min_size=20
+				hibernate.c3p0.max_size=40
+				hibernate.c3p0.timeout=300
+				hibernate.c3p0.max_statements=50
+				hibernate.c3p0.idle_test_period=3000
+				<!-- hibernate.connection.zeroDateTimeBehavior=convertToNull -->
+			</value>
+		</property>
+	</bean>
+
+	<!-- applicationContext.xml -->
+	<bean id="sessionFactoryMetaData"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="embeddeddatabasemetadata" />
+		<property name="packagesToScan" value="com.springiot.modal" />
+		<property name="hibernateProperties">
+			<value>
+				hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
+				hibernate.connection.useUnicode=true
+				hibernate.connection.characterEncoding=UTF-8
+				hibernate.connection.charSet=UTF-8
+				hibernate.ejb.naming_strategy=org.hibernate.cfg.ImprovedNamingStrategy
+				hibernate.show_sql=true
+				hibernate.generate_statistics=true
+
+				hibernate.c3p0.min_size=20
+				hibernate.c3p0.max_size=40
+				hibernate.c3p0.timeout=300
+				hibernate.c3p0.max_statements=50
+				hibernate.c3p0.idle_test_period=3000
+				<!-- hibernate.connection.zeroDateTimeBehavior=convertToNull -->
+			</value>
+		</property>
+	</bean>
+
+
+	<bean id="sessionFactoryLogs"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="embeddeddatabaselogs" />
+		<property name="packagesToScan" value="com.springiot.modal" />
+		<property name="hibernateProperties">
+			<value>
+				hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
+				hibernate.connection.useUnicode=true
+				hibernate.connection.characterEncoding=UTF-8
+				hibernate.connection.charSet=UTF-8
+				hibernate.ejb.naming_strategy=org.hibernate.cfg.ImprovedNamingStrategy
+				hibernate.show_sql=true
+				hibernate.generate_statistics=true
+
+				hibernate.c3p0.min_size=20
+				hibernate.c3p0.max_size=40
+				hibernate.c3p0.timeout=300
+				hibernate.c3p0.max_statements=50
+				hibernate.c3p0.idle_test_period=3000
+				<!-- hibernate.connection.zeroDateTimeBehavior=convertToNull -->
+			</value>
+		</property>
+	</bean>
+
+	<bean id="sessionFactoryHsql"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="embedded-database-hsql" />
+		<property name="packagesToScan" value="com.springiot.modal" />
+		<property name="hibernateProperties">
+			<value>
+				connection.pool_size=1
+				connection.password=
+				hibernate.dialect=org.hibernate.dialect.HSQLDialect
+				hibernate.connection.useUnicode=true
+				hibernate.connection.characterEncoding=UTF-8
+				hibernate.connection.charSet=UTF-8
+				hibernate.ejb.naming_strategy=org.hibernate.cfg.ImprovedNamingStrategy
+				hibernate.show_sql=true
+				hibernate.generate_statistics=true
+
+				hibernate.c3p0.min_size=20
+				hibernate.c3p0.max_size=40
+				hibernate.c3p0.timeout=300
+				hibernate.c3p0.max_statements=50
+				hibernate.c3p0.idle_test_period=3000
+				<!-- hibernate.connection.zeroDateTimeBehavior=convertToNull -->
+			</value>
+		</property>
+	</bean>
+
+	<bean class="org.springframework.orm.hibernate4.HibernateTransactionManager"
+		id="transactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<bean class="org.springframework.orm.hibernate4.HibernateTransactionManager"
+		id="transactionManagerconfig">
+		<property name="sessionFactory" ref="sessionFactoryConfig"></property>
+	</bean>
+
+	<bean class="org.springframework.orm.hibernate4.HibernateTransactionManager"
+		id="transactionManagermetadata">
+		<property name="sessionFactory" ref="sessionFactoryMetaData"></property>
+	</bean>
+
+	<bean class="com.springiot.constant.ProcessParameter" id="processParameter">
+		<property name="maps">
+			<map>
+
+				<entry key="4"
+					value="call xfusion_performance_servicestatus_device_get_all(device_id,user_key,user_id)" />
+				<entry key="6"
+					value="call xfusion_device_register(device_id,organization_id,gateway_id,protocol)" />
+				<entry key="7"
+					value="call xfusion_performance_status_device_get_all(device_id,user_key,user_id)" />
+				<entry key="8"
+					value="call xfusion_organization_get_all_by_user(user_key,user_email)" />
+				<entry key="9"
+					value="call xfusion_performance_performanceservice_device_get_single(device_id,user_key,user_id,service_name,data_source,from_date,end_date)" />
+				<entry key="10"
+					value="call xfusion_performance_performanceservice_device_get_many(device_id,user_key,user_id,service_name,data_source,from_date,end_date)" />
+				<entry key="11"
+					value="call xfusion_performance_performanceservice_device_get_all(device_id,user_key,user_id,from_date,end_date)" />
+				<entry key="12"
+					value="call xfusion_performance_performancestatus_device_get_all(device_id,user_key,user_id,from_date,end_date)" />
+				<entry key="13"
+					value="call xfusion_performance_performancestatus_device_get_many(device_id,user_key,user_id,service_name,data_source,from_date,end_date)" />
+				<entry key="14"
+					value="call xfusion_performance_performancestatus_device_get_single(device_id,user_key,user_id,service_name,data_source,from_date,end_date)" />
+				<entry key="15"
+					value="call xfusion_device_get_services(device_id,user_key,user_id)" />
+				<entry key="16"
+					value="call xfusion_device_get_device_suggestion(user_key,user_id,organization_path)" />
+				<entry key="17" value="call xfusion_device_get_by_user(user_key,user_id)" />
+				<entry key="18"
+					value="call xfusion_performance_performanceservice_devices_get_many(device_id,user_key,user_id,service_name,data_source,from_date,end_date)" />
+				<entry key="19"
+					value="call xfusion_performance_performancestatus_devices_get_many(device_id,user_key,user_id,service_name,data_source,from_date,end_date)" />
+				<entry key="20"
+					value="call xfusion_device_get_all_commands(device_id,user_key,user_id)" />
+				<entry key="21"
+					value="call xfusion_device_get_command_template_parameter_by_name(device_id,command_name,user_key,user_email)" />
+				<entry key="22" value="call xfusion_get_device_config(?,?,?)" />
+				<entry key="23"
+					value="call xfusion_command_insert(device_id,user_key,user_id,command_name,command)" />
+				<entry key="24"
+					value="call xfusion_organization_root_by_user(user_id,user_key)" />
+				<entry key="25" value="call xfusion_device_get_type(user_key,user_id)" />
+				<entry key="26" value="call xfusion_device_get_city()" />
+				<entry key="27"
+					value="call xfusion_organization_insert(user_key,user_id,parent_organization,organization_name,city,country,description,color_code)" />
+				<entry key="28"
+					value="call xfusion_organization_get_all(user_key,user_id)" />
+				<entry key="29"
+					value="call xfusion_user_organization_insert(user_key,user_id,insert_userKey,insert_user_id,organization_ids)" />
+				<entry key="30"
+					value="call xfusion_organization_update(user_key,user_id,organization_id,organization_name,organization_alias,organization_city,description,country_id,color_code)" />
+				<entry key="31"
+					value="call xfusion_organization_delete(user_key,user_id,organization_id)" />
+				<entry key="32"
+					value="call xfusion_device_get_metadata_status_by_type(user_key,user_id,device_type,host_status)" />
+				<entry key="33"
+					value="call xfusion_device_add_device(user_key,user_id,name,alias,ip_address,lattitude,longitutde,mac_address,description,elevation,hardware_version,software_version,device_id,device_country,device_state,device_city,parent_device,organization_ids,properties_ids,properties_names,properties_values,is_configurable,tags,iccid,imei,template_id,is_movable)" />
+				<entry key="34"
+					value="call xfusion_command_update(device_id,user_key,user_id,id,response,status)" />
+				<entry key="35"
+					value="call xfusion_command_insert(device_id,user_key,user_id,command_name,command)" />
+				<entry key="36"
+					value="call xfusion_performance_performanceinventory_device_get_all(device_id,user_key,user_id,from_date,end_date)" />
+				<entry key="37"
+					value="call xfusion_performance_performanceinventory_device_get_many(device_id,user_key,user_id,service_name,data_source,from_date,end_date)" />
+				<entry key="38"
+					value="call xfusion_performance_performanceinventory_device_get_single(device_id,user_key,user_id,service_name,data_source,from_date,end_date)" />
+				<entry key="39"
+					value="call xfusion_performance_inventorystatus_device_get_all(device_id,user_key,user_id)" />
+				<entry key="40"
+					value="call xfusion_performance_inventorystatus_device_get_many(device_id,user_key,user_id,service_name,data_source)" />
+				<entry key="41"
+					value="call xfusion_performance_inventorystatus_device_get_single(device_id,user_key,user_id,service_name,data_source)" />
+				<entry key="42"
+					value="call xfusion_performance_performanceinventory_device_get_all_count(device_id,user_key,user_id,from_date,end_date)" />
+				<entry key="43"
+					value="call xfusion_performance_performanceinventory_device_get_all_limit(device_id,user_key,user_id,from_date,end_date,limit,offset)" />
+				<entry key="44"
+					value="call xfusion_performance_performanceservice_device_get_all_count(device_id,user_key,user_id,from_date,end_date)" />
+				<entry key="45"
+					value="call xfusion_performance_performanceservice_device_get_all_limit(device_id,user_key,user_id,from_date,end_date,limit,offset)" />
+				<entry key="46"
+					value="call xfusion_performance_performanceinventory_device_get_many_count(device_id,user_key,user_id,service_name,data_source,from_date,end_date)" />
+				<entry key="47"
+					value="call xfusion_performance_performanceinventory_device_get_many_limit(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset)" />
+				<entry key="48"
+					value="call xfusion_inventorystatus_device_get_all_without_data(device_id,user_key,user_id)" />
+				<entry key="49"
+					value="call xfusion_inventorystatus_device_get_many_without_data(device_id,user_key,user_id,service_name,data_source)" />
+				<entry key="50"
+					value="call xfusion_inventorystatus_device_get_single_without_data(device_id,user_key,user_id,service_name,data_source)" />
+				<entry key="51"
+					value="call xfusion_performanceinventory_device_get_all_limit_without_data(device_id,user_key,user_id,from_date,end_date,limit,offset)" />
+				<entry key="52"
+					value="call xfusion_performanceinventory_device_get_all_without_data(device_id,user_key,user_id,from_date,end_date)" />
+				<entry key="53"
+					value="call xfusion_performanceinventory_device_get_many_limit_without_data(device_id,user_key,user_id,service_name,data_source ,from_date ,end_date,limit,offset)" />
+				<entry key="54"
+					value="call xfusion_performanceinventory_device_get_many_without_data(device_id,user_key,user_id,service_name,data_source ,from_date ,end_date)" />
+				<entry key="56"
+					value="call xfusion_performanceinventory_device_get_single_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date)" />
+				<entry key="57"
+					value="call xfusion_performanceservice_device_get_all_limit_without_data(device_id,user_key,user_id,from_date,end_date,limit,offset)" />
+				<entry key="58"
+					value="call xfusion_performanceservice_device_get_all_without_data(device_id,user_key,user_id,from_date,end_date)" />
+				<entry key="59"
+					value="call xfusion_performanceservice_device_get_many_limit_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset))" />
+				<entry key="60"
+					value="call xfusion_performanceservice_device_get_many_without_data(device_id,user_key,user_id,service_name,data_source ,from_date,end_date)" />
+				<entry key="62"
+					value="call xfusion_performanceservice_device_get_single_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date)" />
+				<entry key="63"
+					value="call xfusion_performanceservice_devices_get_many_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date)" />
+				<entry key="64"
+					value="call xfusion_servicestatus_device_get_all_without_data(device_id,user_key,user_id)" />
+				<entry key="65"
+					value="call xfusion_servicestatus_device_get_many_without_data(device_id,user_key,user_id,service_name,data_source)" />
+				<entry key="66"
+					value="call xfusion_servicestatus_device_get_single_without_data(device_id,user_key,user_id,service_name,data_source)" />
+				<entry key="67"
+					value="call xfusion_device_get_metadata(user_key,user_id,device_id)" />
+				<entry key="68"
+					value="call xfusion_performance_servicestatus_devices_get_many(device_id,user_key,user_id,service_name,data_source)" />
+				<entry key="85" value="call xfusion_users_get_all(user_key,user_id)" />
+				<entry key="86" value="call xfusion_city_get_city(state_id)" />
+				<entry key="88" value="call xfusion_country_get_country()" />
+				<entry key="89" value="call xfusion_state_get_state(country_id)" />
+				<entry key="90"
+					value="call xfusion_dashboard_main_get_device_status_count(user_key,user_id)" />
+				<entry key="91"
+					value="call xfusion_dashboard_main_worst_performing_devices(user_key,user_id,from_date,end_date)" />
+				<entry key="103"
+					value="call xfusion_dashboard_main_worst_performing_device_type(user_key,user_id,from_date,end_date)" />
+				<entry key="106"
+					value="call xfusion_dashboard_main_get_command_count(user_key,user_id,from_date,end_date)" />
+				<entry key="107"
+					value="call xfusion_dashboard_main_get_command_count_by_device_type(user_key,user_id,from_date,end_date)" />
+				<entry key="108" value="call xfusion_audit_log_insert(?,?,?,?,?,?,?,?)" />
+				<entry key="109"
+					value="call xfusion_audit_log_get_all(user_key,user_id,application_key,from_date,end_date,organization_id,in_condition)" />
+				<entry key="144"
+					value=" call xfusion_performance_performanceservice_device_get_many_count(device_id,user_key,user_id,service_name,data_source,from_date,end_date)" />
+				<entry key="146"
+					value=" call xfusion_user_session_check(user_key,user_id,application_key,session_key,last_activity_date,password_change_date)" />
+				<entry key="147"
+					value=" call xfusion_user_session_update(delete_previous_session,create_new_session,user_key,user_id,application_key,session_key,last_activity_date,last_password_change_date)" />
+				<entry key="149"
+					value=" call xfusion_organization_setting_update(user_key,user_id,organization_id,is_password_expire,password_expire_time,session_expire_time,is_session_enable,is_single_sign_on_enable)" />
+				<entry key="150"
+					value=" call xfusion_device_get_metadata_status_by_type_limit_csv(user_key,user_id,device_type,limit,offset)" />
+				<entry key="196"
+					value=" call xfusion_dashboard_device_status_count(user_key,user_id,device_id,from_date,end_date)" />
+				<entry key="197"
+					value=" call xfusion_device_get_vendors(user_key,user_id,device_technology)" />
+				<entry key="198"
+					value=" call xfusion_device_get_all_technology(user_key,user_id)" />
+				<entry key="199"
+					value=" call xfusion_device_get_all_device_type_by_vendor(user_key,user_id,vendor_id)" />
+				<entry key="268" value=" call xfusion_device_get_status(user_key,user_id)" />
+				<entry key="270"
+					value=" call xfusion_device_model_get_all(user_key,user_id)" />
+				<entry key="271"
+					value=" call xfusion_device_delete_device(user_key,user_id,device_id)" />
+				<entry key="272"
+					value=" call xfusion_device_get_all_device_models_by_type(user_key,user_id,device_type_id)" />
+				<entry key="273"
+					value=" call xfusion_device_get_properties(user_key,user_id,device_model_id)" />
+				<entry key="274"
+					value=" call xfusion_device_get_all_templates(user_key,user_id)" />
+				<entry key="275"
+					value=" call xfusion_device_update_device_status(user_key,user_id,device_id,device_status)" />
+				<entry key="276"
+					value=" call xfusion_device_add_model(user_key,user_id,name,alias,device_type,device_vendor,device_technology,gis_icon,icon,properties_names,properties_alias,properties_data_types,show_on_gis,show_on_perofrmance_report,template_name)" />
+				<entry key="277" value=" call xfusion_data_get_datatype(user_key,user_id)" />
+				<entry key="279"
+					value=" call xfusion_device_update_operational_status(user_key,user_id,old_device_id,new_device_id,device_name,device_status)" />
+				<entry key="295"
+					value=" call xfusion_service_inventory_status_device_get_all(device_id,user_key,user_id,show_bit)" />
+				<entry key="296"
+					value=" call xfusion_device_add_type(user_key,user_id,type_name,type_alias,vendor_id,color)" />
+				<entry key="297"
+					value=" call xfusion_device_add_vendor(user_key,user_id,vendor_name,vendor_alias,technology_id)" />
+				<entry key="298"
+					value=" call xfusion_device_add_technology(user_key,user_id,technology_name,technology_alias)" />
+				<entry key="314"
+					value=" call xfusion_device_update_device(user_key,user_id,name,alias,ip_address,lattitude,longitutde,mac_address,description,elevation,hardware_version,software_version,device_id,device_country,device_state,device_city,parent_device,organization_ids,properties_ids,properties_names,properties_values,is_configurable,tags,iccid,imei,template_id,is_movable)" />
+				<entry key="315"
+					value=" call xfusion_device_add_model_service_datasource(user_key,user_id,devicemodel_id,service_name,service_alias,service_category,datasource_name,datasource_alias,datasource_mvalue,datasource_max_value,datasource_unit,data_item_source_type,datasource_data_types,datasource_editable,datasource_chart,datasource_colour,datasource_is_shown_on_gis,datasource_is_shown_on_report,priority,formula,simulation_control)" />
+				<entry key="316"
+					value=" call xfusion_device_add_model_error_codes(user_key,user_id,devicemodel_id,device_error_code_names,device_error_code_alias)" />
+				<entry key="318" value=" call xfusion_colour_get_colour(user_key,user_id)" />
+				<entry key="319" value=" call xfusion_charts_get_charts(user_key,user_id)" />
+				<entry key="320"
+					value=" call xfusion_performance_servicestatus_devices_get_all(device_id,user_key,user_id)" />
+				<entry key="336"
+					value=" call xfusion_device_get_priorities(user_key,user_id)" />
+				<entry key="337"
+					value=" call xfusion_device_update_model(user_key,user_id,device_model_id,name,alias,device_type,device_vendor,device_technology,gis_icon,icon,properties_names,properties_alias,properties_data_types,show_on_gis,show_on_perofrmance_report,template_name)" />
+				<entry key="338"
+					value=" call xfusion_device_delete_model(user_key,user_id,device_model_id)" />
+				<entry key="339"
+					value=" call xfusion_device_get_model_properties(user_key,user_id,device_model_id)" />
+				<entry key="340"
+					value=" call xfusion_device_get_model_error_codes(user_key,user_id,device_model_id)" />
+				<entry key="341"
+					value=" call xfusion_device_get_model_services(user_key,user_id,device_model_id)" />
+				<entry key="342"
+					value=" call xfusion_device_get_command_template_parameter_by_name(device_id,command_name,user_key,user_email)" />
+				<entry key="343"
+					value=" call xfusion_dashboard_main_worst_device_type_grouped_hourly(user_key,user_id,from_date,end_date)" />
+				<entry key="344"
+					value=" call xfusion_re_rule_add_rule(user_key,user_id,global_rule_id,name,service_id,service_name,data_source_id,data_source_name,trigger_method,value_under,value_over,value_from,value_to,value_equal,alarm_age,description,is_in_conditional,is_alert,devicemodel_id,device_ids,rule_order,operator,severity_id,severity,severity_colour,severity_priority,is_correlated,rule_type,latitude,longitude,sequence)" />
+				<entry key="345"
+					value=" call xfusion_re_device_add_severity(user_key,user_id,device_model_id,service_name,service_id,datasource_id,datasource_name,severity_name,severity_priority,severity_colour_code)" />
+				<entry key="346"
+					value=" call xfusion_re_device_get_model_services(user_key,user_id,device_model_id)" />
+				<entry key="347"
+					value=" call xfusion_re_user_device_get_model(user_key,user_id,device_type_id)" />
+				<entry key="348"
+					value=" call xfusion_re_device_get_by_model(user_key,user_id,device_model_id)" />
+				<entry key="349"
+					value=" call xfusion_re_device_add_action(user_key,user_id,global_rule_id,action_type_id,action_type_name,action_type_parameter_name,action_type_parameter_value,action_user_ids,action_phone,action_duration,organization_id)" />
+				<entry key="350"
+					value=" call xfusion_re_device_get_model_service_datasource(user_key,user_id,device_model_id,service_id)" />
+				<entry key="351"
+					value=" call xfusion_re_rule_get_action(user_key,user_id,global_rule_id)" />
+				<entry key="352"
+					value=" call xfusion_re_rule_get_action_parameter(user_key,user_id,action_type_id)" />
+				<entry key="353"
+					value=" call xfusion_re_device_get_severity(user_key,user_id,device_model_id,service_id,datasource_id)" />
+				<entry key="354"
+					value=" call xfusion_re_device_type_get_rules(user_key,user_id,device_type_id)" />
+				<entry key="357"
+					value=" call xfusion_re_rule_delete_rule(user_key,user_id,rule_id)" />
+				<entry key="360"
+					value=" call xfusion_performance_eventstatus_alert_device_get_all(device_id,user_key,user_id)" />
+				<entry key="363"
+					value=" call xfusion_performance_eventstatus_alert_device_get_many(device_id,user_key,user_id,service_name,data_source)" />
+				<entry key="364"
+					value=" call xfusion_performance_eventstatus_alert_device_get_single(device_id,user_key,user_id,service_name,data_source)" />
+				<entry key="365"
+					value=" call xfusion_performance_eventstatus_alert_devices_get_all(device_id,user_key,user_id)" />
+				<entry key="366"
+					value=" call xfusion_performance_eventstatus_alert_devices_get_many(device_id,user_key,user_id,service_name,data_source)" />
+				<entry key="367"
+					value=" call xfusion_performance_performanceevent_alert_device_get_all(device_id,user_key,user_id,from_date,end_date)" />
+				<entry key="370"
+					value=" call xfusion_performance_performanceevent_alert_device_get_many(device_id,user_key,user_id,service_name,data_source,from_date,end_date)" />
+				<entry key="371"
+					value=" call xfusion_performance_performanceevent_alert_device_get_many_count(device_id,user_key,user_id,service_name,data_source ,from_date,end_date)" />
+				<entry key="372"
+					value=" call xfusion_performance_performanceevent_alert_device_get_many_limit(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset)" />
+				<entry key="373"
+					value=" call xfusion_performance_performanceevent_alert_device_get_single(device_id,user_key,user_id,service_name,data_source,from_date,end_date)" />
+				<entry key="374"
+					value=" call xfusion_performanceevent_alert_device_get_single_count(device_id,user_key,user_id,service_name,data_source,from_date,end_date)" />
+				<entry key="375"
+					value=" call xfusion_performanceevent_alert_device_get_single_limit(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset)" />
+				<entry key="376"
+					value=" call xfusion_performance_eventstatus_device_get_many(device_id,user_key,user_id,service_name,data_source)" />
+				<entry key="377"
+					value=" call xfusion_performance_eventstatus_device_get_single(device_id,user_key,user_id,service_name,data_source)" />
+				<entry key="378"
+					value=" call xfusion_performance_eventstatus_devices_get_all(device_id,user_key,user_id)" />
+				<entry key="379"
+					value=" call xfusion_performance_eventstatus_devices_get_many(device_id,user_key,user_id,service_name,data_source)" />
+				<entry key="380"
+					value=" call xfusion_performance_performanceevent_device_get_all(device_id,user_key,user_id,from_date,end_date)" />
+				<entry key="383"
+					value=" call xfusion_performance_performanceevent_device_get_many(device_id,user_key,user_id,service_name,data_source,from_date,end_date)" />
+				<entry key="384"
+					value=" call xfusion_performance_performanceevent_device_get_many_count(device_id,user_key,user_id,service_name,data_source,from_date,end_date)" />
+				<entry key="385"
+					value=" call xfusion_performance_performanceevent_device_get_many_limit(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset)" />
+				<entry key="386"
+					value=" call xfusion_performance_performanceevent_device_get_single(device_id,user_key,user_id,service_name,data_source,from_date,end_date)" />
+				<entry key="387"
+					value=" call xfusion_performance_performanceevent_device_get_single_count(device_id,user_key,user_id,service_name,data_source,from_date,end_date)" />
+				<entry key="388"
+					value=" call xfusion_performance_performanceevent_device_get_single_limit(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset)" />
+				<entry key="389"
+					value=" call xfusion_performance_eventstatus_device_type_get_all(device_type,user_key,user_id)" />
+				<entry key="390"
+					value=" call xfusion_performance_eventstatus_device_type_get_all_count(device_type,user_key,user_id)" />
+				<entry key="391"
+					value=" call xfusion_performance_eventstatus_device_type_get_all_limit(device_type,user_key,user_id,limit,offset)" />
+				<entry key="392"
+					value=" call xfusion_performance_eventstatus_alert_device_type_get_all(device_type,user_key,user_id)" />
+				<entry key="395"
+					value=" call xfusion_dashboard_alert_get_count(user_key,user_id,from_date,end_date)" />
+				<entry key="396"
+					value=" call xfusion_dashboard_device_severity_count(user_key,user_id,device_id,service_name,data_source_name,from_date,end_date)" />
+				<entry key="397"
+					value=" call xfusion_dashboard_main_device_with_most_alert_count(user_key,user_id,from_date,end_date)" />
+				<entry key="398"
+					value=" call xfusion_re_rule_get_sub_rule(user_key,user_id,rule_id)" />
+				<entry key="399"
+					value=" call xfusion_re_rule_update_rule(user_key,user_id,rule_id,global_rule_id,name,service_id,service_name,data_source_id,data_source_name,trigger_method,value_under,value_over,value_from,value_to,value_equal,alarm_age,description,is_in_conditional,is_alert,devicemodel_id,device_ids,rule_order,operator,severity_id,severity,severity_colour,severity_priority,is_correlated,rule_type,latitude,longitude,sequence)" />
+				<entry key="400" value=" call xfusion_tags_get_tags(user_key,user_id)" />
+				<entry key="401"
+					value=" call xfusion_utility_get_derived_service_data_source(user_key,user_id,gateway_id)" />
+				<entry key="402" value=" call xfusion_action_get_action(user_key,user_id)" />
+				<entry key="403"
+					value=" call xfusion_device_get_parent_device_suggestion(user_key,user_id,parent_device_id)" />
+				<entry key="404"
+					value=" call xfusion_device_model_get_all_by_device_technology(user_key,user_id,device_technology_id)" />
+				<entry key="405"
+					value=" call xfusion_users_get_all_by_user_organization(user_key,user_id)" />
+				<entry key="406"
+					value=" call xfusion_device_get_all_types(user_key,user_id)" />
+				<entry key="407"
+					value=" call xfusion_device_get_all_vendor(user_key,user_id)" />
+				<entry key="408"
+					value=" call xfusion_re_rule_delete_rule_by_rule_id(user_key,user_id,rule_id)" />
+				<entry key="409"
+					value=" call xfusion_re_device_get_by_rule_id(user_key,user_id,rule_id)" />
+				<entry key="410"
+					value=" call xfusion_device_search(user_key,user_id,device_model,device_country,device_state,device_city,device_tags,device_alias)" />
+				<entry key="411"
+					value=" call xfusion_re_get_rules_by_global_rule_id(user_key,user_id,global_rule_id)" />
+				<entry key="412"
+					value=" call xfusion_performance_commandstatus_devices_get_all(device_id,user_key,user_id)" />
+				<entry key="250"
+					value="call xfusion_performance_eventstatus_device_get_all(device_id,user_key,user_id)" />
+				<entry key="251"
+					value="call xfusion_performance_eventstatus_device_get_all_count(device_id,user_key,user_id)" />
+				<entry key="252"
+					value="call xfusion_performance_eventstatus_device_get_all_limit(device_id,user_key,user_id,limit,offset)" />
+				<entry key="414"
+					value="call xfusion_devices_get_by_keyword(user_key,user_id,search_criteria)" />
+				<entry key="415"
+					value="call xfusion_device_model_get_service_data_source(user_key,user_id,device_model_id)" />
+				<entry key="416"
+					value="call xfusion_device_organization_insert(organization_id,device_id)" />
+				<entry key="417"
+					value="call xfusion_organization_check(organization_name)" />
+				<entry key="418"
+					value="call xfusion_exception_log_get_all_limit(user_key,user_id,application_key,from_date,end_date,limit,offset,organization_id,in_condition)" />
+				<entry key="419"
+					value="call xfusion_exception_log_count(user_key,user_id,application_key,from_date,end_date,organization_id,in_condition)" />
+				<entry key="420"
+					value="call xfusion_exception_log_insert(?,?,?,?,?,?,?,?)" />
+				<entry key="421"
+					value="call xfusion_service_datasource_get_all(user_key,user_id)" />
+				<entry key="422"
+					value="call xfusion_get_device_config(device_id,topic_type,user_key,user_id)" />
+				<entry key="423"
+					value="call xfusion_organization_get_by_user(user_key,user_email)" />
+				<entry key="424"
+					value="call xfusion_dashboard_alert_count(user_key,user_id,from_date,end_date,alert_timezone)" />
+				<entry key="425"
+					value="call xfusion_webhook_get_events(user_key,user_id,global_rule_id)" />
+				<entry key="426"
+					value="call xfusion_webhook_get_payload_destination(user_key,user_id)" />
+				<entry key="427"
+					value="call xfusion_webhook_get_payload_destination_schema(user_key,user_id,payload_destination_id)" />
+				<entry key="428"
+					value="call xfusion_webhook_insert_event(user_key,user_id,webhook_name,webhook_description,global_rule_id,webhook_category,payload_destination_id,payload_destination_parameter_key,payload_destination_parameter_value)" />
+				<entry key="429"
+					value="call xfusion_webhook_update_event(user_key,user_id,webhook_name,webhook_description,payload_destination_id,payload_destination_parameter_key,payload_destination_parameter_value,webhook_event_id)" />
+				<entry key="430"
+					value="call xfusion_webhook_delete_event(user_key,user_id,webhook_event_id)" />
+				<entry key="431"
+					value=" call xfusion_utilities_performance_pivot(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,table_name,in_condition)" />
+				<entry key="432"
+					value=" call xfusion_re_rule_get_hsql_connections(user_key,user_id,global_rule_id,topic_type)" />
+				<entry key="433"
+					value=" call xfusion_auth_insert_token(user_id,user_key,access_key,token)" />
+				<entry key="434"
+					value=" call xfusion_auth_validate_token(user_key,user_id,token)" />
+				<entry key="435"
+					value=" call xfusion_utilities_performance_pivot_with_inventory(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,table_name,in_condition)" />
+				<entry key="436"
+					value=" call xfusion_performance_performanceinventory_devices_get_many(device_id,user_key,user_id,service_name,data_source,from_date,end_date)" />
+				<entry key="437"
+					value=" call xfusion_device_template_inherit(user_key,user_id,template_id,template_name,model_name)" />
+				<entry key="438"
+					value=" call xfusion_device_template_get_defaults(user_key,user_id)" />
+				<entry key="439"
+					value=" call xfusion_dashboard_message_count(user_key,user_id,from_date,end_date)" />
+				<entry key="440"
+					value=" call xfusion_service_simulation_get_controls(user_key,user_id)" />
+				<entry key="441"
+					value=" call xfusion_organization_users_get_all(user_key,user_id)" />
+
+
+				<!-- Server Side Filtering -->
+
+				<entry key="442"
+					value=" call xfusion_service_bi_hourly_devices_get_many(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="443"
+					value=" call xfusion_inventory_bi_hourly_devices_get_many(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="444"
+					value=" call xfusion_service_half_hourly_devices_get_many(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="445"
+					value=" call xfusion_inventory_half_hourly_devices_get_many(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="446"
+					value=" call xfusion_inventory_yearly_devices_get_many(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="447"
+					value=" call xfusion_service_yearly_devices_get_many(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="448"
+					value=" call xfusion_inventory_monthly_devices_get_many(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="449"
+					value=" call xfusion_service_monthly_devices_get_many(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="450"
+					value=" call xfusion_inventory_weekly_devices_get_many(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="451"
+					value=" call xfusion_service_weekly_devices_get_many(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="452"
+					value=" call xfusion_inventory_daily_devices_get_many(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="453"
+					value=" call xfusion_service_daily_devices_get_many(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="454"
+					value=" call xfusion_inventory_hourly_devices_get_many(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="455"
+					value=" call xfusion_service_hourly_devices_get_many(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+
+
+				<entry key="104"
+					value="call xfusion_device_get_metadata_status_by_type_count(user_key,user_id,device_type,host_status,in_condition)" />
+				<entry key="61"
+					value="call xfusion_performanceservice_device_get_single_limit_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="110"
+					value="call xfusion_audit_log_get_all_limit(user_key,user_id,application_key,from_date,end_date,limit,offset,organization_id,in_condition)" />
+				<entry key="111"
+					value="call xfusion_audit_log_count(user_key,user_id,application_key,from_date,end_date,organization_id,in_condition)" />
+				<entry key="55"
+					value="call xfusion_performanceinventory_device_get_single_limit_without_dat(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="145"
+					value=" call xfusion_performance_performanceservice_device_get_single_count(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="143"
+					value=" call xfusion_performance_performanceinventory_device_get_single_count(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+
+				<entry key="368"
+					value=" call xfusion_performance_performanceevent_alert_device_get_all_count(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+
+				<entry key="369"
+					value=" call xfusion_performance_performanceevent_alert_device_get_all_limit(device_id,user_key,user_id,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="361"
+					value=" call xfusion_performance_eventstatus_alert_device_get_all_count(device_id,user_key,user_id,in_condition)" />
+				<entry key="362"
+					value=" call xfusion_performance_eventstatus_alert_device_get_all_limit(device_id,user_key,user_id,limit,offset,in_condition)" />
+				<entry key="355"
+					value=" call xfusion_re_device_type_get_rules_count(user_key,user_id,device_type_id,is_correlated,in_condition)" />
+				<entry key="105"
+					value="call xfusion_device_get_metadata_status_by_type_limit(user_key,user_id,device_type,host_status,limit,offset,in_condition)" />
+				<entry key="394"
+					value=" call xfusion_performance_eventstatus_alert_device_type_get_all_limit(device_type,user_key,user_id,limit,offset,is_correlated,in_condition)" />
+				<entry key="393"
+					value=" call xfusion_performance_eventstatus_alert_device_type_get_all_count(device_type,user_key,user_id,is_correlated,in_condition)" />
+				<entry key="356"
+					value=" call xfusion_re_device_type_get_rules_limit(user_key,user_id,device_type_id,limit,offset,is_correlated,in_condition)" />
+				<entry key="269"
+					value=" call xfusion_device_get_metadata_status_by_status(user_key,user_id,status_type,limit,offset,in_condition)" />
+				<entry key="278"
+					value=" call xfusion_device_get_metadata_status_by_status_count(user_key,user_id,status_type,in_condition)" />
+				<entry key="413"
+					value=" call xfusion_device_get_tags_by_model(user_key,user_id,device_model,tags)" />
+				<entry key="381"
+					value=" call xfusion_performance_performanceevent_device_get_all_limit(device_id,user_key,user_id,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="382"
+					value=" call xfusion_performance_performanceevent_device_get_all_count(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="127"
+					value=" call xfusion_service_hourly_device_get_single_without_data(?,?,?,?,?,?,?,?)" />
+				<entry key="128"
+					value=" call xfusion_service_hourly_device_get_single_limit_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="129"
+					value=" call xfusion_service_hourly_device_get_single_limit(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="130"
+					value=" call xfusion_service_hourly_device_get_single_count(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="131"
+					value=" call xfusion_service_hourly_device_get_single(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="132"
+					value=" call xfusion_service_hourly_device_get_many_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="133"
+					value=" call xfusion_service_hourly_device_get_many_limit_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="134"
+					value=" call xfusion_service_hourly_device_get_many_limit(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="135"
+					value=" call xfusion_service_hourly_device_get_many_count(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="136"
+					value=" call xfusion_service_hourly_device_get_many(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="137"
+					value=" call xfusion_service_hourly_device_get_all_without_data(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="138"
+					value=" call xfusion_service_hourly_device_get_all_limit_without_data(device_id,user_key,user_id,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="139"
+					value=" call xfusion_service_hourly_device_get_all_limit(device_id,user_key,user_id,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="140"
+					value=" call xfusion_service_hourly_device_get_all_count(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="141"
+					value=" call xfusion_service_hourly_device_get_all(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="69"
+					value="call xfusion_service_daily_device_get_single_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="70"
+					value="call xfusion_service_daily_device_get_single_limit_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="71"
+					value="call xfusion_service_daily_device_get_single_limit(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,data_source)" />
+				<entry key="72"
+					value="call xfusion_service_daily_device_get_single_count(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="73"
+					value="call xfusion_service_daily_device_get_single(device_id,user_key,user_id,service_name,data_source,from_date,end_date,data_source)" />
+				<entry key="74"
+					value="call xfusion_service_daily_device_get_many_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="75"
+					value="call xfusion_service_daily_device_get_many_limit_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="76"
+					value="call xfusion_service_daily_device_get_many_limit(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="77"
+					value="call xfusion_service_daily_device_get_many_count(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="78"
+					value="call xfusion_service_daily_device_get_many(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="79"
+					value="call xfusion_service_daily_device_get_all_without_data(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="80"
+					value="call xfusion_service_daily_device_get_all_limit_without_data(device_id,user_key,user_id,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="81"
+					value="call xfusion_service_daily_device_get_all_limit(device_id,user_key,user_id,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="82"
+					value="call xfusion_service_daily_device_get_all_count(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="83"
+					value="call xfusion_service_daily_device_get_all(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="84"
+					value="call xfusion_service_bi_hourly_device_get_single_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="92"
+					value="call xfusion_service_bi_hourly_device_get_single_limit_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="93"
+					value="call xfusion_service_bi_hourly_device_get_single_limit(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="94"
+					value="call xfusion_service_bi_hourly_device_get_single_count(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="95"
+					value="call xfusion_service_bi_hourly_device_get_single(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="96"
+					value="call xfusion_service_bi_hourly_device_get_many_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="97"
+					value="call xfusion_service_bi_hourly_device_get_many_limit_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="98"
+					value="call xfusion_service_bi_hourly_device_get_many_limit(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="99"
+					value="call xfusion_service_bi_hourly_device_get_many_count(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="100"
+					value="call xfusion_service_bi_hourly_device_get_many(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition))" />
+				<entry key="101"
+					value="call xfusion_service_bi_hourly_device_get_all_without_data(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="102"
+					value="call xfusion_service_bi_hourly_device_get_all_limit_without_data(device_id,user_key,user_id,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="112"
+					value="call xfusion_service_half_hourly_device_get_all_limit(device_id,user_key,user_id,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="113"
+					value="call xfusion_service_half_hourly_device_get_all_count(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="114"
+					value="call xfusion_service_half_hourly_device_get_all_without_data(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="115"
+					value="call xfusion_service_half_hourly_device_get_all(device_id,user_key,user_id,from_date,end_date,data_source)" />
+				<entry key="116"
+					value="call xfusion_service_half_hourly_device_get_single_limit(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="117"
+					value="call xfusion_service_half_hourly_device_get_single_count(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="118"
+					value="call xfusion_service_half_hourly_device_get_single(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="119"
+					value="call xfusion_service_half_hourly_device_get_many_limit(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="120"
+					value="call xfusion_service_half_hourly_device_get_all_limit_without_data(device_id,user_key,user_id,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="121"
+					value=" call xfusion_service_half_hourly_device_get_many_count(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="122"
+					value=" call xfusion_service_half_hourly_device_get_many(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="123"
+					value=" call xfusion_service_half_hourly_device_get_single_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="124"
+					value=" call xfusion_service_half_hourly_device_get_single_limit_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="125"
+					value=" call xfusion_service_half_hourly_device_get_many_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="126"
+					value=" call xfusion_service_half_hourly_device_get_many_limit_without_data(device_id,user_key,user_id,service_name,data_source ,from_date ,end_date,limit,offset,in_condition)" />
+				<entry key="151"
+					value=" call xfusion_service_monthly_device_get_single_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="152"
+					value=" call xfusion_service_monthly_device_get_single_limit_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="153"
+					value=" call xfusion_service_monthly_device_get_single_limit(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="154"
+					value=" call xfusion_service_monthly_device_get_single_count(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="155"
+					value=" call xfusion_service_monthly_device_get_single(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="156"
+					value=" call xfusion_service_monthly_device_get_many_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="157"
+					value=" call xfusion_service_monthly_device_get_many_limit_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="158"
+					value=" call xfusion_service_monthly_device_get_many_limit(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="159"
+					value=" call xfusion_service_monthly_device_get_many_count(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="160"
+					value=" call xfusion_service_monthly_device_get_many(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="161"
+					value=" call xfusion_service_monthly_device_get_all_without_data(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="162"
+					value=" call xfusion_service_monthly_device_get_all_limit_without_data(device_id,user_key,user_id,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="163"
+					value=" call xfusion_service_monthly_device_get_all_limit(device_id,user_key,user_id,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="164"
+					value=" call xfusion_service_monthly_device_get_all_count(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="165"
+					value=" call xfusion_service_monthly_device_get_all(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="166"
+					value=" call xfusion_service_yearly_device_get_single_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="167"
+					value=" call xfusion_service_yearly_device_get_single_limit_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="168"
+					value=" call xfusion_service_yearly_device_get_single_limit(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="169"
+					value=" call xfusion_service_yearly_device_get_single_count(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="170"
+					value=" call xfusion_service_yearly_device_get_single(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="171"
+					value=" call xfusion_service_yearly_device_get_many_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="172"
+					value=" call xfusion_service_yearly_device_get_many_limit_without_data(device_id,user_key,user_id,service_name,data_source,from_date ,end_date,limit,offset,in_condition)" />
+				<entry key="173"
+					value=" call xfusion_service_yearly_device_get_many_limit(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="174"
+					value=" call xfusion_service_yearly_device_get_many_count(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="175"
+					value=" call xfusion_service_yearly_device_get_many(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="176"
+					value=" call xfusion_service_yearly_device_get_all_without_data(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="177"
+					value=" call xfusion_service_yearly_device_get_all_limit_without_data(device_id,user_key,user_id,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="178"
+					value=" call xfusion_service_yearly_device_get_all_limit(device_id,user_key,user_id,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="179"
+					value=" call xfusion_service_yearly_device_get_all_count(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="180"
+					value=" call xfusion_service_yearly_device_get_all(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="181"
+					value=" call xfusion_service_weekly_device_get_single_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="182"
+					value=" call xfusion_service_weekly_device_get_single_limit_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="183"
+					value=" call xfusion_service_weekly_device_get_single_limit(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="184"
+					value=" call xfusion_service_weekly_device_get_single_count(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="185"
+					value=" call xfusion_service_weekly_device_get_single(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="186"
+					value=" call xfusion_service_weekly_device_get_many_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="187"
+					value=" call xfusion_service_weekly_device_get_many_limit_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="188"
+					value=" call xfusion_service_weekly_device_get_many_limit(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="189"
+					value=" call xfusion_service_weekly_device_get_many_count(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="190"
+					value=" call xfusion_service_weekly_device_get_many(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="191"
+					value=" call xfusion_service_weekly_device_get_all_without_data(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="192"
+					value=" call xfusion_service_weekly_device_get_all_limit_without_data(device_id,user_key,user_id,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="193"
+					value=" call xfusion_service_weekly_device_get_all_limit(device_id,user_key,user_id,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="194"
+					value=" call xfusion_service_weekly_device_get_all_count(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="195"
+					value=" call xfusion_service_weekly_device_get_all(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="200"
+					value="call xfusion_inventory_half_hourly_device_get_single_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="201"
+					value="call xfusion_inventory_half_hourly_device_get_single_limit(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="202"
+					value="call xfusion_inventory_half_hourly_device_get_single_count(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="203"
+					value="call xfusion_inventory_half_hourly_device_get_single(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="204"
+					value="call xfusion_inventory_half_hourly_device_get_many_limit(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="205"
+					value="call xfusion_inventory_half_hourly_device_get_many_count(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="206"
+					value="call xfusion_inventory_half_hourly_device_get_many(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="207"
+					value="call xfusion_inventory_half_hourly_device_get_all_without_data(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="208"
+					value="call xfusion_inventory_half_hourly_device_get_all_limit(device_id,user_key,user_id,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="209"
+					value="call xfusion_inventory_half_hourly_device_get_all_count(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="210"
+					value="call xfusion_inventory_half_hourly_device_get_all(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="211"
+					value="call xfusion_inventory_bi_hourly_device_get_single_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="212"
+					value="call xfusion_inventory_bi_hourly_device_get_single_limit_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="213"
+					value="call xfusion_inventory_bi_hourly_device_get_single_limit(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="214"
+					value="call xfusion_inventory_bi_hourly_device_get_single_count(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="215"
+					value="call xfusion_inventory_bi_hourly_device_get_single(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="216"
+					value="call xfusion_inventory_bi_hourly_device_get_many_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="217"
+					value="call xfusion_inventory_bi_hourly_device_get_many_limit_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="218"
+					value="call xfusion_inventory_bi_hourly_device_get_many_limit(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="219"
+					value="call xfusion_inventory_bi_hourly_device_get_many_count(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="220"
+					value="call xfusion_inventory_bi_hourly_device_get_many(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="221"
+					value="call xfusion_inventory_bi_hourly_device_get_all_without_data(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="222"
+					value="call xfusion_inventory_bi_hourly_device_get_all_limit_without_data(device_id,user_key,user_id,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="223"
+					value="call xfusion_inventory_bi_hourly_device_get_all_limit(device_id,user_key,user_id,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="224"
+					value="call xfusion_inventory_bi_hourly_device_get_all_count(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="225"
+					value="call xfusion_inventory_bi_hourly_device_get_all(device_id,user_key,user_id,from_date,end_date,in_condition))" />
+				<entry key="226"
+					value="call xfusion_inventory_yearly_device_get_single_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="227"
+					value="call xfusion_inventory_yearly_device_get_single_limit_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="228"
+					value="call xfusion_inventory_yearly_device_get_single_limit(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="229"
+					value="call xfusion_inventory_yearly_device_get_single_count(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="230"
+					value="call xfusion_inventory_yearly_device_get_single(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="231"
+					value="call xfusion_inventory_yearly_device_get_many_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="232"
+					value="call xfusion_inventory_yearly_device_get_many_limit_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="233"
+					value="call xfusion_inventory_yearly_device_get_many_count(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="234"
+					value="call xfusion_inventory_yearly_device_get_many(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="235"
+					value="call xfusion_inventory_yearly_device_get_all_without_data(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="236"
+					value="call xfusion_inventory_yearly_device_get_all_limit_without_data(device_id,user_key,user_id,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="237"
+					value="call xfusion_inventory_yearly_device_get_all_limit(device_id,user_key,user_id,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="238"
+					value="call xfusion_inventory_yearly_device_get_all_count(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="239"
+					value="call xfusion_inventory_yearly_device_get_all(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="240"
+					value="call xfusion_inventory_yearly_device_get_many_limit(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="253"
+					value=" call xfusion_inventory_weekly_device_get_single_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="254"
+					value=" call xfusion_inventory_weekly_device_get_single_limit_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="255"
+					value=" call xfusion_inventory_weekly_device_get_single_limit(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="256"
+					value=" call xfusion_inventory_weekly_device_get_single_count(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="257"
+					value=" call xfusion_inventory_weekly_device_get_single(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="258"
+					value=" call xfusion_inventory_weekly_device_get_many_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="259"
+					value=" call xfusion_inventory_weekly_device_get_many_limit_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="260"
+					value=" call xfusion_inventory_weekly_device_get_many_limit(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="261"
+					value=" call xfusion_inventory_weekly_device_get_many_count(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="262"
+					value=" call xfusion_inventory_weekly_device_get_many(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="263"
+					value=" call xfusion_inventory_weekly_device_get_all_without_data(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="264"
+					value=" call xfusion_inventory_weekly_device_get_all_limit_without_data(device_id,user_key,user_id,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="265"
+					value=" call xfusion_inventory_weekly_device_get_all_limit(device_id,user_key,user_id,from_date,end_date,limit,offset,in_condition))" />
+				<entry key="266"
+					value=" call xfusion_inventory_weekly_device_get_all_count(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="267"
+					value=" call xfusion_inventory_weekly_device_get_all(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="87"
+					value="call xfusion_inventory_daily_device_get_all_limit_without_data(device_id,user_key,user_id,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="280"
+					value=" call xfusion_inventory_daily_device_get_all_limit(device_id,user_key,user_id,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="282"
+					value=" call xfusion_inventory_daily_device_get_single_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="283"
+					value=" call xfusion_inventory_daily_device_get_single_limit_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="284"
+					value=" call xfusion_inventory_daily_device_get_single_limit(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="285"
+					value=" call xfusion_inventory_daily_device_get_single_count(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="286"
+					value=" call xfusion_inventory_daily_device_get_single(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="287"
+					value=" call xfusion_inventory_daily_device_get_many_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="288"
+					value=" call xfusion_inventory_daily_device_get_many_limit_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="289"
+					value=" call xfusion_inventory_daily_device_get_many_limit(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="290"
+					value=" call xfusion_inventory_daily_device_get_many_count(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="291"
+					value=" call xfusion_inventory_daily_device_get_many(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="292"
+					value=" call xfusion_inventory_daily_device_get_all_without_data(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="293"
+					value=" call xfusion_inventory_daily_device_get_all_count(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="294"
+					value=" call xfusion_inventory_daily_device_get_all(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="299"
+					value=" call xfusion_inventory_monthly_device_get_single_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="300"
+					value=" call xfusion_inventory_monthly_device_get_single_limit_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="301"
+					value=" call xfusion_inventory_monthly_device_get_single_limit(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="302"
+					value=" call xfusion_inventory_monthly_device_get_single_count(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="303"
+					value=" call xfusion_inventory_monthly_device_get_single(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="304"
+					value=" call xfusion_inventory_monthly_device_get_many_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="305"
+					value=" call xfusion_inventory_monthly_device_get_many_limit_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="306"
+					value=" call xfusion_inventory_monthly_device_get_many_limit(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="307"
+					value=" call xfusion_inventory_monthly_device_get_many_count(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="308"
+					value=" call xfusion_inventory_monthly_device_get_many(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="309"
+					value=" call xfusion_inventory_monthly_device_get_all_without_data(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="310"
+					value=" call xfusion_inventory_monthly_device_get_all_limit_without_data(device_id,user_key,user_id,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="311"
+					value=" call xfusion_inventory_monthly_device_get_all_limit(device_id,user_key,user_id,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="312"
+					value=" call xfusion_inventory_monthly_device_get_all_count(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="313"
+					value=" call xfusion_inventory_monthly_device_get_all(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="321"
+					value=" call xfusion_inventory_hourly_device_get_single_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="322"
+					value=" call xfusion_inventory_hourly_device_get_single_limit_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="323"
+					value=" call xfusion_inventory_hourly_device_get_single_limit(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="324"
+					value=" call xfusion_inventory_hourly_device_get_single_count(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="325"
+					value=" call xfusion_inventory_hourly_device_get_single(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="326"
+					value=" call xfusion_inventory_hourly_device_get_many_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="327"
+					value=" call xfusion_inventory_hourly_device_get_many_limit_without_data(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="328"
+					value=" call xfusion_inventory_hourly_device_get_many_limit(device_id,user_key,user_id,service_name,data_source,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="329"
+					value=" call xfusion_inventory_hourly_device_get_many_count(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="330"
+					value=" call xfusion_inventory_hourly_device_get_many(device_id,user_key,user_id,service_name,data_source,from_date,end_date,in_condition)" />
+				<entry key="331"
+					value=" call xfusion_inventory_hourly_device_get_all_without_data(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="332"
+					value=" call xfusion_inventory_hourly_device_get_all_limit_without_data(device_id,user_key,user_id,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="333"
+					value=" call xfusion_inventory_hourly_device_get_all_limit(device_id,user_key,user_id,from_date,end_date,limit,offset,in_condition)" />
+				<entry key="334"
+					value=" call xfusion_inventory_hourly_device_get_all_count(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<entry key="335"
+					value=" call xfusion_inventory_hourly_device_get_all(device_id,user_key,user_id,from_date,end_date,in_condition)" />
+				<!-- Geofence Procedures -->
+				<entry key="456"
+					value=" call xfusion_re_rule_geofence_get_all(user_key,user_id,device_id)" />
+				<!-- TOPOLOGY Procedures -->
+				<entry key="457"
+					value=" call xfusion_device_topology_insert(user_key,user_id,origin_device,destination_device,origin_coordinate_x,origin_coordinate_y,destination_coordinate_x,destination_coordinate_y,edge)" />
+				<entry key="458"
+					value=" call xfusion_device_topology_get_by_device(user_key,user_id,organization_id,device_id)" />
+				<entry key="459"
+					value=" call xfusion_device_topology_get_all(user_key,user_id,organization_id)" />
+				<entry key="460" value=" call xfusion_settings_get_all()" />
+				<entry key="461"
+					value=" call xfusion_device_get_all(user_key,user_id,search_text)" />
+			</map>
+		</property>
+	</bean>
+
+
+	<bean class="com.springiot.constant.TableParameter" id="tableParameter">
+		<property name="performance_performanceservice" value="performance_performanceservice" />
+		<property name="performance_performancestatus" value="performance_performancestatus" />
+		<property name="performance_servicestatus" value="performance_servicestatus" />
+		<property name="performance_status" value="performance_status" />
+		<property name="report_header_mapping" value="report_header_mapping" />
+	</bean>
+
+	<!-- <bean class="com.springiot.constant.URLParameter" id="urlParameter">
+		<property name="gatewayauthURL"
+			value="http://127.0.0.1:7878/OAuthEngine_v2/oauth/token" />
+		<property name="validateaccesskey"
+			value="http://127.0.0.1:7878/OAuthEngine_v2/validate/accesskey/url" />
+		<property name="forgotPassword"
+			value="http://127.0.0.1:7878/OAuthEngine_v2/forgotpassword" />
+		<property name="changePassword"
+			value="http://127.0.0.1:7878/OAuthEngine_v2/passwordupdate" />
+		<property name="resetPassword"
+			value="http://127.0.0.1:7878/OAuthEngine_v2/passwordreset" />
+		<property name="usersList"
+			value="http://127.0.0.1:7878/OAuthEngine_v2/users/get/all/by/application/key" />
+		<property name="tokenExpire"
+			value="http://127.0.0.1:7878/OAuthEngine_v2/oauth/token/expire" />
+		<property name="applicationGetAll"
+			value="http://127.0.0.1:7878/OAuthEngine_v2/application/get/all" />
+		<property name="userProfileUpdate"
+			value="http://127.0.0.1:7878/OAuthEngine_v2/user/profile/update" />
+		<property name="userDetails"
+			value="http://127.0.0.1:7878/OAuthEngine_v2/user/details/get/by/user/id" />
+		<property name="validateToken"
+			value="http://127.0.0.1:7878/OAuthEngine_v2/oauth/validate/token" />
+		<property name="userSessionCheck"
+			value="http://127.0.0.1:7878/OAuthEngine_v2/user/session/check" />
+		<property name="userSessionUpdate"
+			value="http://127.0.0.1:7878/OAuthEngine_v2/auth/session/update" />
+		<property name="authSessionconfigure"
+			value="http://127.0.0.1:7878/OAuthEngine_v2/auth/session/configure" />
+		<property name="authSessionDeleteSettings"
+			value="http://127.0.0.1:7878/OAuthEngine_v2/auth/session/delete/settings" />
+		<property name="grafanaRole"
+			value="http://127.0.0.1:7878/AIDashboard/grafana/user/get/roles" />
+		<property name="getAllPermisions"
+			value="http://127.0.0.1:7878/OAuthEngine_v2/api/get/all/permissions" />
+		<property name="grafanaAPI" value="http://127.0.0.1:7878/AIDashboard" />
+	</bean>
+ -->
+<bean class="com.springiot.constant.URLParameter" id="urlParameter">
+		<property name="gatewayauthURL"
+			value="http://127.0.0.1:7878/OAuthEngine/oauth/token" />
+		<property name="validateaccesskey"
+			value="http://127.0.0.1:7878/OAuthEngine/validate/accesskey/url" />
+		<property name="forgotPassword"
+			value="http://127.0.0.1:7878/OAuthEngine/forgotpassword" />
+		<property name="changePassword"
+			value="http://127.0.0.1:7878/OAuthEngine/passwordupdate" />
+		<property name="resetPassword"
+			value="http://127.0.0.1:7878/OAuthEngine/passwordreset" />
+		<property name="usersList"
+			value="http://127.0.0.1:7878/OAuthEngine/users/get/all/by/application/key" />
+		<property name="tokenExpire"
+			value="http://127.0.0.1:7878/OAuthEngine/oauth/token/expire" />
+		<property name="applicationGetAll"
+			value="http://127.0.0.1:7878/OAuthEngine/application/get/all" />
+		<property name="userProfileUpdate"
+			value="http://127.0.0.1:7878/OAuthEngine/user/profile/update" />
+		<property name="userDetails"
+			value="http://127.0.0.1:7878/OAuthEngine/user/details/get/by/user/id" />
+		<property name="validateToken"
+			value="http://127.0.0.1:7878/OAuthEngine/oauth/validate/token" />
+		<property name="userSessionCheck"
+			value="http://127.0.0.1:7878/OAuthEngine/user/session/check" />
+		<property name="userSessionUpdate"
+			value="http://127.0.0.1:7878/OAuthEngine/auth/session/update" />
+		<property name="authSessionconfigure"
+			value="http://127.0.0.1:7878/OAuthEngine/auth/session/configure" />
+		<property name="authSessionDeleteSettings"
+			value="http://127.0.0.1:7878/OAuthEngine/auth/session/delete/settings" />
+		<property name="grafanaRole"
+			value="http://127.0.0.1:7878/AIDashboard/grafana/user/get/roles" />
+		<property name="getAllPermisions"
+			value="http://127.0.0.1:7878/OAuthEngine/api/get/all/permissions" />
+		<property name="grafanaAPI" value="http://127.0.0.1:7878/AIDashboard" />
+	</bean>
+
+
+	<bean id="loggingAspect" class="com.springiot.logging.AOPLogging" />
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="50000000" />
+	</bean>
+</beans>

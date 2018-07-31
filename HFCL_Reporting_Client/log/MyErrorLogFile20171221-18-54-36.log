@@ -1,0 +1,4 @@
+org.json.JSONException: JSONObject["device_id"] not found.
+	at org.json.JSONObject.get(JSONObject.java:516)
+	at com.teramatrix.processData.GetData.devicesByUser(GetData.java:68)
+	at com.teramatrix.main.FftEscalationApp.main(FftEscalationApp.java:110)

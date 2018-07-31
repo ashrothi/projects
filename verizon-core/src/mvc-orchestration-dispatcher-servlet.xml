@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd
+  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+  http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+
+	<context:component-scan base-package="org.orchestration.*" />
+
+	<mvc:annotation-driven />
+
+
+	<aop:aspectj-autoproxy />
+	<bean id="embedded-databaseOrchestration"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="org.mariadb.jdbc.Driver" />
+		<property name="url" value="jdbc:mariadb://192.168.1.122:3306/verizon" />
+		<property name="username" value="developer" />
+		<property name="password" value="admin@123" />
+	</bean>
+
+
+	<!-- <bean id="embedded-databaseOrchestration" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> 
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" /> <property 
+		name="url" value="jdbc:mysql://127.0.0.1:3306/verizon" /> <property name="username" 
+		value="orch_usr" /> <property name="password" value="globetouch@123" /> </bean> -->
+
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	<!-- applicationContext.xml -->
+	<bean id="sessionOrchestrationFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="embedded-databaseOrchestration" />
+		<property name="packagesToScan" value="org.orchestration.response.modal" />
+		<property name="hibernateProperties">
+			<value>
+				hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect
+				hibernate.connection.useUnicode=true
+				hibernate.connection.characterEncoding=UTF-8
+				hibernate.connection.charSet=UTF-8
+				hibernate.ejb.naming_strategy=org.hibernate.cfg.ImprovedNamingStrategy
+				hibernate.show_sql=true
+
+				hibernate.c3p0.msize=20
+				hibernate.c3p0.max_size=40
+				hibernate.c3p0.timeout=300
+				hibernate.c3p0.max_statements=50
+				hibernate.c3p0.idle_test_period=3000
+				<!-- hibernate.connection.zeroDateTimeBehavior=convertToNull -->
+			</value>
+		</property>
+	</bean>
+
+	<bean class="org.springframework.orm.hibernate4.HibernateTransactionManager"
+		id="transactionManager">
+		<property name="sessionFactory" ref="sessionOrchestrationFactory"></property>
+	</bean>
+	<bean class="org.orchestration.constant.OrchestrationProcessParameter"
+		id="processOLParameter">
+		<property name="maps">
+			<map>
+				<entry key="1"
+					value="call verizon_api_get_by_api_group_id(api_group_id,country)" />
+				<entry key="2"
+					value="call verizon_token_get(api_group_id,api_id,node_address_id)" />
+				<entry key="3"
+					value="call verizon_token_insert(api_group_id,api_id,token,node_address_id)" />
+				<entry key="4"
+					value="call verizon_token_update(api_group_id,api_id,last_modified_time,token,node_address_id)" />
+				<entry key="4" value="call verizon_is_user_valid(user_name,password,ip)" />
+				<entry key="5" value="call verizon_system_config_get(kafka_type)" />
+				<entry key="6"
+					value="call verizon_audit_log_insert(tracking_message_header,api_group_id,api_id,is_successful,message,state_id,name,value,username)" />
+				<entry key="7"
+					value="call verizon_audit_log_get_by_username(user_name,start_time,end_time)" />
+				<entry key="8"
+					value="call verizon_audit_log_get_by_tracking_message(tracking_message_header)" />
+				<entry key="9"
+					value="call verizon_error_code_get_by_api_group_id(api_group_id)" />
+				<entry key="10"
+					value="call verizon_notification_template_for_sync_api_get(api_group_id)" />
+			</map>
+		</property>
+	</bean>
+
+
+
+</beans>

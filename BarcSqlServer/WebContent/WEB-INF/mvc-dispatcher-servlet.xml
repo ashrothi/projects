@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd
+  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+  http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+	<context:component-scan base-package="com.springiot.*" />
+
+	<mvc:annotation-driven />
+	<!-- <bean id="loggingAspect" class="com.springiot.logging.AOPLogging" /> 
+		<aop:aspectj-autoproxy /> -->
+
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	<!-- <mvc:resources mapping="/resources/**" location="/resources/" cache-period="10000" 
+		/> -->
+
+	<bean id="swagger2Config"
+		class="springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration" />
+
+
+	<context:property-placeholder location="classpath:/swagger.properties" />
+
+	<mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/" />
+	<mvc:resources mapping="/webjars/**"
+		location="classpath:/META-INF/resources/webjars/" />
+
+	<!-- applicationContext.xml -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="embedded-database" />
+		<property name="packagesToScan" value="com.springiot.modal" />
+		<property name="hibernateProperties">
+			<value>
+				hibernate.dialect=org.hibernate.dialect.SQLServerDialect
+				hibernate.connection.useUnicode=true
+				hibernate.connection.characterEncoding=UTF-8
+				hibernate.connection.charSet=UTF-8
+				hibernate.ejb.naming_strategy=org.hibernate.cfg.ImprovedNamingStrategy
+				hibernate.show_sql=true
+
+				hibernate.c3p0.min_size=20
+				hibernate.c3p0.max_size=40
+				hibernate.c3p0.timeout=300
+				hibernate.c3p0.max_statements=50
+				hibernate.c3p0.idle_test_period=3000
+				<!-- hibernate.connection.zeroDateTimeBehavior=convertToNull -->
+			</value>
+		</property>
+	</bean>
+
+	<bean class="org.springframework.orm.hibernate4.HibernateTransactionManager"
+		id="transactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+
+	<bean class="com.springiot.constant.ProcessParameter" id="processParameter">
+		<property name="maps">
+			<map>
+				<entry key="1"
+					value="exec barc_collection_audit_log_insert(?,?,?,?,?,?,?,?,?)" />
+				<entry key="2" value="exec barc_collection_hashcode_get (?)" />
+				<entry key="3" value="exec barc_media_url_get(?)" />
+
+			</map>
+		</property>
+	</bean>
+
+	<!-- <bean name="runMeJob" class="org.springframework.scheduling.quartz.JobDetailBean"> 
+		<property name="jobClass" value="com.springiot.scheduling.JOBs" /> <property 
+		name="name" value="runmetask" /> </bean> <bean id="cronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean"> 
+		<property name="jobDetail" ref="runMeJob" /> <property name="cronExpression" 
+		value="0 0/5 * * * ?" /> </bean> -->
+
+	<!-- <bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean"> 
+		<property name="jobDetails" ref="runMeJob"/> <property name="triggers" ref="cronTrigger" 
+		/> </bean> -->
+
+	<!-- <bean id="emailStatus" class="com.springiot.email.EmailStatus"> <property 
+		name="username" value="xfusionherodonotreply@gmail.com" /> <property name="password" 
+		value="Hero@123" /> <property name="socketPort" value="465" /> <property 
+		name="socketClass" value="javax.net.ssl.SSLSocketFactory" /> <property name="authEmail" 
+		value="true" /> <property name="emailHost" value="smtp.gmail.com" /> <property 
+		name="emailPort" value="587" /> <property name="to" value="xfusionherodonotreply@gmail.com" 
+		/> <property name="bcc" value="xfusionherodonotreply@gmail.com" /> <property 
+		name="bcc" value="ankita.shrothi@teramaix.in" /> <property name="cc" value="xfusionherodonotreply@gmail.com" 
+		/> <property name="attachment" value="" /> <property name="subject" value="Forgot 
+		Password" /> <property name="msgFromStatus" value="xFusion-Platform" /> </bean> -->
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+
+	</bean>
+
+</beans>

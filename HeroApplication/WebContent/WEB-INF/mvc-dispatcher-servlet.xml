@@ -1,0 +1,938 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd
+  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+  http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+	<context:component-scan base-package="com.springiot.*" />
+
+	<mvc:annotation-driven />
+
+	<bean id="loggingAspect" class="com.springiot.logging.AOPLogging" />
+
+	<aop:aspectj-autoproxy />
+
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	<!-- <mvc:resources mapping="/resources/**" location="/resources/" cache-period="10000" 
+		/> -->
+
+	<bean id="swagger2Config"
+		class="springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration" />
+
+	<context:property-placeholder location="classpath:/swagger.properties" />
+
+	<mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/" />
+	<mvc:resources mapping="/webjars/**"
+		location="classpath:/META-INF/resources/webjars/" />
+
+
+
+	<!-- applicationContext.xml -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="embedded-database" />
+		<property name="packagesToScan" value="com.springiot.modal" />
+		<property name="hibernateProperties">
+			<value>
+				hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
+				hibernate.connection.useUnicode=true
+				hibernate.connection.characterEncoding=UTF-8
+				hibernate.connection.charSet=UTF-8
+				hibernate.ejb.naming_strategy=org.hibernate.cfg.ImprovedNamingStrategy
+				hibernate.show_sql=true
+
+				hibernate.c3p0.min_size=20
+				hibernate.c3p0.max_size=40
+				hibernate.c3p0.timeout=300
+				hibernate.c3p0.max_statements=50
+				hibernate.c3p0.idle_test_period=3000
+				<!-- hibernate.connection.zeroDateTimeBehavior=convertToNull -->
+			</value>
+		</property>
+	</bean>
+
+	<bean class="org.springframework.orm.hibernate4.HibernateTransactionManager"
+		id="transactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+
+	<bean class="com.springiot.constant.ProcessParameter" id="processParameter">
+		<property name="maps">
+			<map>
+
+				<entry key="insertfile" value="call hero_file_deatils_insert(?,?,?)" />
+
+				<entry key="1"
+					value="call hero_component_get_setting_history( ?,?,?,?,?)" />
+				<entry key="2" value="call hero_component_get_settings(?,?,?,?,?)" />
+				<entry key="3" value="call hero_component_get_type()" />
+				<entry key="4"
+					value="call hero_component_update_settings(?,?,?,?,?,?,?,?)" />
+				<entry key="5"
+					value="call hero_inventory_component_get_list(?,?,?,?,?,?,?,?)" />
+				<entry key="6" value="call hero_inventory_count_components(?)" />
+				<entry key="7" value="call hero_inventory_delele_location(? )" />
+				<entry key="8" value="call hero_inventory_delete_unplanned(?)" />
+				<entry key="9" value="call hero_inventory_delete_vendor(?)" />
+				<entry key="10" value="call hero_inventory_distribution(?)" />
+				<entry key="11" value="call hero_inventory_get_location()" />
+				<entry key="12" value="call hero_inventory_get_unplanned(?,?,?,?)" />
+				<entry key="13" value="call hero_inventory_get_vendor()" />
+				<entry key="14" value="call hero_inventory_insert_location(?,?)" />
+				<entry key="15" value="call hero_testing_get_type()" />
+
+				<!-- File Upload Procedure -->
+				<entry key="16" value="call hero_fileupload_get_history()" />
+				<entry key="17" value="call hero_fileupload_insert_detail(?,?,?,?,?,?)" />
+				<entry key="18" value="call hero_fileupload_sheet_get_fault(?)" />
+				<entry key="19" value="call hero_fileupload_sheet_get_inventory(?)" />
+				<entry key="20" value="call hero_fileupload_update_status(?,?)" />
+
+				<entry key="21"
+					value="call hero_inventory_component_update_list(?,?,?,?,?,?,?,?,?,?)" />
+				<entry key="22" value="call hero_inventory_component_delete_list(?)" />
+				<entry key="23" value="call hero_planner_get_detail(?,?,?,?,?,?)" />
+				<entry key="24" value="call hero_planner_get_planner_name(?,?)" />
+				<entry key="25" value="call hero_ineventory_get_update_reason()" />
+				<entry key="26" value="call hero_component_get_settings_by_id(?)" />
+				<entry key="27"
+					value="call hero_inventory_insert_unplanned(?,?,?,?,?,?,?,?,?,?)" />
+
+
+				<entry key="28"
+					value="call hero_inventory_update_unplanned(?,?,?,?,?,?,?,?,?,?,?)" />
+				<entry key="29"
+					value="call hero_inventory_component_download_list(?,?,?,?,?,?,?,?)" />
+
+				<!-- File Upload -->
+				<entry key="30" value="call hero_fileupload_download_history()" />
+				<entry key="31" value="call hero_inventory_insert_vendor(?,?,?)" />
+
+				<!-- Daily report and Planner Download Procedure -->
+
+
+				<entry key="32" value="call hero_horn_get_daily_report(?,?,?,?,?,?,?)" />
+				<entry key="33" value="call hero_planner_get_detail(?,?,?,?,?,?)" />
+				<entry key="34"
+					value="call hero_planner_equipment_get_detail(?,?,?,?,?,?)" />
+				<entry key="35" value="call hero_daily_report_get_relay(?,?,?,?,?,?,?)" />
+				<entry key="36"
+					value="call hero_daily_report_get_side_stand(?,?,?,?,?,?,?)" />
+				<entry key="37" value="call hero_daily_report_get_relay_repeat_data(?,?)" />
+				<entry key="38"
+					value="call hero_daily_report_get_side_stand_repeat_data(?,?)" />
+				<entry key="39" value="call hero_daily_report_count_horn(?,?,?)" />
+				<entry key="40" value="call hero_daily_report_count_relay(?,?,?)" />
+				<entry key="41" value="call hero_daily_report_count_side_stand(?,?,?)" />
+				<entry key="42" value="call hero_download_inventory_get_format()" />
+
+				<!-- Machine Procedure -->
+				<entry key="43" value="call hero_machine_get_parts(?,?)" />
+				<entry key="44" value="call hero_machine_get_horn(?)" />
+				<entry key="45" value="call hero_machine_get_lock(?)" />
+				<entry key="46" value="call hero_machine_get_relay(?)" />
+				<entry key="47" value="call hero_machine_get_side_stand(?)" />
+				<entry key="48" value="call hero_horn_report_get_repeat_data(?,?)" />
+				<entry key="49" value="call hero_planner_download(?,?,?,?)" />
+				<entry key="50" value="call hero_component_get_name()" />
+
+
+				<!-- Audit Log Procedure -->
+				<entry key="60" value="call hero_audit_log_insert(?,?,?,?,?,?,?,?,?)" />
+				<entry key="61" value="call hero_audit_log_get_all(?,?,?,?,?)" />
+				<entry key="62" value="call hero_audit_log_get_all_limit(?,?,?,?,?,?,?)" />
+				<entry key="63" value="call hero_audit_log_count(?,?,?,?,?)" />
+
+				<!--Final report Header and Grid Procedure -->
+				<entry key="53" value="call hero_final_report_get_horn_data(?,?,?,?)" />
+				<entry key="54" value="call hero_final_report_get_relay_data(?,?,?,?)" />
+				<entry key="55"
+					value="call hero_final_report_get_side_stand_header(?,?,?,?)" />
+				<entry key="56" value="call hero_final_report_get_horn(?, ?,?,?)" />
+				<entry key="57" value="call hero_final_report_get_relay(?,?,?,?)" />
+				<entry key="58" value="call hero_final_report_get_side_stand(?,?,?,?)" />
+				<entry key="64"
+					value="call hero_final_report_shower_get_tail_lamp_header(?,?,?,?)" />
+				<entry key="65"
+					value="call hero_final_report_shower_get_tail_lamp(?,?,?,?)" />
+
+
+				<!-- Scheduling Procedure -->
+				<entry key="51" value="call hero_machine_update_part_cycle()" />
+				<entry key="52" value="call hero_get_active_parts()" />
+				<entry key="59" value="call hero_daily_report_insert_horn_data(?)" />
+				<entry key="74" value="call hero_daily_report_insert_relay_data(?)" />
+
+
+				<!--Insert Observation for Final Report Procedure -->
+				<entry key="67"
+					value="call hero_final_report_insert_horn_observation(?,?,?,?,?)" />
+
+				<!-- testing_Version Procedure -->
+				<entry key="68"
+					value="call hero_final_report_ro_horn_get_testing_Version(?,?,?)" />
+				<entry key="69"
+					value="call hero_final_report_ro_lock_get_testing_Version(?,?,?)" />
+				<entry key="70"
+					value="call hero_final_report_ro_relay_get_testing_Version(?,?,?)" />
+				<entry key="71"
+					value="call hero_final_report_ro_side_stand_get_testing_Version(?,?,?)" />
+				<entry key="72"
+					value="call hero_final_report_shower_get_tail_lamp_testing_Version(?,?,?)" />
+				<entry key="73"
+					value="call hero_final_report_dust_get_head_lamp_testing_Version(?,?,?)" />
+
+				<!-- Get Observation Procedure -->
+				<entry key="66"
+					value="call hero_final_report_get_horn_observation(?,?,?,?)" />
+
+				<entry key="75"
+					value="call hero_final_report_get_lock_observation(?,?,?,?)" />
+				<entry key="76"
+					value="call hero_final_report_get_relay_observation(?,?,?,?)" />
+				<entry key="77"
+					value="call hero_final_report_get_side_stand_observation(?,?,?,?)" />
+				<entry key="78"
+					value="call hero_final_report_shower_get_tail_lamp_observation(?,?,?,?)" />
+				<entry key="79"
+					value="call hero_final_report_dust_get_observation(?,?,?,?)" />
+				<!-- Image Procedure -->
+				<entry key="80"
+					value="call hero_final_report_get_horn_before_test_images(?,?,?,?)" />
+				<entry key="81"
+					value="call hero_final_report_get_horn_after_test_images(?,?,?,?)" />
+				<entry key="82"
+					value="call hero_final_report_update_horn_header(?,?,?,?,?)" />
+				<entry key="83"
+					value="call hero_final_report_horn_insert_images(?,?,?,?,?,?,?,?)" />
+
+				<!-- <entry key="84" value="call hero_final_report_update_horn(?,?,?,?,?)" 
+					/> -->
+
+				<entry key="85" value="call hero_final_report_get_horn_analysis(?,?,?,?)" />
+				<entry key="86"
+					value="call hero_final_report_get_horn_conclusion(?,?,?,?)" />
+				<entry key="87"
+					value="call hero_final_report_insert_horn_analysis(?,?,?,?,?)" />
+				<entry key="88"
+					value="call hero_final_report_insert_horn_conclusion (?,?,?,?,?)" />
+				<entry key="89" value="call hero_final_report_delete_horn_observation(?)" />
+				<entry key="90"
+					value="call hero_final_report_delete_before_after_test_images(?)" />
+				<entry key="91" value="call hero_final_report_get_signature()" />
+				<entry key="92" value="call hero_final_report_get_signature_by_id(?)" />
+				<entry key="93" value="call hero_final_report_delete_signature(?)" />
+				<entry key="94" value="call hero_final_report_insert_signature(?,?)" />
+				<entry key="95" value="call hero_final_report_get_horn_result(?,?,?,?)" />
+				<entry key="96"
+					value="call hero_final_report_update_final_submit(?,?,?,?,?,?)" />
+				<entry key="97" value="call hero_final_report_update_signature(?,?,?)" />
+				<entry key="98" value="call hero_inventory_download_unplanned(?,?)" />
+
+				<entry key="99" value="call hero_final_report_update_horn(?)" />
+
+				<entry key="100" value="call hero_final_report_get_horn_download(?,?,?,?)" />
+				<entry key="101" value="call hero_dashboard_get_kpi()" />
+				<entry key="102" value="call hero_dashboard_get_kpi_equipments()" />
+				<entry key="103" value="call hero_dashboard_get_kpi_testing_log_status()" />
+				<entry key="104"
+					value="call hero_component_download_setting_history(?,?,?,?,?)" />
+
+				<entry key="105"
+					value="call hero_component_get_default_settings(?,?,?,?,?)" />
+				<entry key="106"
+					value="call hero_final_report_insert_horn_signature(?,?,?,?,?,?,?)" />
+				<entry key="107"
+					value="call hero_final_report_get_horn_signature(?,?,?,?)" />
+
+				<entry key="108"
+					value="call hero_final_report_shower_get_tail_lamp_analysis(?,?,?,?)" />
+
+				<entry key="109"
+					value="call hero_final_report_shower_get_tail_lamp_result(?,?,?,?)" />
+
+				<entry key="110"
+					value="call hero_final_report_shower_get_tail_lamp_conclusion(?,?,?,?)" />
+
+				<entry key="111"
+					value="call hero_final_report_shower_update_tail_lamp_header(?,?,?,?,?,?,?,?,?,?,?,?)" />
+				<entry key="112"
+					value="call hero_final_report_shower_update_tail_lamp(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)" />
+
+				<entry key="113"
+					value="call hero_final_report_shower_insert_tail_lamp_images(?,?,?,?,?,?,?,?,?)" />
+
+				<entry key="114"
+					value="call hero_final_report_shower_get_tail_lamp_before_test_images(?,?,?,?,?)" />
+
+				<entry key="115"
+					value="call hero_final_report_shower_get_tail_lamp_after_test_images(?,?,?,?,?)" />
+
+				<entry key="116"
+					value="call hero_final_report_shower_insert_tail_lamp_signature(?,?,?,?,?,?,?)" />
+				<entry key="117"
+					value="call hero_final_report_shower_update_tail_lamp_final_submit(?,?,?,?,?,?)" />
+				<entry key="118"
+					value="call hero_final_report_shower_get_tail_lamp_signature(?,?,?,?)" />
+
+
+				<entry key="119"
+					value="call hero_final_report_shower_tail_lamp_insert_analysis(?,?,?,?,?)" />
+				<entry key="120"
+					value="call hero_final_report_shower_tail_lamp_delete_images(?)" />
+				<entry key="121"
+					value="call hero_final_report_shower_tail_lamp_insert_result(?,?,?,?,?)" />
+				<entry key="122"
+					value="call hero_final_report_shower_tail_lamp_insert_conclusion(?,?,?,?,?)" />
+				<entry key="123"
+					value="call hero_final_report_shower_tail_lamp_insert_observation(?,?,?,?,?)" />
+
+				<entry key="124" value="call hero_notification_settings_get_component()" />
+				<entry key="125"
+					value="call hero_notification_settings_get_component_parameter(?)" />
+				<entry key="126"
+					value="call hero_notification_settings_insert_rule(?,?,?)" />
+				<entry key="127" value="call hero_notification_settings_get_rules()" />
+
+				<entry key="128"
+					value="call hero_notification_settings_update_rule(?,?,?)" />
+				<entry key="129"
+					value="call hero_final_report_shower_delete_tail_lamp_observation(?)" />
+				<entry key="130" value="call hero_notification_get_all(?,?,?,?,?)" />
+				<entry key="131" value="call hero_notification_get_all_alert(?,?,?,?,?)" />
+
+				<entry key="132" value="call hero_inventory_get_hmcl_location()" />
+
+				<entry key="133"
+					value="call hero_notification_escalation_get_escalationlevel()" />
+
+				<entry key="134"
+					value="call hero_notification_escalation_add_escalationlevel(?,?,?,?)" />
+
+				<entry key="135"
+					value="call hero_notification_escalation_update_escalationlevel(?,?,?,?,?)" />
+
+				<entry key="136" value="call hero_inventory_insert_hmcl_location(?,?)" />
+
+				<entry key="137" value="call hero_notification_action_insert(?,?,?,?)" />
+
+				<entry key="138" value="call hero_notification_get_notificationcodes()" />
+
+				<entry key="139"
+					value="call hero_notification_settings_get_rules_download()" />
+
+				<entry key="140"
+					value="call hero_notification_escalation_delete_escalationlevel(?,?)" />
+
+				<!-- New APIs -->
+				<entry key="141"
+					value="call hero_final_report_get_relay_analysis(?,?,?,?)" />
+				<entry key="142"
+					value="call hero_final_report_get_relay_conclusion(?,?,?,?)" />
+				<entry key="143" value="call hero_final_report_get_relay_result(?,?,?,?)" />
+				<entry key="144"
+					value="call hero_final_report_get_relay_images(?,?,?,?,?,?)" />
+				<entry key="145"
+					value="call hero_final_report_get_relay_signature(?,?,?,?)" />
+				<entry key="146"
+					value="call hero_final_report_insert_relay_images(?,?,?,?,?,?,?,?,?)" />
+				<entry key="147"
+					value="call hero_final_report_insert_relay_analysis(?,?,?,?,?)" />
+				<entry key="148"
+					value="call hero_final_report_insert_relay_conclusion(?,?,?,?,?)" />
+				<entry key="149"
+					value="call hero_final_report_insert_relay_observation(?,?,?,?,?)" />
+
+				<entry key="150"
+					value="call hero_final_report_insert_relay_result(?,?,?,?,?)" />
+				<entry key="151"
+					value="call hero_final_report_insert_relay_signature(?,?,?,?,?,?,?)" />
+				<entry key="152"
+					value="call hero_final_report_delete_relay_observation(?)" />
+				<entry key="153" value="call hero_final_report_delete_relay_images(?)" />
+
+				<entry key="154"
+					value="call hero_final_report_update_relay_header(?,?,?,?,?,?)" />
+				<entry key="155"
+					value="call hero_final_report_update_relay_final_submit(?,?,?,?,?,?)" />
+
+				<entry key="156"
+					value="call hero_notification_escalation_get_escalationlevel_download()" />
+
+				<entry key="157"
+					value="call hero_notification_insert_user_notification_seen_status(?,?,?)" />
+
+				<entry key="158"
+					value="call hero_final_report_get_horn_screw_seting(?,?,?,?)" />
+
+				<entry key="159" value="call hero_final_report_update_relay(?)" />
+				<entry key="160" value="call hero_inventory_component_get_archive()" />
+				<entry key="161" value="call hero_inventory_component_update_action(?,?)" />
+				<entry key="162" value="call hero_dashboard_get_performance_kpi(?, ?)" />
+
+				<entry key="163" value="call hero_dashboard_get_kpi_notification(?,?)" />
+				<entry key="164" value="call hero_dashboard_get_kpi_alerts(?,?)" />
+
+				<entry key="165" value="call hero_daily_report_insert_side_stand_data(?)" />
+
+				<entry key="166"
+					value="call hero_final_report_get_side_stand_analysis(?,?,?,? )" />
+				<entry key="167"
+					value="call hero_final_report_get_side_stand_conclusion(?,?,?,? )" />
+				<entry key="168"
+					value="call hero_final_report_get_side_stand_images(?,?,?,?,?,?)" />
+				<entry key="169"
+					value="call hero_final_report_get_side_stand_result(?,?,?,? )" />
+				<entry key="170"
+					value="call hero_final_report_get_side_stand_signature(?,?,?,?)" />
+
+
+				<entry key="171"
+					value="call hero_final_report_insert_side_stand_analysis(?,?,?,?,?)" />
+				<entry key="172"
+					value="call hero_final_report_insert_side_stand_conclusion(?,?,?,?,?)" />
+				<entry key="173"
+					value="call hero_final_report_insert_side_Stand_images(?,?,?,?,?,?,?,?,?)" />
+				<entry key="174"
+					value="call hero_final_report_insert_side_stand_observation(?,?,?,?,?)" />
+				<entry key="175"
+					value="call hero_final_report_insert_side_stand_result(?,?,?,?,?)" />
+				<entry key="176"
+					value="call hero_final_report_insert_side_stand_signature(?,?,?,?,?,?,?)" />
+
+				<entry key="177" value="call hero_final_report_update_side_stand(?)" />
+				<entry key="178"
+					value="call hero_final_report_update_side_stand_final_submit(?,?,?,?,?,?)" />
+				<entry key="179"
+					value="call hero_final_report_update_side_stand_header(?,?,?,?,?,?,?,?,?,?)" />
+				<entry key="180"
+					value="call hero_final_report_delete_side_stand_observation(?)" />
+				<entry key="181"
+					value="call hero_final_report_delete_side_stand_images(?)" />
+
+				<entry key="182" value="call hero_planner_update_success_status(?,?,?,?)" />
+				<entry key="183" value="call hero_planner_get_update_status_detail(?,?)" />
+
+
+				<entry key="184" value="call hero_inventory_delete_archive(?)" />
+				<entry key="185" value="call hero_inventory_get_no_of_sample_shower(?,?)" />
+				<entry key="186" value="call hero_inventory_get_no_of_sample_dust(?,?)" />
+				<entry key="187" value="call hero_inventory_get_no_of_sample_ro(?,?)" />
+				<entry key="188"
+					value="call hero_component_setting_update_default_value(?)" />
+				<entry key="189"
+					value="call hero_final_report_dust_get_head_lamp(?,?,?,?)" />
+				<entry key="190"
+					value="call hero_final_report_dust_get_head_lamp_analysis(?,?,?,?)" />
+				<entry key="191"
+					value="call hero_final_report_dust_get_head_lamp_conclusion(?,?,?,?)" />
+				<entry key="192"
+					value="call hero_final_report_dust_get_head_lamp_header(?,?,?,?)" />
+				<entry key="193"
+					value="call hero_final_report_dust_get_head_lamp_images(?,?,?,?,?,?)" />
+				<entry key="194"
+					value="call hero_final_report_dust_get_head_lamp_observation(?,?,?,?)" />
+				<entry key="195"
+					value="call hero_final_report_dust_get_head_lamp_result(?,?,?,?)" />
+				<entry key="196"
+					value="call hero_final_report_dust_get_head_lamp_signature(?,?,?,?)" />
+				<entry key="197"
+					value="call hero_final_report_dust_insert_head_lamp_analysis(?,?,?,?,?)" />
+				<entry key="198"
+					value="call hero_final_report_dust_insert_head_lamp_conclusion(?,?,?,?,?)" />
+				<entry key="199"
+					value="call hero_final_report_dust_insert_head_lamp_images(?,?,?,?,?,?,?,?,?)" />
+				<entry key="200"
+					value="call hero_final_report_dust_insert_head_lamp_observation(?,?,?,?,?)" />
+				<entry key="201"
+					value="call hero_final_report_dust_insert_head_lamp_result(?,?,?,?,?)" />
+				<entry key="202"
+					value="call hero_final_report_dust_insert_head_lamp_signature(?,?,?,?,?,?,?)" />
+				<entry key="203"
+					value="call hero_final_report_dust_delete_head_lamp_images(?)" />
+				<entry key="204"
+					value="call hero_final_report_dust_update_head_lamp(?,?,?,?,?,?,?,?,?,?,?)" />
+				<entry key="205"
+					value="call hero_final_report_dust_update_head_lamp_header(?,?,?,?,?,?,?,?,?,?,?)" />
+				<entry key="206"
+					value="call hero_final_report_dust_update_head_lamp_final_submit(?,?,?,?,?,?)" />
+				<entry key="207"
+					value="call hero_final_report_dust_delete_head_lamp_observation(?)" />
+
+				<entry key="208" value="call hero_planner_update_no_of_samples()" />
+				<entry key="209"
+					value="call hero_final_report_dust_get_tail_lamp(?,?,?,?)" />
+				<entry key="210"
+					value="call hero_final_report_dust_get_tail_lamp_analysis(?,?,?,?)" />
+				<entry key="211"
+					value="call hero_final_report_dust_get_tail_lamp_conclusion(?,?,?,?)" />
+				<entry key="212"
+					value="call hero_final_report_dust_get_tail_lamp_header(?,?,?,?)" />
+				<entry key="213"
+					value="call hero_final_report_dust_get_tail_lamp_images(?,?,?,?,?,?)" />
+				<entry key="214"
+					value="call hero_final_report_dust_get_tail_lamp_observation(?,?,?,?)" />
+				<entry key="215"
+					value="call hero_final_report_dust_get_tail_lamp_result(?,?,?,?)" />
+				<entry key="216"
+					value="call hero_final_report_dust_get_tail_lamp_signature(?,?,?,?)" />
+				<entry key="217"
+					value="call hero_final_report_dust_insert_tail_lamp_analysis(?,?,?,?,?)" />
+				<entry key="218"
+					value="call hero_final_report_dust_insert_tail_lamp_conclusion(?,?,?,?,?)" />
+				<entry key="219"
+					value="call hero_final_report_dust_insert_tail_lamp_images(?,?,?,?,?,?,?,?,?)" />
+				<entry key="220"
+					value="call hero_final_report_dust_insert_tail_lamp_observation(?,?,?,?,?)" />
+				<entry key="221"
+					value="call hero_final_report_dust_insert_tail_lamp_result(?,?,?,?,?)" />
+				<entry key="222"
+					value="call hero_final_report_dust_insert_tail_lamp_signature(?,?,?,?,?,?,?)" />
+				<entry key="223"
+					value="call hero_final_report_dust_delete_tail_lamp_images(?)" />
+				<entry key="224"
+					value="call hero_final_report_dust_update_tail_lamp(?,?,?,?,?,?,?,?,?,?,?)" />
+				<entry key="225"
+					value="call hero_final_report_dust_update_tail_lamp_header(?,?,?,?,?,?,?,?,?,?,?)" />
+				<entry key="226"
+					value="call hero_final_report_dust_update_tail_lamp_final_submit(?,?,?,?,?,?)" />
+				<entry key="227"
+					value="call hero_final_report_dust_delete_tail_lamp_observation(?)" />
+				<entry key="228"
+					value="call hero_final_report_dust_get_tail_lamp_testing_Version(?,?,?)" />
+				<entry key="229"
+					value="call hero_final_report_shower_get_head_lamp(?,?,?,?)" />
+				<entry key="230"
+					value="call hero_final_report_shower_get_head_lamp_analysis(?,?,?,?)" />
+				<entry key="231"
+					value="call hero_final_report_shower_get_head_lamp_conclusion(?,?,?,?)" />
+				<entry key="232"
+					value="call hero_final_report_shower_get_head_lamp_header(?,?,?,?)" />
+				<entry key="233"
+					value="call hero_final_report_shower_get_head_lamp_images(?,?,?,?,?,?)" />
+				<entry key="234"
+					value="call hero_final_report_shower_get_head_lamp_observation(?,?,?,?)" />
+				<entry key="235"
+					value="call hero_final_report_shower_get_head_lamp_result(?,?,?,?)" />
+				<entry key="236"
+					value="call hero_final_report_shower_get_head_lamp_signature(?,?,?,?)" />
+				<entry key="237"
+					value="call hero_final_report_shower_head_lamp_insert_analysis(?,?,?,?,?)" />
+				<entry key="238"
+					value="call hero_final_report_shower_head_lamp_insert_conclusion(?,?,?,?,?)" />
+				<entry key="239"
+					value="call hero_final_report_shower_insert_head_lamp_images(?,?,?,?,?,?,?,?,?)" />
+				<entry key="240"
+					value="call hero_final_report_shower_head_lamp_insert_observation(?,?,?,?,?)" />
+				<entry key="241"
+					value="call hero_final_report_shower_head_lamp_insert_result(?,?,?,?,?)" />
+				<entry key="242"
+					value="call hero_final_report_shower_insert_head_lamp_signature(?,?,?,?,?,?,?)" />
+				<entry key="243"
+					value="call hero_final_report_shower_head_lamp_delete_images(?)" />
+				<entry key="244"
+					value="call hero_final_report_shower_update_head_lamp(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)" />
+				<entry key="245"
+					value="call hero_final_report_shower_update_head_lamp_header(?,?,?,?,?,?,?,?,?,?,?,?)" />
+				<entry key="246"
+					value="call hero_final_report_shower_update_head_lamp_final_submit(?,?,?,?,?,?)" />
+				<entry key="247"
+					value="call hero_final_report_shower_delete_head_lamp_observation(?)" />
+				<entry key="248"
+					value="call hero_final_report_shower_get_head_lamp_testing_Version(?,?,?)" />
+				<entry key="249" value="call hero_calendar_get_holidays()" />
+				<entry key="250" value="call hero_calendar_update_holidays(?,?,?)" />
+				<entry key="251" value="call hero_calendar_delete_holidays(?)" />
+				<entry key="252" value="call hero_calendar_insert_holidays(?,?,?)" />
+				<entry key="253" value="call hero_calendar_holidays_distribution()" />
+				<entry key="254" value="call hero_calendar_holiday_download_format()" />
+				<entry key="255" value="call hero_planner_processing_master(?,?,?,?,?)" />
+
+
+				<entry key="256"
+					value="call hero_final_report_shower_get_front_winker(?,?,?,?)" />
+				<entry key="257"
+					value="call hero_final_report_shower_get_front_winker_analysis(?,?,?,?)" />
+				<entry key="258"
+					value="call hero_final_report_shower_get_front_winker_conclusion(?,?,?,?)" />
+				<entry key="259"
+					value="call hero_final_report_shower_get_front_winker_header(?,?,?,?)" />
+				<entry key="260"
+					value="call hero_final_report_shower_get_front_winker_images(?,?,?,?,?,?)" />
+				<entry key="261"
+					value="call hero_final_report_shower_get_front_winker_observation(?,?,?,?)" />
+				<entry key="262"
+					value="call hero_final_report_shower_get_front_winker_result(?,?,?,?)" />
+				<entry key="263"
+					value="call hero_final_report_shower_get_front_winker_signature(?,?,?,?)" />
+				<entry key="264"
+					value="call hero_final_report_shower_get_front_winker_testing_Version(?,?,?)" />
+				<entry key="265"
+					value="call hero_final_report_shower_get_rear_winker(?,?,?,?)" />
+				<entry key="266"
+					value="call hero_final_report_shower_front_winker_insert_analysis(?,?,?,?,?)" />
+				<entry key="267"
+					value="call hero_final_report_shower_front_winker_insert_observation(?,?,?,?,?)" />
+				<entry key="268"
+					value="call hero_final_report_shower_front_winker_insert_conclusion(?,?,?,?,?)" />
+				<entry key="269"
+					value="call hero_final_report_shower_front_winker_insert_result(?,?,?,?,?)" />
+				<entry key="270"
+					value="call hero_final_report_shower_front_winker_insert_signature(?,?,?,?,?,?,?)" />
+				<entry key="271"
+					value="call hero_final_report_shower_front_winker_insert_images(?,?,?,?,?,?,?,?,?)" />
+				<entry key="272"
+					value="call hero_final_report_shower_front_winker_delete_images(?)" />
+				<entry key="273"
+					value="call hero_final_report_shower_front_winker_delete_observation(?)" />
+				<entry key="274"
+					value="call hero_final_report_shower_front_winker_update(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)" />
+				<entry key="275"
+					value="call hero_final_report_shower_front_winker_update_final_submit(?,?,?,?,?,?)" />
+				<entry key="276"
+					value="call hero_final_report_shower_front_winker_update_header(?,?,?,?,?,?,?,?,?,?,?,?)" />
+				<entry key="277"
+					value="call hero_final_report_shower_rear_winker_delete_images(?)" />
+				<entry key="278"
+					value="call hero_final_report_shower_rear_winker_delete_observation(?)" />
+				<entry key="279"
+					value="call hero_final_report_shower_rear_winker_insert_analysis(?,?,?,?,?)" />
+				<entry key="280"
+					value="call hero_final_report_shower_rear_winker_insert_conclusion(?,?,?,?,?)" />
+				<entry key="281"
+					value="call hero_final_report_shower_rear_winker_insert_images(?,?,?,?,?,?,?,?,?)" />
+				<entry key="282"
+					value="call hero_final_report_shower_rear_winker_insert_observation(?,?,?,?,?)" />
+				<entry key="283"
+					value="call hero_final_report_shower_rear_winker_insert_result(?,?,?,?,?)" />
+				<entry key="284"
+					value="call hero_final_report_shower_rear_winker_insert_signature(?,?,?,?,?,?,?)" />
+				<entry key="285"
+					value="call hero_final_report_shower_rear_winker_update(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)" />
+				<entry key="286"
+					value="call hero_final_report_shower_rear_winker_update_final_submit(?,?,?,?,?,?)" />
+				<entry key="287"
+					value="call hero_final_report_shower_rear_winker_update_header(?,?,?,?,?,?,?,?,?,?,?,?)" />
+				<entry key="288"
+					value="call hero_final_report_shower_get_rear_winker_analysis(?,?,?,?)" />
+				<entry key="289"
+					value="call hero_final_report_shower_get_rear_winker_conclusion(?,?,?,?)" />
+				<entry key="290"
+					value="call hero_final_report_shower_get_rear_winker_header(?,?,?,?)" />
+				<entry key="291"
+					value="call hero_final_report_shower_get_rear_winker_images(?,?,?,?,?,?)" />
+				<entry key="292"
+					value="call hero_final_report_shower_get_rear_winker_observation(?,?,?,?)" />
+				<entry key="293"
+					value="call hero_final_report_shower_get_rear_winker_result(?,?,?,?)" />
+				<entry key="294"
+					value="call hero_final_report_shower_get_rear_winker_signature(?,?,?,?)" />
+				<entry key="295"
+					value="call hero_final_report_shower_get_rear_winker_testing_Version(?,?,?)" />
+				<entry key="296"
+					value="call hero_final_report_shower_starter_get_relay(?,?,?,?)" />
+				<entry key="297"
+					value="call hero_final_report_shower_starter_get_relay_analysis(?,?,?,?)" />
+				<entry key="298"
+					value="call hero_final_report_shower_starter_get_relay_conclusion(?,?,?,?)" />
+				<entry key="299"
+					value="call hero_final_report_shower_starter_get_relay_header(?,?,?,?)" />
+				<entry key="300"
+					value="call hero_final_report_shower_starter_get_relay_images(?,?,?,?,?,?)" />
+				<entry key="301"
+					value="call hero_final_report_shower_starter_get_relay_observation(?,?,?,?)" />
+				<entry key="302"
+					value="call hero_final_report_shower_starter_get_relay_result(?,?,?,?)" />
+				<entry key="303"
+					value="call hero_final_report_shower_starter_get_relay_signature(?,?,?,?)" />
+				<entry key="304"
+					value="call hero_final_report_shower_starter_get_relay_testing_Version(?,?,?)" />
+				<entry key="305"
+					value="call hero_final_report_shower_starter_insert_relay_analysis(?,?,?,?,?)" />
+				<entry key="306"
+					value="call hero_final_report_shower_starter_insert_relay_conclusion(?,?,?,?,?)" />
+				<entry key="307"
+					value="call hero_final_report_shower_starter_insert_relay_images(?,?,?,?,?,?,?,?,?)" />
+				<entry key="308"
+					value="call hero_final_report_shower_starter_insert_relay_observation(?,?,?,?,?)" />
+				<entry key="309"
+					value="call hero_final_report_shower_starter_insert_relay_result(?,?,?,?,?)" />
+				<entry key="310"
+					value="call hero_final_report_shower_starter_insert_relay_signature(?,?,?,?,?,?,?)" />
+				<entry key="311"
+					value="call hero_final_report_shower_starter_delete_relay_images(?)" />
+				<entry key="312"
+					value="call hero_final_report_shower_starter_delete_relay_observation(?)" />
+				<entry key="313"
+					value="call hero_final_report_shower_starter_update_relay_header(?,?,?,?,?,?,?,?,?,?,?,?)" />
+				<entry key="314"
+					value="call hero_final_report_shower_starter_update_relay_final_submit(?,?,?,?,?,?)" />
+				<!-- Update api for final report at 315 -->
+
+				<entry key="316" value="call hero_daily_report_get_lock_header(?,?,?)" />
+				<entry key="317" value="call hero_daily_report_get_lock(?,?,?,?,?,?,?,?)" />
+				<entry key="318" value="call hero_daily_report_get_lock_cycle(?,?)" />
+				<entry key="319" value="call hero_daily_report_count_lock(?,?,?,?)" />
+
+				<entry key="320" value="call hero_final_report_lock_get_header(?,?,?,?)" />
+				<entry key="321" value="call hero_final_report_lock_get_analysis(?,?,?,?)" />
+				<entry key="322"
+					value="call hero_final_report_lock_get_conclusion(?,?,?,?)" />
+				<entry key="323"
+					value="call hero_final_report_lock_get_images(?,?,?,?,?,?)" />
+				<entry key="324"
+					value="call hero_final_report_lock_get_observation(?,?,?,?)" />
+				<entry key="325"
+					value="call hero_final_report_lock_get_signature(?,?,?,?)" />
+				<entry key="326"
+					value="call hero_final_report_lock_get_testing_Version(?,?,?)" />
+				<entry key="327"
+					value="call hero_final_report_lock_insert_analysis(?,?,?,?,?)" />
+				<entry key="328"
+					value="call hero_final_report_lock_insert_conclusion(?,?,?,?,?)" />
+				<entry key="329"
+					value="call hero_final_report_lock_insert_images(?,?,?,?,?,?,?,?,?)" />
+				<entry key="330"
+					value="call hero_final_report_lock_insert_observation(?,?,?,?,?)" />
+				<entry key="331"
+					value="call hero_final_report_lock_insert_result(?,?,?,?,?)" />
+				<entry key="332"
+					value="call hero_final_report_lock_insert_signature(?,?,?,?,?,?,?)" />
+				<entry key="333"
+					value="call hero_final_report_lock_update_header(?,?,?,?,?,?)" />
+				<entry key="334"
+					value="call hero_final_report_lock_update_final_submit(?,?,?,?,?,?)" />
+				<entry key="335" value="call hero_final_report_lock_delete_images(?)" />
+				<entry key="336" value="call hero_final_report_lock_delete_observation(?)" />
+				<entry key="337" value="call hero_final_report_lock_get_result(?,?,?,?)" />
+				<entry key="338"
+					value="call hero_final_report_shower_starter_update_relay(?)" />
+				<entry key="339" value="call hero_final_report_get_lock(?,?,?,?)" />
+				<entry key="340" value="call hero_final_report_lock_update(?)" />
+
+				<!-- Procedure for Vendor & Version -->
+				<entry key="341" value="call hero_final_report_get_vendor(?,?,?,?)" />
+				<entry key="342" value="call hero_final_report_get_version(?,?,?,?,?)" />
+
+				<!-- .......................... get data .............................................. -->
+				<entry key="343"
+					value="call hero_final_report_shower_get_speedometer_header(?,?,?,?)" />
+				<entry key="344"
+					value="call hero_final_report_shower_get_speedometer_analysis(?,?,?,?)" />
+				<entry key="345"
+					value="call hero_final_report_shower_get_speedometer_conclusion(?,?,?,?)" />
+				<entry key="346"
+					value="call hero_final_report_shower_get_speedometer_images(?,?,?,?,?,?)" />
+				<entry key="347"
+					value="call hero_final_report_shower_get_speedometer_observation(?,?,?,?)" />
+				<entry key="348"
+					value="call hero_final_report_shower_get_speedometer_signature(?,?,?,?)" />
+				<entry key="349"
+					value="call hero_final_report_shower_speedometer_get_Version(?,?,?)" />
+				<entry key="350"
+					value="call hero_final_report_shower_get_speedometer_grid(?,?,?,?)" />
+				<entry key="351"
+					value="call hero_final_report_shower_get_speedometer_result(?,?,?,?)" />
+
+				<!-- .......................... insert data .............................................. -->
+				<entry key="352"
+					value="call hero_final_report_shower_insert_speedometer_images(?,?,?,?,?,?,?,?,?)" />
+				<entry key="353"
+					value="call hero_final_report_shower_insert_speedometer_observation(?,?,?,?,?)" />
+				<entry key="354"
+					value="call hero_final_report_shower_insert_speedometer_result(?,?,?,?,?)" />
+				<entry key="355"
+					value="call  hero_final_report_shower_insert_speedometer_signature(?,?,?,?,?,?,?)" />
+				<entry key="356"
+					value="call hero_final_report_shower_insert_speedometer_analysis(?,?,?,?,?)" />
+				<entry key="357"
+					value="call hero_final_report_shower_insert_speedometer_conclusion(?,?,?,?,?)" />
+
+				<!-- .......................... delete data .............................................. -->
+				<entry key="358"
+					value="call hero_final_report_shower_speedometer_delete_images(?)" />
+				<entry key="359"
+					value="call hero_final_report_shower_speedometer_delete_observation(?)" />
+
+				<!-- .......................... update data .............................................. -->
+				<entry key="360"
+					value="call hero_final_report_shower_update_speedometer_grid(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)" />
+				<entry key="361"
+					value="call hero_final_report_shower_update_speedometer_final_submit(?,?,?,?,?,?)" />
+				<entry key="362"
+					value="call hero_final_report_shower_update_speedometer_header(?,?,?,?,?,?,?,?,?,?,?,?,?)" />
+
+				<!-- Procedures for Final Report of Dust Testing of Front Winker -->
+				<!-- procedures for get -->
+				<entry key="363"
+					value="call hero_final_report_dust_get_winker_front(?,?,?,?)" />
+				<entry key="364"
+					value="call hero_final_report_dust_get_winker_front_analysis(?,?,?,?)" />
+				<entry key="365"
+					value="call hero_final_report_dust_get_winker_front_conclusion(?,?,?,?)" />
+				<entry key="366"
+					value="call hero_final_report_dust_get_winker_front_header(?,?,?,?)" />
+				<entry key="367"
+					value="call hero_final_report_dust_get_winker_front_images(?,?,?,?,?,?)" />
+				<entry key="368"
+					value="call hero_final_report_dust_get_winker_front_observation(?,?,?,?)" />
+				<entry key="369"
+					value="call hero_final_report_dust_get_winker_front_result(?,?,?,?)" />
+				<entry key="370"
+					value="call hero_final_report_dust_get_winker_front_signature(?,?,?,?)" />
+				<entry key="371"
+					value="call hero_final_report_dust_get_winker_front_testing_Version(?,?,?)" />
+				<entry key="372"
+					value="call hero_final_report_dust_get_winker_front_vendor(?,?)" />
+				<!-- Procedures for insert -->
+				<entry key="373"
+					value="call hero_final_report_dust_insert_winker_front_analysis(?,?,?,?,?)" />
+				<entry key="374"
+					value="call hero_final_report_dust_insert_winker_front_conclusion(?,?,?,?,?)" />
+				<entry key="375"
+					value="call hero_final_report_dust_insert_winker_front_images(?,?,?,?,?,?,?,?,?)" />
+				<entry key="376"
+					value="call hero_final_report_dust_insert_winker_front_observation(?,?,?,?,?)" />
+				<entry key="377"
+					value="call hero_final_report_dust_insert_winker_front_result(?,?,?,?,?)" />
+				<entry key="378"
+					value="call hero_final_report_dust_insert_winker_front_signature(?,?,?,?,?,?,?)" />
+				<!-- Procedures for update -->
+				<entry key="379"
+					value="call hero_final_report_dust_update_winker_front(?,?,?,?,?,?,?,?,?,?,?,?)" />
+				<entry key="380"
+					value="call hero_final_report_dust_update_winker_front_final_submit(?,?,?,?,?,?)" />
+				<entry key="381"
+					value="call hero_final_report_dust_update_winker_front_header(?,?,?,?,?,?,?,?,?,?,?,?,?)" />
+				<!-- Procedure for Final Submit -->
+				<entry key="382"
+					value="call hero_final_report_dust_winker_front_final_submit(?,?,?,?,?,?)" />
+				<!-- Procedure for deletion -->
+				<entry key="383"
+					value="call hero_final_report_dust_winker_front_delete_images(?)" />
+				<entry key="384"
+					value="call hero_final_report_dust_winker_front_delete_observation(?)" />
+
+
+				<!-- Procedures for Final Report of Dust Testing of Rear Winker -->
+				<!-- procedures for get -->
+				<entry key="385"
+					value="call hero_final_report_dust_get_winker_rear(?,?,?,?)" />
+				<entry key="386"
+					value="call hero_final_report_dust_get_winker_rear_analysis(?,?,?,?)" />
+				<entry key="387"
+					value="call hero_final_report_dust_get_winker_rear_conclusion(?,?,?,?)" />
+				<entry key="388"
+					value="call hero_final_report_dust_get_winker_rear_header(?,?,?,?)" />
+				<entry key="389"
+					value="call hero_final_report_dust_get_winker_rear_images(?,?,?,?,?,?)" />
+				<entry key="390"
+					value="call hero_final_report_dust_get_winker_rear_observation(?,?,?,?)" />
+				<entry key="391"
+					value="call hero_final_report_dust_get_winker_rear_result(?,?,?,?)" />
+				<entry key="392"
+					value="call hero_final_report_dust_get_winker_rear_signature(?,?,?,?)" />
+				<entry key="393"
+					value="call hero_final_report_dust_get_winker_rear_testing_Version(?,?,?)" />
+				<entry key="394"
+					value="call hero_final_report_dust_get_winker_rear_vendor(?,?)" />
+				<!-- procedures for insert -->
+				<entry key="395"
+					value="call hero_final_report_dust_insert_winker_rear_analysis(?,?,?,?,?)" />
+				<entry key="396"
+					value="call hero_final_report_dust_insert_winker_rear_conclusion(?,?,?,?,?)" />
+				<entry key="397"
+					value="call hero_final_report_dust_insert_winker_rear_images(?,?,?,?,?,?,?,?,?)" />
+				<entry key="398"
+					value="call hero_final_report_dust_insert_winker_rear_observation(?,?,?,?,?)" />
+				<entry key="399"
+					value="call hero_final_report_dust_insert_winker_rear_result(?,?,?,?,?)" />
+				<entry key="400"
+					value="call hero_final_report_dust_insert_winker_rear_signature(?,?,?,?,?,?,?)" />
+				<!-- procedures for update -->
+				<entry key="401"
+					value="call hero_final_report_dust_update_winker_rear(?,?,?,?,?,?,?,?,?,?,?,?)" />
+				<entry key="402"
+					value="call hero_final_report_dust_update_winker_rear_final_submit(?,?,?,?,?,?)" />
+				<entry key="403"
+					value="call hero_final_report_dust_update_winker_rear_header(?,?,?,?,?,?,?,?,?,?,?,?,?)" />
+				<!-- procedures for final submit -->
+				<entry key="404"
+					value="call hero_final_report_dust_winker_rear_final_submit(?,?,?,?,?,?)" />
+				<!-- Procedure for deletion -->
+				<entry key="405"
+					value="call hero_final_report_dust_winker_rear_delete_images(?)" />
+				<entry key="406"
+					value="call hero_final_report_dust_winker_rear_delete_observation(?)" />
+
+				<entry key="407" value="call hero_ml_get_horn_history(?)" />
+				<entry key="408" value="call hero_ml_get_horn_status()" />
+				<entry key="409" value="call hero_ml_get_horn_specification(?)" />
+
+			</map>
+		</property>
+	</bean>
+	<!-- URLs for Development Server Local on 192.168.1.73:4444 -->
+	<!-- <bean class="com.springiot.constant.URLParameter" id="urlParameter"> 
+		<property name="authURL" value="http://192.168.1.73:4444/OAuthEngine/oauth/token" 
+		/> <property name="xfusionOAuthURL" value="http://192.168.1.73:4444/XFusionPlatform/oauth/token" 
+		/> <property name="authResetPasswordURL" value="http://192.168.1.73:4444/OAuthEngine/passwordreset" 
+		/> <property name="authExpireURL" value="http://192.168.1.73:4444/OAuthEngine/oauth/token/expire" 
+		/> <property name="authForgotPasswordURL" value="http://192.168.1.73:4444/OAuthEngine/forgotpassword" 
+		/> <property name="authUpdateURL" value="http://192.168.1.73:4444/OAuthEngine/passwordupdate" 
+		/> <property name="xfusionURL" value="http://192.168.1.73:4444/XFusionPlatform/xfusionusers" 
+		/> /> </bean> -->
+
+	<!-- URLs for Testing Server Local on 192.168.1.73 -->
+	<bean class="com.springiot.constant.URLParameter" id="urlParameter">
+		<property name="authURL"
+			value="http://192.168.1.242:7878/OAuthEngine/oauth/token" />
+		<property name="xfusionOAuthURL"
+			value="http://192.168.1.242:7878/XFusionPlatform/oauth/token" />
+		<property name="authResetPasswordURL"
+			value="http://192.168.1.242:7878/OAuthEngine/passwordreset" />
+		<property name="authExpireURL"
+			value="http://192.168.1.242:7878/OAuthEngine/oauth/token/expire" />
+		<property name="authForgotPasswordURL"
+			value="http://192.168.1.242:7878/OAuthEngine/forgotpassword" />
+		<property name="authUpdateURL"
+			value="http://192.168.1.242:7878/OAuthEngine/passwordupdate" />
+		<property name="xfusionURL"
+			value="http://192.168.1.242:7878/XFusionPlatform/xfusionusers" />
+	</bean>
+
+	<!-- URLs for Azure Server -->
+	<!-- <bean class="com.springiot.constant.URLParameter" id="urlParameter"> 
+		<property name="authURL" value="http://127.0.0.1:7878/OAuthEngine/oauth/token" 
+		/> <property name="xfusionOAuthURL" value="http://127.0.0.1:7878/XFusionPlatform/oauth/token" 
+		/> <property name="authResetPasswordURL" value="http://127.0.0.1:7878/OAuthEngine/passwordreset" 
+		/> <property name="authExpireURL" value="http://127.0.0.1:7878/OAuthEngine/oauth/token/expire" 
+		/> <property name="authForgotPasswordURL" value="http://127.0.0.1:7878/OAuthEngine/forgotpassword" 
+		/> <property name="authUpdateURL" value="http://127.0.0.1:7878/OAuthEngine/passwordupdate" 
+		/> <property name="xfusionURL" value="http://127.0.0.1:7878/XFusionPlatform/xfusionusers" 
+		/> </bean> -->
+
+	<!-- URLs for Azure Server -->
+	<!-- <bean class="com.springiot.constant.URLParameter" id="urlParameter"> 
+		<property name="authURL" value="http://52.187.64.242:7878/OAuthEngine/oauth/token" 
+		/> <property name="xfusionOAuthURL" value="http://52.187.64.242:7878/XFusionPlatform/oauth/token" 
+		/> <property name="authResetPasswordURL" value="http://52.187.64.242:7878/OAuthEngine/passwordreset" 
+		/> <property name="authExpireURL" value="http://52.187.64.242:7878/OAuthEngine/oauth/token/expire" 
+		/> <property name="authForgotPasswordURL" value="http://52.187.64.242:7878/OAuthEngine/forgotpassword" 
+		/> <property name="authUpdateURL" value="http://52.187.64.242:7878/OAuthEngine/passwordupdate" 
+		/> <property name="xfusionURL" value="http://52.187.64.242:7878/XFusionPlatform/xfusionusers" 
+		/> </bean> -->
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+
+	</bean>
+
+</beans>

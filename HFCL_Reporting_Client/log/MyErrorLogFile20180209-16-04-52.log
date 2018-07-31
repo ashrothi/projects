@@ -1,0 +1,4 @@
+org.json.JSONException: JSONObject["object"] is not a JSONArray.
+	at org.json.JSONObject.getJSONArray(JSONObject.java:596)
+	at com.teramatrix.processData.GetData.devicesByUser(GetData.java:65)
+	at com.teramatrix.main.HfclEscalationApp.main(HfclEscalationApp.java:147)

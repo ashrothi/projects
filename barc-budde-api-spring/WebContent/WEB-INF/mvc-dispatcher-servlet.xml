@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd
+  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+  http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+	<context:component-scan
+		base-package="com.springiot.*" />
+
+	<mvc:annotation-driven />
+
+
+	<bean id="loggingAspect" class="com.springiot.logging.AOPLogging" />
+	<aop:aspectj-autoproxy />
+
+	<tx:annotation-driven
+		transaction-manager="transactionManager" />
+	<!-- <mvc:resources mapping="/resources/**" location="/resources/" cache-period="10000" 
+		/> -->
+
+	<bean id="swagger2Config"
+		class="springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration" />
+
+
+	<!-- <context:property-placeholder location="classpath:/swagger.properties" 
+		/> -->
+
+	<mvc:resources mapping="swagger-ui.html"
+		location="classpath:/META-INF/resources/" />
+	<mvc:resources mapping="/webjars/**"
+		location="classpath:/META-INF/resources/webjars/" />
+
+	<!-- applicationContext.xml -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="embedded-database" />
+		<property name="packagesToScan" value="com.springiot.modal" />
+		<property name="hibernateProperties">
+			<value>
+				hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect
+				hibernate.connection.useUnicode=true
+				hibernate.connection.characterEncoding=UTF-8
+				hibernate.connection.charSet=UTF-8
+				hibernate.ejb.naming_strategy=org.hibernate.cfg.ImprovedNamingStrategy
+				hibernate.show_sql=true
+
+				hibernate.c3p0.min_size=20
+				hibernate.c3p0.max_size=40
+				hibernate.c3p0.timeout=300
+				hibernate.c3p0.max_statements=50
+				hibernate.c3p0.idle_test_period=3000
+				<!-- hibernate.connection.zeroDateTimeBehavior=convertToNull -->
+			</value>
+		</property>
+	</bean>
+
+	<bean
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager"
+		id="transactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+
+	<bean class="com.springiot.constant.ProcessParameter"
+		id="processParameter">
+		<property name="maps">
+			<map>
+				<entry key="1" value="call barc_budde_study_delete(study_id,is_deleted)" />
+				<entry key="2"
+					value="call barc_budde_study_get(start_date,end_date,limit,offset,condition)" />
+				<entry key="3"
+					value="call barc_budde_is_user_valid(user_name,mac_address,ram,cpu,ip_address,os)" />
+				<entry key="4"
+					value="call barc_budde_city_get_by_state_id(state_id)" />
+				<entry key="5" value="call barc_budde_country_get()" />
+				<entry key="6" value="call barc_budde_study_delete(study_id)" />
+				<entry key="7"
+					value="call barc_budde_study_get(start_date,end_date)" />
+				<entry key="8" value="call barc_budde_study_insert(file_name)" />
+				<entry key="9"
+					value="call barc_budde_org_server_insert(server_name,org_id,ftp_user,ftp_password,ftp_url,ftp_port,mac_address,ip_address)" />
+				<entry key="10"
+					value="call barc_budde_org_server_update(id,server_name,org_id,ftp_user,ftp_password,ftp_url,ftp_port,mac_address,ip_address,is_active)" />
+				<entry key="11" value="call barc_budde_org_server_delete(id)" />
+				<entry key="12"
+					value="call barc_budde_org_server_get_by_org_id(org_id)" />
+				<entry key="13" value="call barc_budde_org_server_get_all()" />
+				<entry key="14"
+					value="call barc_budde_user_organization_update(id,org_id,mac_address,allow_conn_to_barc,ram,cpu,ip_address,os,password,name,auth_role,auth_role_id,auth_role_accesskey,application_key)" />
+				<entry key="15"
+					value="call barc_budde_user_organization_insert(org_id,mac_address,allow_conn_to_barc,ram,cpu,ip_address,os,new_user_id,password,name,auth_role,auth_role_id,auth_role_accesskey,application_key,new_user_key)" />
+				<entry key="16"
+					value="call barc_budde_user_organization_release(id)" />
+				<entry key="17"
+					value="call barc_budde_user_organization_get_all(user_key,user_id)" />
+				<entry key="18"
+					value="call barc_budde_user_organization_get_by_org_id(org_id)" />
+				<entry key="19"
+					value="call barc_budde_organization_insert(user_key,state,name,alias,city,country,description,users_allowed,domain_allowed,total_server,in_srv_connection_time,client_connection_time,parent_org_id,is_active,role_name,auth_role_id,application_key)" />
+				<entry key="20"
+					value="call barc_budde_organization_delete(id)" />
+				<entry key="21"
+					value="call barc_budde_organization_get(user_key, user_id)" />
+				<entry key="22"
+					value="call barc_budde_state_get_by_country_id(country_id)" />
+				<entry key="23"
+					value="call barc_budde_organization_update(id,user_key,state,name,alias,city,country,description,users_allowed,domain_allowed,total_server,in_srv_connection_time,client_connection_time,is_active,parent_org_id,role_name,auth_role_id,application_key)" />
+
+				<entry key="24"
+					value="call barc_budde_user_organization_delete(id)" />
+				<entry key="25"
+					value="call barc_budde_audit_log_get_all_limit(user_key,user_id,application_key,from_date,end_date,limit,offset,organization_id,condition)" />
+				<entry key="26"
+					value="call barc_budde_audit_log_get_all(user_key,user_id,application_key,from_date,end_date,organization_id,condition)" />
+				<entry key="27"
+					value="call barc_budde_audit_log_count(user_key,user_id,application_key,from_date,end_date,organization_id,condition)" />
+				<entry key="28"
+					value="call barc_budde_audit_log_insert(controller_name,input_parameters,ip_address,url_accessed,user_key,user_id,application_key,organization_id,timeaccessed)" />
+				<entry key="29"
+					value="call barc_budde_organization_get_by_id(id)" />
+				<entry key="30"
+					value="call barc_budde_organization_study_access_delete(org_id,study_id,is_deleted)" />
+				<entry key="31"
+					value="call barc_budde_organization_study_access_update(id,org_id,study_id,master_ques_var_name,master_ans_var_name)" />
+				<entry key="32"
+					value="call barc_budde_organization_study_access_get_all()" />
+				<entry key="33"
+					value="call barc_budde_organization_study_access_get_by_org_id(org_id)" />
+				<entry key="34"
+					value="call barc_budde_organization_study_access_insert(org_id,study_id,master_ques_var_name,master_ans_var_name)" />
+
+				<entry key="35"
+					value="call barc_budde_get_org_id_by_user_id(user_name)" />
+				<entry key="36"
+					value="call barc_budde_study_get_by_org_id(org_id)" />
+				<entry key="37"
+					value="call barc_budde_study_access_get_by_study_id(org_id,study_id)" />
+
+				<entry key="38"
+					value="call barc_budde_study_access_get_by_master_ques(study_id,master_ques_var_name)" />
+				<entry key="39" value="call barc_budde_study_get_all()" />
+				<entry key="40"
+					value="call barc_budde_get_master_answers_by_question_id(master_parent_question_id)" />
+				<entry key="41"
+					value="call barc_budde_master_question_get_all()" />
+				<entry key="42"
+					value="call barc_budde_get_organization_roles_by_org_id(org_id)" />
+				<entry key="43"
+					value="call barc_budde_organization_subscription_delete(id,is_deleted)" />
+				<entry key="44"
+					value="call barc_budde_organization_subscription_get_all())" />
+				<entry key="45"
+					value="call barc_budde_organization_subscription_get_by_org_id(org_id)" />
+				<entry key="46"
+					value="call barc_budde_organization_subscription_insert(subs_start_date,subs_end_date,org_id)" />
+				<entry key="47"
+					value="call barc_budde_organization_subscription_update(id,subs_start_date,subs_end_date)" />
+				<entry key="48"
+					value="call barc_budde_is_organization_active(org_id)" />
+				<entry key="49"
+					value="call barc_budde_update_organization_state(org_id,is_active)" />
+				<entry key="50"
+					value="call barc_budde_get_study_by_userkey(user_key)" />
+				<entry key="51"
+					value="call barc_budde_answer_get_by_answer_group_id(answer_group_id,limit,offset)" />
+				<entry key="52"
+					value="call barc_budde_answer_group_answer_delete(id,is_deleted)" />
+				<entry key="53"
+					value="call barc_budde_answer_group_answer_update(id,answer_code,answer_text,group1,group2,answer_group_id,ref_question_code,ref_answer_code,sort_order)" />
+				<entry key="54"
+					value="call barc_budde_answer_group_delete(id,is_deleted)" />
+				<entry key="55"
+					value="call barc_budde_answer_group_get_all(limit,offset)" />
+				<entry key="56"
+					value="call barc_budde_master_answer_group_answer_insert(answer_group_id,answer_code,answer_text,group1,group2,ref_question_code,ref_answer_code,sort_order,is_derived)" />
+				<entry key="57"
+					value="call barc_budde_answer_group_update(id,answer_group)" />
+
+
+				<entry key="58"
+					value="call barc_budde_master_answer_group_insert(answer_group)" />
+				<entry key="59"
+					value="call barc_budde_master_question_delete(id,is_deleted)" />
+				<entry key="60"
+					value="call barc_budde_master_question_insert(question_text,question_code,answer_group_id,question_group,subcategory_id,show_to_app,is_derived,is_cwe_question,is_household_question,sort_order)" />
+				<entry key="61"
+					value="call barc_budde_master_question_update(id,question_text,question_code,answer_group_id,question_group,is_visible,subcategory_id,show_to_app,is_derived,is_cwe_question,is_household_question,sort_order)" />
+				<entry key="62"
+					value="call barc_budde_master_subcategory_get_all()" />
+				<entry key="63"
+					value="call barc_budde_master_question_get_all_limit(limit,offset)" />
+				<entry key="64"
+					value="call barc_budde_study_update(study_id,vendor_name)" />
+				<entry key="65"
+					value="call barc_budde_master_level_insert(level)" />
+				<entry key="66"
+					value="call barc_budde_master_level_update(level_id,level)" />
+				<entry key="67"
+					value="call barc_budde_master_level_delete(level_id,is_deleted)" />
+				<entry key="68" value="call barc_budde_master_level_get_all()" />
+
+				<entry key="69"
+					value="call barc_budde_master_category_delete(category_id,is_deleted)" />
+				<entry key="70"
+					value="call barc_budde_master_category_get_all()" />
+				<entry key="71"
+					value="call barc_budde_master_category_get_by_level_id(level_id)" />
+				<entry key="72"
+					value="call barc_budde_master_category_insert(category,level_id,sort_order)" />
+
+				<entry key="73"
+					value="call barc_budde_master_category_update(category_id,category,sort_order)" />
+				<entry key="74"
+					value="call barc_budde_master_subcategory_delete(subcategory_id,is_deleted)" />
+				<entry key="75"
+					value="call barc_budde_master_subcategory_insert(subcategory,category_id,sort_order)" />
+				<entry key="76"
+					value="call barc_budde_master_subcategory_update(subcategory_id,subcategory,sort_order)" />
+				<entry key="77"
+					value="call barc_budde_answer_group_answer_get_all()" />
+				<entry key="78"
+					value="call barc_budde_master_subcategory_get()" />
+				<entry key="79"
+					value="call barc_budde_organization_get_by_id(id)" />
+				<entry key="80"
+					value="call barc_budde_study_queue_insert(org_id,study_id)" />
+				<entry key="81"
+					value="call barc_budde_is_job_in_processing(org_id,study_id)" />
+				<entry key="82"
+					value="call barc_budde_get_ref_answer_groups()" />
+				<entry key="83" value="call barc_budde_get_ref_question()" />
+				<entry key="84"
+					value="call barc_budde_is_ftp_user_exists(ftp_user)" />
+				<entry key="85"
+					value="call barc_budde_category_sort_order_update(category_id,sort_order)" />
+				<entry key="86"
+					value="call barc_budde_subcategory_sort_order_update(subcategory_id,sort_order)" />
+				<entry key="87"
+					value="call barc_budde_get_ref_answers_by_question_id(question_code)" />
+				<entry key="88"
+					value="call barc_budde_master_active_level_get_all()" />
+				<entry key="89"
+					value="call barc_budde_master_active_category_get_by_level_id(level_id)" />
+				<entry key="90"
+					value="call barc_budde_master_active_subcategory_get_all()" />
+				<entry key="91"
+					value="call barc_budde_active_answer_group_get_all(limit,offset)" />
+				<entry key="92"
+					value="call barc_budde_study_active_inactive(study_id,is_deleted)" />
+					
+			</map>
+		</property>
+	</bean>
+
+	<bean class="com.springiot.constant.TableParameter"
+		id="tableParameter">
+
+		<property name="report_header_mapping"
+			value="report_header_mapping" />
+	</bean>
+
+	<!-- Development -->
+	<!-- <bean class="com.springiot.constant.URLParameter"
+		id="urlParameter">
+		 <property name="authURL"
+			value="http://127.0.0.1:4444/OAuthEngineBarc/oauth/token" />
+		<property name="authResetPasswordURL"
+			value="http://127.0.0.1:4444/OAuthEngineBarc/passwordreset" />
+		<property name="authExpireURL"
+			value="http://127.0.0.1:4444/OAuthEngineBarc/oauth/token/expire" />
+		<property name="authForgotPasswordURL"
+			value="http://127.0.0.1:4444/OAuthEngineBarc/forgotpassword" />
+		<property name="authUpdateURL"
+			value="http://127.0.0.1:4444/OAuthEngineBarc/passwordupdate" />
+		<property name="roleGetAll"
+			value="http://127.0.0.1:4444/OAuthEngineBarc/roles/get/all" />
+		<property name="validateToken"
+			value="http://127.0.0.1:4444/OAuthEngineBarc/oauth/validate/token" />
+		<property name="userCreate"
+			value="http://127.0.0.1:4444/OAuthEngineBarc/user/create" />
+		<property name="userUpdate"
+			value="http://127.0.0.1:4444/OAuthEngineBarc/user/update" />
+		<property name="userDelete"
+			value="http://127.0.0.1:4444/OAuthEngineBarc/user/delete" />
+		<property name="userGetAll"
+			value="http://127.0.0.1:4444/OAuthEngineBarc/users/get/application" />
+		<property name="getAllPermisions"
+			value="http://127.0.0.1:4444/OAuthEngineBarc/permission/view/get/all" />
+		<property name="authSessionconfigure"
+			value="http://127.0.0.1:4444/OAuthEngineBarc/auth/session/configure" />
+	</bean> -->
+
+	<!-- Testing -->
+	<bean class="com.springiot.constant.URLParameter" id="urlParameter">
+		<property name="authURL"
+			value="http://127.0.0.1:7878/OAuthEngineBarc/oauth/token" />
+		<property name="authResetPasswordURL"
+			value="http://127.0.0.1:7878/OAuthEngineBarc/passwordreset" />
+		<property name="authExpireURL"
+			value="http://127.0.0.1:7878/OAuthEngineBarc/oauth/token/expire" />
+		<property name="authForgotPasswordURL"
+			value="http://127.0.0.1:7878/OAuthEngineBarc/forgotpassword" />
+		<property name="authUpdateURL"
+			value="http://127.0.0.1:7878/OAuthEngineBarc/passwordupdate" />
+		<property name="roleGetAll"
+			value="http://127.0.0.1:7878/OAuthEngineBarc/roles/get/all" />
+		<property name="validateToken"
+			value="http://127.0.0.1:7878/OAuthEngineBarc/oauth/validate/token" />
+		<property name="userCreate"
+			value="http://127.0.0.1:7878/OAuthEngineBarc/user/create" />
+		<property name="userUpdate"
+			value="http://127.0.0.1:7878/OAuthEngineBarc/user/update" />
+		<property name="userDelete"
+			value="http://127.0.0.1:7878/OAuthEngineBarc/user/delete" />
+		<property name="userGetAll"
+			value="http://127.0.0.1:7878/OAuthEngineBarc/users/get/application" />
+		<property name="getAllPermisions"
+			value="http://127.0.0.1:7878/OAuthEngineBarc/permission/view/get/all" />
+		<property name="authSessionconfigure"
+			value="http://127.0.0.1:7878/OAuthEngineBarc/auth/session/configure" />
+	</bean>
+	
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+	</bean>
+
+</beans>
